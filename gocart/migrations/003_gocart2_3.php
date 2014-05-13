@@ -224,7 +224,7 @@ class Migration_gocart2_3 extends CI_migration {
                 $config['order_statuses'] = json_encode($config['order_statuses']);
 
                 //set locale to default
-                $config['locale'] = 'en_utf8';
+                $config['locale'] = locale_get_default();
                 $config['currency_iso'] = $config['currency'];
 
                 unset($config['currency']);
@@ -249,7 +249,7 @@ class Migration_gocart2_3 extends CI_migration {
                 $config['state'] = '';
                 $config['zip'] = '';
                 $config['email'] = '';
-                $config['locale'] = 'en_utf8';
+                $config['locale'] = locale_get_default();
                 $config['currency_iso'] = 'USD';
                 $config['weight_unit'] = 'LB';
                 $config['dimension_unit'] = 'IN';

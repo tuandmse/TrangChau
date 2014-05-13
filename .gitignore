@@ -1,5 +1,5 @@
 .htaccess
-# uploads/*
+uploads/*
 *.bak
 
 # OS generated files #

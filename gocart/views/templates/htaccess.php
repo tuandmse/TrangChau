@@ -1,5 +1,3 @@
-AddType image/svg+xml svg svgz
-AddEncoding gzip svgz
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
