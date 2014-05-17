@@ -218,9 +218,9 @@ class Migration_gocart2_3 extends CI_migration {
 
         if(empty($settings))
         {
-            if(file_exists(FCPATH.'gocart/config/gocart.php'))
+            if(file_exists(FCPATH.'fashionshop/config/gocart.php'))
             {
-                include(FCPATH.'gocart/config/gocart.php');
+                include(FCPATH.'fashionshop/config/gocart.php');
                 $config['order_statuses'] = json_encode($config['order_statuses']);
 
                 //set locale to default
