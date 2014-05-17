@@ -38,7 +38,7 @@
 |
 */
 
-if(file_exists(FCPATH.'fashionshop/config/database.php'))
+if(file_exists(FCPATH.'gocart/config/database.php'))
 {
     $route['default_controller']	= "cart";
 }

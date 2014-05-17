@@ -73,7 +73,7 @@ if (defined('ENVIRONMENT'))
  * NO TRAILING SLASH!
  *
  */
-	$application_folder = 'fashionshop';
+	$application_folder = 'gocart';
 
 /*
  * --------------------------------------------------------------------

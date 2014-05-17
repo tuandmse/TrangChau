@@ -18,7 +18,7 @@ function load_jquery($front = false)
 	}
 	else
 	{
-		echo link_tag($path.'fashionshop/'.$jquery_ui_css);
+		echo link_tag($path.'gocart/'.$jquery_ui_css);
 	}
 	//load scripts
 	echo load_script($path.'/'.$jquery);

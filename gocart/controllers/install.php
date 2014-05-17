@@ -10,7 +10,7 @@ Class Install extends CI_Controller {
         $this->load->helper(array('form', 'file', 'url'));
 
         //if this system is already installed redirect to the homepage
-        if(file_exists(FCPATH.'fashionshop/config/database.php'))
+        if(file_exists(FCPATH.'gocart/config/database.php'))
         {
             redirect('/');
         }
@@ -25,7 +25,7 @@ Class Install extends CI_Controller {
 
         //check for writable folders
         $data['is_writeable']['root'] = is_writeable(FCPATH);
-        $data['is_writeable']['config'] = is_writeable(FCPATH.'fashionshop/config/');
+        $data['is_writeable']['config'] = is_writeable(FCPATH.'gocart/config/');
         $data['is_writeable']['uploads'] = is_writeable(FCPATH.'uploads/');
 
         $this->form_validation->set_rules('hostname', 'Hostname', 'required');
@@ -63,7 +63,7 @@ Class Install extends CI_Controller {
                 $settings['database']       = $this->input->post('database');
                 $settings['prefix']         = $this->input->post('prefix');             
                 $file_contents              = $this->load->view('templates/database', $settings, true);
-                write_file(FCPATH.'fashionshop/config/database.php', $file_contents);
+                write_file(FCPATH.'gocart/config/database.php', $file_contents);
 
                 //setup the CodeIgniter default config file
                 $config_index               = array('index'=>'index.php');
@@ -72,7 +72,7 @@ Class Install extends CI_Controller {
                     $config_index           = array('index'=>'');
                 }
                 $file_contents              = $this->load->view('templates/config', $config_index, true);
-                write_file(FCPATH.'fashionshop/config/config.php', $file_contents);
+                write_file(FCPATH.'gocart/config/config.php', $file_contents);
                 
                 //setup the .htaccess file
                 if($this->input->post('mod_rewrite'))
