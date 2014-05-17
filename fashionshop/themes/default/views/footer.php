@@ -1,6 +1,6 @@
     <footer class="footer">
 
-        <div style="text-align:center;"><a href="http://gocartdv.com" target="_blank"><img src="<?php echo base_url('assets/img/drivenByGoCart.svg');?>" alt="Driven By GoCart"></a></div>
+        <div style="text-align:center;"><a href="" target="_blank"><img src="<?php echo base_url('assets/img/logo.png');?>" alt="By 3T1C"></a></div>
         
     </footer>
 </div>

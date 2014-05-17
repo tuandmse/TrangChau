@@ -11,7 +11,7 @@
 	<?php echo $meta;?>
 <?php else:?>
 <meta name="Keywords" content="Shopping Cart, eCommerce, Code Igniter">
-<meta name="Description" content="Go Cart is an open source shopping cart built on the Code Igniter framework">
+<meta name="Description" content="This is a website for fashion shopping">
 <?php endif;?>
 
 <?php echo theme_css('bootstrap.min.css', true);?>
