@@ -9,7 +9,7 @@ class Reports extends Admin_Controller {
 	{		
 		parent::__construct();
 
-		$this->auth->check_access('Admin', true);
+		//$this->auth->check_access('Admin', true);
 		
 		$this->load->model('Order_model');
 		$this->load->model('Search_model');

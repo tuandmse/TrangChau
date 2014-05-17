@@ -94,21 +94,14 @@ $(document).ready(function(){
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_sales') ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>orders"><?php echo lang('common_orders') ?></a></li>
-                            <?php if($this->auth->check_access('Admin')) : ?>
                             <li><a href="<?php echo $admin_url;?>customers"><?php echo lang('common_customers') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>customers/groups"><?php echo lang('common_groups') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>reports"><?php echo lang('common_reports') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>coupons"><?php echo lang('common_coupons') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>giftcards"><?php echo lang('common_giftcards') ?></a></li>
-                            <?php endif; ?>
                         </ul>
                     </li>
 
-
-
-                    <?php
-                    // Restrict access to Admins only
-                    if($this->auth->check_access('Admin')) : ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_catalog') ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -125,7 +118,9 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
                         </ul>
                     </li>
-                    
+                    <?php
+                    // Restrict access to Admins only
+                    if($this->auth->check_access('Admin')) : ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_administrative') ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">

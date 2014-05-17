@@ -213,20 +213,18 @@ class Orders extends Admin_Controller {
     
     function send_notification($order_id='')
     {
-			// send the message
-   		$this->load->library('email');
-		
 		$config = array(
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_port' => 465,
-            'smtp_user' => 'troioidathoi.com',
-            'smtp_pass' => 'matkhauvietthuong',
+            'smtp_user' => 'trangchau.fashionshop',
+            'smtp_pass' => 'VIETHOAKHONGDAU',
             'mailtype' => 'html',
             'charset' => 'utf-8'
         );
 		
-		$this->email->initialize($config);
+		$this->load->library('email', $config);
+		$this->email->set_newline("\r\n");
 
 		$this->email->from($this->config->item('email'), $this->config->item('company_name'));
 		$this->email->to($this->input->post('recipient'));

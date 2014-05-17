@@ -8,7 +8,7 @@ class Products extends Admin_Controller {
 	{		
 		parent::__construct();
         
-		$this->auth->check_access('Admin', true);
+		//$this->auth->check_access('Admin', true);
 		
 		$this->load->model(array('Product_model'));
 		$this->load->helper('form');

@@ -6,7 +6,7 @@ class Pages extends Admin_Controller
 	{
 		parent::__construct();
 
-		$this->auth->check_access('Admin', true);
+		//$this->auth->check_access('Admin', true);
 		$this->load->model('Page_model');
 		$this->lang->load('page');
 	}
