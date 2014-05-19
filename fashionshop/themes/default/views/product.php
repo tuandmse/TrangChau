@@ -32,7 +32,7 @@
         </div>
         <?php if(!empty($primary->caption)):?>
         <div class="row">
-            <div class="span4" id="product_caption">
+            <div class="span4" id="product-caption">
                 <?php echo $primary->caption;?>
             </div>
         </div>
@@ -60,10 +60,10 @@
                         <span class="pull-right">
                             <?php if($product->saleprice > 0):?>
                                 <small><?php echo lang('on_sale');?></small>
-                                <span class="product_price"><?php echo format_currency($product->saleprice); ?></span>
+                                <span class="product-price"><?php echo format_currency($product->saleprice); ?></span>
                             <?php else: ?>
                                 <small><?php echo lang('product_price');?></small>
-                                <span class="product_price"><?php echo format_currency($product->price); ?></span>
+                                <span class="product-price"><?php echo format_currency($product->price); ?></span>
                             <?php endif;?>
                         </span>
                     </h2>
@@ -226,7 +226,9 @@
         
         <div class="row" style="margin-top:15px;">
             <div class="span8">
+                <div class="product-caption">
                 <?php echo $product->description; ?>
+                </div>
             </div>
         </div>
         

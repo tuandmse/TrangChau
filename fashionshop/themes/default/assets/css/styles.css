@@ -1,6 +1,6 @@
 body {
 	margin-top:60px;
-    background-color: #888585;
+    background-color: #ffffff;
     color: #ffffff;
 }
 
@@ -14,6 +14,19 @@ body {
 img.responsiveImage
 {
 	width: 100%;
+    border: 2px solid #eee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)
+
+}
+
+img.responsiveImage:hover
+{
+    border: 2px solid #000000;
 }
 
 .price-slash {
@@ -33,7 +46,7 @@ img.responsiveImage
 }
 
 .product-price {
-	color:#ffa800;
+	color:#002a80;
 }
 
 /* Footer
@@ -149,4 +162,28 @@ img.responsiveImage
 
 .carousel {
     border: 5px solid #000000;
+}
+
+.page-header h2 {
+    color: #000000;
+}
+
+.control-group {
+    color: #000000;
+}
+
+.span8 p {
+    color: #f5f5f5;
+}
+
+.product-caption {
+    background-color: #000000;
+    border:1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px 5px 10px;
+    webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)
 }
