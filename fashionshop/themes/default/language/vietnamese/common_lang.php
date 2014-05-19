@@ -17,7 +17,7 @@ Site front end
 *******************/
 
 //common terms
-$lang['login']					= 'Login';
+$lang['login']					= 'Đăng nhập';
 $lang['logout']					= 'Logout';
 $lang['my_account']				= 'My Account';
 $lang['my_downloads']			= 'My Downloads';
