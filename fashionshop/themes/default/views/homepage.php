@@ -4,4 +4,4 @@
     </div>
 </div>
 
-<?php $this->banners->show_collection(2, 3, '3_box_row');?>
+<?php $this->banners->show_collection(2, 4, '4_box_row');?>

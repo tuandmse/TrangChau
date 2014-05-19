@@ -8,7 +8,7 @@
 			<div class="<?php echo $active_banner;?>item">
 				<?php
 						
-				$banner_image	= '<img src="'.base_url('uploads/'.$banner->image).'" />';
+				$banner_image	= '<img style="float: center" src="'.base_url('uploads/'.$banner->image).'" />';
 				if($banner->link)
 				{
 					$target=false;

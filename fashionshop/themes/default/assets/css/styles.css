@@ -1,5 +1,7 @@
 body {
 	margin-top:60px;
+    background-color: #888585;
+    color: #ffffff;
 }
 
 @media (max-width: 979px) {
@@ -38,7 +40,7 @@ img.responsiveImage
 -------------------------------------------------- */
 .footer {
 	margin-top: 45px;
-	padding: 35px 0 36px;
+	padding: 10px 0 10px;
 	border-top: 1px solid #e5e5e5;
 }
 .footer p {
@@ -130,4 +132,21 @@ img.responsiveImage
 	max-height:150px;
 	display:inline;
 	margin:auto;
+}
+
+.breadcrumb {
+    color: #000000;
+}
+
+.brand {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.nav {
+    /*background-color: #de352c;*/
+}
+
+.carousel {
+    border: 5px solid #000000;
 }

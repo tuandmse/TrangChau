@@ -45,12 +45,12 @@ if(isset($additional_header_info))
 					<span class="icon-bar"></span>
 				</a>
 			
-				<a class="brand" href="<?php echo site_url();?>"><?php echo $this->config->item('company_name');?></a>
+				<a class="brand" href="<?php echo site_url();?>">Trang Châu</a>
 				
 				<div class="nav-collapse">
 					<ul class="nav">
 						<?php if(isset($this->categories[0])):?>
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('catalog');?> <b class="caret"></b></a>
+						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Categories<b class="caret"></b></a>
 							<ul class="dropdown-menu">
 								<?php foreach($this->categories[0] as $cat_menu):?>
 								<li <?php echo $cat_menu->active ? 'class="active"' : false; ?>><a href="<?php echo site_url($cat_menu->slug);?>"><?php echo $cat_menu->name;?></a></li>
@@ -121,7 +121,7 @@ if(isset($additional_header_info))
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="container">
 		<?php if(!empty($base_url) && is_array($base_url)):?>
 			<div class="row">
