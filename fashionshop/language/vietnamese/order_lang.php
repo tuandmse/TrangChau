@@ -4,20 +4,20 @@ US English
 Admin Order Language
 ******************************************/
 
-$lang['orders']						= 'Orders';
-$lang['view_order']					= 'View Order';
-$lang['notes']						= 'Notes';
-$lang['status']						= 'Status';
-$lang['giftcard_is_active']			= 'Gift Card is Active';
-$lang['activate']					= 'Activate';
-$lang['order']						= 'Order';
-$lang['bill_to']					= 'Bill To';
-$lang['ship_to']					= 'Ship To';
-$lang['ordered_on']					= 'Ordered On';
-$lang['from'	]					= 'From';
-$lang['to']							= 'To';
-$lang['term']						= 'Search Term';
-$lang['xml_export']					= 'XML Export';
+$lang['orders']						= 'Đơn Hàng';
+$lang['view_order']					= 'Xem Đơn Hàng';
+$lang['notes']						= 'Ghi Chú';
+$lang['status']						= 'Trạng Thái';
+$lang['giftcard_is_active']			= 'Thẻ Quà Tặng Hợp Lệ';
+$lang['activate']					= 'Kích Hoạt';
+$lang['order']						= 'Đơn Hàng';
+$lang['bill_to']					= 'Người Thanh Toán';
+$lang['ship_to']					= 'Người Nhận Hàng';
+$lang['ordered_on']					= 'Thời Gian Đặt Hàng';
+$lang['from'	]					= 'Từ';
+$lang['to']							= 'Đến';
+$lang['term']						= 'Từ khóa';
+$lang['xml_export']					= 'Xuất File XML';
 
 $lang['no_orders']					= 'There are currently no orders.';
 $lang['message_order_updated']		= 'The order has been updated.';

@@ -24,7 +24,7 @@
 				echo form_textarea($data);
 				?>
 
-				<label for="enabled"><?php echo lang('enabled');?> </label>
+				<label for="enabled"><?php echo lang('enabled_status');?> </label>
         		<?php echo form_dropdown('enabled', array('0' => lang('disabled'), '1' => lang('enabled')), set_value('enabled',$enabled)); ?>
 			</fieldset>
 		</div>

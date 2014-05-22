@@ -1,19 +1,19 @@
-<?php if(!$payment_module_installed):?>
-	
-	<div class="alert">
-		<a class="close" data-dismiss="alert">×</a>
-		<strong><?php echo lang('common_note') ?>:</strong> <?php echo lang('no_payment_module_installed'); ?>
-	</div>
-
-<?php endif;?>
-
-<?php if(!$shipping_module_installed):?>
-	<div class="alert">
-		<a class="close" data-dismiss="alert">×</a>
-		<strong><?php echo lang('common_note') ?>:</strong> <?php echo lang('no_shipping_module_installed'); ?>
-	</div>
-
-<?php endif;?>
+<?php //if(!$payment_module_installed):?>
+<!--	-->
+<!--	<div class="alert">-->
+<!--		<a class="close" data-dismiss="alert">×</a>-->
+<!--		<strong>--><?php //echo lang('common_note') ?><!--:</strong> --><?php //echo lang('no_payment_module_installed'); ?>
+<!--	</div>-->
+<!---->
+<?php //endif;?>
+<!---->
+<?php //if(!$shipping_module_installed):?>
+<!--	<div class="alert">-->
+<!--		<a class="close" data-dismiss="alert">×</a>-->
+<!--		<strong>--><?php //echo lang('common_note') ?><!--:</strong> --><?php //echo lang('no_shipping_module_installed'); ?>
+<!--	</div>-->
+<!---->
+<?php //endif;?>
 
 <h2><?php echo lang('recent_orders') ?></h2>
 <table class="table table-striped">

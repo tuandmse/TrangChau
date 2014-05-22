@@ -17,12 +17,12 @@
         <div class="span5">
             <label><?php echo lang('coupon_label');?></label>
             <input type="text" name="coupon_code" class="span3" style="margin:0px;">
-            <input class="span2 btn" type="submit" value="<?php echo lang('apply_coupon');?>"/>
+            <input class="span2 btn btn-info" type="submit" value="<?php echo lang('apply_coupon');?>"/>
             
             <?php if($gift_cards_enabled):?>
                 <label style="margin-top:15px;"><?php echo lang('gift_card_label');?></label>
                 <input type="text" name="gc_code" class="span3" style="margin:0px;">
-                <input class="span2 btn"  type="submit" value="<?php echo lang('apply_gift_card');?>"/>
+                <input class="span2 btn btn-info"  type="submit" value="<?php echo lang('apply_gift_card');?>"/>
             <?php endif;?>
         </div>
         
@@ -30,10 +30,10 @@
                 <input id="redirect_path" type="hidden" name="redirect" value=""/>
     
                 <?php if(!$this->Customer_model->is_logged_in(false,false)): ?>
-                    <input class="btn" type="submit" onclick="$('#redirect_path').val('checkout/login');" value="<?php echo lang('login');?>"/>
-                    <input class="btn" type="submit" onclick="$('#redirect_path').val('checkout/register');" value="<?php echo lang('register_now');?>"/>
+                    <input class="btn btn-large" type="submit" onclick="$('#redirect_path').val('checkout/login');" value="<?php echo lang('login');?>"/>
+                    <input class="btn btn-large" type="submit" onclick="$('#redirect_path').val('checkout/register');" value="<?php echo lang('register_now');?>"/>
                 <?php endif; ?>
-                    <input class="btn" type="submit" value="<?php echo lang('form_update_cart');?>"/>
+                    <input class="btn btn-large" type="submit" value="<?php echo lang('form_update_cart');?>"/>
                     
             <?php if ($this->Customer_model->is_logged_in(false,false) || !$this->config->item('require_login')): ?>
                 <input class="btn btn-large btn-primary" type="submit" onclick="$('#redirect_path').val('checkout');" value="<?php echo lang('form_checkout');?>"/>

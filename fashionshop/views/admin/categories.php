@@ -14,7 +14,7 @@ function areyousure()
 		<tr>
 			<th><?php echo lang('category_id');?></th>
 			<th><?php echo lang('name')?></th>
-			<th><?php echo lang('enabled');?></th>
+			<th><?php echo lang('enabled_status');?></th>
 			<th></th>
 		</tr>
 	</thead>

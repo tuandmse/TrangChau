@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Go Cart<?php echo (isset($page_title))?' :: '.$page_title:''; ?></title>
+<title><?php echo $this->config->item('company_name'); ?><?php echo (isset($page_title))?' :: '.$page_title:''; ?></title>
 
 <link href="<?php echo base_url('assets/css/bootstrap.min.css');?>" rel="stylesheet" type="text/css" />
 <link href="<?php echo base_url('assets/css/bootstrap-responsive.min.css');?>" rel="stylesheet" type="text/css" />
@@ -85,7 +85,7 @@ $(document).ready(function(){
             
             <?php $admin_url = site_url($this->config->item('admin_folder')).'/';?>
             
-            <a class="brand" href="<?php echo $admin_url;?>">GoCart</a>
+            <a class="brand" href="<?php echo $admin_url;?>"><?php echo $this->config->item('company_name'); ?></a>
             
             <div class="nav-collapse">
                 <ul class="nav">
@@ -111,19 +111,21 @@ $(document).ready(function(){
                         </ul>
                     </li>
                     
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_content') ?> <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo $admin_url;?>banners"><?php echo lang('common_banners') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
-                        </ul>
-                    </li>
+<!--                    <li class="dropdown">-->
+<!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">--><?php //echo lang('common_content') ?><!-- <b class="caret"></b></a>-->
+<!--                        <ul class="dropdown-menu">-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--banners">--><?php //echo lang('common_banners') ?><!--</a></li>-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--pages">--><?php //echo lang('common_pages') ?><!--</a></li>-->
+<!--                        </ul>-->
+<!--                    </li>-->
                     <?php
                     // Restrict access to Admins only
                     if($this->auth->check_access('Admin')) : ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_administrative') ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
+                            <li><a href="<?php echo $admin_url;?>banners"><?php echo lang('common_banners') ?></a></li>
+                            <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>settings"><?php echo lang('common_gocart_configuration') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>shipping"><?php echo lang('common_shipping_modules') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>payment"><?php echo lang('common_payment_modules') ?></a></li>

@@ -262,7 +262,7 @@ $config['encryption_key'] = 'fd017e421468a68d91fa51ad6d3d0981';
 | 'sess_time_to_update'		= how many seconds between CI refreshing Session Information
 |
 */
-$config['sess_cookie_name']		= 'GoCart';
+$config['sess_cookie_name']		= 'FashionShop';
 $config['sess_expiration']		= 0;
 $config['sess_expire_on_close']	= FALSE;
 $config['sess_encrypt_cookie']	= TRUE;
