@@ -56,7 +56,10 @@ if(isset($additional_header_info))
 								<li <?php echo $cat_menu->active ? 'class="active"' : false; ?>><a href="<?php echo site_url($cat_menu->slug);?>"><?php echo $cat_menu->name;?></a></li>
 								<?php endforeach;?>
 							</ul>
-						</li>	
+						</li>
+                        <li>
+                            <a href="<?php echo  site_url('guestbook');?>">Liên hệ/Góp ý</a>
+                        </li>
 						<?php
 						endif;
 						

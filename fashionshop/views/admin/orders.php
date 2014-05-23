@@ -145,7 +145,7 @@ function do_export(val)
 {
 	$('#export_search_term').val($('#'+val).val());
 	$('#export_start_date').val($('#start_'+val+'_alt').val());
-	$('#export_end_date').val($('#end_'+val+'_alt').val());
+	$('#export_end_date').val($('#end_'+val+'_alt').val());GoCart Theme
 	$('#export_form').submit();
 }
 

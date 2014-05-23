@@ -1,4 +1,4 @@
 <?php
 
-$lang['charge_on_delivery']	= 'Charge on Delivery';
-$lang['processing_error']	= 'There was an error processing your payment';
+$lang['charge_on_delivery']	= 'Thanh toán khi nhận hàng';
+$lang['processing_error']	= 'Có lỗi xảy ra trong quá trình thanh toán!';
