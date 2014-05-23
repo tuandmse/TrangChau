@@ -1,6 +1,7 @@
 <div class="row">
 	<?php foreach($banners as $banner):?>
 	<div class="span3">
+        <div class="cate-container" style="position: relative">
 		<?php
 		
 		$box_image	= '<img class="responsiveImage" src="'.base_url('uploads/'.$banner->image).'" />';
@@ -18,6 +19,13 @@
 			echo $box_image;
 		}
 		?>
+
+        <?php if($banner->name): ?>
+            <div class="box-caption">
+                <h4><?php echo $banner->name ?></h4>
+            </div>
+        <?php endif; ?>
+        </div>
 	</div>
 	<?php endforeach;?>
 </div>

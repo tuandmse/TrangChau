@@ -18,9 +18,9 @@ img.responsiveImage
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
-    webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)
+    /*webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    /*-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);*/
+    /*box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)*/
 
 }
 
@@ -186,4 +186,25 @@ img.responsiveImage:hover
     webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
     -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075)
+}
+
+.box-caption {
+    position: absolute;
+    top: 20%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+}
+
+.box-caption h4 {
+    padding: 10px 30px 10px 30px;
+    font-size: 30px;
+}
+
+.cate-container {
+    height: 100%;
+    /*width: 100%;*/
+    border: 2px solid #eee;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
 }
