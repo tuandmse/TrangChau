@@ -115,6 +115,9 @@ if(isset($additional_header_info))
 								?>
 								</a>
 							</li>
+							
+							
+							<li><a href="<?php echo site_url('adviser/index');?>">call_adviser</a></li>
 					</ul>
 					
 					<?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>

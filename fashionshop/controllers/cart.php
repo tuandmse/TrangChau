@@ -545,4 +545,7 @@ class Cart extends Front_Controller {
 			redirect('cart/view_cart');
 		}
 	}
+	
+
+
 }

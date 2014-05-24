@@ -8,8 +8,18 @@
                 <h3>Cảm ơn sự phản hồi của bạn đến website của chúng tôi!</h3>
             <?php endif; ?>
             <?php if( $posted == false ): ?>
+			
+			
+			
+			
             <?php echo form_open('guestbook', 'class="form-horizontal"'); ?>
+			
+			
+			
             <fieldset>
+			
+			
+			
                 <div class="control-group">
                     <label class="control-label" for="name">Name</label>
                     <div class="controls">
@@ -44,9 +54,19 @@
                         <input type="submit" value="Submit" name="submit" class="btn btn-primary"/>
                     </div>
                 </div>
+				
+				
+				
+				
             </fieldset>
+			
+			
             </form>
-            <?php endif; ?>
+            
+			
+			
+			
+			<?php endif; ?>
         </div>
     </div>
 <?php include('footer.php');?>
