@@ -30,9 +30,6 @@ class Migration_Install extends CI_Migration {
         $this->_table_routes();
         $this->_table_search();
         $this->_table_settings();
-        //For like and comment functions
-        $this->_table_like();
-        $this->_table_comment();
     }
     
     public function down()
@@ -1713,76 +1710,6 @@ class Migration_Install extends CI_Migration {
 
             $this->dbforge->add_key('id', true);
             $this->dbforge->create_table('settings', true);
-        }
-    }
-
-    /********************************************
-     *
-     * Generate like table
-     *
-     *********************************************/
-    private function _table_like()
-    {
-        if(!$this->db->table_exists('like'))
-        {
-            $this->dbforge->add_field(array(
-                'id' => array(
-                    'type' => 'int',
-                    'constraint' => 9,
-                    'unsigned' => true,
-                    'auto_increment' => true
-                ),
-                'product_id' => array(
-                    'type' => 'int',
-                    'null' => false
-                ),
-                'user_id' => array(
-                    'type' => 'varchar',
-                    'constraint' => 255,
-                    'null' => false
-                )
-            ));
-
-
-            $this->dbforge->add_key('id', true);
-            $this->dbforge->create_table('like', true);
-        }
-    }
-
-    /********************************************
-     *
-     * Generate comment table
-     *
-     *********************************************/
-    private function _table_comment()
-    {
-        if(!$this->db->table_exists('comment'))
-        {
-            $this->dbforge->add_field(array(
-                'id' => array(
-                    'type' => 'int',
-                    'constraint' => 9,
-                    'unsigned' => true,
-                    'auto_increment' => true
-                ),
-                'product_id' => array(
-                    'type' => 'int',
-                    'null' => false
-                ),
-                'user_id' => array(
-                    'type' => 'varchar',
-                    'constraint' => 255,
-                    'null' => false
-                ),
-                'content' => array(
-                    'type' => 'varchar',
-                    'constraint' => 255,
-                    'null' => false
-                )
-            ));
-
-            $this->dbforge->add_key('id', true);
-            $this->dbforge->create_table('comment', true);
         }
     }
 }
