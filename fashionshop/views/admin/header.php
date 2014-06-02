@@ -111,6 +111,14 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>digital_products"><?php echo lang('common_digital_products') ?></a></li>
                         </ul>
                     </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản Trị Hệ Tư Vấn<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo $admin_url;?>adviser_question">Quản Trị Câu Hỏi</a></li>
+                            <li><a href="<?php echo $admin_url;?>adviser_node">Quản Trị Nút</a></li>
+                            <li><a href="<?php echo $admin_url;?>adviser_rule">Quản Trị Luật</a></li>
+                        </ul>
+                    </li>
                     
 <!--                    <li class="dropdown">-->
 <!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">--><?php //echo lang('common_content') ?><!-- <b class="caret"></b></a>-->

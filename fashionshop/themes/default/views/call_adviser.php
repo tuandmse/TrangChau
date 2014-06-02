@@ -59,9 +59,9 @@
 										<div class="control-group">
 											<label class="" for="height">Chiều cao</label>
 											<div>
-												<input type="radio" name="weight" value="cao"> Cao
-												<input type="radio" name="weight" value="thap"> Thấp
-												<input type="radio" name="weight" value="candoi"> Cân Đối
+												<input type="radio" name="height" value="cao"> Cao
+												<input type="radio" name="height" value="thap"> Thấp
+												<input type="radio" name="height" value="candoi"> Cân Đối
 												
 											</div>
 										</div>
