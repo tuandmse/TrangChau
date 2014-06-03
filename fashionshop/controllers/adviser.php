@@ -26,35 +26,39 @@ class Adviser extends Front_Controller {
         $data["postedStyle"] = false;
 		$data["postedInfor"] = false;
 		$data["posted"] = false;
-		$data["entries"] = $this->Adviser_model->view();
-		if( $this->input->post("submitInfor") ) {
-            if( $this->Adviser_model->test()) 	{
-               $data["postedInfor"] = true;
-			   $data["postedStyle"] = false;
-            }
+		$data["node_view"] = $this->Adviser_model->node_view();
+		$data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType();
+
+		
+		$data["question_view"] =  $this->Adviser_model->question_view();
+		
+		//if( $this->input->post("submitInfor") ) {
+         //   if( $this->Adviser_model->test()) 	{
+         //      $data["postedInfor"] = true;
+		//	   $data["postedStyle"] = false;
+        //    }
+        //}
+        if( $this->input->post("submitInfor") ) {
+		
+		    
+           $answerYN = array();
+			foreach( $data["node_view"] as $node_entry )
+			 {
+			$answerYN[$node_entry->questionNode]  =  $this->input->post($node_entry->questionNode);
+			}
+			
+			$answerCF = array();
+			foreach( $data["cF_node_view"] as $cf_node_entry )
+			 {
+			$answerYN[$cf_node_entry->nodesNode]  =  $this->input->post($cf_node_entry->nodesNode);
+			}
+
+
+           // if( $this->Adviser_model->test()) 	{
+            //   $data["postedStyle"] = true;
+			  // $data["postedInfor"] = false;
+            //}
         }
-        if( $this->input->post("submitStyle") ) {
-            $data = array(
-			  "gender"	=> $this->input->post("gender"),
-                "age"	=> $this->input->post("age"),
-                "height"	=> $this->input->post("height"),
-                "weight"	=> $this->input->post("weight"),
-                "skin"	=> $this->input->post("skin"),
-                "congviec"	=> $this->input->post("a1"),
-                "thanhlich"	=> $this->input->post("a2"),
-                "quyenru"	=> $this->input->post("a3"),
-                "catinh"	=> $this->input->post("a4"),
-                "nhenhang"	=> $this->input->post("a5"),
-                "tretrung"	=> $this->input->post("a6"),
-                "sanhdieu"	=> $this->input->post("a7"),
-                "hoatdong"	=> $this->input->post("a8")
-            );
-            if( $this->Adviser_model->test()) 	{
-               $data["postedStyle"] = true;
-			   $data["postedInfor"] = false;
-            }
-        }
-	          // $this->load->view("guestbook.php", $data);
 		 $this->load->view("call_adviser.php", $data);
 	}
 }

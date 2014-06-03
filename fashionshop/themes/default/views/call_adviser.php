@@ -9,7 +9,13 @@
 			</h1>
             </div>
             <?php if( $postedInfor == true ): ?>
+			
+			 
+			
                 <h3> Infor Results !</h3>
+				
+				
+				
             <?php endif; ?>
 			<?php if( $postedStyle == true ): ?>
                 <h3>Style Results!</h3>
@@ -27,74 +33,30 @@
 						<div class="tab-content">
 							<div class="tab-pane active" id="infor">
 								<?php echo form_open('adviser', 'class="form-horizontal"'); ?>
-								<div class="row">
+								
+
+								 <?php foreach($question_view as $yn): ?>
+									
+									<div class="row">
 									<div class="span8">
 										<div class="control-group">
-											<label  for="gender">Bạn thuộc giới tính nào ?</label>
+											<label  for="<?php echo $yn->questionNode; ?>"><?php echo $yn->questionContent; ?></label>
 											<div>
-												<input type="radio" name="gender" value="male" checked> Nam
-												<input type="radio" name="gender" value="female"> Nữ                   
-											</div>
 											
-										</div>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="span8">
-										<div class="control-group">
-											<label  for="age">Bạn thuộc nhóm tuổi nào ?</label>
-											<div>
-												<input type="radio" name="age" value="treem" checked> Trẻ em
-												<input type="radio" name="age" value="thanhnien"> Thanh niên
-												<input type="radio" name="age" value="trungnien"> Trung niên
-											</div>
-											
-										</div>
-									</div>
-								</div>
-								
-								<div class="row">
-									<div class="span8">
-										<div class="control-group">
-											<label for="height">Chiều cao</label>
-											<div>
-												<input type="radio" name="height" value="cao" checked> Cao
-												<input type="radio" name="height" value="thap"> Thấp
-												<input type="radio" name="height" value="candoi"> Cân Đối
-												
+										<?php foreach($node_view as $a):?>
+                                        <?php
+											if ($yn->questionNode == $a -> questionNode ) :
+											echo '<input type="radio" name="'.$a->questionNode.'" value="'.$a->nodesNode.'" checked> '.$a->nodesContent.'';
+											?>
+			                             <?php endif; ?>
+										<?php endforeach; ?>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<div class="row">
-									<div class="span8">
-										<div class="control-group">
-											<label for="weight">Cân nặng</label>
-											<div>
-												<input type="radio" name="weight" value="map" checked> Mập
-												<input type="radio" name="weight" value="gay"> Gầy
-												<input type="radio" name="weight" value="candoi"> Cân Đối
-												
-											</div>
-										</div>
-									</div>
-								</div>
+								<?php endforeach; ?>
 								
-								<div class="row">
-									<div class="span8">
-										<div class="control-group">
-											<label  for="skin">Bạn có nước da trắng hay ngăm đen ?</label>
-											<div>
-												<input type="radio" name="skin" value="white" checked> Trắng
-												<input type="radio" name="skin" value="black"> Ngăm Đen
-												
-											</div>
-											
-										</div>
-									</div>
-								</div>
 				
 								<div class="row">
 									<div class="span8">
@@ -110,17 +72,17 @@
 							</div>
 							<div class="tab-pane" id="style">
 							<?php echo form_open('adviser', 'class="form-horizontal"'); ?>
-								 <?php foreach($entries as $entry): ?>
+								 <?php foreach($cF_node_view as $node_entry): ?>
 									
 									<div class="row">
 									<div class="span8">
 										<div class="control-group">
-											<label  for="<?php echo $entry->nodesNode; ?>"><?php echo $entry->nodesContent; ?></label>
+											<label  for="<?php echo $node_entry->nodesNode; ?>"><?php echo $node_entry->nodesContent; ?></label>
 											<div>
-												<input type="radio" name="<?php echo $entry->nodesNode; ?>" value="no" checked> Không
-												<input type="radio" name="<?php echo $entry->nodesNode; ?>" value="little"> Chút ít
-												<input type="radio" name="<?php echo $entry->nodesNode; ?>" value="like"> Thích
-												<input type="radio" name="<?php echo $entry->nodesNode; ?>" value="verylike">Rất thích                    
+												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0" checked> Không
+												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0.6"> Chút ít
+												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0.8"> Thích
+												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="1">Rất thích                    
 											</div>
 											
 										</div>

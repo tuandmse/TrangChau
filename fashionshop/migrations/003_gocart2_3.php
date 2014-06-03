@@ -16,7 +16,7 @@ class Migration_gocart2_3 extends CI_migration {
             $fields = array('postcode_required'=>array('name'=>'zip_required', 'type'=>'int','constraint'=>1));
             $this->dbforge->modify_column('countries', $fields);
         }
-        
+
         //if the banner_collections table does not exist, run the migration
         if (!$this->db->table_exists('banner_collections'))
         {

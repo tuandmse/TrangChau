@@ -13,14 +13,40 @@ class Adviser_model extends CI_Model {
 	}
   
    
-	function view()
+	function node_view_filter_CfType()
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('nodesNode', 'ASC');
+		$this->db->where('questionNode', 'c1');
+
+		$result	= $this->db->get('adviser_nodes');
+		return $result->result();
+		
+	}
+	function node_view()
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('nodesNode', 'ASC');
+
+		$result	= $this->db->get('adviser_nodes');
+		return $result->result();
+		
+	}
+	
+	function question_view()
 	{
 		//sort by alphabetically by default
 		$this->db->order_by('questionNode', 'ASC');
-		$result	= $this->db->get('adviser_nodes');
-
+		$this->db->where('questionType', 'YN');
+		$result	= $this->db->get('adviser_question');
 		return $result->result();
+		
 	}
+	
+
+	
+	
+	
     function insert( $data = array() ) {
         $data["name"] = $this->db->escape_str($data["name"]);
         $data["email"] = $this->db->escape_str($data["email"]);

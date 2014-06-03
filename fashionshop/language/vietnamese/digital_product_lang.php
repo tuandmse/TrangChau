@@ -2,7 +2,7 @@
 
 $lang['dgtl_pr_header'] = 'Digital Product Files';
 
-$lang['confirm_delete_file']	= 'Warning: Deleting a file that is associated with an active product will automatically disable availability';
+$lang['confirm_delete_file']	= 'Cảnh báo: Xóa tập tin liên hệ với sản phẩm đang bán sẽ tự động disable sản phẩm'; //'Warning: Deleting a file that is associated with an active product will automatically disable availability';
 $lang['path_error']				= 'Your file uploads path is not writable. Please verify your folder permissions before you can upload anything.';
 $lang['message_deleted_file']	= 'The file has been deleted.';
 
