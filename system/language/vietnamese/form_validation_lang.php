@@ -1,28 +1,29 @@
 <?php
 
-$lang['required']			= "The %s field is required.";
-$lang['isset']				= "The %s field must have a value.";
-$lang['valid_email']		= "The %s field must contain a valid email address.";
-$lang['valid_emails']		= "The %s field must contain all valid email addresses.";
-$lang['valid_url']			= "The %s field must contain a valid URL.";
-$lang['valid_ip']			= "The %s field must contain a valid IP.";
-$lang['min_length']			= "The %s field must be at least %s characters in length.";
-$lang['max_length']			= "The %s field can not exceed %s characters in length.";
-$lang['exact_length']		= "The %s field must be exactly %s characters in length.";
-$lang['alpha']				= "The %s field may only contain alphabetical characters.";
-$lang['alpha_numeric']		= "The %s field may only contain alpha-numeric characters.";
-$lang['alpha_dash']			= "The %s field may only contain alpha-numeric characters, underscores, and dashes.";
-$lang['numeric']			= "The %s field must contain only numbers.";
-$lang['is_numeric']			= "The %s field must contain only numeric characters.";
-$lang['integer']			= "The %s field must contain an integer.";
-$lang['regex_match']		= "The %s field is not in the correct format.";
-$lang['matches']			= "The %s field does not match the %s field.";
-$lang['is_unique'] 			= "The %s field must contain a unique value.";
-$lang['is_natural']			= "The %s field must contain only positive numbers.";
-$lang['is_natural_no_zero']	= "The %s field must contain a number greater than zero.";
-$lang['decimal']			= "The %s field must contain a decimal number.";
-$lang['less_than']			= "The %s field must contain a number less than %s.";
-$lang['greater_than']		= "The %s field must contain a number greater than %s.";
+$lang['required']			= "%s là bắt buộc.";
+$lang['isset']				= "%s phải có giá trị.";
+$lang['valid_email']		= "%s phải là một địa chỉ email hợp lệ.";
+$lang['valid_emails']		= "%s phải là những địa chỉ email hợp lệ.";
+$lang['valid_url']			= "%s phải là một địa chỉ URL hợp lệ.";
+$lang['valid_ip']			= "%s phải là một địa chỉ IP hợp lệ.";
+$lang['min_length']			= "%s phải có ít nhất %s kí tự.";
+$lang['max_length']			= "%s chỉ có tối đa %s kí tự.";
+$lang['exact_length']		= "%s phải có chính xác %s kí tự.";
+$lang['alpha']				= "%s field may only contain alphabetical characters.";
+$lang['alpha_numeric']		= "%s field may only contain alpha-numeric characters.";
+$lang['alpha_dash']			= "%s field may only contain alpha-numeric characters, underscores, and dashes.";
+$lang['numeric']			= "%s chỉ có thể là số.";
+$lang['is_numeric']			= "%s chỉ có thể là kí tự số.";
+$lang['integer']			= "%s chỉ có thể là số nguyên.";
+$lang['regex_match']		= "%s có giá trị không giống với format có sẵn.";
+$lang['matches']			= "%s không giống %s.";
+$lang['is_unique'] 			= "%s phải có giá trị unique.";
+$lang['is_natural']			= "%s phải có giá trị là số tự nhiên.";
+$lang['is_natural_no_zero']	= "%s phải có giá trị lớn hơn 0.";
+$lang['decimal']			= "%s phải có giá trị số thập phân.";
+$lang['less_than']			= "%s phải có giá trị bé hơn %s.";
+$lang['greater_than']		= "%s phải có giá trị lớn hơn %s.";
+$lang['validateCF']		    = "Giá trị CF phải nằm trong khoảng từ 0 đến 1.";
 
 
 /* End of file form_validation_lang.php */

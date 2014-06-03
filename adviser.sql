@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 01, 2014 at 10:23 AM
+-- Generation Time: Jun 03, 2014 at 08:27 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `fashionshop`
@@ -26,10 +20,11 @@ SET time_zone = "+00:00";
 -- Table structure for table `fs_adviser_nodes`
 --
 
+DROP TABLE IF EXISTS `fs_adviser_nodes`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_nodes` (
-  `nodesNode` varchar(20) NOT NULL,
+  `nodesNode` varchar(10) NOT NULL DEFAULT '0',
   `nodesContent` text NOT NULL,
-  `questionNode` varchar(20) NULL,
+  `questionNode` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`nodesNode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -38,14 +33,75 @@ CREATE TABLE IF NOT EXISTS `fs_adviser_nodes` (
 --
 
 INSERT INTO `fs_adviser_nodes` (`nodesNode`, `nodesContent`, `questionNode`) VALUES
-('a1', 'Bạn muốn thể hiện sự nghiêm túc của mình trong công việc ?', 'c1'),
-('a2', 'Bạn muốn diện những bộ đồ thanh lịch ?', 'c1'),
-('a3', 'Bạn muốn gây vẻ quyến rũ của mình tới mọi người ?', 'c1'),
-('a4', 'Bạn muốn thể hiện cá tính của mình ?', 'c1'),
-('a5', 'Bạn muốn diện bộ đồ mang tính nhẹ nhàng ?', 'c1'),
-('a6', 'Bạn muốn mình trở nên trẻ trung hơn trong bộ đồ ?', 'c1'),
-('a7', 'Bạn muốn thể hiện mình là người sành điệu?', 'c1'),
-('a8', 'Bạn muốn diện bộ đồ có thể dễ dàng tham gia các hoạt động?', 'c1');
+('NODE000011', 'Bạn muốn thể hiện sự nghiêm túc của mình trong công việc?', 'QUES000007'),
+('NODE000012', 'Bạn muốn diện những bộ đồ thanh lịch?', 'QUES000007'),
+('NODE000013', 'Bạn muốn gây vẻ quyến rũ của mình tới mọi người?', 'QUES000007'),
+('NODE000014', 'Đồ công sở', NULL),
+('NODE000015', 'Bạn muốn thể hiện cá tính của mình?', 'QUES000007'),
+('NODE000016', 'Bạn muốn diện bộ đồ mang tính nhẹ nhàng?', 'QUES000007'),
+('NODE000017', 'Bạn muốn mình trở nên trẻ trung hơn trong bộ đồ?', 'QUES000007'),
+('NODE000018', 'Bạn muốn thể hiện mình là người sành điệu?', 'QUES000007'),
+('NODE000019', 'Bạn muốn diện bộ đồ có thể dễ dàng tham gia các hoạt động?', 'QUES000007'),
+('NODE000026', '1213213', 'QUES000009'),
+('NODE000027', '32132131', 'QUES000009');
+
+--
+-- Triggers `fs_adviser_nodes`
+--
+DROP TRIGGER IF EXISTS `tg_fs_adviser_nodes_insert`;
+DELIMITER //
+CREATE TRIGGER `tg_fs_adviser_nodes_insert` BEFORE INSERT ON `fs_adviser_nodes`
+ FOR EACH ROW BEGIN
+  INSERT INTO fs_adviser_nodes_seq VALUES (NULL);
+  SET NEW.nodesNode = CONCAT('NODE', LPAD(LAST_INSERT_ID(), 6, '0'));
+END
+//
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fs_adviser_nodes_seq`
+--
+
+DROP TABLE IF EXISTS `fs_adviser_nodes_seq`;
+CREATE TABLE IF NOT EXISTS `fs_adviser_nodes_seq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+
+--
+-- Dumping data for table `fs_adviser_nodes_seq`
+--
+
+INSERT INTO `fs_adviser_nodes_seq` (`id`) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7),
+(8),
+(9),
+(10),
+(11),
+(12),
+(13),
+(14),
+(15),
+(16),
+(17),
+(18),
+(19),
+(20),
+(21),
+(22),
+(23),
+(24),
+(25),
+(26),
+(27);
 
 -- --------------------------------------------------------
 
@@ -53,8 +109,9 @@ INSERT INTO `fs_adviser_nodes` (`nodesNode`, `nodesContent`, `questionNode`) VAL
 -- Table structure for table `fs_adviser_question`
 --
 
+DROP TABLE IF EXISTS `fs_adviser_question`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_question` (
-  `questionNode` varchar(20) NOT NULL,
+  `questionNode` varchar(10) NOT NULL DEFAULT '0',
   `questionContent` text NOT NULL,
   `questionType` varchar(2) NOT NULL,
   PRIMARY KEY (`questionNode`)
@@ -65,11 +122,47 @@ CREATE TABLE IF NOT EXISTS `fs_adviser_question` (
 --
 
 INSERT INTO `fs_adviser_question` (`questionNode`, `questionContent`, `questionType`) VALUES
-('c1', 'Chọn kiểu trang phục', 'CF'),
-('c2', 'Bạn thuộc giới tính nào ?', 'YN'),
-('c3', 'Bạn thuộc nhóm tuổi nào ?', 'YN'),
-('c4', 'Bạn có chiều cao, cân nặng là bao nhiêu ?', 'YN'),
-('c5', 'Bạn có nước da trắng hay ngăm đen ?', 'YN');
+('QUES000007', 'Chọn kiểu trang phục', 'CF');
+
+--
+-- Triggers `fs_adviser_question`
+--
+DROP TRIGGER IF EXISTS `tg_fs_adviser_question_insert`;
+DELIMITER //
+CREATE TRIGGER `tg_fs_adviser_question_insert` BEFORE INSERT ON `fs_adviser_question`
+ FOR EACH ROW BEGIN
+  INSERT INTO fs_adviser_question_seq VALUES (NULL);
+  SET NEW.questionNode = CONCAT('QUES', LPAD(LAST_INSERT_ID(), 6, '0'));
+END
+//
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fs_adviser_question_seq`
+--
+
+DROP TABLE IF EXISTS `fs_adviser_question_seq`;
+CREATE TABLE IF NOT EXISTS `fs_adviser_question_seq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+
+--
+-- Dumping data for table `fs_adviser_question_seq`
+--
+
+INSERT INTO `fs_adviser_question_seq` (`id`) VALUES
+(1),
+(2),
+(3),
+(4),
+(5),
+(6),
+(7),
+(8),
+(9);
 
 -- --------------------------------------------------------
 
@@ -77,8 +170,9 @@ INSERT INTO `fs_adviser_question` (`questionNode`, `questionContent`, `questionT
 -- Table structure for table `fs_adviser_rules`
 --
 
+DROP TABLE IF EXISTS `fs_adviser_rules`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_rules` (
-  `rulesId` varchar(20) NOT NULL,
+  `rulesId` varchar(10) NOT NULL DEFAULT '0',
   `rulesContent` text NOT NULL,
   `rulesCF` double NOT NULL,
   PRIMARY KEY (`rulesId`)
@@ -89,26 +183,40 @@ CREATE TABLE IF NOT EXISTS `fs_adviser_rules` (
 --
 
 INSERT INTO `fs_adviser_rules` (`rulesId`, `rulesContent`, `rulesCF`) VALUES
-('r1', 'a1^a2=>f1', 0.7),
-('r11', 'a4^a6^a8=>f11', 0.8),
-('r12', 'a1^a8=>f12', 0.67),
-('r13', 'a3^a6^e2=>f13', 0.76),
-('r14', 'a6^a8=>f14', 0.8),
-('r15', 'a8=>f15', 0.79),
-('r16', 'd1=>g1', 0.6),
-('r17', 'd1=>g3', 0.5),
-('r18', 'd3=>g5', 0.56),
-('r19', 'd3=>g2', 0.66),
-('r2', 'a3^a4^e2=>f2', 0.78),
-('r20', 'b1=>g8', 0.6),
-('r21', 'b1=>g1', 0.7),
-('r22', 'b1=>g10', 0.65),
-('r23', 'b1=>g3', 0.8),
-('r24', 'b1=>g7', 0.56),
-('r25', 'b2=>g9', 0.67),
-('r26', 'b2=>g10', 0.7),
-('r27', 'b2=>g4', 0.76);
+('RULE000001', 'NODE000011^NODE000012=>NODE000014', 0.5),
+('RULE000002', 'NODE000011^NODE000012^NODE000013=>NODE000014', 0.9),
+('RULE000003', 'NODE000011^NODE000012^NODE000013^NODE000015^NODE000016^NODE000017^NODE000018^NODE000019=>NODE000014', 0.99);
 
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+--
+-- Triggers `fs_adviser_rules`
+--
+DROP TRIGGER IF EXISTS `tg_fs_adviser_rules_insert`;
+DELIMITER //
+CREATE TRIGGER `tg_fs_adviser_rules_insert` BEFORE INSERT ON `fs_adviser_rules`
+ FOR EACH ROW BEGIN
+  INSERT INTO fs_adviser_rules_seq VALUES (NULL);
+  SET NEW.rulesId = CONCAT('RULE', LPAD(LAST_INSERT_ID(), 6, '0'));
+END
+//
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fs_adviser_rules_seq`
+--
+
+DROP TABLE IF EXISTS `fs_adviser_rules_seq`;
+CREATE TABLE IF NOT EXISTS `fs_adviser_rules_seq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `fs_adviser_rules_seq`
+--
+
+INSERT INTO `fs_adviser_rules_seq` (`id`) VALUES
+(1),
+(2),
+(3);

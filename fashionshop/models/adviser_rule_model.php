@@ -14,7 +14,7 @@ class Adviser_rule_model extends CI_Model {
     }
 
     function view() 	{
-        $this->db->order_by("rulesId", "asc");
+        $this->db->order_by("rulesId", "desc");
         return $this->db->get('adviser_rules')->result();
     }
 
