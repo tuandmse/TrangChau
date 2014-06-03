@@ -12,7 +12,15 @@ class Adviser_model extends CI_Model {
 	return true;
 	}
   
+   
+	function view()
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('questionNode', 'ASC');
+		$result	= $this->db->get('adviser_nodes');
 
+		return $result->result();
+	}
     function insert( $data = array() ) {
         $data["name"] = $this->db->escape_str($data["name"]);
         $data["email"] = $this->db->escape_str($data["email"]);
