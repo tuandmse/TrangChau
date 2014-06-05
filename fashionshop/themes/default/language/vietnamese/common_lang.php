@@ -253,3 +253,12 @@ $lang['giftcard_already_applied']			= 'Your gift card is already applied';
 $lang['error_updating_cart']				= 'There was an error updating the cart!';
 $lang['not_enough_stock']					= 'The quantity requested for the "%s" product could not be added. We only have %d item(s) in stock.';
 $lang['remove_item']						= 'Are you sure you want to remove this item from your cart?';
+
+//comment and like
+$lang['said']					= 'đã bình luận';
+$lang['comment']					= 'Bình luận';
+$lang['no_login_comment']					= 'Xin mời đăng nhập để bình luận về sản phẩm này.';
+$lang['no_login_like']					= 'Xin hãy đăng nhập để Like sản phẩm này.';
+$lang['people_like']					= 'người đã thích sản phẩm này.';
+$lang['you_and']					= 'bạn và';
+$lang['your_comment_here']					= 'Nhập bình luận của bạn vào dây';

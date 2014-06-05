@@ -253,3 +253,12 @@ $lang['giftcard_already_applied']			= 'Your gift card is already applied';
 $lang['error_updating_cart']				= 'There was an error updating the cart!';
 $lang['not_enough_stock']					= 'The quantity requested for the "%s" product could not be added. We only have %d item(s) in stock.';
 $lang['remove_item']						= 'Are you sure you want to remove this item from your cart?';
+
+//comment and like
+$lang['said']					= 'said';
+$lang['comment']					= 'Comment';
+$lang['no_login_comment']					= 'Please login to comment on this product.';
+$lang['no_login_like']					= 'Please login to like on this product.';
+$lang['people_like']					= 'people liked this product.';
+$lang['you_and']					= 'you and';
+$lang['your_comment_here']					= 'Enter your comment here';
