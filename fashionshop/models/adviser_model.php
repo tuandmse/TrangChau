@@ -13,11 +13,11 @@ class Adviser_model extends CI_Model {
 	}
   
    
-	function node_view_filter_CfType()
+	function node_view_filter_CfType($idCF)
 	{
 		//sort by alphabetically by default
 		$this->db->order_by('nodesNode', 'ASC');
-		$this->db->where('questionNode', 'c1');
+		$this->db->where('questionNode', $idCF);
 
 		$result	= $this->db->get('adviser_nodes');
 		return $result->result();
@@ -33,6 +33,30 @@ class Adviser_model extends CI_Model {
 		
 	}
 	
+		function node_view_filterYN($idCF)
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('nodesNode', 'ASC');
+		
+		$this->db->where('questionNode != "'.$idCF.'" and questionNode is NOT NULL  and  questionNode !="" ',null,false);
+
+		$result	= $this->db->get('adviser_nodes');
+		return $result->result();
+		
+	}
+	
+	function node_filter_questionNode($qN)
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('nodesNode', 'ASC');
+		$this->db->where('questionNode', $qN);
+		$result	= $this->db->get('adviser_nodes');
+		return $result->result();
+		
+	}
+	
+	
+	
 	function question_view()
 	{
 		//sort by alphabetically by default
@@ -43,6 +67,15 @@ class Adviser_model extends CI_Model {
 		
 	}
 	
+		function findIDCF()
+	{
+		//sort by alphabetically by default
+		$this->db->order_by('questionNode', 'ASC');
+		$this->db->where('questionType', 'CF');
+		$result	= $this->db->get('adviser_question');
+		return $result->result();
+		
+	}
 
 	
 	

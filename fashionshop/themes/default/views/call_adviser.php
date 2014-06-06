@@ -32,7 +32,11 @@
 						</div>
 						<div class="tab-content">
 							<div class="tab-pane active" id="infor">
-								<?php echo form_open('adviser', 'class="form-horizontal"'); ?>
+								<?php echo form_open('adviser', 'class="form-horizontal"'); 
+						
+
+								?>
+								
 								
 
 								 <?php foreach($question_view as $yn): ?>
@@ -46,7 +50,13 @@
 										<?php foreach($node_view as $a):?>
                                         <?php
 											if ($yn->questionNode == $a -> questionNode ) :
-											echo '<input type="radio" name="'.$a->questionNode.'" value="'.$a->nodesNode.'" checked> '.$a->nodesContent.'';
+											echo '<input type="radio" name="'.$a->questionNode.'" value="'.$a->nodesNode.'"> '.$a->nodesContent.'';
+											//echo form_radio($data);
+											//$data = array('name' => $a->questionNode, 'value' => $a->nodesNode);
+											//echo form_radio($data);
+											//echo ''.$a->nodesContent;
+											//echo form_radio(‘var’, ’1′, set_radio(‘var’, ’1′));
+
 											?>
 			                             <?php endif; ?>
 										<?php endforeach; ?>
@@ -68,12 +78,12 @@
 										</div>
 									</div>
 								</div>
-							</form>
+							
 							</div>
 							<div class="tab-pane" id="style">
-							<?php echo form_open('adviser', 'class="form-horizontal"'); ?>
-								 <?php foreach($cF_node_view as $node_entry): ?>
-									
+							<?php // echo form_open('adviser', 'class="form-horizontal"'); ?>
+								 <?php foreach($cF_node_view as $node_entry): ?>					
+
 									<div class="row">
 									<div class="span8">
 										<div class="control-group">
