@@ -42,7 +42,7 @@ class Adviser_question_model extends CI_Model {
             $this->db->insert('adviser_question', $data);
             $this->db->order_by("questionNode", "desc");
             $question = $this->db->get('adviser_question')->row();
-            return $this->db->get('adviser_question')->result()->row()->questionNode;
+            return $question->questionNode;
         }
         else
         {
