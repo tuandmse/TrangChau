@@ -14,7 +14,7 @@ class Adviser_question_model extends CI_Model {
     }
 
     function view() 	{
-        $this->db->order_by("questionNode", "asc");
+        $this->db->order_by("questionNode", "desc");
         return $this->db->get('adviser_question')->result();
     }
 
@@ -40,11 +40,15 @@ class Adviser_question_model extends CI_Model {
         if(count($question) < 1)
         {
             $this->db->insert('adviser_question', $data);
+            $this->db->order_by("questionNode", "desc");
+            $question = $this->db->get('adviser_question')->row();
+            return $this->db->get('adviser_question')->result()->row()->questionNode;
         }
         else
         {
             $this->db->where('questionNode', $data['questionNode']);
             $this->db->update('adviser_question', $data);
+            return $data['questionNode'];
         }
     }
 

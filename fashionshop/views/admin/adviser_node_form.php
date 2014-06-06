@@ -1,11 +1,15 @@
 <?php echo form_open($this->config->item('admin_folder') . '/adviser_node/form/' . $nodesNode); ?>
 <fieldset>
     <div class="control-group">
-        <label class="control-label" for="name">Nút</label>
 
+        <?php
+        if($nodesNode != ''){
+            echo '<label class=\"control-label\" for=\"name\">Đang chỉnh sửa cho nút: <b>'.$nodesNode.'</b></label>';
+        }
+        ?>
         <div class="controls">
             <?php
-            $data = array('name' => 'nodesNode', 'value' => set_value('nodesNode', $nodesNode), 'required' => '', 'class' => 'span2', 'maxlength' => '20');
+            $data = array('name' => 'nodesNode', 'type' => 'hidden', 'value' => set_value('nodesNode', $nodesNode), 'required' => '', 'class' => 'span2', 'maxlength' => '20');
             if($nodesNode != ''){
                 $data['readonly'] = 'readonly';
             }

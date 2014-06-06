@@ -14,7 +14,7 @@ class Adviser_node_model extends CI_Model {
     }
 
     function view() 	{
-        $this->db->order_by("nodesNode", "asc");
+        $this->db->order_by("nodesNode", "desc");
         return $this->db->get('adviser_nodes')->result();
     }
 

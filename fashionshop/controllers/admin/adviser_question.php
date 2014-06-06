@@ -60,13 +60,6 @@ class Adviser_Question extends Admin_Controller {
         //$this->form_validation->set_rules('username', 'lang:username', 'trim|required|max_length[128]|callback_check_username');
         $this->form_validation->set_rules('questionType', 'Loại Câu Hỏi', 'trim|required');
 
-        //if this is a new account require a password, or if they have entered either a password or a password confirmation
-//        if ($this->input->post('password') != '' || $this->input->post('confirm') != '' || !$id)
-//        {
-//            $this->form_validation->set_rules('password', 'lang:password', 'required|min_length[6]|sha1');
-//            $this->form_validation->set_rules('confirm', 'lang:confirm_password', 'required|matches[password]');
-//        }
-
         if ($this->form_validation->run() == FALSE)
         {
             $this->view($this->config->item('admin_folder').'/adviser_question_form', $data);
@@ -77,16 +70,16 @@ class Adviser_Question extends Admin_Controller {
             $save['questionContent']	= $this->input->post('questionContent');
             $save['questionType']	= $this->input->post('questionType');
 
-            $this->Adviser_question_model->save_adviser_question($save);
+            $questionNode = $this->Adviser_question_model->save_adviser_question($save);
             $nodesNodes = $this->input->post('nodesNode');
             $nodesContents = $this->input->post('nodesContent');
 
-            if(count($nodesNodes) >0){
-                foreach( $nodesNodes as $key=>$nodesNode){
-                    if($nodesNode!='' && $nodesContents[$key] != '') {
-                        $saveNode['nodesNode'] = $nodesNode;
-                        $saveNode['nodesContent'] = $nodesContents[$key];
-                        $saveNode['questionNode'] = $save['questionNode'];
+            if(count($nodesContents) >0){
+                foreach( $nodesContents as $key=>$nodesContent){
+                    if($nodesContent!='') {
+                        $saveNode['nodesNode'] = $nodesNodes[$key];
+                        $saveNode['nodesContent'] = $nodesContent;
+                        $saveNode['questionNode'] = $questionNode;
                         $this->Adviser_question_model->save_adviser_question_answer($saveNode);
                     }
                 }

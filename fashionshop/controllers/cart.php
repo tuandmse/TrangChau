@@ -1,6 +1,12 @@
 <?php
 
 class Cart extends Front_Controller {
+    function __construct()
+    {
+        parent::__construct();
+        $this->load->model(array('Like_and_comment_model'));
+        $this->load->helper('form');
+    }
 
 	function index()
 	{
@@ -235,8 +241,16 @@ class Cart extends Front_Controller {
 	{
 		//get the product
 		$data['product']	= $this->Product_model->get_product($id);
-		
-		
+
+        $data['product_id'] = $id;
+
+        $this->load->model('Like_and_comment_model');
+		$data['comments'] = $this->Like_and_comment_model->get_all_comment($id);
+        $data['likes'] = $this->Like_and_comment_model->count_all_like($id);
+
+        $customer = $this->go_cart->customer();
+        $data['is_like'] = $this->Like_and_comment_model->is_like($id, $customer['id']);
+
 		if(!$data['product'] || $data['product']->enabled==0)
 		{
 			show_404();

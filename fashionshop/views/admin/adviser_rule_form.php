@@ -1,14 +1,57 @@
 <div class="row">
     <?php echo form_open($this->config->item('admin_folder') . '/adviser_rule/form/' . $rulesId); ?>
+    <div class="span5">
+        <fieldset>
+            <div class="alert alert-info">
+                Chọn một hoặc nhiều nút vế trái làm giả thuyết
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="name">Nút Vế Trái</label>
+            </div>
+            <div class="answers">
+                <table>
+                    <?php if (isset($lefthand)) foreach ($lefthand as $entry): ?>
+                        <tr>
+                            <td><input name="leftclause[]" type="checkbox" value="<?php echo $entry->nodesNode; ?>"
+                                       class="gc_check"/></td>
+                            <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+        </fieldset>
+    </div>
+    <div class="span4">
+        <fieldset>
+            <div class="alert alert-info">
+                Chọn một nút vế phải làm kết luận
+            </div>
+            <div class="control-group">
+                <label class="control-label" for="name">Nút Vế Phải</label>
+
+            </div>
+
+            <div class="answers">
+                <table>
+                    <?php if (isset($righthand)) foreach ($righthand as $entry): ?>
+                        <tr>
+                            <td><input name="rightclause" type="radio" value="<?php echo $entry->nodesNode; ?>"
+                                       class="gc_check"/></td>
+                            <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
+                </table>
+            </div>
+        </fieldset>
+    </div>
     <div class="span3">
         <fieldset>
             <div class="control-group">
-                <label class="control-label" for="name">Mã Luật</label>
 
                 <div class="controls">
                     <?php
-                    $data = array('name' => 'rulesId', 'value' => set_value('rulesId', $rulesId), 'required' => '', 'class' => 'span2', 'maxlength' => '20');
-                    if($rulesId != ''){
+                    $data = array('name' => 'rulesId', 'type' => 'hidden', 'value' => set_value('rulesId', $rulesId), 'required' => '', 'class' => 'span2', 'maxlength' => '20');
+                    if ($rulesId != '') {
                         $data['readonly'] = 'readonly';
                     }
                     echo form_input($data);
@@ -36,55 +79,14 @@
             </div>
         </fieldset>
     </div>
-    <div class="span5">
-        <fieldset>
-            <div class="alert alert-info">
-                Chọn một hoặc nhiều nút vế trái làm giả thuyết
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="name">Nút Vế Trái</label>
-            </div>
-            <div class="answers">
-                <table>
-                <?php if(isset($lefthand)) foreach($lefthand as $entry): ?>
-                    <tr>
-                        <td><input name="leftclause[]" type="checkbox" value="<?php echo $entry->nodesNode; ?>" class="gc_check"/></td>
-                        <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
-                    </tr>
-                <?php endforeach; ?>
-                </table>
-            </div>
-        </fieldset>
-    </div>
-    <div class="span4">
-        <fieldset>
-            <div class="alert alert-info">
-                Chọn một nút vế phải làm kết luận
-            </div>
-            <div class="control-group">
-                <label class="control-label" for="name">Nút Vế Phải</label>
 
-            </div>
-
-            <div class="answers">
-                <table>
-                    <?php if(isset($righthand)) foreach($righthand as $entry): ?>
-                        <tr>
-                            <td><input name="rightclause" type="radio" value="<?php echo $entry->nodesNode; ?>" class="gc_check"/></td>
-                            <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </table>
-            </div>
-        </fieldset>
-    </div>
     </form>
 </div>
 <script type="text/javascript">
     $('form').submit(function () {
         $('.btn').attr('disabled', true).addClass('disabled');
     });
-    $("#addMoreAnswer").click(function(){
+    $("#addMoreAnswer").click(function () {
         $(".answers").append("<div class='controls'><input type='text' name='nodesNode[]' value='' class='span1' placeholder='Nút'/>            <input type='text' name='nodesContent[]' value='' class='span6' placeholder='Nội Dung Nút'/></div>");
     });
 </script>
