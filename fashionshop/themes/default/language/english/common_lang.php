@@ -262,3 +262,4 @@ $lang['no_login_like']					= 'Please login to like on this product.';
 $lang['people_like']					= 'people liked this product.';
 $lang['you_and']					= 'you and';
 $lang['your_comment_here']					= 'Enter your comment here';
+$lang['delete_comment']					= 'Delete comment';

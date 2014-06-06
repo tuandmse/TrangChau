@@ -253,6 +253,9 @@
                 }
             } else {
             ?>
+            <div class="form-actions">
+                <span><?php echo $likes; ?> <?php echo lang('people_like') ?></span>
+            </div>
             <div><?php echo lang('no_login_like') ?></div>
         <?php
         } ?>
@@ -264,6 +267,15 @@
                 foreach($comments as $comment){
             ?>
                 <div class="comment_user"><?php echo $comment->email; ?> <?php echo lang('said') ?>: </div>
+                    <?php if($this->session->userdata('admin')){ ?>
+                        <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/like_and_comment/delete_comment/'.$comment->id); ?>"><?php echo lang('delete_comment'); ?></a>
+                    <?php } else {
+                        if($comment->is_my_comment){
+                            ?>
+                            <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/like_and_comment/delete_comment/'.$comment->id); ?>"><?php echo lang('delete_comment'); ?></a>
+                        <?php
+                        }
+                    } ?>
                     <div class="comment_content"><?php echo $comment->content; ?></div>
             <?php
                 }

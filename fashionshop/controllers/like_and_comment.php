@@ -39,4 +39,18 @@ class Like_and_comment extends Front_Controller
         redirect($_SERVER['HTTP_REFERER']);
     }
 
+    function delete_comment($cid)
+    {
+        if($this->session->userdata('admin')){
+            $this->Like_and_comment_model->delete_comment($cid);
+        } else {
+            $customer = $this->go_cart->customer();
+            $comment = $this->Like_and_comment_model->get_a_comment($cid);
+            if($customer['id'] == $comment[0]->user_id){
+                $this->Like_and_comment_model->delete_comment($cid);
+            }
+        }
+        redirect($_SERVER['HTTP_REFERER']);
+    }
+
 } 

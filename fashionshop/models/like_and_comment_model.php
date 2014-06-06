@@ -14,9 +14,26 @@ class Like_and_comment_model extends CI_Model
         $this->db->select('email, content, comment.id');
         $this->db->join('customers', 'customers.id=comment.user_id', 'right');
         $this->db->where('product_id', $pid);
-        $result	= $this->db->get('comment');
+        $result	= $this->db->get('comment')->result();
 
-        return $result->result();
+        $customer = $this->go_cart->customer();
+        for($i = 0; $i < count($result); $i ++){
+            if($result[$i]->email == $customer['email']){
+                $result[$i]->is_my_comment = true;
+            } else {
+                $result[$i]->is_my_comment = false;
+            }
+        }
+
+        return $result;
+    }
+
+    function get_a_comment($cid)
+    {
+        $this->db->where('id', $cid);
+        $result	= $this->db->get('comment')->result();
+
+        return $result;
     }
 
     function count_all_like($pid)
@@ -57,5 +74,10 @@ class Like_and_comment_model extends CI_Model
         $comment['user_id'] = $uid;
         $comment['content'] = $content;
         $this->db->insert('comment', $comment);
+    }
+
+    function delete_comment($cid)
+    {
+        $this->db->delete('comment', array('id'=>$cid));
     }
 } 
