@@ -30,7 +30,7 @@
                     <td style="white-space:nowrap"><?php echo $entry->rulesContent; ?></td>
                     <td style="white-space:nowrap"><?php echo $entry->rulesCF; ?></td>
                     <td>
-                        <a class="btn btn-small" style="float:right;"href="<?php echo site_url($this->config->item('admin_folder').'/adviser_rule/form/'.$entry->rulesId);?>"><i class="icon-search"></i> <?php echo lang('form_view')?></a>
+<!--                        <a class="btn btn-small" style="float:right;"href="--><?php //echo site_url($this->config->item('admin_folder').'/adviser_rule/form/'.$entry->rulesId);?><!--"><i class="icon-search"></i> --><?php //echo lang('form_view')?><!--</a>-->
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -36,59 +36,50 @@ class Adviser_Rule extends Admin_Controller
     {
         $data1 = new stdClass();
         $data1->node = "NODE000012";
-        $data1->cf = "0.6";
+        $data1->cf = "0.5";
         $data2 = new stdClass();
         $data2->node = "NODE000013";
-        $data2->cf = "0.2";
+        $data2->cf = "0.9";
         $data3 = new stdClass();
         $data3->node = "NODE000018";
-        $data3->cf = "0.8";
-        $inputs = array('1' => $data1, "2" => $data2, "3" => $data3);
-        $data["rules"] = $this->Adviser_rule_model->view();
-        $usable_rule = array();
-        echo 'Usable rule: <br>';
-        foreach ($data["rules"] as $rule) {
-            $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
-            $found = true;
-            foreach ($exploded as $key => $ruleId) {
-                if ($key < count($exploded) - 1) {
-                    if (!$this->check_exist_in_arrays($inputs, $ruleId)) {
-                        $found = false;
-                    }
-                }
-            }
-            if ($found == true) {
-                echo $rule->rulesId.'<br>';
-                array_push($usable_rule, $rule);
-            }
-        }
-        foreach($usable_rule as $urule){
-            $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
-            $lastItem = $exploded[count($exploded)-1];
-            if(!$this->check_exist_in_arrays($inputs,$lastItem )){
-                $dataTemp = new stdClass();
-                $dataTemp->node = $lastItem;
-                //$dataTemp->cf = $urule->rulesCF;
-                array_push($inputs, $dataTemp);
-            }
-        }
+        $data3->cf = "0.2";
+        $data4 = new stdClass();
+        $data4->node = "NODE000011";
+        $data4->cf = "0.6";
+        $inputs = array('1' => $data1, "2" => $data2, "3" => $data3, '4' => $data4);
+        $rules = $this->Adviser_rule_model->view();
+
+        $usable_rule = $this->get_usable_rule($inputs, $rules);
+
+//        foreach($usable_rule as $urule){
+//            $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
+//            $lastItem = $exploded[count($exploded)-1];
+//            if(!$this->check_exist_in_arrays($inputs,$lastItem )){
+//                $dataTemp = new stdClass();
+//                $dataTemp->node = $lastItem;
+//                //$dataTemp->cf = $urule->rulesCF;
+//                array_push($inputs, $dataTemp);
+//            }
+//        }
         $superFinal = new stdClass();
         $finalResult = array();
         $maxCF = 0;
-        foreach($usable_rule as $key=>$urule){
+        foreach ($usable_rule as $key => $urule) {
             $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
-            $lastItem = $exploded[count($exploded)-1];
+            $lastItem = $exploded[count($exploded) - 1];
             array_push($finalResult, $urule);
             unset($usable_rule[$key]);
-            foreach($usable_rule as $key2=>$urule2){
+            $usable_rule = array_values($usable_rule);
+            foreach ($usable_rule as $key2 => $urule2) {
                 $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
-                $lastItem2 = $exploded2[count($exploded2)-1];
-                if($lastItem2 == $lastItem){
+                $lastItem2 = $exploded2[count($exploded2) - 1];
+                if ($lastItem2 == $lastItem) {
                     array_push($finalResult, $urule2);
                     unset($usable_rule[$key2]);
+                    $usable_rule = array_values($usable_rule);
                 }
             }
-            if($this->calculateCF($inputs, $finalResult) > $maxCF){
+            if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
                 $superFinal->node = $lastItem;
                 $superFinal->cf = $this->calculateCF($inputs, $finalResult);
                 $maxCF = $this->calculateCF($inputs, $finalResult);
@@ -97,51 +88,103 @@ class Adviser_Rule extends Admin_Controller
         }
 
         $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
-        echo 'Trang phuc phu hop voi ban la: '.$suggestNodes->nodesContent;
+        echo 'Trang phuc phu hop voi ban la: ' . $suggestNodes->nodesContent;
 
     }
 
-    function getInputFormInputs($inputs, $id){
-        foreach($inputs as $input){
-            if($input->node == $id){
+    // get usable rule depends on user's input
+    function get_usable_rule($inputs, $rules){
+        // init the array for outputting
+        $usable_rule = array();
+        foreach ($rules as $rule) {
+            // explode the rulesContent content into multiple nodesNode
+            $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
+            $flag = true;
+            // for each nodesNode in the rulesContent
+            foreach ($exploded as $key => $nodesNode) {
+                // if nodesNode is in the leftside
+                if ($key < count($exploded) - 1) {
+                    // if nodesNode is not exist in user's inputs
+                    // flag=false as the rule is not usable
+                    if (!$this->check_exist_in_arrays($inputs, $nodesNode)) {
+                        $flag = false;
+                    }
+                }
+            }
+            // if flag remain true after the foreach loop, rule is usable
+            // push rule to the array for outputting
+            if ($flag == true) {
+                array_push($usable_rule, $rule);
+            }
+        }
+        // return the array of usable rule(s)
+        return $usable_rule;
+    }
+
+    // get the single input from user's input
+    function getSingleInputFormInputs($inputs, $id)
+    {
+        foreach ($inputs as $input) {
+            if ($input->node == $id) {
                 return $input;
             }
         }
     }
 
-    function calculateCF($inputs, $finalResult){
-        $fMang = array();
-        foreach($finalResult as $ruleTemp){
+    function calculateCF($inputs, $finalResult)
+    {
+        $fArray = array();
+        foreach ($finalResult as $ruleTemp) {
             $exploded = $this->multiexplode(array("^", "=>"), $ruleTemp->rulesContent);
-            $minCF = $this->getInputFormInputs($inputs,$exploded[0])->cf;
-            foreach($exploded as $key=>$id){
-                if($key < count($exploded) -1){
-                    if($this->getInputFormInputs($inputs,$id)->cf < $minCF){
-                        $minCF = $this->getInputFormInputs($inputs,$id)->cf;
+            $minCF = $this->getSingleInputFormInputs($inputs, $exploded[0])->cf;
+            foreach ($exploded as $key => $id) {
+                if ($key < count($exploded) - 1) {
+                    if ($this->getSingleInputFormInputs($inputs, $id)->cf < $minCF) {
+                        $minCF = $this->getSingleInputFormInputs($inputs, $id)->cf;
                     }
                 }
             }
-            $f = $minCF*$ruleTemp->rulesCF;
-            array_push($fMang, $f);
+            $f = $minCF * $ruleTemp->rulesCF;
+            array_push($fArray, $f);
         }
-        return $this->callToGod($fMang);
+        return $this->recursiveCertainty($fArray);
     }
 
-    function callToGod($inputs){
-        if(count($inputs) == 1){
+    // calculate the certainty
+    function recursiveCertainty($inputs)
+    {
+        // if input array is empty, return 0
+        if (count($inputs) == 0) {
+            return 0;
+        }
+        //else if input array contains 1 item, return its value
+        else if (count($inputs) == 1) {
             return $inputs[0];
         } else {
-            $tam = 0;
-            if($inputs[0] > 0 && $inputs[1] > 0){
-                $tam = $inputs[0] + $inputs[1] - ($inputs[0]*$inputs[1]);
-            } else if ($inputs[0] < 0 && $inputs[1] < 0){
-                $tam = $inputs[0] + $inputs[1] + ($inputs[0]*$inputs[1]);
-            } else {
-                $tam = ($inputs[0] + $inputs[1])/ (1 - min(abs($inputs[0]), abs($inputs[1])));
+            // this happens when multiple rules have the same conclusion
+            // if both CF are positive
+            // CF(t) = CF(t1) + CF(t2) – CF(t1) * CF(t2)
+            if ($inputs[0] > 0 && $inputs[1] > 0) {
+                $tam = $inputs[0] + $inputs[1] - ($inputs[0] * $inputs[1]);
             }
+            // if both CF are negative
+            // CF(t) = CF(t1) + CF(t2) + CF(t1) * CF(t2)
+            else if ($inputs[0] < 0 && $inputs[1] < 0) {
+                $tam = $inputs[0] + $inputs[1] + ($inputs[0] * $inputs[1]);
+            }
+            // otherwise
+            // CF(t) = (CF(t1) + CF(t2)) / (1 – MIN(ABS(CF(t1)), ABS(CF(t2))))
+            else {
+                $tam = ($inputs[0] + $inputs[1]) / (1 - min(abs($inputs[0]), abs($inputs[1])));
+            }
+            // set CF(t) to the first item in array
             $inputs[0] = $tam;
+            // remove the second item out of array
             unset($inputs[1]);
-            $this->callToGod($inputs);
+            // reindex the array
+            $inputs = array_values($inputs);
+            // call recursively function until the input arrays has only 1 item
+            $this->recursiveCertainty($inputs);
         }
     }
 
@@ -165,28 +208,6 @@ class Adviser_Rule extends Admin_Controller
             $data["rules"][$ruleKey]->rulesContent = $newContent;
         }
         $this->view($this->config->item('admin_folder') . '/adviser_rule', $data);
-    }
-
-    function viewdetails($id)
-    {
-        $data['guestbook'] = $this->Adviser_rule_model->viewdetails($id);
-        $this->view($this->config->item('admin_folder') . '/adviser_node/form/' . $id, $data);
-    }
-
-    function calculate_result()
-    {
-        $questions = $this->Adviser_question_model->view();
-        $nodes = $this->Adviser_node_model->view();
-
-        $answers = array();
-        foreach ($questions as $question) {
-            if ($question->$questionType = 'YN') {
-                $answers[$question->$questionNode] = $this->input->post($question->$questionNode);
-            }
-            if ($question->$questionType = 'CF') {
-                $answers[$question->$questionNode] = $this->input->post($question->$questionNode);
-            }
-        }
     }
 
     function form($id = false)
