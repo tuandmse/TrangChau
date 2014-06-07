@@ -33,31 +33,17 @@ class Adviser extends Front_Controller
 		$data["ID_of_CF"]   = $this->Adviser_model->findIDCF();
 
 		
-		//truyen vo cho nay
         $data["node_view_filterYN"]   = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
-		//truyen vo cho nay
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
         
         
         $data["question_view"] = $this->Adviser_model->question_view();
         
-        //if( $this->input->post("submitInfor") ) {
-        //   if( $this->Adviser_model->test()) 	{
-        //      $data["postedInfor"] = true;
-        //	   $data["postedStyle"] = false;
-        //    }
-        //}
-        
-        
-		//foreach(  $data["node_view_filterYN"]  as $fltyb){
-		
-		//echo ''.$fltyb->questionNode;
-		//}
+    
 		
 		
         if ($this->input->post("submitInfor")) {
             
-						//var_dump($this->input->post("c2"));
 						$answerYN = array();
 						$answer = array();
 						
@@ -69,7 +55,6 @@ class Adviser extends Front_Controller
 						$obj = new stdClass();
 						$obj->node =  $this->input->post($node_entry->questionNode);
 						$obj->cf =  1;
-						
 						$answer[$i]=$obj;
 						$i++;
 						
@@ -88,7 +73,6 @@ class Adviser extends Front_Controller
 						$i++;
                         }
 						
-						var_dump($answer);
 			
 			
         }

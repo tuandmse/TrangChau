@@ -44,6 +44,8 @@ class Adviser_Rule extends Admin_Controller
         $data3->node = "NODE000018";
         $data3->cf = "0.8";
         $inputs = array('1' => $data1, "2" => $data2, "3" => $data3);
+		
+		
         $data["rules"] = $this->Adviser_rule_model->view();
         $usable_rule = array();
         echo 'Usable rule: <br>';
