@@ -34,19 +34,24 @@ class Adviser_Rule extends Admin_Controller
 
     function advice_processing()
     {
+        header('Content-Type: text/html; charset=utf-8');
+        $inputs = array();
         $data1 = new stdClass();
         $data1->node = "NODE000012";
         $data1->cf = "0.5";
+        array_push($inputs, $data1);
         $data2 = new stdClass();
         $data2->node = "NODE000013";
         $data2->cf = "0.9";
+        array_push($inputs, $data2);
         $data3 = new stdClass();
         $data3->node = "NODE000018";
         $data3->cf = "0.2";
+        array_push($inputs, $data3);
         $data4 = new stdClass();
         $data4->node = "NODE000011";
         $data4->cf = "0.6";
-        $inputs = array('1' => $data1, "2" => $data2, "3" => $data3, '4' => $data4);
+        array_push($inputs, $data4);
         $rules = $this->Adviser_rule_model->view();
 
         $usable_rule = $this->get_usable_rule($inputs, $rules);
@@ -61,39 +66,42 @@ class Adviser_Rule extends Admin_Controller
 //                array_push($inputs, $dataTemp);
 //            }
 //        }
-        $superFinal = new stdClass();
-        $finalResult = array();
-        $maxCF = 0;
-        foreach ($usable_rule as $key => $urule) {
-            $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
-            $lastItem = $exploded[count($exploded) - 1];
-            array_push($finalResult, $urule);
-            unset($usable_rule[$key]);
-            $usable_rule = array_values($usable_rule);
-            foreach ($usable_rule as $key2 => $urule2) {
-                $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
-                $lastItem2 = $exploded2[count($exploded2) - 1];
-                if ($lastItem2 == $lastItem) {
-                    array_push($finalResult, $urule2);
-                    unset($usable_rule[$key2]);
-                    $usable_rule = array_values($usable_rule);
-                }
-            }
-            if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
-                $superFinal->node = $lastItem;
-                $superFinal->cf = $this->calculateCF($inputs, $finalResult);
-                $maxCF = $this->calculateCF($inputs, $finalResult);
-            }
+        if (count($usable_rule) > 0) {
+            $superFinal = new stdClass();
             $finalResult = array();
+            $maxCF = 0;
+            foreach ($usable_rule as $key => $urule) {
+                $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
+                $lastItem = $exploded[count($exploded) - 1];
+                array_push($finalResult, $urule);
+                unset($usable_rule[$key]);
+                $usable_rule = array_values($usable_rule);
+                foreach ($usable_rule as $key2 => $urule2) {
+                    $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
+                    $lastItem2 = $exploded2[count($exploded2) - 1];
+                    if ($lastItem2 == $lastItem) {
+                        array_push($finalResult, $urule2);
+                        unset($usable_rule[$key2]);
+                        $usable_rule = array_values($usable_rule);
+                    }
+                }
+                if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
+                    $superFinal->node = $lastItem;
+                    $superFinal->cf = $this->calculateCF($inputs, $finalResult);
+                    $maxCF = $this->calculateCF($inputs, $finalResult);
+                }
+                $finalResult = array();
+            }
+            $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
+            echo 'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
+        } else {
+            echo 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
         }
-
-        $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
-        echo 'Trang phuc phu hop voi ban la: ' . $suggestNodes->nodesContent;
-
     }
 
     // get usable rule depends on user's input
-    function get_usable_rule($inputs, $rules){
+    function get_usable_rule($inputs, $rules)
+    {
         // init the array for outputting
         $usable_rule = array();
         foreach ($rules as $rule) {
@@ -156,8 +164,7 @@ class Adviser_Rule extends Admin_Controller
         // if input array is empty, return 0
         if (count($inputs) == 0) {
             return 0;
-        }
-        //else if input array contains 1 item, return its value
+        } //else if input array contains 1 item, return its value
         else if (count($inputs) == 1) {
             return $inputs[0];
         } else {
@@ -166,13 +173,11 @@ class Adviser_Rule extends Admin_Controller
             // CF(t) = CF(t1) + CF(t2) – CF(t1) * CF(t2)
             if ($inputs[0] > 0 && $inputs[1] > 0) {
                 $tam = $inputs[0] + $inputs[1] - ($inputs[0] * $inputs[1]);
-            }
-            // if both CF are negative
+            } // if both CF are negative
             // CF(t) = CF(t1) + CF(t2) + CF(t1) * CF(t2)
             else if ($inputs[0] < 0 && $inputs[1] < 0) {
                 $tam = $inputs[0] + $inputs[1] + ($inputs[0] * $inputs[1]);
-            }
-            // otherwise
+            } // otherwise
             // CF(t) = (CF(t1) + CF(t2)) / (1 – MIN(ABS(CF(t1)), ABS(CF(t2))))
             else {
                 $tam = ($inputs[0] + $inputs[1]) / (1 - min(abs($inputs[0]), abs($inputs[1])));
