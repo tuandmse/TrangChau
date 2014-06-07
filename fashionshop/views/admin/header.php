@@ -108,7 +108,7 @@ $(document).ready(function(){
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>categories"><?php echo lang('common_categories') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>products"><?php echo lang('common_products') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>digital_products"><?php echo lang('common_digital_products') ?></a></li>
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--digital_products">--><?php //echo lang('common_digital_products') ?><!--</a></li>-->
                         </ul>
                     </li>
                     <li class="dropdown">
@@ -135,11 +135,11 @@ $(document).ready(function(){
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>banners"><?php echo lang('common_banners') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>settings"><?php echo lang('common_gocart_configuration') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>shipping"><?php echo lang('common_shipping_modules') ?></a></li>
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--settings">--><?php //echo lang('common_gocart_configuration') ?><!--</a></li>-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--shipping">--><?php //echo lang('common_shipping_modules') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>payment"><?php echo lang('common_payment_modules') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>settings/canned_messages"><?php echo lang('common_canned_messages') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>locations"><?php echo lang('common_locations') ?></a></li>
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--settings/canned_messages">--><?php //echo lang('common_canned_messages') ?><!--</a></li>-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--locations">--><?php //echo lang('common_locations') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>admin"><?php echo lang('common_administrators') ?></a></li>
                         </ul>
                     </li>

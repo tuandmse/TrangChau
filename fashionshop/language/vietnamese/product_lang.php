@@ -24,6 +24,7 @@ $lang['saleprice']					= 'Sale Price';
 $lang['weight']						= 'Weight';
 $lang['attributes']					= 'Attributes';
 $lang['categories']					= 'Categories';
+$lang['advisers']					= 'Adviser Rules';
 $lang['filters']					= 'Filters';
 $lang['add_category']				= 'Add Category';
 $lang['header_information']			= 'SEO Information';

@@ -12,9 +12,9 @@
                 <table>
                     <?php if (isset($lefthand)) foreach ($lefthand as $entry): ?>
                         <tr>
-                            <td><input name="leftclause[]" type="checkbox" value="<?php echo $entry->nodesNode; ?>"
+                            <td style="vertical-align: text-top;"><input name="leftclause[]" type="checkbox" value="<?php echo $entry->nodesNode; ?>"
                                        class="gc_check"/></td>
-                            <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
+                            <td style=""><?php echo $entry->nodesContent; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>
@@ -35,9 +35,9 @@
                 <table>
                     <?php if (isset($righthand)) foreach ($righthand as $entry): ?>
                         <tr>
-                            <td><input name="rightclause" type="radio" value="<?php echo $entry->nodesNode; ?>"
+                            <td style="vertical-align: text-top;"><input name="rightclause" type="radio" value="<?php echo $entry->nodesNode; ?>"
                                        class="gc_check"/></td>
-                            <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
+                            <td style=""><?php echo $entry->nodesContent; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

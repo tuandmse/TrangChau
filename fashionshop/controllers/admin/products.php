@@ -10,7 +10,7 @@ class Products extends Admin_Controller {
         
 		//$this->auth->check_access('Admin', true);
 		
-		$this->load->model(array('Product_model'));
+		$this->load->model(array('Product_model', 'Adviser_rule_model'));
 		$this->load->helper('form');
 		$this->lang->load('product');
 	}
@@ -140,6 +140,7 @@ class Products extends Admin_Controller {
 		
 		$data['categories']		= $this->Category_model->get_categories_tiered();
 		$data['file_list']		= $this->Digital_Product_model->get_list();
+        $data['nodeRight']      = $this->Adviser_rule_model->list_righthand();
 
 		$data['page_title']		= lang('product_form');
 
@@ -161,6 +162,7 @@ class Products extends Admin_Controller {
 		$data['fixed_quantity']		= '';
 		$data['quantity']			= '';
 		$data['enabled']			= '';
+        $data['adviserNode']        = '';
 		$data['related_products']	= array();
 		$data['product_categories']	= array();
 		$data['images']				= array();
@@ -210,6 +212,7 @@ class Products extends Admin_Controller {
 			$data['taxable']			= $product->taxable;
 			$data['fixed_quantity']		= $product->fixed_quantity;
 			$data['enabled']			= $product->enabled;
+            $data['adviserNode']        = $product->adviserNode;
 			
 			//make sure we haven't submitted the form yet before we pull in the images/related products from the database
 			if(!$this->input->post('submit'))
@@ -277,6 +280,7 @@ class Products extends Admin_Controller {
 			$data['related_products']	= $this->input->post('related_products');
 			$data['product_categories']	= $this->input->post('categories');
 			$data['images']				= $this->input->post('images');
+            $data['adviserNode']		= $this->input->post('adviserNode');
 			$data['product_files']		= $this->input->post('downloads');
 			
 		}
@@ -332,6 +336,7 @@ class Products extends Admin_Controller {
 			$save['shippable']			= $this->input->post('shippable');
 			$save['taxable']			= $this->input->post('taxable');
 			$save['enabled']			= $this->input->post('enabled');
+            $save['adviserNode']		= $this->input->post('adviserNode');
 			$post_images				= $this->input->post('images');
 			
 			$save['slug']				= $slug;

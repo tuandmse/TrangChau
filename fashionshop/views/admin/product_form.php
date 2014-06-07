@@ -26,7 +26,7 @@ $(document).ready(function() {
 function add_product_image(data)
 {
 	p	= data.split('.');
-	
+
 	var photo = '<?php add_image("'+p[0]+'", "'+p[0]+'.'+p[1]+'", '', '', '', base_url('uploads/images/thumbnails'));?>';
 	$('#gc_photos').append(photo);
 	$('#gc_photos').sortable('destroy');
@@ -44,7 +44,7 @@ function remove_image(img)
 
 function photos_sortable()
 {
-	$('#gc_photos').sortable({	
+	$('#gc_photos').sortable({
 		handle : '.gc_thumbnail',
 		items: '.gc_photo',
 		axis: 'y',
@@ -78,6 +78,7 @@ function remove_option(id)
 				<li><a href="#product_options" data-toggle="tab"><?php echo lang('options');?></a></li>
 				<li><a href="#product_related" data-toggle="tab"><?php echo lang('related_products');?></a></li>
 				<li><a href="#product_photos" data-toggle="tab"><?php echo lang('images');?></a></li>
+                <li><a href="#product_adviser" data-toggle="tab"><?php echo lang('advisers');?></a></li>
 			</ul>
 		</div>
 		<div class="tab-content">
@@ -90,18 +91,18 @@ function remove_option(id)
 						?>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="span8">
-						
+
 						<?php
 						$data	= array('name'=>'description', 'class'=>'redactor', 'value'=>set_value('description', $description));
 						echo form_textarea($data);
 						?>
-						
+
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="span8">
 						<label><?php echo lang('excerpt');?></label>
@@ -111,7 +112,7 @@ function remove_option(id)
 						?>
 					</div>
 				</div>
-				
+
 				<div class="row">
 					<div class="span8">
 						<fieldset>
@@ -152,19 +153,19 @@ function remove_option(id)
 							<legend><?php echo lang('header_information');?></legend>
 							<div class="row" style="padding-top:10px;">
 								<div class="span8">
-									
+
 									<label for="slug"><?php echo lang('slug');?> </label>
 									<?php
 									$data	= array('name'=>'slug', 'value'=>set_value('slug', $slug), 'class'=>'span8');
 									echo form_input($data);?>
-									
+
 									<label for="seo_title"><?php echo lang('seo_title');?> </label>
 									<?php
 									$data	= array('name'=>'seo_title', 'value'=>set_value('seo_title', $seo_title), 'class'=>'span8');
 									echo form_input($data);
 									?>
 
-									<label for="meta"><?php echo lang('meta');?> <i><?php echo lang('meta_example');?></i></label> 
+									<label for="meta"><?php echo lang('meta');?> <i><?php echo lang('meta_example');?></i></label>
 									<?php
 									$data	= array('name'=>'meta', 'value'=>set_value('meta', html_entity_decode($meta)), 'class'=>'span8');
 									echo form_textarea($data);
@@ -175,7 +176,7 @@ function remove_option(id)
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tab-pane" id="product_downloads">
 				<div class="alert alert-info">
 					<?php echo lang('digital_products_desc'); ?>
@@ -204,7 +205,7 @@ function remove_option(id)
 					</table>
 				</fieldset>
 			</div>
-			
+
 			<div class="tab-pane" id="product_categories">
 				<div class="row">
 					<div class="span8">
@@ -218,7 +219,7 @@ function remove_option(id)
 								</thead>
 							<?php
 							function list_categories($parent_id, $cats, $sub='', $product_categories) {
-			
+
 								foreach ($cats[$parent_id] as $cat):?>
 								<tr>
 									<td><?php echo  $sub.$cat->name; ?></td>
@@ -235,10 +236,7 @@ function remove_option(id)
 								}
 								endforeach;
 							}
-						
-						
 							list_categories(0, $categories, '', $product_categories);
-						
 							?>
 						</table>
 					<?php else:?>
@@ -247,7 +245,7 @@ function remove_option(id)
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="tab-pane" id="product_options">
 				<div class="row">
 					<div class="span8">
@@ -264,9 +262,9 @@ function remove_option(id)
 						</div>
 					</div>
 				</div>
-				
+
 				<script type="text/javascript">
-				
+
 				$( "#add_option" ).click(function(){
 					if($('#option_options').val() != '')
 					{
@@ -274,12 +272,12 @@ function remove_option(id)
 						$('#option_options').val('');
 					}
 				});
-				
+
 				function add_option(type)
 				{
 					//increase option_count by 1
 					option_count++;
-					
+
 					<?php
 					$value			= array(array('name'=>'', 'value'=>'', 'weight'=>'', 'price'=>'', 'limit'=>''));
 					$js_textfield	= (object)array('name'=>'', 'type'=>'textfield', 'required'=>false, 'values'=>$value);
@@ -309,10 +307,10 @@ function remove_option(id)
 						$('#options_container').append('<?php add_option($js_droplist, "'+option_count+'");?>');
 					}
 				}
-				
+
 				function add_option_value(option)
 				{
-					
+
 					option_value_count++;
 					<?php
 					$js_po	= (object)array('type'=>'radiolist');
@@ -320,22 +318,22 @@ function remove_option(id)
 					?>
 					$('#option-items-'+option).append('<?php add_option_value($js_po, "'+option+'", "'+option_value_count+'", $value);?>');
 				}
-				
+
 				$(document).ready(function(){
 					$('body').on('click', '.option_title', function(){
 						$($(this).attr('href')).slideToggle();
 						return false;
 					});
-					
+
 					$('body').on('click', '.delete-option-value', function(){
 						if(confirm('<?php echo lang('confirm_remove_value');?>'))
 						{
 							$(this).closest('.option-values-form').remove();
 						}
 					});
-					
-					
-					
+
+
+
 					$('#options_container').sortable({
 						axis: "y",
 						items:'tr',
@@ -343,7 +341,7 @@ function remove_option(id)
 						forceHelperSize: true,
 						forcePlaceholderSize: true
 					});
-					
+
 					$('.option-items').sortable({
 						axis: "y",
 						handle:'.handle',
@@ -367,7 +365,7 @@ function remove_option(id)
 						margin-bottom:5px;
 						border:1px solid #ddd;
 					}
-					
+
 					.option-values-form input {
 						margin:0px;
 					}
@@ -381,7 +379,7 @@ function remove_option(id)
 							<?php
 							$counter	= 0;
 							if(!empty($product_options))
-							
+
 							{
 								foreach($product_options as $po)
 								{
@@ -392,7 +390,7 @@ function remove_option(id)
 									$counter++;
 								}
 							}?>
-								
+
 						</table>
 					</div>
 				</div>
@@ -414,22 +412,22 @@ function remove_option(id)
 									$('#product_list').html('');
 									run_product_query();
 								});
-						
+
 								function run_product_query()
 								{
 									$.post("<?php echo site_url($this->config->item('admin_folder').'/products/product_autocomplete/');?>", { name: $('#product_search').val(), limit:10},
 										function(data) {
-									
+
 											$('#product_list').html('');
-									
+
 											$.each(data, function(index, value){
-									
+
 												if($('#related_product_'+index).length == 0)
 												{
 													$('#product_list').append('<option id="product_item_'+index+'" value="'+index+'">'+value+'</option>');
 												}
 											});
-									
+
 									}, 'json');
 								}
 								</script>
@@ -460,16 +458,15 @@ function remove_option(id)
 					</div>
 				</div>
 			</div>
-			
 			<div class="tab-pane" id="product_photos">
 				<div class="row">
 					<iframe id="iframe_uploader" src="<?php echo site_url($this->config->item('admin_folder').'/products/product_image_form');?>" class="span8" style="height:75px; border:0px;"></iframe>
 				</div>
 				<div class="row">
 					<div class="span8">
-						
+
 						<div id="gc_photos">
-							
+
 						<?php
 						foreach($images as $photo_id=>$photo_obj)
 						{
@@ -485,6 +482,33 @@ function remove_option(id)
 					</div>
 				</div>
 			</div>
+            <div class="tab-pane" id="product_adviser">
+                <div class="row">
+                    <div class="span8">
+                        <?php if(isset($nodeRight[0])):?>
+                            <label><strong>Add this product as suggestion for the adviser</strong></label>
+                            <table class="table table-striped">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th colspan="2">Type of suggestion</th>
+                                </tr>
+                                </thead>
+                                <?php if (isset($nodeRight)) foreach ($nodeRight as $entry): ?>
+                                    <tr>
+                                        <td style="vertical-align: text-top;">
+                                            <input name="adviserNode" type="radio" value="<?php echo $entry->nodesNode; ?>" <?php if($entry->nodesNode==$adviserNode){echo "checked=\"checked\"";} ?> class="gc_check"/>
+                                        </td>
+                                        <td style=""><?php echo $entry->nodesContent; ?></td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </table>
+                        <?php else:?>
+                            <div class="alert"><?php echo lang('no_available_categories');?></div>
+                        <?php endif;?>
+                    </div>
+                </div>
+            </div>
 		</div>
 	</div>
 	<div class="span4">
@@ -494,36 +518,36 @@ function remove_option(id)
 							);
 		echo form_dropdown('enabled', $options, set_value('enabled',$enabled), 'class="span4"');
 		?>
-		
+
 		<?php
 		$options = array(	 '1'	=> lang('shippable')
 							,'0'	=> lang('not_shippable')
 							);
 		echo form_dropdown('shippable', $options, set_value('shippable',$shippable), 'class="span4"');
 		?>
-		
+
 		<?php
 		$options = array(	 '1'	=> lang('taxable')
 							,'0'	=> lang('not_taxable')
 							);
 		echo form_dropdown('taxable', $options, set_value('taxable',$taxable), 'class="span4"');
 		?>
-		
+
 		<label for="sku"><?php echo lang('sku');?></label>
 		<?php
 		$data	= array('name'=>'sku', 'value'=>set_value('sku', $sku), 'class'=>'span4');
 		echo form_input($data);?>
-		
+
 		<label for="weight"><?php echo lang('weight');?> </label>
 		<?php
 		$data	= array('name'=>'weight', 'value'=>set_value('weight', $weight), 'class'=>'span4');
 		echo form_input($data);?>
-		
+
 		<label for="price"><?php echo lang('price');?></label>
 		<?php
 		$data	= array('name'=>'price', 'value'=>set_value('price', $price), 'class'=>'span4');
 		echo form_input($data);?>
-		
+
 		<label for="saleprice"><?php echo lang('saleprice');?></label>
 		<?php
 		$data	= array('name'=>'saleprice', 'value'=>set_value('saleprice', $saleprice), 'class'=>'span4');
@@ -572,7 +596,7 @@ function add_image($photo_id, $filename, $alt, $caption, $primary=false)
 	$stuff = ob_get_contents();
 
 	ob_end_clean();
-	
+
 	echo replace_newline($stuff);
 }
 
@@ -589,11 +613,11 @@ function add_option($po, $count)
 			<input type="hidden" name="option[<?php echo $count;?>][type]" value="<?php echo $po->type;?>" />
 			<div class="option-form" id="option-form-<?php echo $count;?>">
 				<div class="row-fluid">
-				
+
 					<div class="span10">
 						<input type="text" class="span10" placeholder="<?php echo lang('option_name');?>" name="option[<?php echo $count;?>][name]" value="<?php echo $po->name;?>"/>
 					</div>
-					
+
 					<div class="span2" style="text-align:right;">
 						<input class="checkbox" type="checkbox" name="option[<?php echo $count;?>][required]" value="1" <?php echo ($po->required)?'checked="checked"':'';?>/> <?php echo lang('required');?>
 					</div>
@@ -632,12 +656,12 @@ function add_option($po, $count)
 			</div>
 		</td>
 	</tr>
-	
+
 	<?php
 	$stuff = ob_get_contents();
 
 	ob_end_clean();
-	
+
 	echo replace_newline($stuff);
 }
 
@@ -711,7 +735,7 @@ function remove_related_product(id)
 
 function photos_sortable()
 {
-	$('#gc_photos').sortable({	
+	$('#gc_photos').sortable({
 		handle : '.gc_thumbnail',
 		items: '.gc_photo',
 		axis: 'y',

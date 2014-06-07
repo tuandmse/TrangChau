@@ -10,13 +10,13 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th><input type="checkbox" id="gc_check_all" />
+                <th style="white-space:nowrap"><input type="checkbox" id="gc_check_all" />
                     <button type="submit" class="btn btn-small btn-danger"
                         <?php echo (count($nodes) < 1)?'disabled="disabled"':''?>>
                     <i class="icon-trash icon-white"></i></button></th>
-                <th>Nút</th>
-                <th>Nội Dung</th>
-                <th>Nút Của Câu Hỏi</th>
+                <th style="white-space:nowrap">Nút</th>
+                <th style="white-space:nowrap">Nội Dung</th>
+                <th style="white-space:nowrap">Nút Của Câu Hỏi</th>
                 <th></th>
             </tr>
             </thead>
@@ -27,7 +27,7 @@
                 <tr>
                     <td><input name="order[]" type="checkbox" value="<?php echo $entry->nodesNode; ?>" class="gc_check"/></td>
                     <td style="white-space:nowrap"><?php echo $entry->nodesNode; ?></td>
-                    <td style="white-space:nowrap"><?php echo $entry->nodesContent; ?></td>
+                    <td style=""><?php echo $entry->nodesContent; ?></td>
                     <td style="white-space:nowrap"><?php echo $entry->questionNode; ?></td>
                     <td>
                         <a class="btn btn-small" style="float:right;"href="<?php echo site_url($this->config->item('admin_folder').'/adviser_node/form/'.$entry->nodesNode);?>"><i class="icon-search"></i> <?php echo lang('form_view')?></a>

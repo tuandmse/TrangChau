@@ -10,13 +10,13 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th><input type="checkbox" id="gc_check_all" />
+                <th style="white-space:nowrap"><input type="checkbox" id="gc_check_all" />
                     <button type="submit" class="btn btn-small btn-danger"
                         <?php echo (count($rules) < 1)?'disabled="disabled"':''?>>
                     <i class="icon-trash icon-white"></i></button></th>
-                <th>Mã Luật</th>
-                <th>Nội Dung Luật</th>
-                <th>Giá Trị CF</th>
+                <th style="white-space:nowrap">Mã Luật</th>
+                <th style="white-space:nowrap">Nội Dung Luật</th>
+                <th style="white-space:nowrap">Giá Trị CF</th>
                 <th></th>
             </tr>
             </thead>
@@ -27,7 +27,7 @@
                 <tr>
                     <td><input name="order[]" type="checkbox" value="<?php echo $entry->rulesId; ?>" class="gc_check"/></td>
                     <td style="white-space:nowrap"><?php echo $entry->rulesId; ?></td>
-                    <td style="white-space:nowrap"><?php echo $entry->rulesContent; ?></td>
+                    <td style=""><?php echo $entry->rulesContent; ?></td>
                     <td style="white-space:nowrap"><?php echo $entry->rulesCF; ?></td>
                     <td>
 <!--                        <a class="btn btn-small" style="float:right;"href="--><?php //echo site_url($this->config->item('admin_folder').'/adviser_rule/form/'.$entry->rulesId);?><!--"><i class="icon-search"></i> --><?php //echo lang('form_view')?><!--</a>-->
@@ -51,7 +51,6 @@
                 $(".gc_check").removeProp("checked");
             }
         });
-
         // set the datepickers individually to specify the alt fields
         $('#start_top').datepicker({dateFormat:'mm-dd-yy', altField: '#start_top_alt', altFormat: 'yy-mm-dd'});
         $('#start_bottom').datepicker({dateFormat:'mm-dd-yy', altField: '#start_bottom_alt', altFormat: 'yy-mm-dd'});
