@@ -428,16 +428,18 @@ class Checkout extends Front_Controller {
 			}
 		}
 
+            if($payment_methods = $this->_get_payment_methods())
+            {
+                $this->payment_form($payment_methods);
+            }
+            /* now where? continue to step 4 */
+            else
+            {
+                var_dump($payment_methods);
+//                $this->step_4();
+            }
 
-		if($payment_methods = $this->_get_payment_methods())
-		{
-			$this->payment_form($payment_methods);
-		}
-		/* now where? continue to step 4 */
-		else
-		{
-			$this->step_4();
-		}
+
 	}
 
 	protected function payment_form($payment_methods)
@@ -456,7 +458,7 @@ class Checkout extends Front_Controller {
 		$this->form_validation->set_rules('module', 'lang:payment_method', 'trim|required|xss_clean|callback_check_payment');
 
 		$module = $this->input->post('module');
-		if($module)
+		if($module && $module != 'nganluong')
 		{
 			$this->load->add_package_path(APPPATH.'packages/payment/'.$module.'/');
 			$this->load->library($module);
@@ -468,25 +470,36 @@ class Checkout extends Front_Controller {
 		}
 		else
 		{
-			$this->go_cart->set_payment( $module, $this->$module->description() );
-			redirect('checkout/step_4');
+            if($module != 'nganluong'){
+                $this->go_cart->set_payment( $module, $this->$module->description() );
+                redirect('checkout/step_4');
+            } else {
+                $this->go_cart->set_payment( $module, 'Ngân Lượng' );
+                redirect('checkout/step_4');
+            }
+
 		}
 	}
 
 	/* callback that lets the payment method return an error if invalid */
 	function check_payment($module)
 	{
-		$check	= $this->$module->checkout_check();
+        if($module != 'nganluong'){
+            $check	= $this->$module->checkout_check();
 
-		if(!$check)
-		{
-			return true;
-		}
-		else
-		{
-			$this->form_validation->set_message('check_payment', $check);
-			return false;
-		}
+            if(!$check)
+            {
+                return true;
+            }
+            else
+            {
+                $this->form_validation->set_message('check_payment', $check);
+                return false;
+            }
+        } else {
+            return true;
+        }
+
 	}
 
 	private function _get_payment_methods()
@@ -506,6 +519,17 @@ class Checkout extends Front_Controller {
 					$payment_methods[$payment_method] = $payment_form;
 				}
 			}
+
+            $payment_method_nl['nganluong'] = array("name"=>"Ngân Lượng", "form"=>"<table width=\"100%\" border=\"0\" cellpadding=\"5\">
+                            <tbody><tr>
+                                <td><img src=\"https://www.nganluong.vn/data/images/buttons/11.gif\" border=\"0\" alt=\"Acceptance Mark\"></td>
+                            </tr>
+                            <tr>
+                                <td>You will be directed to the Paypal website to verify your payment. Once your payment is authorized, you will be directed back to our website and your order will be complete.</td>
+                            </tr>
+                            </tbody></table>");
+            $payment_methods['nganluong'] = $payment_method_nl['nganluong'];
+
 		}
 		if(!empty($payment_methods))
 		{
@@ -525,6 +549,7 @@ class Checkout extends Front_Controller {
 		$data['shipping_method']	= $this->go_cart->shipping_method();
 
 		$data['payment_method']		= $this->go_cart->payment_method();
+
 
 
 		/* Confirm the sale */
@@ -568,21 +593,27 @@ class Checkout extends Front_Controller {
 		
 		if(!empty($payment) && (bool)$payment_methods == true)
 		{
-			//load the payment module
-			$this->load->add_package_path(APPPATH.'packages/payment/'.$payment['module'].'/');
-			$this->load->library($payment['module']);
-		
-			// Is payment bypassed? (total is zero, or processed flag is set)
-			if($this->go_cart->total() > 0 && ! isset($payment['confirmed'])) {
-				//run the payment
-				$error_status	= $this->$payment['module']->process_payment();
-				if($error_status !== false)
-				{
-					// send them back to the payment page with the error
-					$this->session->set_flashdata('error', $error_status);
-					redirect('checkout/step_3');
-				}
-			}
+            if($payment['module'] != 'nganluong')
+            {
+                //load the payment module
+                $this->load->add_package_path(APPPATH.'packages/payment/'.$payment['module'].'/');
+                $this->load->library($payment['module']);
+
+                // Is payment bypassed? (total is zero, or processed flag is set)
+                if($this->go_cart->total() > 0 && ! isset($payment['confirmed'])) {
+                    //run the payment
+                    $error_status	= $this->$payment['module']->process_payment();
+                    if($error_status !== false)
+                    {
+                        // send them back to the payment page with the error
+                        $this->session->set_flashdata('error', $error_status);
+                        redirect('checkout/step_3');
+                    }
+                }
+
+
+
+            }
 		}
 			
 		
@@ -603,10 +634,12 @@ class Checkout extends Front_Controller {
 		// run the complete payment module method once order has been saved
 		if(!empty($payment))
 		{
-			if(method_exists($this->$payment['module'], 'complete_payment'))
-			{
-				$this->$payment['module']->complete_payment($data);
-			}
+            if($payment['module'] != 'nganluong'){
+                if(method_exists($this->$payment['module'], 'complete_payment'))
+                {
+                    $this->$payment['module']->complete_payment($data);
+                }
+            }
 		}
 	
 		// Send the user a confirmation email
