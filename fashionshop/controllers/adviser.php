@@ -25,22 +25,15 @@ class Adviser extends Front_Controller
         $data["postedInfor"] = false;
         $data["posted"]      = false;
         $data["node_view"]   = $this->Adviser_model->node_view();
-		
 		$data["ID_of_CF"]   = $this->Adviser_model->findIDCF();
-
-		
         $data["node_view_filterYN"]   = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
-        
-        
         $data["question_view"] = $this->Adviser_model->question_view();
 		
         if ($this->input->post("submitInfor")) {
             
 						$answerYN = array();
 						$answer = array();
-						
-						
 						$i= 0;
                         foreach( $data["question_view"] as $node_entry )
                         {
