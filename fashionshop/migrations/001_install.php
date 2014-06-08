@@ -289,6 +289,11 @@ class Migration_Install extends CI_Migration {
                     'type' => 'varchar', 
                     'constraint' => 128
                     ),
+                'adviserNode' => array(
+                    'type' => 'varchar',
+                    'constraint' => 20,
+                    'null' => true
+                ),
                 'route_id' => array( 
                     'type' => 'int', 
                     'constraint' => 9,

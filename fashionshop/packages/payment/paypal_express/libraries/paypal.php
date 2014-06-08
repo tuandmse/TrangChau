@@ -7,11 +7,10 @@
  * @copyright (C) 2008 martin maly
  * @see  http://www.php-suit.com/paypal
  * 2.10.2008 20:30:40
- 
  ** Mofified for compatibility with GoCart, by Clear Sky Designs
- 
+
  */
- 
+
 /*
 * Copyright (c) 2008 Martin Maly - http://www.php-suit.com
 * All rights reserved.
@@ -39,202 +38,220 @@
 * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
 
-class PayPal {
+class PayPal
+{
 
-	private $API_USERNAME;
-	private $API_PASSWORD;
-	private $API_SIGNATURE;
-	
-	private $RETURN_URL;
-	private $CANCEL_URL;
+    private $API_USERNAME;
+    private $API_PASSWORD;
+    private $API_SIGNATURE;
 
-	public $endpoint;
-	public $host;
-	private $gate;
-	private $currency;
-	private $CI;
+    private $RETURN_URL;
+    private $CANCEL_URL;
 
-	function __construct() {
-		
-		$this->endpoint = '/nvp';
-		$this->CI =& get_instance();
-		
-		// retrieve settings
-		if ( $settings = $this->CI->Settings_model->get_settings('paypal_express') ) 
-		{
-			$this->API_USERNAME = $settings['username'];
-			$this->API_PASSWORD = $settings['password'];
-			$this->API_SIGNATURE = $settings['signature'];
-			
-			$this->RETURN_URL = $settings["return_url"];
-			$this->CANCEL_URL = $settings["cancel_url"];
-			
-			$this->currency = $this->CI->config->item('currency'); //$settings['currency'];
-			
-			// Test mode?
-			if ($settings['SANDBOX']=='0') {
-				$this->host = "api-3t.paypal.com";
-				$this->gate = 'https://www.paypal.com/cgi-bin/webscr?';
-			} else {
-				//sandbox
-				$this->host = "api-3t.sandbox.paypal.com";
-				$this->gate = 'https://www.sandbox.paypal.com/cgi-bin/webscr?';
-			}
-		}
-	}
+    public $endpoint;
+    public $host;
+    private $gate;
+    private $currency;
+    private $CI;
 
-	/**
-	 * @return string URL of the "success" page
-	 */
-	private function getReturnTo() {
-		//return sprintf("%s://%s/".$this->RETURN_URL,
-		//$this->getScheme(), $_SERVER['SERVER_NAME']);
-		return site_url($this->RETURN_URL);
-	}
+    function __construct()
+    {
 
-	/**
-	 * @return string URL of the "cancel" page
-	 */
-	private function getReturnToCancel() {
-		//return sprintf("%s://%s/".$this->CANCEL_URL,
-		//$this->getScheme(), $_SERVER['SERVER_NAME']);
-		return site_url($this->CANCEL_URL);
-	}
+        $this->endpoint = '/nvp';
+        $this->CI =& get_instance();
 
-	/**
-	 * @return HTTPRequest
-	 */
-	private function response($data){
-		//$r = new HTTPRequest($this->host, $this->endpoint, 'POST', true);
-		//$result = $r->connect($data);
-		$result = $this->CI->httprequest->connect($data);
-		if ($result<400) return $this->CI->httprequest;
-		return false;
-	}
+        // retrieve settings
+        //		if ( $settings = $this->CI->Settings_model->get_settings('paypal_express') )
+//		{
+//			$this->API_USERNAME = $settings['username'];
+//			$this->API_PASSWORD = $settings['password'];
+//			$this->API_SIGNATURE = $settings['signature'];
+//
+//			$this->RETURN_URL = $settings["return_url"];
+//			$this->CANCEL_URL = $settings["cancel_url"];
+//
+//			$this->currency = $this->CI->config->item('currency'); //$settings['currency'];
 
-	private function buildQuery($data = array()){
-		$data['USER'] = $this->API_USERNAME;
-		$data['PWD'] = $this->API_PASSWORD;
-		$data['SIGNATURE'] = $this->API_SIGNATURE;
-		$data['VERSION'] = '56.0';
-		$query = http_build_query($data);
-		return $query;
-	}
+        $this->API_USERNAME = '2thang7-facilitator_api1.gmail.com';
+        $this->API_PASSWORD = '1375065567';
+        $this->API_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AtiNGtZRJ5l1nGy.uY7QxIBqBWYv';
+        $this->RETURN_URL = 'pp_gate/pp_return/';
+        $this->CANCEL_URL = 'pp_gate/pp_cancel/';
 
-	/**
-	 * Main payment function
-	 * 
-	 * If OK, the customer is redirected to PayPal gateway
-	 * If error, the error info is returned
-	 * 
-	 * @param float $amount Amount (2 numbers after decimal point)
-	 * @param string $desc Item description
-	 * @param string $invoice Invoice number (can be omitted)
-	 * @param string $currency 3-letter currency code (USD, GBP, CZK etc.)
-	 * 
-	 * @return array error info
-	 */
-	public function doExpressCheckout($amount, $desc, $invoice=''){
-		$data = array(
-		'PAYMENTACTION' =>'Sale',
-		'AMT' => $amount,
-		'RETURNURL' => $this->getReturnTo(),
-		'CANCELURL'  => $this->getReturnToCancel(),
-		'DESC'=> $desc,
-		'NOSHIPPING'=> "1",
-		'ALLOWNOTE'=> "1",
-		'CURRENCYCODE'=> $this->currency,
-		'METHOD' => 'SetExpressCheckout');
+        $this->currency = 'USD';
 
-		$data['CUSTOM'] = $amount.'|'.$this->currency.'|'.$invoice;
-		if ($invoice) $data['INVNUM'] = $invoice;
+        // Test mode?
+//			if ($settings['SANDBOX']=='0') {
+//				$this->host = "api-3t.paypal.com";
+//				$this->gate = 'https://www.paypal.com/cgi-bin/webscr?';
+//			} else {
+        //sandbox
+        $this->host = "api-3t.sandbox.paypal.com";
+        $this->gate = 'https://www.sandbox.paypal.com/cgi-bin/webscr?';
+//			}
+//		}
+    }
 
-		$query = $this->buildQuery($data);
+    /**
+     * @return string URL of the "success" page
+     */
+    private function getReturnTo()
+    {
+        //return sprintf("%s://%s/".$this->RETURN_URL,
+        //$this->getScheme(), $_SERVER['SERVER_NAME']);
+        return site_url($this->RETURN_URL);
+    }
 
-		$result = $this->response($query);
+    /**
+     * @return string URL of the "cancel" page
+     */
+    private function getReturnToCancel()
+    {
+        //return sprintf("%s://%s/".$this->CANCEL_URL,
+        //$this->getScheme(), $_SERVER['SERVER_NAME']);
+        return site_url($this->CANCEL_URL);
+    }
 
-		if (!$result) return false;
-		$response = $result->getContent();
-		$return = $this->responseParse($response);
+    /**
+     * @return HTTPRequest
+     */
+    private function response($data)
+    {
+        //$r = new HTTPRequest($this->host, $this->endpoint, 'POST', true);
+        //$result = $r->connect($data);
+        $result = $this->CI->httprequest->connect($data);
+        if ($result < 400) return $this->CI->httprequest;
+        return false;
+    }
 
-		if ($return['ACK'] == 'Success') {
-			header('Location: '.$this->gate.'cmd=_express-checkout&useraction=commit&token='.$return['TOKEN'].'');
-			die();
-		}
-		return($return);
-	}
+    private function buildQuery($data = array())
+    {
+        $data['USER'] = $this->API_USERNAME;
+        $data['PWD'] = $this->API_PASSWORD;
+        $data['SIGNATURE'] = $this->API_SIGNATURE;
+        $data['VERSION'] = '56.0';
+        $query = http_build_query($data);
+        return $query;
+    }
 
-	public function getCheckoutDetails($token){
-		$data = array(
-		'TOKEN' => $token,
-		'METHOD' =>'GetExpressCheckoutDetails');
-		$query = $this->buildQuery($data);
+    /**
+     * Main payment function
+     *
+     * If OK, the customer is redirected to PayPal gateway
+     * If error, the error info is returned
+     *
+     * @param float $amount Amount (2 numbers after decimal point)
+     * @param string $desc Item description
+     * @param string $invoice Invoice number (can be omitted)
+     * @param string $currency 3-letter currency code (USD, GBP, CZK etc.)
+     *
+     * @return array error info
+     */
+    public function doExpressCheckout($amount, $desc, $invoice = '')
+    {
+        $data = array(
+            'PAYMENTACTION' => 'Sale',
+            'AMT' => $amount,
+            'RETURNURL' => $this->getReturnTo(),
+            'CANCELURL' => $this->getReturnToCancel(),
+            'DESC' => $desc,
+            'NOSHIPPING' => "1",
+            'ALLOWNOTE' => "1",
+            'CURRENCYCODE' => $this->currency,
+            'METHOD' => 'SetExpressCheckout');
 
-		$result = $this->response($query);
+        $data['CUSTOM'] = $amount . '|' . $this->currency . '|' . $invoice;
+        if ($invoice) $data['INVNUM'] = $invoice;
 
-		if (!$result) return false;
-		$response = $result->getContent();
-		$return = $this->responseParse($response);
-		return($return);
-	}
-	
-	
-	public function doPayment()
-	{
-		$token = $_GET['token'];
-		$payer = $_GET['PayerID'];
-		
-		$details = $this->getCheckoutDetails($token);
-		if (!$details) return false;
-		list($amount,$currency,$invoice) = explode('|',$details['CUSTOM']);
-		$data = array(
-		'PAYMENTACTION' => 'Sale',
-		'PAYERID' => $payer,
-		'TOKEN' =>$token,
-		'AMT' => $amount,
-		'CURRENCYCODE'=>$currency,
-		'METHOD' =>'DoExpressCheckoutPayment');
-		$query = $this->buildQuery($data);
+        $query = $this->buildQuery($data);
 
-		$result = $this->response($query);
+        $result = $this->response($query);
 
-		if (!$result) return false;
-		$response = $result->getContent();
-		$return = $this->responseParse($response);
+        if (!$result) return false;
+        $response = $result->getContent();
+        $return = $this->responseParse($response);
 
-		/*
-		 * [AMT] => 10.00
-		 * [CURRENCYCODE] => USD
-		 * [PAYMENTSTATUS] => Completed
-		 * [PENDINGREASON] => None
-		 * [REASONCODE] => None
-		 */
+        if ($return['ACK'] == 'Success') {
+            header('Location: ' . $this->gate . 'cmd=_express-checkout&useraction=commit&token=' . $return['TOKEN'] . '');
+            die();
+        }
+        return ($return);
+    }
 
-		return($return);
-	}
+    public function getCheckoutDetails($token)
+    {
+        $data = array(
+            'TOKEN' => $token,
+            'METHOD' => 'GetExpressCheckoutDetails');
+        $query = $this->buildQuery($data);
 
-	private function getScheme() {
-		$scheme = 'http';
-		if (isset($_SERVER['HTTPS']) and $_SERVER['HTTPS'] == 'on') {
-			$scheme .= 's';
-		}
-		return $scheme;
-	}
+        $result = $this->response($query);
 
-	private function responseParse($resp){
-		$a=explode("&", $resp);
-		$out = array();
-		foreach ($a as $v){
-			$k = strpos($v, '=');
-			if ($k) {
-				$key = trim(substr($v,0,$k));
-				$value = trim(substr($v,$k+1));
-				if (!$key) continue;
-				$out[$key] = urldecode($value);
-			} else {
-				$out[] = $v;
-			}
-		}
-		return $out;
-	}
+        if (!$result) return false;
+        $response = $result->getContent();
+        $return = $this->responseParse($response);
+        return ($return);
+    }
+
+
+    public function doPayment()
+    {
+        $token = $_GET['token'];
+        $payer = $_GET['PayerID'];
+
+        $details = $this->getCheckoutDetails($token);
+        if (!$details) return false;
+        list($amount, $currency, $invoice) = explode('|', $details['CUSTOM']);
+        $data = array(
+            'PAYMENTACTION' => 'Sale',
+            'PAYERID' => $payer,
+            'TOKEN' => $token,
+            'AMT' => $amount,
+            'CURRENCYCODE' => $currency,
+            'METHOD' => 'DoExpressCheckoutPayment');
+        $query = $this->buildQuery($data);
+
+        $result = $this->response($query);
+
+        if (!$result) return false;
+        $response = $result->getContent();
+        $return = $this->responseParse($response);
+
+        /*
+         * [AMT] => 10.00
+         * [CURRENCYCODE] => USD
+         * [PAYMENTSTATUS] => Completed
+         * [PENDINGREASON] => None
+         * [REASONCODE] => None
+         */
+
+        return ($return);
+    }
+
+    private function getScheme()
+    {
+        $scheme = 'http';
+        if (isset($_SERVER['HTTPS']) and $_SERVER['HTTPS'] == 'on') {
+            $scheme .= 's';
+        }
+        return $scheme;
+    }
+
+    private function responseParse($resp)
+    {
+        $a = explode("&", $resp);
+        $out = array();
+        foreach ($a as $v) {
+            $k = strpos($v, '=');
+            if ($k) {
+                $key = trim(substr($v, 0, $k));
+                $value = trim(substr($v, $k + 1));
+                if (!$key) continue;
+                $out[$key] = urldecode($value);
+            } else {
+                $out[] = $v;
+            }
+        }
+        return $out;
+    }
 }
