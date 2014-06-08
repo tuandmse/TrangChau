@@ -165,7 +165,7 @@ echo $download_section;
     <input type="hidden" name="receiver" value="xitrum4692@gmail.com">
     <input id="onlinepayment-id" type="hidden" name="product" value="<?php echo $order_id;?>">
     <input type="hidden" name="price" value="<?php echo str_replace(".","",substr(format_currency($go_cart['total']), 0, -5)); ?>">
-    <input type="hidden" name="return_url" value="<?php echo base_url()?>index.php/order/success">
+    <input type="hidden" name="return_url" value="<?php echo base_url()?>">
     <input type="hidden" name="comments" value="">
     <input class="btn btn-block btn-large btn-primary" type="submit" value="<?php echo lang('form_continue');?>"/>
 </form>

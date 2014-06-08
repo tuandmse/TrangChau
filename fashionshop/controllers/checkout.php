@@ -525,7 +525,7 @@ class Checkout extends Front_Controller {
                                 <td><img src=\"https://www.nganluong.vn/data/images/buttons/11.gif\" border=\"0\" alt=\"Acceptance Mark\"></td>
                             </tr>
                             <tr>
-                                <td>You will be directed to the Paypal website to verify your payment. Once your payment is authorized, you will be directed back to our website and your order will be complete.</td>
+                                <td>You will be directed to the Ngan luong website to verify your payment. Once your payment is authorized, you will be directed back to our website and your order will be complete.</td>
                             </tr>
                             </tbody></table>");
             $payment_methods['nganluong'] = $payment_method_nl['nganluong'];
