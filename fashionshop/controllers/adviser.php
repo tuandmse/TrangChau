@@ -66,7 +66,7 @@ class Adviser extends Front_Controller
 
 
         }
-        $this->load->view("call_adviser.php", $data);
+        $this->view("call_adviser.php", $data);
     }
 	
 	
