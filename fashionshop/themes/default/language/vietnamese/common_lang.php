@@ -263,3 +263,4 @@ $lang['people_like']					= 'người đã thích sản phẩm này.';
 $lang['you_and']					= 'bạn và';
 $lang['your_comment_here']					= 'Nhập bình luận của bạn vào dây';
 $lang['delete_comment']					= 'Xóa bình luận';
+$lang['email_used']					= 'Email của tài khoản này đã được sử dụng. Vui lòng dùng tài khoản khác!';

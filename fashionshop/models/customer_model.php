@@ -183,14 +183,23 @@ Class Customer_model extends CI_Model
         setcookie('GoCartCustomer', $data, $expire, '/', $_SERVER['HTTP_HOST']);
     }
     
-    function login($email, $password, $remember=false)
+    function login($email, $password, $remember=false, $facebook=false)
     {
-        $this->db->select('*');
-        $this->db->where('email', $email);
-        $this->db->where('active', 1);
-        $this->db->where('password',  sha1($password));
-        $this->db->limit(1);
-        $result = $this->db->get('customers');
+        if($facebook){
+            $this->db->select('*');
+            $this->db->where('email', $email);
+            $this->db->where('active', 1);
+            $this->db->limit(1);
+            $result = $this->db->get('customers');
+        }
+        else {
+            $this->db->select('*');
+            $this->db->where('email', $email);
+            $this->db->where('active', 1);
+            $this->db->where('password',  sha1($password));
+            $this->db->limit(1);
+            $result = $this->db->get('customers');
+        }
         $customer   = $result->row_array();
         
         if ($customer)
@@ -246,6 +255,24 @@ Class Customer_model extends CI_Model
         {
             return false;
         }
+    }
+
+    function check_facebook_login($email, $fid)
+    {
+        $result = $this->check_email($email);
+        if($result == true){
+            $this->db->where('facebook', $fid);
+            $this->db->where('email', $email);
+            $result = $this->db->count_all_results('customers');
+            if($result == 0){
+                return "err_email";
+            } else {
+                return "ok";
+            }
+        } else {
+            return "register";
+        }
+
     }
     
     function is_logged_in($redirect = false, $default_redirect = 'secure/login/')

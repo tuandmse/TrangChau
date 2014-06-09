@@ -1,9 +1,17 @@
 <?php
-$company	= array('id'=>'bill_company', 'class'=>'span6', 'name'=>'company', 'value'=> set_value('company'));
-$first		= array('id'=>'bill_firstname', 'class'=>'span3', 'name'=>'firstname', 'value'=> set_value('firstname'));
-$last		= array('id'=>'bill_lastname', 'class'=>'span3', 'name'=>'lastname', 'value'=> set_value('lastname'));
-$email		= array('id'=>'bill_email', 'class'=>'span3', 'name'=>'email', 'value'=>set_value('email'));
-$phone		= array('id'=>'bill_phone', 'class'=>'span3', 'name'=>'phone', 'value'=> set_value('phone'));
+if(isset($facebook) && $facebook == true){
+    $company	= array('id'=>'bill_company', 'class'=>'span6', 'name'=>'company', 'value'=> set_value('company'));
+    $first		= array('id'=>'bill_firstname', 'class'=>'span3', 'name'=>'firstname', 'value'=> $first_name);
+    $last		= array('id'=>'bill_lastname', 'class'=>'span3', 'name'=>'lastname', 'value'=> $last_name);
+    $email		= array('id'=>'bill_email', 'class'=>'span3', 'name'=>'email', 'value'=>$email);
+    $phone		= array('id'=>'bill_phone', 'class'=>'span3', 'name'=>'phone', 'value'=> $phone);
+} else {
+    $company	= array('id'=>'bill_company', 'class'=>'span6', 'name'=>'company', 'value'=> set_value('company'));
+    $first		= array('id'=>'bill_firstname', 'class'=>'span3', 'name'=>'firstname', 'value'=> set_value('firstname'));
+    $last		= array('id'=>'bill_lastname', 'class'=>'span3', 'name'=>'lastname', 'value'=> set_value('lastname'));
+    $email		= array('id'=>'bill_email', 'class'=>'span3', 'name'=>'email', 'value'=>set_value('email'));
+    $phone		= array('id'=>'bill_phone', 'class'=>'span3', 'name'=>'phone', 'value'=> set_value('phone'));
+}
 ?>
 <div class="row" style="margin-top:50px;">
 	<div class="span6 offset3">
@@ -13,7 +21,10 @@ $phone		= array('id'=>'bill_phone', 'class'=>'span3', 'name'=>'phone', 'value'=>
 		<?php echo form_open('secure/register'); ?>
 			<input type="hidden" name="submitted" value="submitted" />
 			<input type="hidden" name="redirect" value="<?php echo $redirect; ?>" />
-
+        <?php if(isset($facebook) && $facebook == true){
+        ?>
+            <input type="hidden" name="facebook" value="true" />
+        <?php } ?>
 			<fieldset>
 				<div class="row">
 					<div class="span6">

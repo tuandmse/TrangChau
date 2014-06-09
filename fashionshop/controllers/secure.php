@@ -8,8 +8,11 @@ class Secure extends Front_Controller {
 	{
 		parent::__construct();
 		
-		$this->load->model(array('location_model'));
+		$this->load->model(array('location_model', 'customer_model'));
+        $this->load->library('form_validation');
 		$this->customer = $this->go_cart->customer();
+
+        $this->load->library('facebook');
 	}
 	
 	function index()
@@ -19,6 +22,9 @@ class Secure extends Front_Controller {
 	
 	function login($ajax = false)
 	{
+        //Facebook
+        $this->load->library('facebook');
+
 		//find out if they're already logged in, if they are redirect them to the my account page
 		$redirect	= $this->Customer_model->is_logged_in(false, false);
 		//if they are logged in, we send them back to the my_account by default, if they are not logging in
@@ -77,6 +83,94 @@ class Secure extends Front_Controller {
 				}
 			}
 		}
+
+        $is_login = true;
+
+        $facebook_login = $this->input->post("facebook_login");
+        if ($facebook_login)
+        {
+            $facebook_user = $this->facebook->api('/me');
+            $email		= $facebook_user['email'];
+            $check = $this->Customer_model->check_facebook_login($email, $this->facebook->getUser());
+            if($check == 'register'){
+                $redirect	= $this->Customer_model->is_logged_in(false, false);
+                //if they are logged in, we send them back to the my_account by default
+                if ($redirect)
+                {
+                    redirect('secure/my_account');
+                }
+                if(!array_key_exists('phone',$facebook_user)){
+                    $facebook_user['phone'] = '';
+                }
+                if(!array_key_exists('first_name',$facebook_user)){
+                    $facebook_user['first_name'] = '';
+                }
+                if(!array_key_exists('last_name',$facebook_user)){
+                    $facebook_user['last_name'] = '';
+                }
+
+                $data['redirect']	= $this->session->flashdata('redirect');
+                $data['facebook'] = true;
+                $data['email'] = $facebook_user['email'];
+                $data['first_name'] = $facebook_user['first_name'];
+                $data['last_name'] = $facebook_user['last_name'];
+                $data['phone'] = $facebook_user['phone'];
+
+                $is_login = false;
+                $this->view('register', $data);
+            } else if($check == "err_email"){
+
+                if ($this->input->post('submitted'))
+                {
+                    $data['redirect']	= $this->input->post('redirect');
+                }
+                $user = $this->facebook->getUser();
+
+                if ($user) {
+                    try {
+                        $data['user_profile'] = $this->facebook->api('/me');
+                    } catch (FacebookApiException $e) {
+                        $user = null;
+                    }
+                } else {
+                    $this->facebook->destroySession();
+                }
+
+                if ($user) {
+
+                    $data['logout_url'] = site_url('secure/logout'); // Logs off application
+
+
+                } else {
+                    $data['login_url'] = $this->facebook->getLoginUrl(array(
+                        'redirect_uri' => site_url('secure/login'),
+                        'scope' => array("email, public_profile") // permissions here
+                    ));
+                }
+
+                $this->session->set_flashdata('redirect', $redirect);
+                $this->session->set_flashdata('error', lang('email_used'));
+
+                $is_login = false;
+                $this->view('login', $data);
+            } else if($check == "ok"){
+                if ($redirect == '')
+                {
+                    //if there is not a redirect link, send them to the my account page
+                    $redirect = 'secure/my_account';
+                }
+                $this->Customer_model->login($email, null, true, true);
+                //to login via ajax
+                if($ajax)
+                {
+                    die(json_encode(array('result'=>true)));
+                }
+                else
+                {
+                    redirect($redirect);
+                }
+            }
+        }
 		
 		// load other page content 
 		//$this->load->model('banner_model');
@@ -86,19 +180,58 @@ class Secure extends Front_Controller {
 		//$data['banners']	= $this->banner_model->get_banners();
 		//$data['ads']		= $this->banner_model->get_banners(true);
 		$data['categories']	= $this->Category_model->get_categories_tiered(0);
-			
-		$this->view('login', $data);
+
+
+
+        $user = $this->facebook->getUser();
+
+        if ($user) {
+            try {
+                $data['user_profile'] = $this->facebook->api('/me');
+            } catch (FacebookApiException $e) {
+                $user = null;
+            }
+        } else {
+            $this->facebook->destroySession();
+        }
+
+        if ($user) {
+
+            $data['logout_url'] = site_url('secure/logout'); // Logs off application
+
+
+        } else {
+            $data['login_url'] = $this->facebook->getLoginUrl(array(
+                'redirect_uri' => site_url('secure/login'),
+                'scope' => array("email, public_profile") // permissions here
+            ));
+        }
+	    if($is_login){
+            $this->view('login', $data);
+        }
 	}
 	
 	function logout()
 	{
 		$this->Customer_model->logout();
+
+
+        // Logs off session from website
+        $this->facebook->destroySession();
+
 		redirect('secure/login');
 	}
 	
 	function register()
 	{
-	
+	    if($this->input->post('facebook')){
+            $data['redirect']	= $this->session->flashdata('redirect');
+            $data['facebook'] = true;
+            $data['email'] = $this->input->post('email');
+            $data['first_name'] = $this->input->post('firstname');
+            $data['last_name'] = $this->input->post('lastname');
+            $data['phone'] = $this->input->post('phone');
+        }
 		$redirect	= $this->Customer_model->is_logged_in(false, false);
 		//if they are logged in, we send them back to the my_account by default
 		if ($redirect)
@@ -122,16 +255,16 @@ class Secure extends Front_Controller {
 		
 		//default values are empty if the customer is new
 
-		$data['company']	= '';
-		$data['firstname']	= '';
-		$data['lastname']	= '';
-		$data['email']		= '';
-		$data['phone']		= '';
-		$data['address1']	= '';
-		$data['address2']	= '';
-		$data['city']		= '';
-		$data['state']		= '';
-		$data['zip']		= '';
+//		$data['company']	= '';
+//		$data['firstname']	= '';
+//		$data['lastname']	= '';
+//		$data['email']		= '';
+//		$data['phone']		= '';
+//		$data['address1']	= '';
+//		$data['address2']	= '';
+//		$data['city']		= '';
+//		$data['state']		= '';
+//		$data['zip']		= '';
 
 
 
@@ -165,6 +298,9 @@ class Secure extends Front_Controller {
 		}
 		else
 		{
+            if($this->input->post('facebook')){
+                $save['facebook'] = $user = $this->facebook->getUser();
+            }
 			
 			
 			$save['id']		= false;

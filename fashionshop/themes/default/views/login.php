@@ -45,5 +45,25 @@
 			<div style="text-align:center;">
 				<a href="<?php echo site_url('secure/forgot_password'); ?>"><?php echo lang('forgot_password')?></a> | <a href="<?php echo site_url('secure/register'); ?>"><?php echo lang('register');?></a>
 			</div>
+
+        <div class="page-header">
+            <h1><?php echo lang('login');?> Facebook</h1>
+        </div>
+<!--        <div class="fb-login-button" data-max-rows="2" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false" onlogin="checkLoginState();"></div>-->
+        <?php echo form_open('secure/login', 'class="form-horizontal"'); ?>
+                <?php if (@$user_profile):  // call var_dump($user_profile) to view all data ?>
+                    <div class="row">
+                        <div class="text-center">
+                            <img class="img-thumbnail" data-src="holder.js/140x140" alt="140x140" src="https://graph.facebook.com/<?=$user_profile['id']?>/picture?type=large" style="width: 140px; height: 140px;">
+                            <h2><?=$user_profile['name']?></h2>
+                            <a href="<?=$user_profile['link']?>" class="btn btn-lg btn-default btn-block" role="button">View Profile</a>
+                            <a href="<?= $logout_url ?>" class="btn btn-lg btn-primary btn-block" role="button">Logout</a>
+                            <button type="submit" class="btn btn-lg btn-primary btn-block" name="facebook_login" value="facebooked" role="button"><?php echo lang('form_login');?></button>
+                        </div>
+                    </div>
+                <?php else: ?>
+                    <a href="<?= $login_url ?>" class="fb-login-button" role="button" data-max-rows="2" data-size="xlarge" data-show-faces="false" data-scope="public_profile, email" data-auto-logout-link="false" onlogin="checkLoginState();">Login</a>
+                <?php endif; ?>
+        </form>
 	</div>
 </div>

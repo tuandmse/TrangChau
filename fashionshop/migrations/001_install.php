@@ -852,7 +852,12 @@ class Migration_Install extends CI_Migration {
                         'constraint' => 1,
                         'null' => false,
                         'default' => '0'
-                         )
+                         ),
+                    'facebook' => array(
+                        'type'=> 'varchar',
+                        'constraint' => 128,
+                        'null' => true
+                        )
             ));
 
             $this->dbforge->add_key('id', true);

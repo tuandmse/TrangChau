@@ -263,3 +263,4 @@ $lang['people_like']					= 'people liked this product.';
 $lang['you_and']					= 'you and';
 $lang['your_comment_here']					= 'Enter your comment here';
 $lang['delete_comment']					= 'Delete comment';
+$lang['email_used']					= 'This email have been use before, please login with other account!';
