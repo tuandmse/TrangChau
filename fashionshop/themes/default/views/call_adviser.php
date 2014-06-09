@@ -7,11 +7,11 @@
         </div>
         <?php
         if ($postedInfor == true): ?>
-            <h3>
+            <div class="comment_user" style="font-size: 20px">
                 <?php
                 echo $advice;
                 ?>
-            </h3>
+            </div>
             <?php
             foreach ($products_image as $product):
 
@@ -23,7 +23,7 @@
 
                 }
                 ?>
-                <div class="product-image">
+                <div class="product-image" style="margin-top: 20px">
                     <a class="thumbnail" href="<?php
                     echo site_url(implode('/', $base_url) . '/' . $product->slug);
                     ?>">
@@ -38,10 +38,10 @@
         <?php
         endif;
         ?>
+
         <?php
         if ($postedInfor == false && $postedStyle == false):
         ?>
-            <div class="span8">
                 <div class="tabbable">
                     <ul class="nav nav-tabs">
                         <li class="active" id="li_infor"><a href="#infor" data-toggle="tab">Thông tin trang phục</a>
@@ -57,14 +57,14 @@
                         <?php
                         foreach ($question_view as $yn):
                             ?>
-                            <div class="row">
-                                <div class="span8">
                                     <div class="control-group">
                                         <label for="<?php
-                                        echo $yn->questionNode;
-                                        ?>"><?php
+                                            echo $yn->questionNode;
+                                        ?>">
+                                        <?php
                                             echo $yn->questionContent;
-                                            ?></label>
+                                        ?>
+                                        </label>
 
                                         <div>
 
@@ -84,9 +84,6 @@
                                             ?>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
                         <?php
                         endforeach;
                         ?>
@@ -106,14 +103,14 @@
                         <?php
                         foreach ($cF_node_view as $node_entry):
                             ?>
-                                <div class="span8">
                                     <div class="control-group">
                                         <label for="<?php
                                         echo $node_entry->nodesNode;
-                                        ?>"><?php
+                                        ?>">
+                                            <?php
                                             echo $node_entry->nodesContent;
-                                            ?></label>
-
+                                            ?>
+                                        </label>
                                         <div>
                                             <input type="radio" name="<?php
                                             echo $node_entry->nodesNode;
@@ -126,11 +123,9 @@
                                             ?>" value="0.8"> Thích
                                             <input type="radio" name="<?php
                                             echo $node_entry->nodesNode;
-                                            ?>" value="1">Rất thích
+                                            ?>" value="1"> Rất thích
                                         </div>
-
                                     </div>
-                                </div>
 
                         <?php
                         endforeach;
@@ -148,9 +143,8 @@
                     </div>
                 </div>
 
-            </div>
+        <?php endif; ?>
     </div>
-    <?php endif; ?>
 </div>
 <script type="text/javascript">
     function next_page() {
