@@ -13,6 +13,16 @@ class Adviser_model extends CI_Model {
 	}
   
    
+   function get_product_by_ruleNode($id){
+	$this->db->order_by('id', 'ASC');
+	$this->db->where('adviserNode', $id);
+	$result	= $this->db->get('products');
+	return $result->result();
+   
+   }
+   
+   
+   
 	function node_view_filter_CfType($idCF)
 	{
 		//sort by alphabetically by default

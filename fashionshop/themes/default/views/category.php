@@ -65,7 +65,7 @@
                         <?php
                         $photo  = theme_img('no_picture.png', lang('no_image_available'));
                         $product->images    = array_values($product->images);
-            
+						
                         if(!empty($product->images[0]))
                         {
                             $primary    = $product->images[0];

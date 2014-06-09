@@ -1,6 +1,8 @@
 
 
-<?php include('header.php');?>
+<?php
+include('header.php');
+?>
     <div class="row" style="margin-top:20px;">
         <div class="span10 offset2">
             <div class="page-header">
@@ -8,20 +10,39 @@
 			Hệ Tư Vấn Trang Phục
 			</h1>
             </div>
-            <?php if( $postedInfor == true ): ?>
-			
-			 
-			
-                <h3> Infor Results !</h3>
-				
-				
-				
-            <?php endif; ?>
-			<?php if( $postedStyle == true ): ?>
-                <h3>Style Results!</h3>
-            <?php endif; ?>
-            <?php if( $postedInfor == false && $postedStyle == false ): ?>
-			
+            <?php
+if ($postedInfor == true):
+?>
+                <h3> Kết Quả Tư Vấn !</h3>
+				<h4>
+				<?php
+    echo $advice;
+?>
+				</h4>
+            	<?php
+    foreach ($products_image as $product):
+        $str   = '{"92b151829d044e4c5b40aefcc53fbe3c":{"filename":"92b151829d044e4c5b40aefcc53fbe3c.jpg","alt":"","caption":""}}';
+        $arr   = preg_split('#(:|,|[\{]|[\}]|"|[\|]{2})#', $str);
+        $photo = '<img src="' . base_url('uploads/images/thumbnails/' . $arr[2]) . '.jpg" alt="' . $product->seo_title . '"/>';
+?>
+					    <div class="product-image">
+                            <a class="thumbnail" href="<?php
+        echo site_url(implode('/', $base_url) . '/' . $product->slug);
+?>">
+                                <?php
+        echo $photo;
+?>
+                            </a>
+                        </div>
+					   <?php
+    endforeach;
+?>
+			<?php
+endif;
+?>
+            <?php
+if ($postedInfor == false && $postedStyle == false):
+?>
 				<div class="row">
 					<div class="span8">
 						<div class="tabbable">
@@ -32,40 +53,49 @@
 						</div>
 						<div class="tab-content">
 							<div class="tab-pane active" id="infor">
-								<?php echo form_open('adviser', 'class="form-horizontal"'); 
-						
-
-								?>
-								
-								
-
-								 <?php foreach($question_view as $yn): ?>
-									
+								<?php
+    echo form_open('adviser', 'class="form-horizontal"');
+?>
+								 <?php
+    foreach ($question_view as $yn):
+?>	
 									<div class="row">
 									<div class="span8">
 										<div class="control-group">
-											<label  for="<?php echo $yn->questionNode; ?>"><?php echo $yn->questionContent; ?></label>
+											<label  for="<?php
+        echo $yn->questionNode;
+?>"><?php
+        echo $yn->questionContent;
+?></label>
 											<div>
 											
-										<?php foreach($node_view as $a):?>
+										<?php
+        foreach ($node_view as $a):
+?>
                                         <?php
-											if ($yn->questionNode == $a -> questionNode ) :
-											echo '<input type="radio" name="'.$a->questionNode.'" value="'.$a->nodesNode.'"> '.$a->nodesContent.'';
-											//echo form_radio($data);
-											//$data = array('name' => $a->questionNode, 'value' => $a->nodesNode);
-											//echo form_radio($data);
-											//echo ''.$a->nodesContent;
-											//echo form_radio(‘var’, ’1′, set_radio(‘var’, ’1′));
-
-											?>
-			                             <?php endif; ?>
-										<?php endforeach; ?>
+            if ($yn->questionNode == $a->questionNode):
+                echo '<input type="radio" name="' . $a->questionNode . '" value="' . $a->nodesNode . '"> ' . $a->nodesContent . '';
+                //echo form_radio($data);
+                //$data = array('name' => $a->questionNode, 'value' => $a->nodesNode);
+                //echo form_radio($data);
+                //echo ''.$a->nodesContent;
+                //echo form_radio(‘var’, ’1′, set_radio(‘var’, ’1′));
+                
+?>
+			                             <?php
+            endif;
+?>
+										<?php
+        endforeach;
+?>
 											</div>
 										</div>
 									</div>
 								</div>
 								
-								<?php endforeach; ?>
+								<?php
+    endforeach;
+?>
 								
 				
 								<div class="row">
@@ -81,25 +111,42 @@
 							
 							</div>
 							<div class="tab-pane" id="style">
-							<?php // echo form_open('adviser', 'class="form-horizontal"'); ?>
-								 <?php foreach($cF_node_view as $node_entry): ?>					
+							<?php // echo form_open('adviser', 'class="form-horizontal"'); 
+?>
+								 <?php
+    foreach ($cF_node_view as $node_entry):
+?>					
 
 									<div class="row">
 									<div class="span8">
 										<div class="control-group">
-											<label  for="<?php echo $node_entry->nodesNode; ?>"><?php echo $node_entry->nodesContent; ?></label>
+											<label  for="<?php
+        echo $node_entry->nodesNode;
+?>"><?php
+        echo $node_entry->nodesContent;
+?></label>
 											<div>
-												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0" checked> Không
-												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0.6"> Chút ít
-												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="0.8"> Thích
-												<input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="1">Rất thích                    
+												<input type="radio" name="<?php
+        echo $node_entry->nodesNode;
+?>" value="0"> Không
+												<input type="radio" name="<?php
+        echo $node_entry->nodesNode;
+?>" value="0.6"> Chút ít
+												<input type="radio" name="<?php
+        echo $node_entry->nodesNode;
+?>" value="0.8"> Thích
+												<input type="radio" name="<?php
+        echo $node_entry->nodesNode;
+?>" value="1">Rất thích                    
 											</div>
 											
 										</div>
 									</div>
 								</div>
 								
-								<?php endforeach; ?>
+								<?php
+    endforeach;
+?>
 								<div class="row">
 									<div class="span8">
 										<div class="control-group">
@@ -119,7 +166,9 @@
 				</div>
 				
 		</div>
-			<?php endif; ?>
+			<?php
+endif;
+?>
     </div>
 	<script type="text/javascript">
   
@@ -143,4 +192,6 @@
 
 </script>
 	
-<?php include('footer.php');?>
+<?php
+include('footer.php');
+?>
