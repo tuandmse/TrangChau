@@ -21,9 +21,15 @@ if ($postedInfor == true):
 				</h4>
             	<?php
     foreach ($products_image as $product):
-        $str   = '{"92b151829d044e4c5b40aefcc53fbe3c":{"filename":"92b151829d044e4c5b40aefcc53fbe3c.jpg","alt":"","caption":""}}';
-        $arr   = preg_split('#(:|,|[\{]|[\}]|"|[\|]{2})#', $str);
+      
+	    $photo  = theme_img('no_picture.png', lang('no_image_available'));
+
+		 if(!empty($product->images[0]))
+            {
+                $arr   = preg_split('#(:|,|[\{]|[\}]|"|[\|]{2})#', $product->images);
         $photo = '<img src="' . base_url('uploads/images/thumbnails/' . $arr[2]) . '.jpg" alt="' . $product->seo_title . '"/>';
+
+			}
 ?>
 					    <div class="product-image">
                             <a class="thumbnail" href="<?php
@@ -75,11 +81,6 @@ if ($postedInfor == false && $postedStyle == false):
                                         <?php
             if ($yn->questionNode == $a->questionNode):
                 echo '<input type="radio" name="' . $a->questionNode . '" value="' . $a->nodesNode . '"> ' . $a->nodesContent . '';
-                //echo form_radio($data);
-                //$data = array('name' => $a->questionNode, 'value' => $a->nodesNode);
-                //echo form_radio($data);
-                //echo ''.$a->nodesContent;
-                //echo form_radio(‘var’, ’1′, set_radio(‘var’, ’1′));
                 
 ?>
 			                             <?php
