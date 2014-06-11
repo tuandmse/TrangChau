@@ -32,37 +32,33 @@ class Adviser extends Front_Controller
 		$data["products_image"] =array();
 		
         if ($this->input->post("submitInfor")) {
-            
-						$answerYN = array();
 						$answer = array();
 						$i= 0;
                         foreach( $data["question_view"] as $node_entry )
                         {
 						$obj = new stdClass();
-						$obj->node =  $this->input->post($node_entry->questionNode);
-						$obj->cf =  1;
-						$answer[$i]=$obj;
-						$i++;
+                            if($this->input->post($node_entry->questionNode)){
+                                $obj->node =  $this->input->post($node_entry->questionNode);
+                                $obj->cf =  1;
+                                $answer[$i]=$obj;
+                                $i++;
+                            }
 						}
-                        $answerCF = array();
                         foreach( $data["cF_node_view"] as $cf_node_entry )
                          {
 					    $obj = new stdClass();
 						$obj->node = $cf_node_entry->nodesNode;
-						$obj->cf =  $this->input->post($cf_node_entry->nodesNode);
-						$answer[$i]=$obj;
-						$i++;
+                             if($this->input->post($cf_node_entry->nodesNode)){
+                                 $obj->cf =  $this->input->post($cf_node_entry->nodesNode);
+                                 $answer[$i]=$obj;
+                                 $i++;
+                             }
+
                         }
-						
-						
-						//echo $this->get_lastNode($answer);
 						$data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($this->get_lastNode($answer));
-						//var_dump($data["products_image"]);
-						//echo $this->advice_processing($answer);
-				    $data["postedInfor"] = true;
-					
-					$data["advice"]= $this->advice_processing($answer);
-					$data["base_url"]= $this->uri->segment_array();
+                        $data["postedInfor"] = true;
+                        $data["advice"]= $this->advice_processing($answer);
+                        $data["base_url"]= $this->uri->segment_array();
 
 
         }

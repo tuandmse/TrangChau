@@ -137,10 +137,7 @@ class Secure extends Front_Controller {
                 }
 
                 if ($user) {
-
                     $data['logout_url'] = site_url('secure/logout'); // Logs off application
-
-
                 } else {
                     $data['login_url'] = $this->facebook->getLoginUrl(array(
                         'redirect_uri' => site_url('secure/login'),
@@ -188,6 +185,7 @@ class Secure extends Front_Controller {
         if ($user) {
             try {
                 $data['user_profile'] = $this->facebook->api('/me');
+
             } catch (FacebookApiException $e) {
                 $user = null;
             }
@@ -214,7 +212,6 @@ class Secure extends Front_Controller {
 	function logout()
 	{
 		$this->Customer_model->logout();
-
 
         // Logs off session from website
         $this->facebook->destroySession();
