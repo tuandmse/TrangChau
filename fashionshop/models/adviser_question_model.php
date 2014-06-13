@@ -38,7 +38,7 @@ class Adviser_question_model extends CI_Model {
         }
     }
 
-    function save_adviser_question_answer($data, $questionNode)
+    function save_adviser_question_answer($data)
     {
         $this->db->where('nodesNode', $data['nodesNode']);
         $result 			= $this->db->get('adviser_nodes');
