@@ -204,7 +204,11 @@ class Adviser_Rule extends Admin_Controller
             $exploded = $this->multiexplode(array("^", "=>"), $rules->rulesContent);
             foreach ($exploded as $key => $nodesNode) {
                 $node = $this->Adviser_node_model->viewdetails($nodesNode);
-                $newContent = $newContent . '<b>' . $node->nodesContent . '</b> (<i>' . $nodesNode . '</i>)';
+                if($node){
+                    $newContent = $newContent . '<b>' . $node->nodesContent . '</b> (<i>' . $nodesNode . '</i>)';
+                } else {
+                    $newContent = $newContent . '<b><font color="red">Không tìm thấy dữ liệu của nút này! Nút có thể đã bị xóa!</b></font> (<i>' . $nodesNode . '</i>)';
+                }
                 if ($key < count($exploded) - 2) {
                     $newContent = $newContent . '</br><font color="green"><b>+</b></font> ';
                 } else if ($key < count($exploded) - 1) {
@@ -227,12 +231,30 @@ class Adviser_Rule extends Admin_Controller
         //default values are empty if the customer is new
         $data['rulesId'] = '';
         $data['rulesCF'] = '0.0';
+        $data['selectedNode'] = array();
         $data['lefthand'] = $this->Adviser_rule_model->list_lefthand();
         $data['righthand'] = $this->Adviser_rule_model->list_righthand();
         $this->form_validation->set_rules('rulesId', 'Nút', 'trim|max_length[20]');
         $this->form_validation->set_rules('rulesCF', 'Giá Trị CF', 'callback_validateCF');
         $this->form_validation->set_rules('rightclause', 'Nút Vế Phải', 'required');
         $this->form_validation->set_rules('leftclause', 'Nút Vế Trái', 'required');
+
+        if ($id)
+        {
+            $this->question_id		= $id;
+            $question			= $this->Adviser_rule_model->viewdetails($id);
+            //if the administrator does not exist, redirect them to the admin list with an error
+            if (!$question)
+            {
+                $this->session->set_flashdata('message', 'Không thể tìm thấy câu hỏi yêu cầu!');
+                redirect($this->config->item('admin_folder').'/adviser_question');
+            }
+            //set values to db values
+            $data['rulesId']			= $question->rulesId;
+            $data['rulesCF']	= $question->rulesCF;
+            $exploded = $this->multiexplode(array("^", "=>"), $question->rulesContent);
+            $data['selectedNode'] = $exploded;
+        }
 
         if ($this->form_validation->run() == FALSE) {
             $this->view($this->config->item('admin_folder') . '/adviser_rule_form', $data);
@@ -256,6 +278,10 @@ class Adviser_Rule extends Admin_Controller
 
             $isRulesExist = $this->Adviser_rule_model->get_adviser_by_content($ruleContent);
             if (count($isRulesExist) > 0) {
+                if($save['rulesId']!=''){
+                    $save['rulesContent'] = $ruleContent;
+                    $this->Adviser_rule_model->save_adviser_rule($save);
+                }
                 $this->session->set_flashdata('message', 'Luật đã tồn tại, không khởi tạo luật mới!');
                 redirect($this->config->item('admin_folder') . '/adviser_rule');
             }

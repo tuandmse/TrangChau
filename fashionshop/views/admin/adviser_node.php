@@ -30,7 +30,7 @@
                     <td style=""><?php echo $entry->nodesContent; ?></td>
                     <td style="white-space:nowrap"><?php echo $entry->questionNode; ?></td>
                     <td>
-                        <a class="btn btn-small" style="float:right;"href="<?php echo site_url($this->config->item('admin_folder').'/adviser_node/form/'.$entry->nodesNode);?>"><i class="icon-search"></i> <?php echo lang('form_view')?></a>
+                        <a class="btn btn-small" style="float:right;"href="<?php echo site_url($this->config->item('admin_folder').'/adviser_node/form/'.$entry->nodesNode);?>"><i class="icon-pencil"></i> <?php echo lang('form_view')?></a>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -22,9 +22,13 @@
         <label class="control-label" for="name">Nội Dung Nút</label>
 
         <div class="controls">
+<!--            --><?php
+//            $data = array('name' => 'nodesContent', 'value' => set_value('nodesContent', $nodesContent), 'required' => '', 'class' => 'span6');
+//            echo form_input($data);
+//            ?>
             <?php
-            $data = array('name' => 'nodesContent', 'value' => set_value('nodesContent', $nodesContent), 'required' => '', 'class' => 'span6');
-            echo form_input($data);
+            $data	= array('name'=>'nodesContent', 'class'=>'redactor', 'value'=>set_value('nodesContent', $nodesContent), 'required' => '');
+            echo form_textarea($data);
             ?>
         </div>
     </div>

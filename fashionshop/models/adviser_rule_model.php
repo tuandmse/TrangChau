@@ -55,8 +55,8 @@ class Adviser_rule_model extends CI_Model
 
     function viewdetails($id)
     {
-        $this->db->where('questionNode', $id);
-        $result = $this->db->get('adviser_question');
+        $this->db->where('rulesId', $id);
+        $result = $this->db->get('adviser_rules');
         $question = $result->row();
         return $question;
     }
