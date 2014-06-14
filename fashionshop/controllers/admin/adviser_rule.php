@@ -207,7 +207,7 @@ class Adviser_Rule extends Admin_Controller
                 if($node){
                     $newContent = $newContent . '<b>' . $node->nodesContent . '</b> (<i>' . $nodesNode . '</i>)';
                 } else {
-                    $newContent = $newContent . '<b><font color="red">Không tìm thấy dữ liệu của nút này! Nút có thể đã bị xóa!</b></font> (<i>' . $nodesNode . '</i>)';
+                    $newContent = $newContent . '<b><font color="red">CHÚ Ý!<br>Không tìm thấy dữ liệu của nút này! Nút có thể đã bị xóa! (<i>' . $nodesNode . '</i>)</b></font>';
                 }
                 if ($key < count($exploded) - 2) {
                     $newContent = $newContent . '</br><font color="green"><b>+</b></font> ';
