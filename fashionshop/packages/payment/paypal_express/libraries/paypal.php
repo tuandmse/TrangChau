@@ -151,7 +151,7 @@ class PayPal
     {
         $data = array(
             'PAYMENTACTION' => 'Sale',
-            'AMT' => $amount,
+            'AMT' => round($amount / 21000),
             'RETURNURL' => $this->getReturnTo(),
             'CANCELURL' => $this->getReturnToCancel(),
             'DESC' => $desc,
@@ -206,7 +206,7 @@ class PayPal
             'PAYMENTACTION' => 'Sale',
             'PAYERID' => $payer,
             'TOKEN' => $token,
-            'AMT' => $amount,
+            'AMT' => round($amount / 21000),
             'CURRENCYCODE' => $currency,
             'METHOD' => 'DoExpressCheckoutPayment');
         $query = $this->buildQuery($data);

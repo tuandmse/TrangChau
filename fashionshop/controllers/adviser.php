@@ -85,16 +85,22 @@ class Adviser extends Front_Controller
     function advice_processing($inputs)
     {
         header('Content-Type: text/html; charset=utf-8');
+        // lấy tất cả các luật ở trong database của chúng ta
         $rules = $this->Adviser_rule_model->view();
-
+        // lấy tất cả các luật có thể sử dụng với input của chúng ta, có nghĩa là những luật mà những nút vế trái đều nằm
+        // trong danh sách những nút có từ input mà người dùng nhập vào
         $usable_rule = $this->get_usable_rule($inputs, $rules);
+        // chúng ta chỉ xử lý khi danh sách những luật có thể sử dụng có phần tử
         if (count($usable_rule) > 0) {
+            // biến supper final được dùng để chứa kết quả tư vấn
             $superFinal = new stdClass();
-
+            // gồm có 2 thuộc tính node và cf
             $superFinal->node = '';
             $superFinal->cf = '';
+            // tạo 1 mảng để chứa những luật có cùng kết luận
             $finalResult = array();
             $maxCF = 0;
+            // duyệt lần lượt từng luật có trong danh sách những luật có thể sử dụng được
             for ($i = 0; $i < count($usable_rule); $i) {
                 $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
@@ -133,7 +139,7 @@ class Adviser extends Front_Controller
             $suggestNodes = new stdClass();
             $suggestNodes->nodesContent = 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
             $suggestNodes->nodesNode = ' ';
-                return $suggestNodes;
+            return $suggestNodes;
         }
 
     }
