@@ -18,108 +18,53 @@ class Adviser extends Front_Controller
 		";
         $this->db->query($query);
     }
+
     function index()
     {
-        $data                = array();
+        $data = array();
         $data["postedStyle"] = false;
         $data["postedInfor"] = false;
-        $data["posted"]      = false;
-        $data["node_view"]   = $this->Adviser_model->node_view();
-		$data["ID_of_CF"]   = $this->Adviser_model->findIDCF();
-        $data["node_view_filterYN"]   = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
+        $data["posted"] = false;
+        $data["node_view"] = $this->Adviser_model->node_view();
+        $data["ID_of_CF"] = $this->Adviser_model->findIDCF();
+        $data["node_view_filterYN"] = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
         $data["question_view"] = $this->Adviser_model->question_view();
-		$data["products_image"] =array();
-		
+        $data["products_image"] = array();
+
         if ($this->input->post("submitInfor")) {
-						$answer = array();
-						$i= 0;
-                        foreach( $data["question_view"] as $node_entry )
-                        {
-						$obj = new stdClass();
-                            if($this->input->post($node_entry->questionNode)){
-                                $obj->node =  $this->input->post($node_entry->questionNode);
-                                $obj->cf =  1;
-                                $answer[$i]=$obj;
-                                $i++;
-                            }
-						}
-                        foreach( $data["cF_node_view"] as $cf_node_entry )
-                         {
-					    $obj = new stdClass();
-						$obj->node = $cf_node_entry->nodesNode;
-                             if($this->input->post($cf_node_entry->nodesNode)){
-                                 $obj->cf =  $this->input->post($cf_node_entry->nodesNode);
-                                 $answer[$i]=$obj;
-                                 $i++;
-                             }
+            $answer = array();
+            $i = 0;
+            foreach ($data["question_view"] as $node_entry) {
+                $obj = new stdClass();
+                if ($this->input->post($node_entry->questionNode)) {
+                    $obj->node = $this->input->post($node_entry->questionNode);
+                    $obj->cf = 1;
+                    $answer[$i] = $obj;
+                    $i++;
+                }
+            }
+            foreach ($data["cF_node_view"] as $cf_node_entry) {
+                $obj = new stdClass();
+                $obj->node = $cf_node_entry->nodesNode;
+                if ($this->input->post($cf_node_entry->nodesNode)) {
+                    $obj->cf = $this->input->post($cf_node_entry->nodesNode);
+                    $answer[$i] = $obj;
+                    $i++;
+                }
 
-                        }
-						$data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($this->get_lastNode($answer));
-                        $data["postedInfor"] = true;
-                        $data["advice"]= $this->advice_processing($answer);
-                        $data["base_url"]= $this->uri->segment_array();
-
+            }
+            $nodeAnswer = $this->advice_processing($answer);
+            $data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($nodeAnswer->nodesNode);
+            $data["postedInfor"] = true;
+            $data["advice"] = $nodeAnswer->nodesContent;
+            $data["base_url"] = $this->uri->segment_array();
 
         }
         $this->view("call_adviser.php", $data);
     }
-	
-	
-	function get_lastNode($inputs)
-    {
-        header('Content-Type: text/html; charset=utf-8');
-        $rules = $this->Adviser_rule_model->view();
 
-        $usable_rule = $this->get_usable_rule($inputs, $rules);
-
-        if (count($usable_rule) > 0) {
-            $superFinal = new stdClass();
-			
-            $superFinal->node = '';
-            $superFinal->cf = '';
-            $finalResult = array();
-            $maxCF = 0;
-            foreach ($usable_rule as $key => $urule) {
-                $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
-                $lastItem = $exploded[count($exploded) - 1];
-                array_push($finalResult, $urule);
-                unset($usable_rule[$key]);
-                $usable_rule = array_values($usable_rule);
-                foreach ($usable_rule as $key2 => $urule2) {
-                    $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
-                    $lastItem2 = $exploded2[count($exploded2) - 1];
-                    if ($lastItem2 == $lastItem) {
-                        array_push($finalResult, $urule2);
-                        unset($usable_rule[$key2]);
-                        $usable_rule = array_values($usable_rule);
-                    }
-                }
-                if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
-                    $superFinal->node = $lastItem;
-                    $superFinal->cf = $this->calculateCF($inputs, $finalResult);
-                    $maxCF = $this->calculateCF($inputs, $finalResult);
-                }
-                $finalResult = array();
-            }
-			if($superFinal->node !=""){
-             
-			 return $superFinal->node;
-
-			}else{
-			return  ' ';
-
-			}
-			
-			
-        } else {
-           return  'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
-        }
-		
-    }
-	
-	
-	function multiexplode($delimiters, $string)
+    function multiexplode($delimiters, $string)
     {
         $ready = str_replace($delimiters, $delimiters[0], $string);
         $launch = explode($delimiters[0], $ready);
@@ -136,58 +81,61 @@ class Adviser extends Front_Controller
         return false;
     }
 
-	
-	
+
     function advice_processing($inputs)
     {
         header('Content-Type: text/html; charset=utf-8');
         $rules = $this->Adviser_rule_model->view();
 
         $usable_rule = $this->get_usable_rule($inputs, $rules);
-
         if (count($usable_rule) > 0) {
             $superFinal = new stdClass();
-			
+
             $superFinal->node = '';
             $superFinal->cf = '';
             $finalResult = array();
             $maxCF = 0;
-            foreach ($usable_rule as $key => $urule) {
-                $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
+            for ($i = 0; $i < count($usable_rule); $i) {
+                $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
-                array_push($finalResult, $urule);
-                unset($usable_rule[$key]);
+                array_push($finalResult, $usable_rule[$i]);
+                unset($usable_rule[$i]);
                 $usable_rule = array_values($usable_rule);
-                foreach ($usable_rule as $key2 => $urule2) {
-                    $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
+                for ($j = 0; $j < count($usable_rule); $j) {
+                    $exploded2 = $this->multiexplode(array("^", "=>"), $usable_rule[$j]->rulesContent);
                     $lastItem2 = $exploded2[count($exploded2) - 1];
                     if ($lastItem2 == $lastItem) {
-                        array_push($finalResult, $urule2);
-                        unset($usable_rule[$key2]);
+                        array_push($finalResult, $usable_rule[$j]);
+                        unset($usable_rule[$j]);
                         $usable_rule = array_values($usable_rule);
+                    } else {
+                        $j++;
                     }
                 }
-                if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
+                $calCF = $this->calculateCF($inputs, $finalResult);
+                if ($calCF > $maxCF) {
                     $superFinal->node = $lastItem;
-                    $superFinal->cf = $this->calculateCF($inputs, $finalResult);
-                    $maxCF = $this->calculateCF($inputs, $finalResult);
+                    $superFinal->cf = $calCF;
+                    $maxCF = $calCF;
                 }
                 $finalResult = array();
             }
-			if($superFinal->node !=""){
-            $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
-           return  'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
-
-			}else{
-			return  'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
-
-			}
-			
-			
+            if ($superFinal->node != "") {
+                $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
+                return $suggestNodes;
+            } else {
+                $suggestNodes = new stdClass();
+                $suggestNodes->nodesContent = 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
+                $suggestNodes->nodesNode = ' ';
+                return $suggestNodes;
+            }
         } else {
-           return  'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
+            $suggestNodes = new stdClass();
+            $suggestNodes->nodesContent = 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
+            $suggestNodes->nodesNode = ' ';
+                return $suggestNodes;
         }
-		
+
     }
 
     // get usable rule depends on user's input
@@ -246,7 +194,8 @@ class Adviser extends Front_Controller
             $f = $minCF * $ruleTemp->rulesCF;
             array_push($fArray, $f);
         }
-        return $this->recursiveCertainty($fArray);
+        $value = $this->recursiveCertainty($fArray);
+        return $value;
     }
 
     // calculate the certainty
@@ -283,8 +232,4 @@ class Adviser extends Front_Controller
             $this->recursiveCertainty($inputs);
         }
     }
-
-
-    
 }
-?>

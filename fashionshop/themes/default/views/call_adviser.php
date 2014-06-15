@@ -7,7 +7,8 @@
         </div>
         <?php
         if ($postedInfor == true): ?>
-            <div class="comment_user" style="font-size: 20px">
+            <h2>Kết quả tư vấn của bạn: </h2>
+            <div class="comment_user" style="font-size: 15px">
                 <?php
                 echo $advice;
                 ?>
