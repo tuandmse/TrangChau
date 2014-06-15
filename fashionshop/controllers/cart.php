@@ -249,6 +249,9 @@ class Cart extends Front_Controller {
         $data['likes'] = $this->Like_and_comment_model->count_all_like($id);
 
         $customer = $this->go_cart->customer();
+        if(!isset($customer['id'])){
+            $customer['id'] = ' ';
+        }
         $data['is_like'] = $this->Like_and_comment_model->is_like($id, $customer['id']);
 
 		if(!$data['product'] || $data['product']->enabled==0)
