@@ -97,8 +97,8 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>customers"><?php echo lang('common_customers') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>customers/groups"><?php echo lang('common_groups') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>reports"><?php echo lang('common_reports') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>coupons"><?php echo lang('common_coupons') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>giftcards"><?php echo lang('common_giftcards') ?></a></li>
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--coupons">--><?php //echo lang('common_coupons') ?><!--</a></li>-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--giftcards">--><?php //echo lang('common_giftcards') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>guestbook">Quản Lý Góp Ý</a></li>
                         </ul>
                     </li>
@@ -135,7 +135,7 @@ $(document).ready(function(){
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>banners"><?php echo lang('common_banners') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
-<!--                            <li><a href="--><?php //echo $admin_url;?><!--settings">--><?php //echo lang('common_gocart_configuration') ?><!--</a></li>-->
+                            <li><a href="<?php echo $admin_url;?>settings"><?php echo lang('common_gocart_configuration') ?></a></li>
 <!--                            <li><a href="--><?php //echo $admin_url;?><!--shipping">--><?php //echo lang('common_shipping_modules') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>payment"><?php echo lang('common_payment_modules') ?></a></li>
 <!--                            <li><a href="--><?php //echo $admin_url;?><!--settings/canned_messages">--><?php //echo lang('common_canned_messages') ?><!--</a></li>-->
