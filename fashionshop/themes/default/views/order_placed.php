@@ -162,7 +162,7 @@ echo $download_section;
 	</tbody>
 </table>
 <form id="onlinepayment" method="post" action="https://www.nganluong.vn/advance_payment.php">
-    <input type="hidden" name="receiver" value="xitrum4692@gmail.com">
+    <input type="hidden" name="receiver" value="trangchauuit@gmail.com">
     <input id="onlinepayment-id" type="hidden" name="product" value="<?php echo $order_id;?>">
     <input type="hidden" name="price" value="<?php echo str_replace(".","",substr(format_currency($go_cart['total']), 0, -5)); ?>">
     <input type="hidden" name="return_url" value="<?php echo base_url()?>">
