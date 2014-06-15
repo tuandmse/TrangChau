@@ -217,8 +217,8 @@ class Orders extends Admin_Controller {
             'protocol' => 'smtp',
             'smtp_host' => 'ssl://smtp.googlemail.com',
             'smtp_port' => 465,
-            'smtp_user' => 'trangchau.fashionshop',
-            'smtp_pass' => 'VIETHOAKHONGDAU',
+            'smtp_user' => 'trangchauuit',
+            'smtp_pass' => 'thuytrang0304',
             'mailtype' => 'html',
             'charset' => 'utf-8'
         );

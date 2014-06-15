@@ -60,12 +60,12 @@ class Paypal_express
 	function install()
 	{
 		
-		$config['username'] = '';
-		$config['password'] = '';; 
-		$config['signature'] = '';
+		$config['username'] = 'trangchau.fashionshop-facilitator_api1.gmail.com';
+		$config['password'] = '1402803784';;
+		$config['signature'] = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AvcVw-4MAjEwvhXeux6Gva0DxN3n';
 		//$config['currency'] = 'USD'; // default
 		$config['SANDBOX'] = '1';
-		$config['enabled'] = '0';
+		$config['enabled'] = '1';
 		
 		//not normally user configurable, these are hidden on the form
 		$config['return_url'] = "pp_gate/pp_return/";

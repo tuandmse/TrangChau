@@ -6,7 +6,7 @@ class pp_gate extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->add_package_path(APPPATH.'packages/payment/paypal_express/');
-		$this->load->library(array('paypal', 'httprequest', 'go_cart'));
+		$this->load->library(array('paypal', 'httprequest', 'go_cart', 'session'));
 		$this->load->helper('form_helper');
 	}
 	
@@ -59,7 +59,7 @@ class pp_gate extends CI_Controller {
 		}
 	
 		// User canceled using paypal, send them back to the payment page
-		$cart  = $this->session->userdata('cart');	
+		//$cart  = $this->session->userdata('cart');
 		$this->session->set_flashdata('message', "<div>Paypal transaction canceled, select another payment method</div>");
 		redirect('checkout');
 	}

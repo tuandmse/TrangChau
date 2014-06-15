@@ -72,9 +72,9 @@ class PayPal
 //
 //			$this->currency = $this->CI->config->item('currency'); //$settings['currency'];
 
-        $this->API_USERNAME = '2thang7-facilitator_api1.gmail.com';
-        $this->API_PASSWORD = '1375065567';
-        $this->API_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AtiNGtZRJ5l1nGy.uY7QxIBqBWYv';
+        $this->API_USERNAME = 'trangchau.fashionshop.1_api1.gmail.com';
+        $this->API_PASSWORD = '1402806382';
+        $this->API_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31ABaw.6IrUM-Kbx-vrNEhY5VqjEsL';
         $this->RETURN_URL = 'pp_gate/pp_return/';
         $this->CANCEL_URL = 'pp_gate/pp_cancel/';
 

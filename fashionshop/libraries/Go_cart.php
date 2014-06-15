@@ -42,6 +42,7 @@ class go_cart {
 	function __construct() 
 	{
 		$this->CI =& get_instance();
+        $this->CI->load->library('session');
 		$this->CI->load->model(array('Coupon_model' , 'Gift_card_model', 'Settings_model', 'Digital_Product_model'));
 		
 		// Load the saved session
