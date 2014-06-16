@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -135,7 +135,7 @@ $(document).ready(function(){
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>banners"><?php echo lang('common_banners') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>pages"><?php echo lang('common_pages') ?></a></li>
-<!--                            <li><a href="--><?php //echo $admin_url;?><!--settings">--><?php //echo lang('common_gocart_configuration') ?><!--</a></li>-->
+                            <li><a href="<?php echo $admin_url;?>settings"><?php echo lang('common_gocart_configuration') ?></a></li>
 <!--                            <li><a href="--><?php //echo $admin_url;?><!--shipping">--><?php //echo lang('common_shipping_modules') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>payment"><?php echo lang('common_payment_modules') ?></a></li>
 <!--                            <li><a href="--><?php //echo $admin_url;?><!--settings/canned_messages">--><?php //echo lang('common_canned_messages') ?><!--</a></li>-->

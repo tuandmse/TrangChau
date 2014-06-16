@@ -25,7 +25,7 @@ class Adviser extends Front_Controller
         $data["postedStyle"] = false;
         $data["postedInfor"] = false;
         $data["posted"] = false;
-        $data["node_view"] = $this->Adviser_model->node_view();
+        $data["node_view"] = $this->Adviser_model->node_view(); 
         $data["ID_of_CF"] = $this->Adviser_model->findIDCF();
         $data["node_view_filterYN"] = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
@@ -35,16 +35,18 @@ class Adviser extends Front_Controller
         if ($this->input->post("submitInfor")) {
             $answer = array();
             $i = 0;
-            foreach ($data["question_view"] as $node_entry) {
+            
+            foreach ($data["question_view"] as $node_entry) { // lay cau hoi YN dua vao answer
                 $obj = new stdClass();
                 if ($this->input->post($node_entry->questionNode)) {
+                   
                     $obj->node = $this->input->post($node_entry->questionNode);
                     $obj->cf = 1;
                     $answer[$i] = $obj;
                     $i++;
                 }
             }
-            foreach ($data["cF_node_view"] as $cf_node_entry) {
+            foreach ($data["cF_node_view"] as $cf_node_entry) {  // lay cau hoi CF dua vao answer
                 $obj = new stdClass();
                 $obj->node = $cf_node_entry->nodesNode;
                 if ($this->input->post($cf_node_entry->nodesNode)) {
@@ -64,14 +66,14 @@ class Adviser extends Front_Controller
         $this->view("call_adviser.php", $data);
     }
 
-    function multiexplode($delimiters, $string)
+    function multiexplode($delimiters, $string) // để cắt dấu ^ va =>
     {
         $ready = str_replace($delimiters, $delimiters[0], $string);
         $launch = explode($delimiters[0], $ready);
         return $launch;
     }
 
-    function check_exist_in_arrays($inputs, $ruleId)
+    function check_exist_in_arrays($inputs, $ruleId) //
     {
         foreach ($inputs as $input) {
             if ($input->node == $ruleId) {
@@ -95,12 +97,15 @@ class Adviser extends Front_Controller
             $superFinal->cf = '';
             $finalResult = array();
             $maxCF = 0;
-            for ($i = 0; $i < count($usable_rule); $i) {
+            for ($i = 0; $i < count($usable_rule); $i) {// chay tim 2 luat co cung ket luan la lastitem va lastitem2 đưa vào finalresult
                 $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
+                
                 array_push($finalResult, $usable_rule[$i]);
+               
                 unset($usable_rule[$i]);
                 $usable_rule = array_values($usable_rule);
+                
                 for ($j = 0; $j < count($usable_rule); $j) {
                     $exploded2 = $this->multiexplode(array("^", "=>"), $usable_rule[$j]->rulesContent);
                     $lastItem2 = $exploded2[count($exploded2) - 1];
@@ -112,14 +117,22 @@ class Adviser extends Front_Controller
                         $j++;
                     }
                 }
-                $calCF = $this->calculateCF($inputs, $finalResult);
-                if ($calCF > $maxCF) {
+                $calCF = $this->calculateCF($inputs, $finalResult); // tinh CF
+                
+                
+                
+                
+                if ($calCF > $maxCF) { // so sanh CF
                     $superFinal->node = $lastItem;
                     $superFinal->cf = $calCF;
-                    $maxCF = $calCF;
+                    $maxCF = $calCF; // chon CF lon nhat
                 }
                 $finalResult = array();
             }
+            
+            
+            
+            
             if ($superFinal->node != "") {
                 $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
                 return $suggestNodes;
@@ -139,7 +152,7 @@ class Adviser extends Front_Controller
     }
 
     // get usable rule depends on user's input
-    function get_usable_rule($inputs, $rules)
+    function get_usable_rule($inputs, $rules) // dua nhung luat co the su dung vao 1 mang
     {
         // init the array for outputting
         $usable_rule = array();
@@ -178,9 +191,9 @@ class Adviser extends Front_Controller
         }
     }
 
-    function calculateCF($inputs, $finalResult)
+    function calculateCF($inputs, $finalResult) //tính CF của mảng luật có cùng kết luận
     {
-        $fArray = array();
+        $fArray = array(); // mang chua cac CF cua cac luat co cung ket luan
         foreach ($finalResult as $ruleTemp) {
             $exploded = $this->multiexplode(array("^", "=>"), $ruleTemp->rulesContent);
             $minCF = $this->getSingleInputFormInputs($inputs, $exploded[0])->cf;

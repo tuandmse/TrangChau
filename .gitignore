@@ -20,3 +20,4 @@ Thumbs.db
 .idea/vcs.xml
 .idea/workspace.xml
 gocart/config/database.php
+/nbproject/private/

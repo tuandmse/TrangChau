@@ -5,7 +5,7 @@
 	<ul class="nav nav-tabs">
 		<li class="active"><a href="#description_tab" data-toggle="tab"><?php echo lang('description');?></a></li>
 		<li><a href="#attributes_tab" data-toggle="tab"><?php echo lang('attributes');?></a></li>
-		<li><a href="#seo_tab" data-toggle="tab"><?php echo lang('seo');?></a></li>
+		
 	</ul>
 
 	<div class="tab-content">
@@ -38,11 +38,7 @@
 				echo form_input($data);
 				?>
 				
-				<label for="sequence"><?php echo lang('sequence');?> </label>
-				<?php
-				$data	= array('name'=>'sequence', 'value'=>set_value('sequence', $sequence));
-				echo form_input($data);
-				?>
+				
 				
 				<label for="parent_id"><?php echo lang('parent');?> </label>
 				<?php
@@ -78,22 +74,7 @@
 			
 		</div>
 		
-		<div class="tab-pane" id="seo_tab">
-			<fieldset>
-				<label for="seo_title"><?php echo lang('seo_title');?> </label>
-				<?php
-				$data	= array('name'=>'seo_title', 'value'=>set_value('seo_title', $seo_title), 'class'=>'span12');
-				echo form_input($data);
-				?>
-				
-				<label><?php echo lang('meta');?></label> 
-				<?php
-				$data	= array('rows'=>3, 'name'=>'meta', 'value'=>set_value('meta', html_entity_decode($meta)), 'class'=>'span12');
-				echo form_textarea($data);
-				?>
-				<p class="help-block"><?php echo lang('meta_data_description');?></p>
-			</fieldset>
-		</div>
+		
 	</div>
 
 </div>
