@@ -113,10 +113,10 @@ function remove_option(id)
 					</div>
 				</div>
 
-				<div class="row">
+				<div class="row" style="display: none">
 					<div class="span8">
 						<fieldset>
-							<legend><?php echo lang('inventory');?></legend>
+<!--							<legend>--><?php //echo lang('inventory');?><!--</legend>-->
 							<div class="row" style="padding-top:10px;">
 								<div class="span3">
 									<label for="track_stock"><?php echo lang('track_stock');?> </label>
@@ -124,7 +124,7 @@ function remove_option(id)
 								 	$options = array(	 '1'	=> lang('yes')
 														,'0'	=> lang('no')
 														);
-									echo form_dropdown('track_stock', $options, set_value('track_stock',$track_stock), 'class="span3"');
+									echo form_dropdown('track_stock', $options, set_value('track_stock',$track_stock), 'class="span3"', 'style="display:none;"');
 									?>
 								</div>
 								<div class="span3">
@@ -133,13 +133,13 @@ function remove_option(id)
 								 	$options = array(	 '0'	=> lang('no')
 														,'1'	=> lang('yes')
 														);
-									echo form_dropdown('fixed_quantity', $options, set_value('fixed_quantity',$fixed_quantity), 'class="span3"');
+									echo form_dropdown('fixed_quantity', $options, set_value('fixed_quantity',$fixed_quantity), 'class="span3"', 'style="display:none;"');
 									?>
 								</div>
 								<div class="span2">
 									<label for="quantity"><?php echo lang('quantity');?> </label>
 									<?php
-									$data	= array('name'=>'quantity', 'value'=>set_value('quantity', $quantity), 'class'=>'span2');
+									$data	= array('name'=>'quantity', 'value'=>set_value('quantity', $quantity), 'class'=>'span2', 'style' => 'display:none;');
 									echo form_input($data);
 									?>
 								</div>
@@ -147,7 +147,7 @@ function remove_option(id)
 						</fieldset>
 					</div>
 				</div>
-				<div class="row">
+				<div class="row"  style="display: none">
 					<div class="span8">
 						<fieldset>
 							<legend><?php echo lang('header_information');?></legend>
@@ -519,6 +519,7 @@ function remove_option(id)
 		echo form_dropdown('enabled', $options, set_value('enabled',$enabled), 'class="span4"');
 		?>
 
+        <div  style="display: none">
 		<?php
 		$options = array(	 '1'	=> lang('shippable')
 							,'0'	=> lang('not_shippable')
@@ -532,7 +533,7 @@ function remove_option(id)
 							);
 		echo form_dropdown('taxable', $options, set_value('taxable',$taxable), 'class="span4"');
 		?>
-
+        </div>
 		<label for="sku"><?php echo lang('sku');?></label>
 		<?php
 		$data	= array('name'=>'sku', 'value'=>set_value('sku', $sku), 'class'=>'span4');

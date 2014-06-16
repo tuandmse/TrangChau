@@ -72,7 +72,7 @@
 
 </fieldset>
 
-<fieldset>
+<fieldset style="display: none">
     <legend><?php echo lang('security');?></legend>
 
     <label><?php echo lang('admin_folder');?></label>
@@ -92,7 +92,7 @@
 
 </fieldset>
 
-<fieldset>
+<fieldset style="display: none">
     <legend><?php echo lang('package_details');?></legend>
 
     <div class="row">
@@ -107,7 +107,7 @@
     </div>
 </fieldset>
 
-<fieldset>
+<fieldset style="display: none">
     <legend><?php echo lang('order_inventory');?></legend>
 
     <table class="table">
@@ -153,7 +153,7 @@
 
 </fieldset>
 
-<fieldset>
+<fieldset style="display: none">
     <legend><?php echo lang('tax_settings');?></legend>
 
     <label><?php echo lang('tax_address');?></label>

@@ -44,7 +44,7 @@ $lang['order_inventory'] = 'Orders &amp; Inventory';
 $lang['tax_settings'] = 'Tax Settings';
 
 //config terms
-$lang['theme'] = 'GoCart Theme';
+$lang['theme'] = 'Theme';
 $lang['ssl_support'] = 'Use SSL';
 $lang['company_name'] = 'Shop Name';
 $lang['address1'] = 'Address';

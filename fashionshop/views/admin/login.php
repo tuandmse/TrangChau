@@ -10,7 +10,7 @@
     
     <div class="span4 offset4">
         <div style="text-align:center; margin-bottom:15px;">
-            <img src="<?php echo base_url('assets/img/logo.svg');?>"/>
+            <img src="<?php echo base_url('assets/img/logo.png');?>"/>
         </div>
     
     <?php echo form_open($this->config->item('admin_folder').'/login') ?>

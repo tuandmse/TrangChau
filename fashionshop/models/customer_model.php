@@ -326,7 +326,18 @@ Class Customer_model extends CI_Model
         if ($customer)
         {
             $this->load->helper('string');
-            $this->load->library('email');
+            $config = array(
+                'protocol' => 'smtp',
+                'smtp_host' => 'ssl://smtp.googlemail.com',
+                'smtp_port' => 465,
+                'smtp_user' => 'trangchauuit',
+                'smtp_pass' => 'thuytrang0304',
+                'mailtype' => 'html',
+                'charset' => 'utf-8'
+            );
+
+            $this->load->library('email', $config);
+            $this->email->set_newline("\r\n");
             
             $new_password       = random_string('alnum', 8);
             $customer['password']   = sha1($new_password);

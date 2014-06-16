@@ -14,7 +14,7 @@
     
     
     <div class="row">
-        <div class="span5">
+        <div class="span5" style="display: none">
             <label><?php echo lang('coupon_label');?></label>
             <input type="text" name="coupon_code" class="span3" style="margin:0px;">
             <input class="span2 btn btn-info" type="submit" value="<?php echo lang('apply_coupon');?>"/>
@@ -26,7 +26,7 @@
             <?php endif;?>
         </div>
         
-        <div class="span7" style="text-align:right;">
+        <div class="span12" style="text-align:right;">
                 <input id="redirect_path" type="hidden" name="redirect" value=""/>
     
                 <?php if(!$this->Customer_model->is_logged_in(false,false)): ?>

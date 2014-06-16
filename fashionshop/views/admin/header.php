@@ -97,8 +97,8 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>customers"><?php echo lang('common_customers') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>customers/groups"><?php echo lang('common_groups') ?></a></li>
                             <li><a href="<?php echo $admin_url;?>reports"><?php echo lang('common_reports') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>coupons"><?php echo lang('common_coupons') ?></a></li>
-                            <li><a href="<?php echo $admin_url;?>giftcards"><?php echo lang('common_giftcards') ?></a></li>
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--coupons">--><?php //echo lang('common_coupons') ?><!--</a></li>-->
+<!--                            <li><a href="--><?php //echo $admin_url;?><!--giftcards">--><?php //echo lang('common_giftcards') ?><!--</a></li>-->
                             <li><a href="<?php echo $admin_url;?>guestbook">Quản Lý Góp Ý</a></li>
                         </ul>
                     </li>
