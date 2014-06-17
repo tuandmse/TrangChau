@@ -11,18 +11,13 @@ class Adviser_Question extends Admin_Controller {
     {
         parent::__construct();
         $this->load->library('form_validation');
-        $this->load->model(array('Adviser_question_model'));
+        $this->load->model(array('Adviser_question_model', 'Adviser_node_model'));
     }
 
     function index() {
         $data = array();
         $data["questions"] = $this->Adviser_question_model->view();
         $this->view($this->config->item('admin_folder').'/adviser_question', $data);
-    }
-
-    function viewdetails($id){
-        $data['guestbook'] = $this->Adviser_question_model->viewdetails($id);
-        $this->view($this->config->item('admin_folder').'/adviser_question/form/'.$id, $data);
     }
 
     function form($id = false){
@@ -89,6 +84,15 @@ class Adviser_Question extends Admin_Controller {
         }
     }
 
+    function edit_status()
+    {
+        $order['nodesID']	= $this->input->post('nodesID');
+
+        $this->Adviser_node_model->delete($order['nodesID']);
+
+        echo url_title($order['nodesID']);
+    }
+
     function bulk_delete()
     {
         $orders	= $this->input->post('order');
@@ -99,11 +103,11 @@ class Adviser_Question extends Admin_Controller {
             {
                 $this->Adviser_question_model->delete($order);
             }
-            $this->session->set_flashdata('message', 'Những gợi ý được chọn đã bị xóa!');
+            $this->session->set_flashdata('message', 'Những câu hỏi được chọn đã bị xóa!');
         }
         else
         {
-            $this->session->set_flashdata('error', 'Bạn chưa chọn gợi ý nào!');
+            $this->session->set_flashdata('error', 'Bạn chưa chọn câu hỏi nào!');
         }
         //redirect as to change the url
         redirect($this->config->item('admin_folder').'/adviser_question');

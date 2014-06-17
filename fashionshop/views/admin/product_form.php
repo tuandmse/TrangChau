@@ -582,8 +582,8 @@ function add_image($photo_id, $filename, $alt, $caption, $primary=false)
 				</div>
 				<div class="span2">
 					<a onclick="return remove_image($(this));" rel="<?php echo $photo_id;?>" class="btn btn-danger" style="float:right; font-size:9px;"><i class="icon-trash icon-white"></i> <?php echo lang('remove');?></a>
-				</div>
-			</div>
+        </div>
+    </div>
 			<div class="row">
 				<div class="span6">
 					<label><?php echo lang('caption');?></label>

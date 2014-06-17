@@ -7,22 +7,23 @@
 
 class Adviser_Node extends Admin_Controller {
 
+    // hàm khởi tạo
     function __construct()
     {
         parent::__construct();
+        // load thư viện validation
         $this->load->library('form_validation');
+        // load model
         $this->load->model(array('Adviser_node_model'));
     }
 
+    // function index, khởi tạo trang chính khi sử dụng chức năng quản trị nút
     function index() {
+        // khởi tạo biến data và load tất cả các nút có trong database
         $data = array();
         $data["nodes"] = $this->Adviser_node_model->view();
+        // trả về view kèm data để hiển thị
         $this->view($this->config->item('admin_folder').'/adviser_node', $data);
-    }
-
-    function viewdetails($id){
-        $data['guestbook'] = $this->Adviser_question_model->viewdetails($id);
-        $this->view($this->config->item('admin_folder').'/adviser_node/form/'.$id, $data);
     }
 
     function form($id = false){
@@ -84,11 +85,11 @@ class Adviser_Node extends Admin_Controller {
             {
                 $this->Adviser_node_model->delete($order);
             }
-            $this->session->set_flashdata('message', 'Những gợi ý được chọn đã bị xóa!');
+            $this->session->set_flashdata('message', 'Những nút được chọn đã bị xóa!');
         }
         else
         {
-            $this->session->set_flashdata('error', 'Bạn chưa chọn gợi ý nào!');
+            $this->session->set_flashdata('error', 'Bạn chưa chọn nút nào!');
         }
         //redirect as to change the url
         redirect($this->config->item('admin_folder').'/adviser_node');

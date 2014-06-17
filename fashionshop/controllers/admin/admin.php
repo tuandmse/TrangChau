@@ -146,14 +146,19 @@ class Admin extends Admin_Controller
     //function check username
 	function check_username($str)
 	{
+        // kiểm tra email người dùng nhập đã tồn tại trong database hay chưa
 		$email = $this->auth->check_username($str, $this->admin_id);
+        // Nếu đã có
 		if ($email)
 		{
+            // set message thông báo
 			$this->form_validation->set_message('check_username', lang('error_username_taken'));
+            // trả về FALSE
 			return FALSE;
 		}
 		else
 		{
+            // trả về TRUE
 			return TRUE;
 		}
 	}
