@@ -61,7 +61,7 @@
                 </div>
             </div>
         <?php else: ?>
-            <a href="<?= $login_url ?>" role="button"><div style="background: url('<?php echo base_url('assets/img/facebook_login.png');?>') no-repeat; height: 46px; width: 300px;" ></div></a>
+            <a href="<?= $login_url ?>" role="button"><div style="background: url('<?php echo base_url('assets/img/facebook_login.png');?>') no-repeat; height: 46px; width: 300px; display:block;" ></div></a>
         <?php endif; ?>
         </form>
 	</div>
