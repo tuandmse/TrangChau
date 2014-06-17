@@ -21,9 +21,9 @@
 		?>
 
         <?php if($banner->name): ?>
-            <div class="box-caption">
-                <h4><?php echo $banner->name ?></h4>
-            </div>
+<!--            <div class="box-caption">-->
+<!--                <h4>--><?php //echo $banner->name ?><!--</h4>-->
+<!--            </div>-->
         <?php endif; ?>
         </div>
 	</div>

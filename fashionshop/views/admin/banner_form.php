@@ -1,5 +1,5 @@
 <?php
-$name			= array('name'=>'name', 'value' => set_value('name', $name));
+$name			= array('name'=>'name', 'value' => "default", "style" => "display: none;");
 $enable_date	= array('name'=>'enable_date', 'id'=>'enable_date', 'value'=>set_value('enable_on', set_value('enable_date', $enable_date)));
 $disable_date	= array('name'=>'disable_date', 'id'=>'disable_date', 'value'=>set_value('disable_on', set_value('disable_date', $disable_date)));
 $f_image		= array('name'=>'image', 'id'=>'image');
@@ -8,7 +8,7 @@ $new_window		= array('name'=>'new_window', 'value'=>1, 'checked'=>set_checkbox('
 ?>
 
 <?php echo form_open_multipart(config_item('admin_folder').'/banners/banner_form/'.$banner_collection_id.'/'.$banner_id); ?>
-	<label for="name"><?php echo lang('name');?> </label>
+<!--	<label for="name">--><?php //echo lang('name');?><!-- </label>-->
 	<?php echo form_input($name); ?>
 
 	<label for="link"><?php echo lang('link');?> </label>

@@ -25,9 +25,9 @@
 				?>
 
 				<?php if($banner->name): ?>
-					<div class="carousel-caption">
-						<h4><?php echo $banner->name ?></h4>
-					</div>
+<!--					<div class="carousel-caption">-->
+<!--						<h4>--><?php //echo $banner->name ?><!--</h4>-->
+<!--					</div>-->
 				<?php endif; ?>
 					
 			</div>

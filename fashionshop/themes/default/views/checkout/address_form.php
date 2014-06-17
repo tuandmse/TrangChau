@@ -196,15 +196,15 @@ $zip		= array('placeholder'=>lang('address_zip'), 'maxlength'=>'10', 'class'=>'a
 						<label class="placeholder"><?php echo lang('address_city');?><b class="r"> *</b></label>
 						<?php echo form_input($city);?>
 					</div>
-					<div class="span3">
-						<label class="placeholder"><?php echo lang('address_state');?><b class="r"> *</b></label>
-						<?php 
-							echo form_dropdown('zone_id',$zone_menu, @$customer[$address_form_prefix.'_address']['zone_id'], 'id="zone_id" class="address span3" ');?>
-					</div>
-					<div class="span2">
-						<label class="placeholder"><?php echo lang('address_zip');?><b class="r"> *</b></label>
-						<?php echo form_input($zip);?>
-					</div>
+<!--					<div class="span3">-->
+<!--						<label class="placeholder">--><?php //echo lang('address_state');?><!--<b class="r"> *</b></label>-->
+<!--						--><?php //
+//							echo form_dropdown('zone_id',$zone_menu, @$customer[$address_form_prefix.'_address']['zone_id'], 'id="zone_id" class="address span3" ');?>
+<!--					</div>-->
+<!--					<div class="span2">-->
+<!--						<label class="placeholder">--><?php //echo lang('address_zip');?><!--<b class="r"> *</b></label>-->
+<!--						--><?php //echo form_input($zip);?>
+<!--					</div>-->
 				</div>
 				<?php if($address_form_prefix=='bill') : ?>
 				<div class="row">
