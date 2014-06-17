@@ -74,25 +74,31 @@
 </fieldset>
 </form>
 <script type="text/javascript">
-    $('form').submit(function () {
-        $('.btn').attr('disabled', true).addClass('disabled');
-    });
-    $("#addMoreAnswer").click(function () {
-        $(".answers").append("<tr><td class='nodeId'><input type='hidden' name='nodesNode[]' value='' class='span1' placeholder='Nút'/></td><td><input type='text' name='nodesContent[]' value='' class='span6' placeholder='Nội Dung Nút'/></td><td><button type='button' name='deleteNode' class='btn btn-small btn-danger btnDelete'><i class='icon-trash icon-white'></i></button></td></tr>");
-    });
-    $('button[name="deleteNode"]').click(function () {
-        if (!confirm('Xóa nút này?')) {
-            return;
-        }
-        show_animation();
-        $nearestRow = $(this).closest('tr');
-        $value = $nearestRow.children('td.nodeId').find('input').val();
-        $nearestRow.hide();
-        if ($value) {
-            $.post("<?php echo site_url($this->config->item('admin_folder').'/adviser_question/edit_status'); ?>", { nodesID: $value}, function (data) {
-                setTimeout('hide_animation()', 500);
-            });
-        }
+    $( document ).ready(function() {
+        $('form').submit(function () {
+            $('.btn').attr('disabled', true).addClass('disabled');
+        });
+        $("#addMoreAnswer").click(function () {
+            $(".answers").append("<tr><td class='nodeId'><input type='hidden' name='nodesNode[]' value='' class='span1' placeholder='Nút'/></td><td><input type='text' name='nodesContent[]' value='' class='span6' placeholder='Nội Dung Nút'/></td><td><button type='button' name='deleteNode' class='btn btn-small btn-danger btnDelete'><i class='icon-trash icon-white'></i></button></td></tr>");
+        });
+
+        $("body").on( "click", 'button[name="deleteNode"]', function() {
+            if (!confirm('Xóa nút này?')) {
+                return;
+            }
+            show_animation();
+            $nearestRow = $(this).closest('tr');
+            $value = $nearestRow.children('td.nodeId').find('input').val();
+            $nearestRow.remove();
+            if ($value) {
+                $.post("<?php echo site_url($this->config->item('admin_folder').'/adviser_question/edit_status'); ?>", { nodesID: $value}, function (data) {
+                    setTimeout('hide_animation()', 500);
+                });
+            } else {
+                setTimeout('hide_animation()', 0);
+            }
+
+        });
     });
 
     function show_animation() {
