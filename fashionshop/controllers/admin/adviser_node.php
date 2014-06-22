@@ -11,6 +11,10 @@ class Adviser_Node extends Admin_Controller {
     function __construct()
     {
         parent::__construct();
+        if(!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin'))
+        {
+            redirect($this->config->item('admin_folder').'/orders');
+        }
         // load thư viện validation
         $this->load->library('form_validation');
         // load model

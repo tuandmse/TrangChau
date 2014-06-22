@@ -7,9 +7,11 @@ class Coupons extends Admin_Controller {
 	function __construct()
 	{		
 		parent::__construct();
-        
 		//$this->auth->check_access('Admin', true);
-		
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		$this->load->model('Coupon_model');
 		$this->load->model('Product_model');
 		$this->lang->load('coupon');

@@ -10,6 +10,11 @@ class Dashboard extends Admin_Controller {
 		{
 			redirect($this->config->item('admin_folder').'/orders');
 		}
+
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		
 		$this->load->model('Order_model');
 		$this->load->model('Customer_model');

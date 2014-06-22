@@ -11,6 +11,10 @@ class Adviser_Rule extends Admin_Controller
     function __construct()
     {
         parent::__construct();
+        if(!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin'))
+        {
+            redirect($this->config->item('admin_folder').'/orders');
+        }
         $this->load->library('form_validation');
         $this->load->model(array('Adviser_rule_model', 'Adviser_node_model'));
     }

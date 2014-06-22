@@ -77,7 +77,7 @@ class Checkout extends Front_Controller {
 		// Relax the requirement for countries without zones
 		if($this->Location_model->has_zones($this->input->post('country_id')))
 		{
-			$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|required|numeric');
+			$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|numeric');
 		} else {
 			$this->form_validation->set_rules('zone_id', 'lang:address_state'); // will be empty
 		}
@@ -89,7 +89,7 @@ class Checkout extends Front_Controller {
 			$country = $this->Location_model->get_country($this->input->post('country_id'));
 			if((bool)$country->zip_required)
 			{
-				$this->form_validation->set_rules('zip', 'Zip', 'trim|required|max_length[10]');
+				$this->form_validation->set_rules('zip', 'Zip', 'trim|max_length[10]');
 			}
 		}
 		else

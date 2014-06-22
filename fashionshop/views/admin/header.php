@@ -90,6 +90,10 @@ $(document).ready(function(){
             <div class="nav-collapse">
                 <ul class="nav">
                     <li><a href="<?php echo $admin_url;?>"><?php echo lang('common_home');?></a></li>
+
+                    <?php
+                    // Restrict access from Advisers
+                    if(!$this->auth->check_access('Advisers')) : ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('common_sales') ?> <b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -111,6 +115,11 @@ $(document).ready(function(){
 <!--                            <li><a href="--><?php //echo $admin_url;?><!--digital_products">--><?php //echo lang('common_digital_products') ?><!--</a></li>-->
                         </ul>
                     </li>
+                    <?php endif; ?>
+
+                    <?php
+                    // Restrict access to Advisers only
+                    if(!$this->auth->check_access('Orders')) : ?>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Quản Trị Hệ Tư Vấn<b class="caret"></b></a>
                         <ul class="dropdown-menu">
@@ -119,6 +128,7 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>adviser_rule">Quản Trị Luật</a></li>
                         </ul>
                     </li>
+                    <?php endif; ?>
                     
 <!--                    <li class="dropdown">-->
 <!--                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">--><?php //echo lang('common_content') ?><!-- <b class="caret"></b></a>-->

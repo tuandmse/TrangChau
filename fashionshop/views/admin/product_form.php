@@ -113,10 +113,10 @@ function remove_option(id)
 					</div>
 				</div>
 
-				<div class="row" style="display: none">
+				<div class="row" style="">
 					<div class="span8">
 						<fieldset>
-<!--							<legend>--><?php //echo lang('inventory');?><!--</legend>-->
+							<legend><?php echo lang('inventory');?></legend>
 							<div class="row" style="padding-top:10px;">
 								<div class="span3">
 									<label for="track_stock"><?php echo lang('track_stock');?> </label>
@@ -139,7 +139,7 @@ function remove_option(id)
 								<div class="span2">
 									<label for="quantity"><?php echo lang('quantity');?> </label>
 									<?php
-									$data	= array('name'=>'quantity', 'value'=>set_value('quantity', $quantity), 'class'=>'span2', 'style' => 'display:none;');
+									$data	= array('name'=>'quantity', 'value'=>set_value('quantity', $quantity), 'class'=>'span2');
 									echo form_input($data);
 									?>
 								</div>
