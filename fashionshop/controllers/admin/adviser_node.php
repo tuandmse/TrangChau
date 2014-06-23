@@ -18,7 +18,8 @@ class Adviser_Node extends Admin_Controller {
         // load thư viện validation
         $this->load->library('form_validation');
         // load model
-        $this->load->model(array('Adviser_node_model'));
+        $this->load->model(array('Adviser_node_model', 'Product_model'));
+        $this->lang->load('product');
     }
 
     // function index, khởi tạo trang chính khi sử dụng chức năng quản trị nút
@@ -30,17 +31,17 @@ class Adviser_Node extends Admin_Controller {
         $this->view($this->config->item('admin_folder').'/adviser_node', $data);
     }
 
-    function form($id = false){
+    function form($id = false, $order_by="name", $sort_order="ASC", $code=0, $page=0, $rows=1){
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
         $data['page_title']		= 'Nút';
 
-        //default values are empty if the customer is new
         $data['nodesNode']		= '';
         $data['nodesContent']	= '';
         $data['questionType']	= '';
+        $data['products']	= $this->Product_model->get_all_products();
 
         if ($id)
         {

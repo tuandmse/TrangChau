@@ -59,6 +59,56 @@ class Auth
             
         }
     }
+
+
+    function check_access_cn($access = array(), $default_redirect=false, $redirect = false)
+    {
+        /*
+        we could store this in the session, but by accessing it this way
+        if an admin's access level gets changed while they're logged in
+        the system will act accordingly.
+        */
+
+        $admin = $this->CI->session->userdata('admin');
+
+        $this->CI->db->select('access');
+        $this->CI->db->where('id', $admin['id']);
+        $this->CI->db->limit(1);
+        $result = $this->CI->db->get('admin');
+        $result = $result->row();
+
+        //result should be an object I was getting odd errors in relation to the object.
+        //if $result is an array then the problem is present.
+        if(!$result || is_array($result))
+        {
+            $this->logout();
+            return false;
+        }
+        //  echo $result->access;
+        if ($access)
+        {
+            if ($access == $result->access)
+            {
+                return true;
+            }
+            else
+            {
+                if ($redirect)
+                {
+                    redirect($redirect);
+                }
+                elseif($default_redirect)
+                {
+                    redirect(config_item('admin_folder').'/dashboard/');
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+        }
+    }
     
     /*
     this checks to see if the admin is logged in

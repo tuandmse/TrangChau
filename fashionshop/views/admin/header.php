@@ -125,6 +125,7 @@ $(document).ready(function(){
                         <ul class="dropdown-menu">
                             <li><a href="<?php echo $admin_url;?>adviser_question">Quản Trị Câu Hỏi</a></li>
                             <li><a href="<?php echo $admin_url;?>adviser_node">Quản Trị Nút</a></li>
+                            <li><a href="<?php echo $admin_url;?>adviser_cf">Quản Trị Chỉ Số CF</a></li>
                             <li><a href="<?php echo $admin_url;?>adviser_rule">Quản Trị Luật</a></li>
                         </ul>
                     </li>
