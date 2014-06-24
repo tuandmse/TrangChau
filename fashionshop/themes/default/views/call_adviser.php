@@ -1,4 +1,7 @@
 <div class="row" style="margin-top:20px;">
+    <?php
+    echo form_open('adviser', 'class="form-horizontal"');
+    ?>
     <div class="span12">
         <div class="page-header">
             <h1>
@@ -12,6 +15,8 @@
                 <?php
                 echo $advice;
                 ?>
+
+
             </div>
             <?php
             foreach ($products_image as $product):
@@ -36,6 +41,29 @@
             <?php
             endforeach;
             ?>
+
+
+            <h2>Hãy gửi đánh gia của bạn cho chúng tôi. Cám ơn ! </h2>
+
+            <div class="control-group">
+
+            <input type="radio" name="eval" value="0"> Chính xác
+            <input type="radio" name="eval" value="0.6"> Phần nào đó
+            <input type="radio" name="eval" value="0.8"> Không thât chính xác
+            <input type="radio" name="eval" value="1"> Thật tệ
+
+
+            </div>
+            <div class="span8">
+                <div class="control-group">
+                    <div class="controls">
+                        <input type="submit" value="submitEval" name="submitEval" class="btn btn-primary"/>
+                    </div>
+
+                </div>
+            </div>
+
+
         <?php
         endif;
         ?>
@@ -52,9 +80,7 @@
                 </div>
                 <div class="tab-content">
                     <div class="tab-pane active" id="infor">
-                        <?php
-                        echo form_open('adviser', 'class="form-horizontal"');
-                        ?>
+
                         <?php
                         foreach ($question_view as $yn):
                             ?>
@@ -99,8 +125,7 @@
                             </div>
                     </div>
                     <div class="tab-pane" id="style">
-                        <?php // echo form_open('adviser', 'class="form-horizontal"');
-                        ?>
+
                         <?php
                         foreach ($cF_node_view as $node_entry):
                             ?>
@@ -118,15 +143,7 @@
                                             <?php
                                             foreach ($Adviser_cf as $adviserCfs):
                                                 ?>
-
-
                                                         <input type="radio" name="<?php echo $node_entry->nodesNode;?>" value="<?php echo $adviserCfs->cfValue;?>"> <?php echo $adviserCfs->cfContent;?>
-
-
-
-
-
-
                                             <?php
                                             endforeach;
                                             ?>
@@ -149,12 +166,13 @@
 
                                 </div>
                             </div>
-                        </form>
+
                     </div>
                 </div>
 
         <?php endif; ?>
     </div>
+    </form>
 </div>
 <script type="text/javascript">
     function next_page() {

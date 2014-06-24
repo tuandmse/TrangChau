@@ -64,8 +64,12 @@ class Adviser extends Front_Controller
             $nodeAnswer = $this->advice_processing($answer);
             $data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($nodeAnswer->nodesNode);
             $data["postedInfor"] = true;
+            $data["postedStyle"] = false;
             $data["advice"] = $nodeAnswer->nodesContent;
             $data["base_url"] = $this->uri->segment_array();
+
+            $dataJson = json_encode((array)$answer);
+            echo $dataJson;
 
         }
         $this->view("call_adviser.php", $data);
