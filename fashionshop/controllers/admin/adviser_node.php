@@ -18,7 +18,7 @@ class Adviser_Node extends Admin_Controller {
         // load thư viện validation
         $this->load->library('form_validation');
         // load model
-        $this->load->model(array('Adviser_node_model', 'Product_model'));
+        $this->load->model(array('Adviser_node_model'));
         $this->lang->load('product');
     }
 
@@ -31,7 +31,7 @@ class Adviser_Node extends Admin_Controller {
         $this->view($this->config->item('admin_folder').'/adviser_node', $data);
     }
 
-    function form($id = false, $order_by="name", $sort_order="ASC", $code=0, $page=0, $rows=1){
+    function form($id = false){
         $this->load->helper('form');
         $this->load->library('form_validation');
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -41,7 +41,6 @@ class Adviser_Node extends Admin_Controller {
         $data['nodesNode']		= '';
         $data['nodesContent']	= '';
         $data['questionType']	= '';
-        $data['products']	= $this->Product_model->get_all_products();
 
         if ($id)
         {

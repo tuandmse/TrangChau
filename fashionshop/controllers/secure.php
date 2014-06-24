@@ -663,11 +663,11 @@ class Secure extends Front_Controller
             $country = $this->location_model->get_country(set_value('country_id'));
             $zone = $this->location_model->get_zone(set_value('zone_id'));
             if (!empty($country)) {
-                $a['field_data']['zone'] = $zone->code; // save the state for output formatted addresses
+//                $a['field_data']['zone'] = $zone->code; // save the state for output formatted addresses
                 $a['field_data']['country'] = $country->name; // some shipping libraries require country name
                 $a['field_data']['country_code'] = $country->iso_code_2; // some shipping libraries require the code
                 $a['field_data']['country_id'] = $this->input->post('country_id');
-                $a['field_data']['zone_id'] = $this->input->post('zone_id');
+//                $a['field_data']['zone_id'] = $this->input->post('zone_id');
             }
 
             $this->Customer_model->save_address($a);

@@ -33,53 +33,6 @@
         </div>
     </div>
 
-    <div class="page-header">
-        <h3>Gán nút cho sản phẩm</h3>
-    </div>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Sale Price</th>
-            <th>Current node</th>
-            <th>
-            </th>
-        </tr>
-        </thead>
-        <tbody>
-        <?php echo (count($products) < 1)?'<tr><td style="text-align:center;" colspan="7">'.lang('no_products').'</td></tr>':''?>
-        <?php foreach ($products as $product):?>
-            <tr>
-                <td><?php echo $product->id;?></td>
-                <td><?php echo $product->name;?></td>
-                <td><?php echo $product->price;?></td>
-                <td><?php echo $product->saleprice;?></td>
-                <td><?php echo $product->adviserNode;?></td>
-                <td>
-					<span class="btn-group pull-right">
-                        <?php
-                            if($product->adviserNode == $nodesNode){
-                        ?>
-						<a class="btn btn-danger" href="" onclick="return areyousure();"><i class="icon-plus icon-white"></i> Hủy Gán</a>
-                        <?php
-                            } elseif ($product->adviserNode == 0){
-                        ?>
-                            <a class="btn btn-primary" href="" onclick="return areyousure();"><i class="icon-plus icon-white"></i> Gán</a>
-                        <?php
-                            } elseif($product->adviserNode != $nodesNode) {
-                        ?>
-                            <a class="btn btn-primary" href="" onclick="return areyousure();"><i class="icon-plus icon-white"></i> Gán lại</a>
-                        <?php
-                            }
-                        ?>
-					</span>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-        </tbody>
-    </table>
 
     <hr>
     <div class="control-group">

@@ -201,12 +201,12 @@ class Checkout extends Front_Controller {
 		$this->form_validation->set_rules('address2', 'lang:address2', 'trim|max_length[128]');
 		$this->form_validation->set_rules('city', 'lang:address_city', 'trim|required|max_length[128]');
 		$this->form_validation->set_rules('country_id', 'lang:address_country', 'trim|required|numeric');
-		$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|required|numeric');
+		$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|numeric');
 		
 		// Relax the requirement for countries without zones
 		if($this->Location_model->has_zones($this->input->post('country_id')))
 		{
-			$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|required|numeric');
+			$this->form_validation->set_rules('zone_id', 'lang:address_state', 'trim|numeric');
 		} else {
 			$this->form_validation->set_rules('zone_id', 'lang:address_state'); // will be empty
 		}
@@ -217,7 +217,7 @@ class Checkout extends Front_Controller {
 			$country = $this->Location_model->get_country($this->input->post('country_id'));
 			if((bool)$country->zip_required)
 			{
-				$this->form_validation->set_rules('zip', 'lang:address_zip', 'trim|required|max_length[10]');
+				$this->form_validation->set_rules('zip', 'lang:address_zip', 'trim|max_length[10]');
 			}
 		}
 		else
