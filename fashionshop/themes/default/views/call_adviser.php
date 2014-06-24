@@ -113,18 +113,27 @@
                                             ?>
                                         </label>
                                         <div>
-                                            <input type="radio" name="<?php
-                                            echo $node_entry->nodesNode;
-                                            ?>" value="0"> Không
-                                            <input type="radio" name="<?php
-                                            echo $node_entry->nodesNode;
-                                            ?>" value="0.6"> Chút ít
-                                            <input type="radio" name="<?php
-                                            echo $node_entry->nodesNode;
-                                            ?>" value="0.8"> Thích
-                                            <input type="radio" name="<?php
-                                            echo $node_entry->nodesNode;
-                                            ?>" value="1"> Rất thích
+
+
+                                            <?php
+                                            foreach ($Adviser_cf as $adviserCfs):
+                                                ?>
+
+
+                                                        <input type="radio" name="<?php echo $node_entry->nodesNode;?>" value="<?php echo $adviserCfs->cfValue;?>"> <?php echo $adviserCfs->cfContent;?>
+
+
+
+
+
+
+                                            <?php
+                                            endforeach;
+                                            ?>
+
+
+
+
                                         </div>
                                     </div>
 

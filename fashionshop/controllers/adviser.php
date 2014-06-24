@@ -8,7 +8,9 @@ class Adviser extends Front_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model(array(
-            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model'));
+            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model','Adviser_cf_model'));
+
+
         $query = "CREATE TABLE IF NOT EXISTS " . $this->db->dbprefix('adviser_question') . " (
             questionNode varchar(11) CHARACTER SET utf8 NOT NULL ,
             questionContent text CHARACTER SET utf8 NOT NULL,
@@ -31,6 +33,9 @@ class Adviser extends Front_Controller
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
         $data["question_view"] = $this->Adviser_model->question_view();
         $data["products_image"] = array();
+
+        $data["Adviser_cf"] = $this->Adviser_cf_model->view();
+
 
         if ($this->input->post("submitInfor")) {
             $answer = array();
