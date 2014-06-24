@@ -235,13 +235,73 @@
         <div class="row" style="margin-top:15px">
             <div class="span8">
                 <h3>Đánh giá từ người dùng: </h3>
+                <div class="user_star">
+                    <table border="0">
+                        <tr>
+                            <td>
+                                <div class="other_rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo $star->five ?> người.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="other_rating">
+                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo $star->four ?> người.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="other_rating">
+                                    <span>☆</span><span>☆</span><span>☆</span>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo $star->three ?> người.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="other_rating">
+                                    <span>☆</span><span>☆</span>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo $star->two ?> người.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="other_rating">
+                                    <span>☆</span>
+                                </div>
+                            </td>
+                            <td>
+                                <?php echo $star->one ?> người.
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
 
-        <div class="row" style="margin-top:15px; max-height: 200px; overflow: auto; padding-top: 10px">
-            <div class="span8" style="border-top: 2px solid #9d9ca2; padding-top: 10px">
+        <div class="row" style="border-top: 2px solid #9d9ca2; border-bottom: 2px solid #9d9ca2; margin-top:15px; max-height: 500px; overflow: auto; padding-top: 10px">
+            <div class="span8" style="padding-top: 10px">
                 <?php
+                $my_rate = 0;
+                $my_comment = '';
                 foreach($rates as $rate){
+                    if($rate->is_my_rate){
+                        $my_rate = $rate->rate;
+                        $my_comment = $rate->content;
+                    }
                     ?>
                     <div class="comment_user"><?php echo $rate->email; ?> <?php echo lang('said') ?>: </div>
                     <?php if($this->session->userdata('admin')){ ?>
@@ -264,19 +324,19 @@
         </div>
 
         <?php if($this->Customer_model->is_logged_in(false, false)){
-        echo form_open('/rate_and_comment/comment/'.$product_id ); ?>
+        echo form_open('/rate_and_comment/rate/'.$product_id ); ?>
         <div class="row" style="margin-top:15px;">
             <div class="span8">
                 <h3>Đánh giá của bạn: </h3>
                 <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
-                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
-                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
-                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
-                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                    <input type="radio" id="star5" name="rating" value="5" <?php if($my_rate == 5){ ?> checked <?php } ?> /><label for="star5" title="Rocks!">5 stars</label>
+                    <input type="radio" id="star4" name="rating" value="4" <?php if($my_rate == 4){ ?> checked <?php } ?> /><label for="star4" title="Pretty good">4 stars</label>
+                    <input type="radio" id="star3" name="rating" value="3" <?php if($my_rate == 3){ ?> checked <?php } ?> /><label for="star3" title="Meh">3 stars</label>
+                    <input type="radio" id="star2" name="rating" value="2" <?php if($my_rate == 2){ ?> checked <?php } ?> /><label for="star2" title="Kinda bad">2 stars</label>
+                    <input type="radio" id="star1" name="rating" value="1" <?php if($my_rate == 1){ ?> checked <?php } ?> /><label for="star1" title="Sucks big time">1 star</label>
                 </fieldset>
                 <?php
-                $data	= array('name'=>'content', 'class'=>'redactor span8', 'value'=>'', 'placeholder'=>lang('your_comment_here'));
+                $data	= array('name'=>'content', 'class'=>'redactor span8', 'value'=> $my_comment, 'placeholder'=>lang('your_comment_here'));
                 echo form_textarea($data);
                 ?>
                 <div class="form-actions">

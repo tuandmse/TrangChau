@@ -241,6 +241,43 @@ class Cart extends Front_Controller {
 	{
         //Rate and comment
         $data['rates'] = $this->Rate_and_comment_model->get_all_rates($id);
+        $one_star = 0;
+        $two_star = 0;
+        $three_star = 0;
+        $four_star = 0;
+        $five_star = 0;
+        foreach($data['rates'] as $a_rate){
+            if($a_rate->rate == '5'){
+                $five_star++;
+            }
+            if($a_rate->rate == '4') {
+                $four_star++;
+            }
+            if($a_rate->rate == '3'){
+                $three_star++;
+            }
+            if($a_rate->rate == '2') {
+                $two_star++;
+            }
+            if($a_rate->rate == '1'){
+                $one_star++;
+            }
+        }
+
+        $data['star'] = new stdClass();
+        $data['star']->one = $one_star;
+        $data['star']->two = $two_star;
+        $data['star']->three = $three_star;
+        $data['star']->four = $four_star;
+        $data['star']->five = $five_star;
+
+        $backup = 0;
+
+        if(($five_star + $four_star + $three_star + $two_star + $one_star) == 0){
+            $backup = 1;
+        }
+        $data['star']->average = ($five_star*5 + $four_star*4 + $three_star*3 + $two_star*2 + $one_star) / ($five_star + $four_star + $three_star + $two_star + $one_star + $backup);
+
 
 
 		//get the product
