@@ -4,7 +4,7 @@ class Cart extends Front_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Like_and_comment_model'));
+        $this->load->model(array('Rate_and_comment_model'));
         $this->load->helper('form');
     }
 
@@ -239,20 +239,19 @@ class Cart extends Front_Controller {
 	
 	function product($id)
 	{
+        //Rate and comment
+        $data['rates'] = $this->Rate_and_comment_model->get_all_rates($id);
+
+
 		//get the product
 		$data['product']	= $this->Product_model->get_product($id);
 
         $data['product_id'] = $id;
 
-        $this->load->model('Like_and_comment_model');
-		$data['comments'] = $this->Like_and_comment_model->get_all_comment($id);
-        $data['likes'] = $this->Like_and_comment_model->count_all_like($id);
-
         $customer = $this->go_cart->customer();
         if(!isset($customer['id'])){
             $customer['id'] = ' ';
         }
-        $data['is_like'] = $this->Like_and_comment_model->is_like($id, $customer['id']);
 
 		if(!$data['product'] || $data['product']->enabled==0)
 		{

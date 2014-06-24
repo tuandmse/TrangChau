@@ -233,64 +233,46 @@
         </div>
 
         <div class="row" style="margin-top:15px">
-        <?php if($this->Customer_model->is_logged_in(false, false)){
-                if($is_like) {
-                    echo form_open('/like_and_comment/unlike/'.$product_id ); ?>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Unlike</button>
-                        <span><?php echo lang('you_and') ?> <?php echo $likes-1; ?> <?php echo lang('people_like') ?></span>
-                    </div>
-                    </form>
-                    <?php
-                } else {
-                    echo form_open('/like_and_comment/like/'.$product_id ); ?>
-                    <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Like</button>
-                        <span><?php echo $likes; ?> <?php echo lang('people_like') ?></span>
-                    </div>
-                    </form>
-                <?php
-                }
-            } else {
-            ?>
-            <div class="form-actions">
-                <span><?php echo $likes; ?> <?php echo lang('people_like') ?></span>
+            <div class="span8">
+                <h3>Đánh giá từ người dùng: </h3>
             </div>
-            <div><?php echo lang('no_login_like') ?></div>
-        <?php
-        } ?>
-
         </div>
 
-        <div class="row" style="margin-top:15px; border-top: 1px solid #000000; max-height: 200px; overflow: auto; padding-top: 10px">
-            <?php
+        <div class="row" style="margin-top:15px; max-height: 200px; overflow: auto; padding-top: 10px">
+            <div class="span8" style="border-top: 2px solid #9d9ca2; padding-top: 10px">
+                <?php
                 foreach($comments as $comment){
-            ?>
-                <div class="comment_user"><?php echo $comment->email; ?> <?php echo lang('said') ?>: </div>
+                    ?>
+                    <div class="comment_user"><?php echo $comment->email; ?> <?php echo lang('said') ?>: </div>
                     <?php if($this->session->userdata('admin')){ ?>
                         <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/like_and_comment/delete_comment/'.$comment->id); ?>"><?php echo lang('delete_comment'); ?></a>
-                    <?php } else {
-                        if($comment->is_my_comment){
-                            ?>
-                            <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/like_and_comment/delete_comment/'.$comment->id); ?>"><?php echo lang('delete_comment'); ?></a>
-                        <?php
-                        }
-                    } ?>
+                    <?php } ?>
                     <div class="comment_content"><?php echo $comment->content; ?></div>
-            <?php
+                <?php
                 }
-            ?>
+                ?>
+            </div>
         </div>
 
         <?php if($this->Customer_model->is_logged_in(false, false)){
-        echo form_open('/like_and_comment/comment/'.$product_id ); ?>
+        echo form_open('/rate_and_comment/comment/'.$product_id ); ?>
         <div class="row" style="margin-top:15px;">
-            <?php
-            $data	= array('name'=>'content', 'class'=>'redactor span8', 'value'=>'', 'placeholder'=>lang('your_comment_here'));
-            echo form_textarea($data);
-            ?>
-            <div class="form-actions">
-                <button type="submit" class="btn btn-primary"><?php echo lang('comment') ?></button>
+            <div class="span8">
+                <h3>Đánh giá của bạn: </h3>
+                <fieldset class="rating">
+                    <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="Rocks!">5 stars</label>
+                    <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="Pretty good">4 stars</label>
+                    <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="Meh">3 stars</label>
+                    <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="Kinda bad">2 stars</label>
+                    <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="Sucks big time">1 star</label>
+                </fieldset>
+                <?php
+                $data	= array('name'=>'content', 'class'=>'redactor span8', 'value'=>'', 'placeholder'=>lang('your_comment_here'));
+                echo form_textarea($data);
+                ?>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary"><?php echo lang('comment') ?></button>
+                </div>
             </div>
         </div>
         </form>

@@ -6,15 +6,15 @@
  * Time: 9:25
  */
 
-class Like_and_comment_model extends CI_Model
+class Rate_and_comment_model extends CI_Model
 {
 
-    function get_all_comment($pid)
+    function get_all_rates($pid)
     {
-        $this->db->select('email, content, comment.id');
-        $this->db->join('customers', 'customers.id=comment.user_id', 'right');
+        $this->db->select('email, content, rate.id, rate');
+        $this->db->join('customers', 'customers.id=rate.user_id', 'right');
         $this->db->where('product_id', $pid);
-        $result	= $this->db->get('comment')->result();
+        $result	= $this->db->get('rate')->result();
 
         $customer = $this->go_cart->customer();
         for($i = 0; $i < count($result); $i ++){
@@ -44,11 +44,12 @@ class Like_and_comment_model extends CI_Model
         return $result;
     }
 
-    function like($pid, $uid)
+    function rate($pid, $uid, $star)
     {
-        $like['product_id'] = $pid;
-        $like['user_id'] = $uid;
-        $this->db->insert('like', $like);
+        $rate['product_id'] = $pid;
+        $rate['user_id'] = $uid;
+        $rate['rate'] = $star;
+        $this->db->insert('rate', $rate);
     }
 
     function is_like($pid, $uid)
@@ -73,6 +74,7 @@ class Like_and_comment_model extends CI_Model
         $comment['product_id'] = $pid;
         $comment['user_id'] = $uid;
         $comment['content'] = $content;
+        $this->db->delete('comment', array('product_id'=>$pid, 'user_id'=>$uid));
         $this->db->insert('comment', $comment);
     }
 
