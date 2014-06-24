@@ -312,3 +312,15 @@ img.responsiveImage:hover
     top:2px;
     left:2px;
 }
+
+.other_rating > span {
+    position: relative;
+    width: 1.1em;
+    font-size:150%;
+    line-height:1.2;
+    color:#ddd;
+    text-shadow:1px 1px #bbb, 2px 2px #666, .1em .1em .2em rgba(0,0,0,.5);
+    content: "\2605";
+    left: 0;
+    color: gold;
+}

@@ -241,13 +241,22 @@
         <div class="row" style="margin-top:15px; max-height: 200px; overflow: auto; padding-top: 10px">
             <div class="span8" style="border-top: 2px solid #9d9ca2; padding-top: 10px">
                 <?php
-                foreach($comments as $comment){
+                foreach($rates as $rate){
                     ?>
-                    <div class="comment_user"><?php echo $comment->email; ?> <?php echo lang('said') ?>: </div>
+                    <div class="comment_user"><?php echo $rate->email; ?> <?php echo lang('said') ?>: </div>
                     <?php if($this->session->userdata('admin')){ ?>
-                        <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/like_and_comment/delete_comment/'.$comment->id); ?>"><?php echo lang('delete_comment'); ?></a>
+                        <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/rate_and_comment/delete_rate/'.$rate->id); ?>"><?php echo lang('delete_comment'); ?></a>
                     <?php } ?>
-                    <div class="comment_content"><?php echo $comment->content; ?></div>
+                    <div class="other_rating">
+                        <?php
+                            for($i = 0; $i < $rate->rate; $i++){
+                            ?>
+                            <span>☆</span>
+                        <?php
+                        }
+                        ?>
+                    </div>
+                    <div class="comment_content"><?php echo $rate->content; ?></div>
                 <?php
                 }
                 ?>

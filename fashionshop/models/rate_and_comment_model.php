@@ -19,9 +19,9 @@ class Rate_and_comment_model extends CI_Model
         $customer = $this->go_cart->customer();
         for($i = 0; $i < count($result); $i ++){
             if($result[$i]->email == $customer['email']){
-                $result[$i]->is_my_comment = true;
+                $result[$i]->is_my_rate = true;
             } else {
-                $result[$i]->is_my_comment = false;
+                $result[$i]->is_my_rate = false;
             }
         }
 
