@@ -48,10 +48,10 @@
 
             <div class="control-group">
 
-            <input type="radio" name="eval" value="0" checked> Chính xác
-            <input type="radio" name="eval" value="0.6"> Phần nào đó
-            <input type="radio" name="eval" value="0.8"> Không thât chính xác
-            <input type="radio" name="eval" value="1"> Thật tệ
+            <input type="radio" name="eval" value="1" checked> Chính xác
+            <input type="radio" name="eval" value="0.8"> Phần nào đó
+            <input type="radio" name="eval" value="0.6"> Không thât chính xác
+            <input type="radio" name="eval" value="0"> Thật tệ
             <input type="hidden" name="selected" value="<?php echo htmlspecialchars(" $evaluationSelected", ENT_QUOTES);?>">
             <input type="hidden" name="conclusion" value="<?php echo htmlspecialchars(" $evaluationConclusion", ENT_QUOTES);?>">
 

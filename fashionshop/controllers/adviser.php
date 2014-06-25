@@ -44,12 +44,13 @@ class Adviser extends Front_Controller
             foreach ($data["question_view"] as $node_entry) { // lay cau hoi YN dua vao answer
                 $obj = new stdClass();
                 if ($this->input->post($node_entry->questionNode)) {
-
                     $obj->node = $this->input->post($node_entry->questionNode);
                     $obj->cf = 1;
+
                     $answer[$i] = $obj;
                     $i++;
                 }
+
             }
             foreach ($data["cF_node_view"] as $cf_node_entry) {  // lay cau hoi CF dua vao answer
                 $obj = new stdClass();
@@ -60,7 +61,12 @@ class Adviser extends Front_Controller
                     $i++;
                 }
 
+
+
             }
+            $dataJson = json_encode((array)$answer);
+            $data["evaluationSelected"] = $dataJson;
+
             $nodeAnswer = $this->advice_processing($answer);
             $data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($nodeAnswer->nodesNode);
             $data["postedInfor"] = true;
@@ -68,10 +74,11 @@ class Adviser extends Front_Controller
             $data["advice"] = $nodeAnswer->nodesContent;
             $data["base_url"] = $this->uri->segment_array();
 
-
-            $dataJson = json_encode((array)$answer);
-            $data["evaluationSelected"] = $dataJson;
             $data["evaluationConclusion"] = $nodeAnswer->nodesNode;
+
+
+
+
 
 
         }
