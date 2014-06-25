@@ -8,7 +8,7 @@ class Adviser extends Front_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model(array(
-            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model','Adviser_cf_model'));
+            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model','Adviser_cf_model','Adviser_evaluation_model'));
 
 
         $query = "CREATE TABLE IF NOT EXISTS " . $this->db->dbprefix('adviser_question') . " (
@@ -40,11 +40,11 @@ class Adviser extends Front_Controller
         if ($this->input->post("submitInfor")) {
             $answer = array();
             $i = 0;
-            
+
             foreach ($data["question_view"] as $node_entry) { // lay cau hoi YN dua vao answer
                 $obj = new stdClass();
                 if ($this->input->post($node_entry->questionNode)) {
-                   
+
                     $obj->node = $this->input->post($node_entry->questionNode);
                     $obj->cf = 1;
                     $answer[$i] = $obj;
@@ -68,10 +68,17 @@ class Adviser extends Front_Controller
             $data["advice"] = $nodeAnswer->nodesContent;
             $data["base_url"] = $this->uri->segment_array();
 
+
             $dataJson = json_encode((array)$answer);
-            echo $dataJson;
+            $data["evaluationSelected"] = $dataJson;
+            $data["evaluationConclusion"] = $nodeAnswer->nodesNode;
+
 
         }
+
+
+
+
         $this->view("call_adviser.php", $data);
     }
 
@@ -155,7 +162,7 @@ class Adviser extends Front_Controller
             $suggestNodes = new stdClass();
             $suggestNodes->nodesContent = 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
             $suggestNodes->nodesNode = ' ';
-                return $suggestNodes;
+            return $suggestNodes;
         }
 
     }

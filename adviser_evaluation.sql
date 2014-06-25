@@ -25,11 +25,11 @@ SET time_zone = "+00:00";
 --
 -- Table structure for table `fs_adviser_evaluation`
 --
-
+DROP TABLE IF EXISTS `fs_adviser_evaluation`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_evaluation` (
   `evaluationId` varchar(10) NOT NULL DEFAULT '0',
   `evaluationSelected` text NOT NULL,
-  `evaluationConclusion` text,
+  `evaluationConclusion` text DEFAULT NULL,
   `evaluationRate` int(10) DEFAULT NULL,
   PRIMARY KEY (`evaluationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -53,6 +53,7 @@ DELIMITER ;
 --
 -- Table structure for table `fs_adviser_evaluation_seq`
 --
+DROP TABLE IF EXISTS `fs_adviser_evaluation_seq`;
 
 CREATE TABLE IF NOT EXISTS `fs_adviser_evaluation_seq` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

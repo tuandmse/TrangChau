@@ -1,7 +1,5 @@
 <div class="row" style="margin-top:20px;">
-    <?php
-    echo form_open('adviser', 'class="form-horizontal"');
-    ?>
+
     <div class="span12">
         <div class="page-header">
             <h1>
@@ -41,33 +39,42 @@
             <?php
             endforeach;
             ?>
+            <?php
+            echo form_open('adviser_eval', 'class="form-horizontal"');
+            ?>
 
 
             <h2>Hãy gửi đánh gia của bạn cho chúng tôi. Cám ơn ! </h2>
 
             <div class="control-group">
 
-            <input type="radio" name="eval" value="0"> Chính xác
+            <input type="radio" name="eval" value="0" checked> Chính xác
             <input type="radio" name="eval" value="0.6"> Phần nào đó
             <input type="radio" name="eval" value="0.8"> Không thât chính xác
             <input type="radio" name="eval" value="1"> Thật tệ
+            <input type="hidden" name="selected" value="<?php echo htmlspecialchars(" $evaluationSelected", ENT_QUOTES);?>">
+            <input type="hidden" name="conclusion" value="<?php echo htmlspecialchars(" $evaluationConclusion", ENT_QUOTES);?>">
 
 
             </div>
             <div class="span8">
                 <div class="control-group">
                     <div class="controls">
-                        <input type="submit" value="submitEval" name="submitEval" class="btn btn-primary"/>
+                        <input type="submit" value="submit" name="submitEval" class="btn btn-primary"/>
                     </div>
 
                 </div>
             </div>
+            </form>
 
 
         <?php
         endif;
         ?>
 
+        <?php
+        echo form_open('adviser', 'class="form-horizontal"');
+        ?>
         <?php
         if ($postedInfor == false && $postedStyle == false):
         ?>

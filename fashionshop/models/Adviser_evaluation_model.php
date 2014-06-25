@@ -20,19 +20,18 @@ class Adviser_evaluation_model extends CI_Model {
 
     function save_adviser_evaluation($data)
     {
-        $this->db->where('evaluationId', $data['evaluationId']);
+       /* $this->db->where('evaluationId', $data['evaluationId']);
         $result 			= $this->db->get('adviser_evaluation')->row();
         if(count($result) < 1)
-        {
+        {*/
             $this->db->insert('adviser_evaluation', $data);
-        }
+       /* }
         else
         {
             $this->db->where('evaluationId', $data['evaluationId']);
             $this->db->update('adviser_evaluation', $data);
-        }
+        }*/
     }
-
     function view_details($id ) 	{
         $this->db->where('evaluationId', $id);
         $result 			= $this->db->get('adviser_evaluation')->row();
