@@ -340,7 +340,7 @@ Class Product_model extends CI_Model
 		$this->db->where('enabled', 1);
 		$this->db->where('(name LIKE "%'.$term.'%" OR description LIKE "%'.$term.'%" OR excerpt LIKE "%'.$term.'%" OR sku LIKE "%'.$term.'%")');
 
-        if($price != ''){
+        if(is_numeric($price)){
             if($price_flag == 1){
                 $price_flag = "<=";
             } else {
