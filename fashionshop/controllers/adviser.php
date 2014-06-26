@@ -151,37 +151,36 @@ class Adviser extends Front_Controller
 
     }
 
-    // get usable rule depends on user's input
+    
     function get_usable_rule($inputs, $rules) // dua nhung luat co the su dung vao 1 mang
     {
-        // init the array for outputting
+       
         $usable_rule = array();
         foreach ($rules as $rule) {
-            // explode the rulesContent content into multiple nodesNode
+            
             $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
             $flag = true;
-            // for each nodesNode in the rulesContent
+            
             foreach ($exploded as $key => $nodesNode) {
-                // if nodesNode is in the leftside
+                
                 if ($key < count($exploded) - 1) {
-                    // if nodesNode is not exist in user's inputs
-                    // flag=false as the rule is not usable
+                    
+                    
                     if (!$this->check_exist_in_arrays($inputs, $nodesNode)) {
                         $flag = false;
                     }
                 }
             }
-            // if flag remain true after the foreach loop, rule is usable
-            // push rule to the array for outputting
+            
             if ($flag == true) {
                 array_push($usable_rule, $rule);
             }
         }
-        // return the array of usable rule(s)
+        
         return $usable_rule;
     }
 
-    // get the single input from user's input
+   
     function getSingleInputFormInputs($inputs, $id)
     {
         foreach ($inputs as $input) {
@@ -205,43 +204,42 @@ class Adviser extends Front_Controller
                 }
             }
             $f = $minCF * $ruleTemp->rulesCF;
-            array_push($fArray, $f);
+            array_push($fArray, $f);  // fArray la 1 mang CF dung de chua CF cua mang luat finalresult
         }
         $value = $this->recursiveCertainty($fArray);
         return $value;
     }
 
-    // calculate the certainty
+    
     function recursiveCertainty($inputs)
     {
-        // if input array is empty, return 0
+        
         if (count($inputs) == 0) {
             return 0;
-        } //else if input array contains 1 item, return its value
+        } 
         else if (count($inputs) == 1) {
             return $inputs[0];
         } else {
-            // this happens when multiple rules have the same conclusion
-            // if both CF are positive
+            
             // CF(t) = CF(t1) + CF(t2) – CF(t1) * CF(t2)
             if ($inputs[0] > 0 && $inputs[1] > 0) {
                 $tam = $inputs[0] + $inputs[1] - ($inputs[0] * $inputs[1]);
-            } // if both CF are negative
+            }
             // CF(t) = CF(t1) + CF(t2) + CF(t1) * CF(t2)
             else if ($inputs[0] < 0 && $inputs[1] < 0) {
                 $tam = $inputs[0] + $inputs[1] + ($inputs[0] * $inputs[1]);
-            } // otherwise
+            } 
             // CF(t) = (CF(t1) + CF(t2)) / (1 – MIN(ABS(CF(t1)), ABS(CF(t2))))
             else {
                 $tam = ($inputs[0] + $inputs[1]) / (1 - min(abs($inputs[0]), abs($inputs[1])));
             }
-            // set CF(t) to the first item in array
+            
             $inputs[0] = $tam;
-            // remove the second item out of array
+           
             unset($inputs[1]);
-            // reindex the array
+            
             $inputs = array_values($inputs);
-            // call recursively function until the input arrays has only 1 item
+            
             $this->recursiveCertainty($inputs);
         }
     }
