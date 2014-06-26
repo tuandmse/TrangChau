@@ -239,9 +239,7 @@
                     <table border="0">
                         <tr>
                             <td>
-                                <div class="other_rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
+                                <label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label>
                             </td>
                             <td>
                                 <?php echo $star->five ?> người.
@@ -249,9 +247,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="other_rating">
-                                    <span>☆</span><span>☆</span><span>☆</span><span>☆</span>
-                                </div>
+                                <label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label>
                             </td>
                             <td>
                                 <?php echo $star->four ?> người.
@@ -259,9 +255,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="other_rating">
-                                    <span>☆</span><span>☆</span><span>☆</span>
-                                </div>
+                                <label class="my-rating-star"></label><label class="my-rating-star"></label><label class="my-rating-star"></label>
                             </td>
                             <td>
                                 <?php echo $star->three ?> người.
@@ -270,7 +264,7 @@
                         <tr>
                             <td>
                                 <div class="other_rating">
-                                    <span>☆</span><span>☆</span>
+                                    <label class="my-rating-star"></label><label class="my-rating-star"></label>
                                 </div>
                             </td>
                             <td>
@@ -279,9 +273,7 @@
                         </tr>
                         <tr>
                             <td>
-                                <div class="other_rating">
-                                    <span>☆</span>
-                                </div>
+                                <label class="my-rating-star"></label>
                             </td>
                             <td>
                                 <?php echo $star->one ?> người.
@@ -307,11 +299,11 @@
                     <?php if($this->session->userdata('admin')){ ?>
                         <a class="btn" title="<?php echo lang('delete_comment'); ?>" href="<?php echo  site_url('/rate_and_comment/delete_rate/'.$rate->id); ?>"><?php echo lang('delete_comment'); ?></a>
                     <?php } ?>
-                    <div class="other_rating">
+                    <div style="margin-top: 10px;">
                         <?php
                             for($i = 0; $i < $rate->rate; $i++){
                             ?>
-                            <span>☆</span>
+                            <label class="my-rating-star"></label>
                         <?php
                         }
                         ?>
@@ -328,13 +320,23 @@
         <div class="row" style="margin-top:15px;">
             <div class="span8">
                 <h3>Đánh giá của bạn: </h3>
-                <fieldset class="rating">
-                    <input type="radio" id="star5" name="rating" value="5" <?php if($my_rate == 5){ ?> checked <?php } ?> /><label for="star5" title="Rocks!">5 stars</label>
-                    <input type="radio" id="star4" name="rating" value="4" <?php if($my_rate == 4){ ?> checked <?php } ?> /><label for="star4" title="Pretty good">4 stars</label>
-                    <input type="radio" id="star3" name="rating" value="3" <?php if($my_rate == 3){ ?> checked <?php } ?> /><label for="star3" title="Meh">3 stars</label>
-                    <input type="radio" id="star2" name="rating" value="2" <?php if($my_rate == 2){ ?> checked <?php } ?> /><label for="star2" title="Kinda bad">2 stars</label>
-                    <input type="radio" id="star1" name="rating" value="1" <?php if($my_rate == 1){ ?> checked <?php } ?> /><label for="star1" title="Sucks big time">1 star</label>
-                </fieldset>
+                <span class="rating">
+                    <input type="radio" class="rating-input" <?php if($my_rate == 5){ ?> checked <?php } ?>
+                           id="rating-input-1-5" name="rating" value="5">
+                    <label for="rating-input-1-5" class="rating-star"></label>
+                    <input type="radio" class="rating-input" <?php if($my_rate == 4){ ?> checked <?php } ?>
+                           id="rating-input-1-4" name="rating" value="4">
+                    <label for="rating-input-1-4" class="rating-star"></label>
+                    <input type="radio" class="rating-input" <?php if($my_rate == 3){ ?> checked <?php } ?>
+                           id="rating-input-1-3" name="rating" value="3">
+                    <label for="rating-input-1-3" class="rating-star"></label>
+                    <input type="radio" class="rating-input" <?php if($my_rate == 2){ ?> checked <?php } ?>
+                           id="rating-input-1-2" name="rating" value="2">
+                    <label for="rating-input-1-2" class="rating-star"></label>
+                    <input type="radio" class="rating-input" <?php if($my_rate == 1){ ?> checked <?php } ?>
+                           id="rating-input-1-1" name="rating" value="1">
+                    <label for="rating-input-1-1" class="rating-star"></label>
+                </span>
                 <?php
                 $data	= array('name'=>'content', 'class'=>'redactor span8', 'value'=> $my_comment, 'placeholder'=>lang('your_comment_here'));
                 echo form_textarea($data);
