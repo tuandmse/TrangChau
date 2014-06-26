@@ -5,7 +5,10 @@ class Giftcards extends Admin_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		$this->load->model('Settings_model');
 		$this->load->model('Gift_card_model');
 		$this->load->helper('form');

@@ -59,24 +59,24 @@ echo form_input($f_id);
 			</div>
 		</div>
 		<div class="row-fluid">
-			<div class="span12">
+            <div class="span4">
+                <label><?php echo lang('address_city');?></label>
+                <?php echo form_input($f_city);?>
+            </div>
+			<div class="span8">
 				<label><?php echo lang('address_country');?></label>
 				<?php echo form_dropdown('country_id', $countries_menu, set_value('country_id', $country_id), 'id="f_country_id" class="span12"');?>
 			</div>
 		</div>
 		<div class="row-fluid">
-			<div class="span4">
-				<label><?php echo lang('address_city');?></label>
-				<?php echo form_input($f_city);?>
-			</div>
-			<div class="span6">
-				<label><?php echo lang('address_state');?></label>
-				<?php echo form_dropdown('zone_id', $zones_menu, set_value('zone_id', $zone_id), 'id="f_zone_id" class="span12"');?>
-			</div>
-			<div class="span2">
-				<label><?php echo lang('address_zip');?></label>
-				<?php echo form_input($f_zip);?>
-			</div>
+<!--			<div class="span6">-->
+<!--				<label>--><?php //echo lang('address_state');?><!--</label>-->
+<!--				--><?php //echo form_dropdown('zone_id', $zones_menu, set_value('zone_id', $zone_id), 'id="f_zone_id" class="span12"');?>
+<!--			</div>-->
+<!--			<div class="span2">-->
+<!--				<label>--><?php //echo lang('address_zip');?><!--</label>-->
+<!--				--><?php //echo form_input($f_zip);?>
+<!--			</div>-->
 		</div>
 	</div>
 	<div class="modal-footer">

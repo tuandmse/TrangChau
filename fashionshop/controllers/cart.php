@@ -4,7 +4,7 @@ class Cart extends Front_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model(array('Like_and_comment_model'));
+        $this->load->model(array('Rate_and_comment_model'));
         $this->load->helper('form');
     }
 
@@ -40,7 +40,7 @@ class Cart extends Front_Controller {
 	}
 	
 	
-	function search($code=false, $page = 0)
+	function search($code=false, $page = 0, $cate_search=false, $price=false, $price_flag=false)
 	{
 		$this->load->model('Search_model');
 		
@@ -49,11 +49,16 @@ class Cart extends Front_Controller {
 		{
 			//if the term is in post, save it to the db and give me a reference
 			$term		= $this->input->post('term', true);
+            $cate_term = $this->input->post('search_cate');
+            $price_flag = $this->input->post('price_flag');
+            $price = $this->input->post('price');
+
+
 			$code		= $this->Search_model->record_term($term);
 			
 			// no code? redirect so we can have the code in place for the sorting.
 			// I know this isn't the best way...
-			redirect('cart/search/'.$code.'/'.$page);
+			redirect('cart/search/'.$code.'/'.$page.'/'.$cate_term.'/'.$price.'/'.$price_flag);
 		}
 		else
 		{
@@ -121,8 +126,8 @@ class Cart extends Front_Controller {
 			$config['next_link'] = '&raquo;';
 			$config['next_tag_open'] = '<li>';
 			$config['next_tag_close'] = '</li>';
-			
-			$result					= $this->Product_model->search_products($term, $config['per_page'], $page, $sort_by['by'], $sort_by['sort']);
+
+			$result					= $this->Product_model->search_products($term, $config['per_page'], $page, $sort_by['by'], $sort_by['sort'], $cate_search, $price, $price_flag);
 			$config['total_rows']	= $result['count'];
 			$this->pagination->initialize($config);
 	
@@ -239,20 +244,56 @@ class Cart extends Front_Controller {
 	
 	function product($id)
 	{
+        //Rate and comment
+        $data['rates'] = $this->Rate_and_comment_model->get_all_rates($id);
+        $one_star = 0;
+        $two_star = 0;
+        $three_star = 0;
+        $four_star = 0;
+        $five_star = 0;
+        foreach($data['rates'] as $a_rate){
+            if($a_rate->rate == '5'){
+                $five_star++;
+            }
+            if($a_rate->rate == '4') {
+                $four_star++;
+            }
+            if($a_rate->rate == '3'){
+                $three_star++;
+            }
+            if($a_rate->rate == '2') {
+                $two_star++;
+            }
+            if($a_rate->rate == '1'){
+                $one_star++;
+            }
+        }
+
+        $data['star'] = new stdClass();
+        $data['star']->one = $one_star;
+        $data['star']->two = $two_star;
+        $data['star']->three = $three_star;
+        $data['star']->four = $four_star;
+        $data['star']->five = $five_star;
+
+        $backup = 0;
+
+        if(($five_star + $four_star + $three_star + $two_star + $one_star) == 0){
+            $backup = 1;
+        }
+        $data['star']->average = ($five_star*5 + $four_star*4 + $three_star*3 + $two_star*2 + $one_star) / ($five_star + $four_star + $three_star + $two_star + $one_star + $backup);
+
+
+
 		//get the product
 		$data['product']	= $this->Product_model->get_product($id);
 
         $data['product_id'] = $id;
 
-        $this->load->model('Like_and_comment_model');
-		$data['comments'] = $this->Like_and_comment_model->get_all_comment($id);
-        $data['likes'] = $this->Like_and_comment_model->count_all_like($id);
-
         $customer = $this->go_cart->customer();
         if(!isset($customer['id'])){
             $customer['id'] = ' ';
         }
-        $data['is_like'] = $this->Like_and_comment_model->is_like($id, $customer['id']);
 
 		if(!$data['product'] || $data['product']->enabled==0)
 		{

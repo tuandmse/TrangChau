@@ -107,10 +107,10 @@
     </div>
 </fieldset>
 
-<fieldset style="display: none">
+<fieldset>
     <legend><?php echo lang('order_inventory');?></legend>
 
-    <table class="table">
+    <table class="table" style="display: none">
         <thead>
             <tr>
                 <th><?php echo lang('order_status');?></th>
@@ -124,7 +124,7 @@
         <tbody id="order_statuses">
         <?php
         $statuses = json_decode($order_statuses, true);
-        
+
         if(!is_array($statuses))
         {
             $statuses = array();
@@ -141,7 +141,7 @@
             </tr>
         <?php endforeach;?>
     </table>
-    <?php echo form_textarea(array('name'=>'order_statuses', 'value'=>set_value('order_statuses',$order_statuses), 'id'=>'order_statuses_json'));?>   
+    <?php echo form_textarea(array('name'=>'order_statuses', 'value'=>set_value('order_statuses',$order_statuses), 'id'=>'order_statuses_json'));?>
 
     <label class="checkbox">
         <?php echo form_checkbox('inventory_enabled', '1', set_value('inventory_enabled',$inventory_enabled));?> <?php echo lang('inventory_enabled');?>

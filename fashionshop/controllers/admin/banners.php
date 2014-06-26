@@ -11,6 +11,10 @@ class Banners extends Admin_Controller {
 	function __construct()
 	{
 		parent::__construct();
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		
 		$this->load->model('banner_model');
 		$this->load->language('banner');

@@ -324,7 +324,7 @@ Class Product_model extends CI_Model
 		$this->db->insert('product_categories', array('product_id'=>$product_id, 'category_id'=>$category_id, 'sequence'=>$sequence));
 	}
 
-	function search_products($term, $limit=false, $offset=false, $by=false, $sort=false)
+	function search_products($term, $limit=false, $offset=false, $by=false, $sort=false, $cate_term=false, $price=false, $price_flag=false)
 	{
 		$results		= array();
 		
@@ -339,7 +339,19 @@ Class Product_model extends CI_Model
 		//this one gets just the ones we need.
 		$this->db->where('enabled', 1);
 		$this->db->where('(name LIKE "%'.$term.'%" OR description LIKE "%'.$term.'%" OR excerpt LIKE "%'.$term.'%" OR sku LIKE "%'.$term.'%")');
-		
+
+        if($price != ''){
+            if($price_flag == 1){
+                $price_flag = "<=";
+            } else {
+                $price_flag = ">=";
+            }
+            $this->db->where("(price ".$price_flag." ".$price.")");
+        }
+		if($cate_term && $cate_term != '0'){
+            $this->db->join('category_products', 'products.id=category_products.product_id', 'left');
+            $this->db->where('category_id', $cate_term);
+        }
 		if($by && $sort)
 		{
 			$this->db->order_by($by, $sort);

@@ -33,18 +33,6 @@
         </div>
     </div>
 
-<!--    <div class="control-group">-->
-<!--        <label class="control-label" for="name">Gán Nút Vào Câu Hỏi</label>-->
-<!---->
-<!--        <div class="controls">-->
-<!--            --><?php
-//            $options = array('CF' => 'CF',
-//                'YN' => 'YN'
-//            );
-//            echo form_dropdown('questionType', $options, set_value('questionType', $questionType));
-//            ?>
-<!--        </div>-->
-<!--    </div>-->
 
     <hr>
     <div class="control-group">

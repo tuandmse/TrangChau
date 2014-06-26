@@ -4,7 +4,7 @@ US English
 Admin Settings Language
 ******************************************/
 
-$lang['settings'] = 'Settings';
+$lang['settings'] = 'Cài đặt';
 $lang['message_name'] = 'Message Name';
 $lang['subject'] = 'Subject';
 $lang['message_content'] = 'Message Content';
@@ -33,28 +33,28 @@ $lang['label_canned_name'] = 'Name';
 $lang['label_canned_subject'] = 'Subject';
 
 //gocart config titles
-$lang['shop_details'] = 'Shop Details';
-$lang['company_name'] = 'Company Name';
-$lang['ship_from_address'] = 'Ship From Address';
-$lang['cart_email'] = 'Cart Email';
-$lang['locale_currency'] = 'Locale &amp; Currency';
+$lang['shop_details'] = 'Chi tiết cửa hàng';
+$lang['company_name'] = 'Tên công ty';
+$lang['ship_from_address'] = 'Địa chỉ gửi hàng';
+$lang['cart_email'] = 'Email cửa hàng';
+$lang['locale_currency'] = 'Địa phương &amp; Đơn vị tiền tệ';
 $lang['security'] = 'Security';
 $lang['package_details'] = 'Package Details';
-$lang['order_inventory'] = 'Orders &amp; Inventory';
+$lang['order_inventory'] = 'Đơn hàng &amp; Kho hàng';
 $lang['tax_settings'] = 'Tax Settings';
 
 //config terms
 $lang['theme'] = 'Theme';
 $lang['ssl_support'] = 'Use SSL';
-$lang['company_name'] = 'Shop Name';
-$lang['address1'] = 'Address';
-$lang['address2'] = 'Address 2';
-$lang['country'] = 'Country';
-$lang['state'] = 'State / Province';
+$lang['company_name'] = 'Tên của hàng';
+$lang['address1'] = 'Địa chỉ 1';
+$lang['address2'] = 'Địa chỉ 2';
+$lang['country'] = 'Quốc gia';
+$lang['state'] = 'Tỉnh / Thành phố';
 $lang['zip'] = 'Zip / Postcode';
 $lang['city'] = 'City';
-$lang['locale'] = 'Locale';
-$lang['currency'] = 'Currency';
+$lang['locale'] = 'Địa phương';
+$lang['currency'] = 'Tiền tệ';
 
 $lang['admin_folder'] = 'Admin Folder';
 $lang['require_login'] = 'Require login to checkout.';
@@ -64,8 +64,8 @@ $lang['dimension_unit'] = 'Dimensional Unit (FT, IN, CM, etc.)';
 $lang['order_status'] = 'Default Order Status';
 $lang['order_statuses'] = 'Order Status Options';
 $lang['status_name'] = 'Status Name';
-$lang['inventory_enabled'] = 'Enable Inventory Tracking';
-$lang['allow_os_purchase'] = 'Allow customers to buy items that are out of stock';
+$lang['inventory_enabled'] = 'Kích hoạt theo dõi kho hàng (thông báo khi sản phẩm hết hàng)';
+$lang['allow_os_purchase'] = 'Cho phép khách đặt mua đối với những sản phẩm hết hàng';
 $lang['tax_shipping'] = 'Charge tax on shipping rates';
 $lang['tax_address'] = 'Base sales tax of which address?';
 $lang['shipping_address'] = 'Shipping Address';

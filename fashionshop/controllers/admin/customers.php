@@ -8,7 +8,10 @@ class Customers extends Admin_Controller {
 	function __construct()
 	{		
 		parent::__construct();
-
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		$this->load->model(array('Customer_model', 'Location_model'));
 		$this->load->helper('formatting_helper');
 		$this->lang->load('customer');

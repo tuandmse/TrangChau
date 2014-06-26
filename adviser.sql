@@ -220,3 +220,44 @@ INSERT INTO `fs_adviser_rules_seq` (`id`) VALUES
 (1),
 (2),
 (3);
+
+
+- --------------------------------------------------------
+
+--
+-- Table structure for table `fs_adviser_cf`
+--
+
+DROP TABLE IF EXISTS `fs_adviser_cf`;
+CREATE TABLE IF NOT EXISTS `fs_adviser_cf` (
+  `cfId` varchar(10) NOT NULL DEFAULT '0',
+  `cfContent` text NOT NULL,
+  `cfValue` double DEFAULT NULL,
+  PRIMARY KEY (`cfId`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--
+-- Triggers `fs_adviser_cf`
+--
+DROP TRIGGER IF EXISTS `tg_fs_adviser_nodes_cf`;
+DELIMITER //
+CREATE TRIGGER `tg_fs_adviser_nodes_cf` BEFORE INSERT ON `fs_adviser_cf`
+FOR EACH ROW BEGIN
+  INSERT INTO fs_adviser_cf_seq VALUES (NULL);
+  SET NEW.cfId = CONCAT('CFVA', LPAD(LAST_INSERT_ID(), 6, '0'));
+END
+//
+DELIMITER ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fs_adviser_cf_seq`
+--
+
+DROP TABLE IF EXISTS `fs_adviser_cf_seq`;
+CREATE TABLE IF NOT EXISTS `fs_adviser_cf_seq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;

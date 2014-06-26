@@ -6,6 +6,10 @@ Class Digital_Products extends Admin_Controller {
 	function __construct()
 	{
 		parent::__construct();
+        if($this->auth->check_access('Advisers'))
+        {
+            redirect($this->config->item('admin_folder').'/adviser_rule');
+        }
 		$this->lang->load('digital_product');
 		$this->load->model('digital_product_model');
 	}

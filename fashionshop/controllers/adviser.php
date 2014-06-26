@@ -8,7 +8,9 @@ class Adviser extends Front_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model(array(
-            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model'));
+            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model','Adviser_cf_model','Adviser_evaluation_model'));
+
+
         $query = "CREATE TABLE IF NOT EXISTS " . $this->db->dbprefix('adviser_question') . " (
             questionNode varchar(11) CHARACTER SET utf8 NOT NULL ,
             questionContent text CHARACTER SET utf8 NOT NULL,
@@ -32,19 +34,23 @@ class Adviser extends Front_Controller
         $data["question_view"] = $this->Adviser_model->question_view();
         $data["products_image"] = array();
 
+        $data["Adviser_cf"] = $this->Adviser_cf_model->view();
+
+
         if ($this->input->post("submitInfor")) {
             $answer = array();
             $i = 0;
-            
+
             foreach ($data["question_view"] as $node_entry) { // lay cau hoi YN dua vao answer
                 $obj = new stdClass();
                 if ($this->input->post($node_entry->questionNode)) {
-                   
                     $obj->node = $this->input->post($node_entry->questionNode);
                     $obj->cf = 1;
+
                     $answer[$i] = $obj;
                     $i++;
                 }
+
             }
             foreach ($data["cF_node_view"] as $cf_node_entry) {  // lay cau hoi CF dua vao answer
                 $obj = new stdClass();
@@ -55,14 +61,31 @@ class Adviser extends Front_Controller
                     $i++;
                 }
 
+
+
             }
+            $dataJson = json_encode((array)$answer);
+            $data["evaluationSelected"] = $dataJson;
+
             $nodeAnswer = $this->advice_processing($answer);
             $data["products_image"] = $this->Adviser_model->get_product_by_ruleNode($nodeAnswer->nodesNode);
             $data["postedInfor"] = true;
+            $data["postedStyle"] = false;
             $data["advice"] = $nodeAnswer->nodesContent;
             $data["base_url"] = $this->uri->segment_array();
 
+            $data["evaluationConclusion"] = $nodeAnswer->nodesNode;
+
+
+
+
+
+
         }
+
+
+
+
         $this->view("call_adviser.php", $data);
     }
 
@@ -146,7 +169,7 @@ class Adviser extends Front_Controller
             $suggestNodes = new stdClass();
             $suggestNodes->nodesContent = 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
             $suggestNodes->nodesNode = ' ';
-                return $suggestNodes;
+            return $suggestNodes;
         }
 
     }

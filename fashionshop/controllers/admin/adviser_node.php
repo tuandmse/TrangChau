@@ -11,10 +11,15 @@ class Adviser_Node extends Admin_Controller {
     function __construct()
     {
         parent::__construct();
+        if(!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin'))
+        {
+            redirect($this->config->item('admin_folder').'/orders');
+        }
         // load thư viện validation
         $this->load->library('form_validation');
         // load model
         $this->load->model(array('Adviser_node_model'));
+        $this->lang->load('product');
     }
 
     // function index, khởi tạo trang chính khi sử dụng chức năng quản trị nút
@@ -33,7 +38,6 @@ class Adviser_Node extends Admin_Controller {
 
         $data['page_title']		= 'Nút';
 
-        //default values are empty if the customer is new
         $data['nodesNode']		= '';
         $data['nodesContent']	= '';
         $data['questionType']	= '';
