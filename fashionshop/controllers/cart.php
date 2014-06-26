@@ -40,7 +40,7 @@ class Cart extends Front_Controller {
 	}
 	
 	
-	function search($code=false, $page = 0)
+	function search($code=false, $page = 0, $cate_search=false, $price=false, $price_flag=false)
 	{
 		$this->load->model('Search_model');
 		
@@ -49,11 +49,16 @@ class Cart extends Front_Controller {
 		{
 			//if the term is in post, save it to the db and give me a reference
 			$term		= $this->input->post('term', true);
+            $cate_term = $this->input->post('search_cate');
+            $price_flag = $this->input->post('price_flag');
+            $price = $this->input->post('price');
+
+
 			$code		= $this->Search_model->record_term($term);
 			
 			// no code? redirect so we can have the code in place for the sorting.
 			// I know this isn't the best way...
-			redirect('cart/search/'.$code.'/'.$page);
+			redirect('cart/search/'.$code.'/'.$page.'/'.$cate_term.'/'.$price.'/'.$price_flag);
 		}
 		else
 		{
@@ -121,8 +126,8 @@ class Cart extends Front_Controller {
 			$config['next_link'] = '&raquo;';
 			$config['next_tag_open'] = '<li>';
 			$config['next_tag_close'] = '</li>';
-			
-			$result					= $this->Product_model->search_products($term, $config['per_page'], $page, $sort_by['by'], $sort_by['sort']);
+
+			$result					= $this->Product_model->search_products($term, $config['per_page'], $page, $sort_by['by'], $sort_by['sort'], $cate_search, $price, $price_flag);
 			$config['total_rows']	= $result['count'];
 			$this->pagination->initialize($config);
 	

@@ -305,3 +305,7 @@ img.responsiveImage:hover
 td {
     padding: 0px 5px;
 }
+
+.myspan {
+    width: 50px;
+}

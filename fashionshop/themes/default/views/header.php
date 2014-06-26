@@ -8,21 +8,22 @@
 
 
 <?php if(isset($meta)):?>
-	<?php echo $meta;?>
+<!--	--><?php //echo $meta;?>
 <?php else:?>
 <meta name="Keywords" content="Shopping Cart, eCommerce, Code Igniter">
 <meta name="Description" content="This is a website for fashion shopping">
 <?php endif;?>
 
 <?php echo theme_css('bootstrap.min.css', true);?>
+<?php echo theme_css('bootstrap-select.min.css', true);?>
 <?php echo theme_css('bootstrap-responsive.min.css', true);?>
 <?php echo theme_css('styles.css', true);?>
 
 <?php echo theme_js('jquery.js', true);?>
 <?php echo theme_js('bootstrap.min.js', true);?>
+<?php echo theme_js('bootstrap-select.min.js', true);?>
 <?php echo theme_js('squard.js', true);?>
 <?php echo theme_js('equal_heights.js', true);?>
-
 <?php
 //with this I can put header data in the header instead of in the body.
 if(isset($additional_header_info))
@@ -34,6 +35,22 @@ if(isset($additional_header_info))
 </head>
 
 <body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('.selectpicker').selectpicker();
+        $(".navbar-search > input").keypress(function(event) {
+            if (event.which == 13) {
+                event.preventDefault();
+                $(".navbar-search").submit();
+            }
+        });
+        $('.search_area').hide();
+        $('#search_button').click(function(){
+            $( ".search_area" ).slideToggle();
+            $("#main_term").focus();
+        });
+    });
+</script>
 	<div class="navbar navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -44,9 +61,9 @@ if(isset($additional_header_info))
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-			
+
 				<a class="brand" href="<?php echo site_url();?>">Trang Châu</a>
-				
+
 				<div class="nav-collapse">
 					<ul class="nav">
 						<?php if(isset($this->categories[0])):?>
@@ -62,7 +79,7 @@ if(isset($additional_header_info))
                         </li>
 						<?php
 						endif;
-						
+
 						if(isset($this->pages[0]))
 						{
 							foreach($this->pages[0] as $menu_page):?>
@@ -73,14 +90,14 @@ if(isset($additional_header_info))
 									<a href="<?php echo site_url($menu_page->slug);?>"><?php echo $menu_page->menu_title;?></a>
 								<?php endif;?>
 								</li>
-								
-							<?php endforeach;	
+
+							<?php endforeach;
 						}
 						?>
 					</ul>
-					
+
 					<ul class="nav pull-right">
-						
+
 						<?php if($this->Customer_model->is_logged_in(false, false)):?>
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('account');?> <b class="caret"></b></a>
@@ -114,18 +131,33 @@ if(isset($additional_header_info))
 								?>
 								</a>
 							</li>
-							
-							
+
+
 							<li><a href="<?php echo site_url('adviser/index');?>">Call Advisers</a></li>
 					</ul>
-					
-					<?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
-						<input type="text" name="term" class="search-query span2" placeholder="<?php echo lang('search');?>"/>
-					</form>
+                    <button class="btn" id="search_button" style="float: right;">Tìm kiếm</button>
 				</div>
 			</div>
 		</div>
 	</div>
+    <div class="search_area navbar" style="position: fixed; top: 50px; right: 50px; background-color: #000000; padding: 5px 10px; border-radius: 10px; ">
+        <?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
+        <?php if(isset($this->categories[0])) { ?>
+            <select name="search_cate" class="selectpicker span15">
+                <option value="0">Tất cả</option>
+                <?php foreach($this->categories[0] as $cat_menu):?>
+                    <option value="<?php echo $cat_menu->id;?>"><?php echo $cat_menu->name;?></option>
+                <?php endforeach;?>
+            </select>
+        <?php } ?>
+        <input type="text" name="term" style="float: left" id="main_term" class="search-query span2" placeholder="<?php echo lang('search');?>"/>
+        <select name="price_flag" class="selectpicker span15" style="float: right">
+            <option value="1"><</option>
+            <option value="2">></option>
+        </select>
+        <input style="float: right" type="text" name="price" class="search-query span2" placeholder="<?php echo lang('price');?>"/>
+        </form>
+    </div>
 
 	<div class="container">
 		<?php if(!empty($base_url) && is_array($base_url)):?>
@@ -148,28 +180,28 @@ if(isset($additional_header_info))
 				</div>
 			</div>
 		<?php endif;?>
-		
+
 		<?php if ($this->session->flashdata('message')):?>
 			<div class="alert alert-info">
 				<a class="close" data-dismiss="alert">×</a>
 				<?php echo $this->session->flashdata('message');?>
 			</div>
 		<?php endif;?>
-		
+
 		<?php if ($this->session->flashdata('error')):?>
 			<div class="alert alert-error">
 				<a class="close" data-dismiss="alert">×</a>
 				<?php echo $this->session->flashdata('error');?>
 			</div>
 		<?php endif;?>
-		
+
 		<?php if (!empty($error)):?>
 			<div class="alert alert-error">
 				<a class="close" data-dismiss="alert">×</a>
 				<?php echo $error;?>
 			</div>
 		<?php endif;?>
-		
+
 
 <?php
 /*
