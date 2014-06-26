@@ -140,7 +140,7 @@ if(isset($additional_header_info))
 			</div>
 		</div>
 	</div>
-    <div class="search_area navbar" style="z-index: 10; position: fixed; top: 50px; right: 50px; background-color: #b94a48; padding: 10px 5px 0px 5px; border-radius: 6px; border: 2px solid #ffffff ">
+    <div class="search_area navbar" style="z-index: 10; position: fixed; top: 50px; right: 50px; background-color: #ffffff; padding: 10px 5px 0px 5px; border-radius: 6px; border: 2px solid #ffffff ">
         <?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
         <?php if(isset($this->categories[0])) { ?>
             <select name="search_cate" class="selectpicker span15" data-style="btn-primary">
