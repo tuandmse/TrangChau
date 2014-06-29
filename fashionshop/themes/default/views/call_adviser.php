@@ -52,6 +52,7 @@
             <input type="radio" name="eval" value="0.8"> Phần nào đó
             <input type="radio" name="eval" value="0.6"> Không thât chính xác
             <input type="radio" name="eval" value="0"> Thật tệ
+
             <input type="hidden" name="selected" value="<?php echo htmlspecialchars(" $evaluationSelected", ENT_QUOTES);?>">
             <input type="hidden" name="conclusion" value="<?php echo htmlspecialchars(" $evaluationConclusion", ENT_QUOTES);?>">
 

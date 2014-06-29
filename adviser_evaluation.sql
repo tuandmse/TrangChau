@@ -30,7 +30,7 @@ CREATE TABLE IF NOT EXISTS `fs_adviser_evaluation` (
   `evaluationId` varchar(10) NOT NULL DEFAULT '0',
   `evaluationSelected` text NOT NULL,
   `evaluationConclusion` text DEFAULT NULL,
-  `evaluationRate` int(10) DEFAULT NULL,
+  `evaluationRate` double DEFAULT NULL,
   PRIMARY KEY (`evaluationId`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
