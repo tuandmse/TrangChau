@@ -1,4 +1,4 @@
-<div class="row" style="margin-top:20px;">
+﻿<div class="row" style="margin-top:20px;">
 
     <div class="span12">
         <div class="page-header">
@@ -48,7 +48,7 @@
 
             <div class="control-group">
 
-            <input type="radio" name="eval" value="1" checked> Chính xác
+            <input type="radio" name="eval" value="1"> Chính xác
             <input type="radio" name="eval" value="0.8"> Phần nào đó
             <input type="radio" name="eval" value="0.6"> Không thât chính xác
             <input type="radio" name="eval" value="0"> Thật tệ
