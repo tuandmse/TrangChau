@@ -22,7 +22,7 @@
             </thead>
 
             <tbody>
-            <?php echo (count($rules) < 1)?'<tr><td style="text-align:center;" colspan="8">Chưa có nút nào!</td></tr>':''?>
+            <?php echo (count($rules) < 1)?'<tr><td style="text-align:center;" colspan="8">Chưa có luật nào!</td></tr>':''?>
             <?php foreach($rules as $entry): ?>
                 <tr>
                     <td><input name="order[]" type="checkbox" value="<?php echo $entry->rulesId; ?>" class="gc_check"/></td>

@@ -127,6 +127,7 @@ $(document).ready(function(){
                             <li><a href="<?php echo $admin_url;?>adviser_node">Quản Trị Nút</a></li>
                             <li><a href="<?php echo $admin_url;?>adviser_cf">Quản Trị Chỉ Số CF</a></li>
                             <li><a href="<?php echo $admin_url;?>adviser_rule">Quản Trị Luật</a></li>
+                            <li><a href="<?php echo $admin_url;?>adviser_evaluation">Quản Trị Đánh Giá Tư Vấn</a></li>
                         </ul>
                     </li>
                     <?php endif; ?>
