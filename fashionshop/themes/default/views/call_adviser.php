@@ -23,7 +23,7 @@
 
                 if (!empty($product->images[0])) {
                     $arr = preg_split('#(:|,|[\{]|[\}]|"|[\|]{2})#', $product->images);
-                    $photo = '<img src="' . base_url('uploads/images/medium/' . $arr[2]).'.jpg" alt="' . $product->seo_title . '"/>';
+                    $photo = '<img src="' . base_url('uploads/images/medium/' . $arr[2]) . '.jpg" alt="' . $product->seo_title . '"/>';
 
                 }
                 ?>
@@ -44,24 +44,28 @@
             ?>
 
 
-            <h2>Hãy gửi đánh gia của bạn cho chúng tôi. Cám ơn ! </h2>
+            <h2>Hãy gửi đánh giá của bạn cho chúng tôi. Cám ơn ! </h2>
 
             <div class="control-group">
 
-            <input type="radio" name="eval" value="1"> Chính xác
-            <input type="radio" name="eval" value="0.8"> Phần nào đó
-            <input type="radio" name="eval" value="0.6"> Không thât chính xác
-            <input type="radio" name="eval" value="0"> Thật tệ
+                <input type="radio" name="eval" value="1"> Rất Chính Xác
+                <input type="radio" name="eval" value="0.8"> Chính Xác
+                <input type="radio" name="eval" value="0.6"> Bình Thường
+                <input type="radio" name="eval" value="0.4"> Không Chính Xác
+                <input type="radio" name="eval" value="0.2"> Rất Không Chính Xác
+                <input type="radio" name="eval" value="0"> Rất Tệ
 
-            <input type="hidden" name="selected" value="<?php echo htmlspecialchars(" $evaluationSelected", ENT_QUOTES);?>">
-            <input type="hidden" name="conclusion" value="<?php echo htmlspecialchars(" $evaluationConclusion", ENT_QUOTES);?>">
+                <input type="hidden" name="selected"
+                       value="<?php echo htmlspecialchars("$evaluationSelected", ENT_QUOTES); ?>">
+                <input type="hidden" name="conclusion"
+                       value="<?php echo htmlspecialchars("$evaluationConclusion", ENT_QUOTES); ?>">
 
 
             </div>
             <div class="span8">
                 <div class="control-group">
                     <div class="controls">
-                        <input type="submit" value="submit" name="submitEval" class="btn btn-primary"/>
+                        <input type="submit" value="Submit" name="submitEval" class="btn btn-primary"/>
                     </div>
 
                 </div>
@@ -78,105 +82,105 @@
         ?>
         <?php
         if ($postedInfor == false && $postedStyle == false):
-        ?>
-                <div class="tabbable">
-                    <ul class="nav nav-tabs">
-                        <li class="active" id="li_infor"><a href="#infor" data-toggle="tab">Thông tin trang phục</a>
-                        </li>
-                        <li class="" id="li_style"><a href="#style" data-toggle="tab">Chọn kiểu trang phục</a></li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <div class="tab-pane active" id="infor">
+            ?>
+            <div class="tabbable">
+                <ul class="nav nav-tabs">
+                    <li class="active" id="li_infor"><a href="#infor" data-toggle="tab">Thông tin trang phục</a>
+                    </li>
+                    <li class="" id="li_style"><a href="#style" data-toggle="tab">Chọn kiểu trang phục</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="infor">
 
-                        <?php
-                        foreach ($question_view as $yn):
-                            ?>
-                                    <div class="control-group">
-                                        <label for="<?php
-                                            echo $yn->questionNode;
-                                        ?>">
-                                        <?php
-                                            echo $yn->questionContent;
+                    <?php
+                    foreach ($question_view as $yn):
+                        ?>
+                        <div class="control-group">
+                            <label for="<?php
+                            echo $yn->questionNode;
+                            ?>">
+                                <?php
+                                echo $yn->questionContent;
+                                ?>
+                            </label>
+
+                            <div>
+
+                                <?php
+                                foreach ($node_view as $a):
+                                    ?>
+                                    <?php
+                                    if ($yn->questionNode == $a->questionNode):
+                                        echo '<input type="radio" name="' . $a->questionNode . '" value="' . $a->nodesNode . '"> ' . $a->nodesContent . '';
+
                                         ?>
-                                        </label>
-
-                                        <div>
-
-                                            <?php
-                                            foreach ($node_view as $a):
-                                                ?>
-                                                <?php
-                                                if ($yn->questionNode == $a->questionNode):
-                                                    echo '<input type="radio" name="' . $a->questionNode . '" value="' . $a->nodesNode . '"> ' . $a->nodesContent . '';
-
-                                                    ?>
-                                                <?php
-                                                endif;
-                                                ?>
-                                            <?php
-                                            endforeach;
-                                            ?>
-                                        </div>
-                                    </div>
-                        <?php
-                        endforeach;
-                        ?>
-                            <div class="span8">
-                                <div class="control-group">
-                                    <label class="control-label" for=""></label>
-
-                                    <div class="controls">
-                                        <input type="button" value="Next" class="btn btn-danger" onclick="next_page()"/>
-                                    </div>
-                                </div>
+                                    <?php
+                                    endif;
+                                    ?>
+                                <?php
+                                endforeach;
+                                ?>
                             </div>
-                    </div>
-                    <div class="tab-pane" id="style">
+                        </div>
+                    <?php
+                    endforeach;
+                    ?>
+                    <div class="span8">
+                        <div class="control-group">
+                            <label class="control-label" for=""></label>
 
-                        <?php
-                        foreach ($cF_node_view as $node_entry):
-                            ?>
-                                    <div class="control-group">
-                                        <label for="<?php
-                                        echo $node_entry->nodesNode;
-                                        ?>">
-                                            <?php
-                                            echo $node_entry->nodesContent;
-                                            ?>
-                                        </label>
-                                        <div>
-
-
-                                            <?php
-                                            foreach ($Adviser_cf as $adviserCfs):
-                                                ?>
-                                                        <input type="radio" name="<?php echo $node_entry->nodesNode;?>" value="<?php echo $adviserCfs->cfValue;?>"> <?php echo $adviserCfs->cfContent;?>
-                                            <?php
-                                            endforeach;
-                                            ?>
-
-
-
-
-                                        </div>
-                                    </div>
-
-                        <?php
-                        endforeach;
-                        ?>
-                            <div class="span8">
-                                <div class="control-group">
-                                    <div class="controls">
-                                        <input type="button" value="Back" class="btn btn-danger" onclick="back_page()"/>
-                                        <input type="submit" value="Submit" name="submitInfor" class="btn btn-primary"/>
-                                    </div>
-
-                                </div>
+                            <div class="controls">
+                                <input type="button" value="Next" class="btn btn-danger" onclick="next_page()"/>
                             </div>
-
+                        </div>
                     </div>
                 </div>
+                <div class="tab-pane" id="style">
+
+                    <?php
+                    foreach ($cF_node_view as $node_entry):
+                        ?>
+                        <div class="control-group">
+                            <label for="<?php
+                            echo $node_entry->nodesNode;
+                            ?>">
+                                <?php
+                                echo $node_entry->nodesContent;
+                                ?>
+                            </label>
+
+                            <div>
+
+
+                                <?php
+                                foreach ($Adviser_cf as $adviserCfs):
+                                    ?>
+                                    <input type="radio" name="<?php echo $node_entry->nodesNode; ?>"
+                                           value="<?php echo $adviserCfs->cfValue; ?>"> <?php echo $adviserCfs->cfContent; ?>
+                                <?php
+                                endforeach;
+                                ?>
+
+
+                            </div>
+                        </div>
+
+                    <?php
+                    endforeach;
+                    ?>
+                    <div class="span8">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="button" value="Back" class="btn btn-danger" onclick="back_page()"/>
+                                <input type="submit" value="Submit" name="submitInfor" class="btn btn-primary"/>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
         <?php endif; ?>
     </div>

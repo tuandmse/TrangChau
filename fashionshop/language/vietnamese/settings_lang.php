@@ -1,8 +1,8 @@
 <?php
 /******************************************
-US English
-Admin Settings Language
-******************************************/
+ * US English
+ * Admin Settings Language
+ ******************************************/
 
 $lang['settings'] = 'Cài đặt';
 $lang['message_name'] = 'Message Name';

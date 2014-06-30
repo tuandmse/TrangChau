@@ -2312,6 +2312,7 @@ button.close {
 
 .btn:active, .btn.active {
     background-color: #ccc \9
+
 }
 
 .btn:first-child {
@@ -2424,6 +2425,7 @@ button.close {
 
 .btn-primary:active, .btn-primary.active {
     background-color: #004099 \9
+
 }
 
 .btn-warning {
@@ -2449,6 +2451,7 @@ button.close {
 
 .btn-warning:active, .btn-warning.active {
     background-color: #c67605 \9
+
 }
 
 .btn-danger {
@@ -2474,6 +2477,7 @@ button.close {
 
 .btn-danger:active, .btn-danger.active {
     background-color: #942a25 \9
+
 }
 
 .btn-success {
@@ -2499,6 +2503,7 @@ button.close {
 
 .btn-success:active, .btn-success.active {
     background-color: #408140 \9
+
 }
 
 .btn-info {
@@ -2524,6 +2529,7 @@ button.close {
 
 .btn-info:active, .btn-info.active {
     background-color: #24748c \9
+
 }
 
 .btn-inverse {
@@ -2549,6 +2555,7 @@ button.close {
 
 .btn-inverse:active, .btn-inverse.active {
     background-color: #080808 \9
+
 }
 
 button.btn, input[type="submit"].btn {
@@ -3441,6 +3448,7 @@ button.btn.btn-mini, input[type="submit"].btn.btn-mini {
 
 .navbar .btn-navbar:active, .navbar .btn-navbar.active {
     background-color: #080808 \9
+
 }
 
 .navbar .btn-navbar .icon-bar {

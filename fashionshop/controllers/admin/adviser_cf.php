@@ -11,9 +11,8 @@ class Adviser_Cf extends Admin_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin'))
-        {
-            redirect($this->config->item('admin_folder').'/orders');
+        if (!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin')) {
+            redirect($this->config->item('admin_folder') . '/orders');
         }
         $this->load->library('form_validation');
         $this->load->model(array('Adviser_cf_model'));
@@ -42,19 +41,17 @@ class Adviser_Cf extends Admin_Controller
         $this->form_validation->set_rules('cfValue', 'Giá Trị CF', 'callback_validateCF');
         $this->form_validation->set_rules('cfContent', 'Nội Dung Chỉ Số', 'required');
 
-        if ($id)
-        {
-            $this->cfId		= $id;
-            $cfMetrics			= $this->Adviser_cf_model->viewdetails($id);
-            if (!$cfMetrics)
-            {
+        if ($id) {
+            $this->cfId = $id;
+            $cfMetrics = $this->Adviser_cf_model->viewdetails($id);
+            if (!$cfMetrics) {
                 $this->session->set_flashdata('message', 'Không thể tìm thấy chỉ số yêu cầu!');
-                redirect($this->config->item('admin_folder').'/adviser_cf');
+                redirect($this->config->item('admin_folder') . '/adviser_cf');
             }
             //set values to db values
-            $data['cfId']			= $cfMetrics->cfId;
-            $data['cfContent']	= $cfMetrics->cfContent;
-            $data['cfValue']	= $cfMetrics->cfValue;
+            $data['cfId'] = $cfMetrics->cfId;
+            $data['cfContent'] = $cfMetrics->cfContent;
+            $data['cfValue'] = $cfMetrics->cfValue;
         }
 
         if ($this->form_validation->run() == FALSE) {

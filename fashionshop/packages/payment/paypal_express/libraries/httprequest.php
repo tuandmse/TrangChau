@@ -6,7 +6,7 @@
  * @author martin maly
  * @copyright (C) 2008 martin maly
  */
-  /*   Modified for compatibility with GoCart by Clear Sky Designs */
+/*   Modified for compatibility with GoCart by Clear Sky Designs */
 /**
  * Class  HTTPRequest
  *
@@ -17,116 +17,118 @@
  */
 
 
-class HTTPRequest {
+class HTTPRequest
+{
 
-	private $host;
-	private $path;
-	private $data;
-	private $method = "POST";
-	private $port;
-	private $rawhost;
-	public $ssl = true;
+    private $host;
+    private $path;
+    private $data;
+    private $method = "POST";
+    private $port;
+    private $rawhost;
+    public $ssl = true;
 
-	private $header;
-	private $content;
-	private $parsedHeader;
-	private $CI;
+    private $header;
+    private $content;
+    private $parsedHeader;
+    private $CI;
 
-	function __construct(/* $host, $path, $method = 'POST', $ssl = false, $port = 0 */) {
-		$this->CI =& get_instance();
-		$this->host = $this->CI->paypal->host;
-		$this->rawhost = $this->ssl ? "ssl://$this->host" : $this->host;
-		$this->path = $this->CI->paypal->endpoint;
-		//$this->method = strtoupper($method);
-		//if ($port) {
-		//	$this->port = $port;
-		//} else {
-		if (!$this->ssl) $this->port = 80; else $this->port = 443;
-		//}
-	}
+    function __construct( /* $host, $path, $method = 'POST', $ssl = false, $port = 0 */)
+    {
+        $this->CI =& get_instance();
+        $this->host = $this->CI->paypal->host;
+        $this->rawhost = $this->ssl ? "ssl://$this->host" : $this->host;
+        $this->path = $this->CI->paypal->endpoint;
+        //$this->method = strtoupper($method);
+        //if ($port) {
+        //	$this->port = $port;
+        //} else {
+        if (!$this->ssl) $this->port = 80; else $this->port = 443;
+        //}
+    }
 
-	public function connect( $data = ''){
-		//$protocol = $this->ssl ? "https://" : "http://";
-		$fp = fsockopen($this->rawhost, $this->port);
-		if (!$fp) return false;
-		fputs($fp, "$this->method $this->path HTTP/1.1\r\n");
-		fputs($fp, "Host: $this->host\r\n");
-		//fputs($fp, "Content-type: $contenttype\r\n");
-		fputs($fp, "Content-length: ".strlen($data)."\r\n");
-		fputs($fp, "Connection: close\r\n");
-		fputs($fp, "\r\n");
-		fputs($fp, $data);
+    public function connect($data = '')
+    {
+        //$protocol = $this->ssl ? "https://" : "http://";
+        $fp = fsockopen($this->rawhost, $this->port);
+        if (!$fp) return false;
+        fputs($fp, "$this->method $this->path HTTP/1.1\r\n");
+        fputs($fp, "Host: $this->host\r\n");
+        //fputs($fp, "Content-type: $contenttype\r\n");
+        fputs($fp, "Content-length: " . strlen($data) . "\r\n");
+        fputs($fp, "Connection: close\r\n");
+        fputs($fp, "\r\n");
+        fputs($fp, $data);
 
-		$responseHeader = '';
-		$responseContent = '';
+        $responseHeader = '';
+        $responseContent = '';
 
-		do
-		{
-			$responseHeader.= fread($fp, 1);
-		}
-		while (!preg_match('/\\r\\n\\r\\n$/', $responseHeader));
-			
-			
-		if (!strstr($responseHeader, "Transfer-Encoding: chunked"))
-		{
-			while (!feof($fp))
-			{
-				$responseContent.= fgets($fp, 128);
-			}
-		}
-		else
-		{
+        do {
+            $responseHeader .= fread($fp, 1);
+        } while (!preg_match('/\\r\\n\\r\\n$/', $responseHeader));
 
-			while ($chunk_length = hexdec(fgets($fp)))
-			{
-				$responseContentChunk = '';
-				 
-				$read_length = 0;
-				 
-				while ($read_length < $chunk_length)
-				{
-					$responseContentChunk .= fread($fp, $chunk_length - $read_length);
-					$read_length = strlen($responseContentChunk);
-				}
 
-				$responseContent.= $responseContentChunk;
-				 
-				fgets($fp);
-				 
-			}
-			 
-		}
+        if (!strstr($responseHeader, "Transfer-Encoding: chunked")) {
+            while (!feof($fp)) {
+                $responseContent .= fgets($fp, 128);
+            }
+        } else {
 
-		$this->header = chop($responseHeader);
-		$this->content = $responseContent;
-		$this->parsedHeader = $this->headerParse();
-		
-		$code = intval(trim(substr($this->parsedHeader[0], 9)));
+            while ($chunk_length = hexdec(fgets($fp))) {
+                $responseContentChunk = '';
 
-		return $code;
-	}
+                $read_length = 0;
 
-	function headerParse(){
-		$h = $this->header;
-		$a=explode("\r\n", $h);
-		$out = array();
-		foreach ($a as $v){
-			$k = strpos($v, ':');
-			if ($k) {
-				$key = trim(substr($v,0,$k));
-				$value = trim(substr($v,$k+1));
-				if (!$key) continue;
-				$out[$key] = $value;
-			} else
-			{
-				if ($v) $out[] = $v;
-			}
-		}
-		return $out;
-	}
+                while ($read_length < $chunk_length) {
+                    $responseContentChunk .= fread($fp, $chunk_length - $read_length);
+                    $read_length = strlen($responseContentChunk);
+                }
 
-	public function getContent() {return $this->content;}
-	public function getHeader() {return $this->parsedHeader;}
-	
+                $responseContent .= $responseContentChunk;
+
+                fgets($fp);
+
+            }
+
+        }
+
+        $this->header = chop($responseHeader);
+        $this->content = $responseContent;
+        $this->parsedHeader = $this->headerParse();
+
+        $code = intval(trim(substr($this->parsedHeader[0], 9)));
+
+        return $code;
+    }
+
+    function headerParse()
+    {
+        $h = $this->header;
+        $a = explode("\r\n", $h);
+        $out = array();
+        foreach ($a as $v) {
+            $k = strpos($v, ':');
+            if ($k) {
+                $key = trim(substr($v, 0, $k));
+                $value = trim(substr($v, $k + 1));
+                if (!$key) continue;
+                $out[$key] = $value;
+            } else {
+                if ($v) $out[] = $v;
+            }
+        }
+        return $out;
+    }
+
+    public function getContent()
+    {
+        return $this->content;
+    }
+
+    public function getHeader()
+    {
+        return $this->parsedHeader;
+    }
+
 
 }

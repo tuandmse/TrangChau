@@ -6,14 +6,16 @@
  * Time: 8:04 PM
  */
 
-class Adviser_cf_model extends CI_Model {
+class Adviser_cf_model extends CI_Model
+{
     function __construct()
     {
         parent::__construct();
         $this->load->database();
     }
 
-    function view() 	{
+    function view()
+    {
         $this->db->order_by("cfId", "desc");
         return $this->db->get('adviser_cf')->result();
     }
@@ -21,23 +23,21 @@ class Adviser_cf_model extends CI_Model {
     function save_adviser_cf($data)
     {
         $this->db->where('cfId', $data['cfId']);
-        $result 			= $this->db->get('adviser_cf');
-        $question				= $result->row();
-        if(count($question) < 1)
-        {
+        $result = $this->db->get('adviser_cf');
+        $question = $result->row();
+        if (count($question) < 1) {
             $this->db->insert('adviser_cf', $data);
-        }
-        else
-        {
+        } else {
             $this->db->where('cfId', $data['cfId']);
             $this->db->update('adviser_cf', $data);
         }
     }
 
-    function viewdetails($id ) 	{
+    function viewdetails($id)
+    {
         $this->db->where('cfId', $id);
-        $result 			= $this->db->get('adviser_cf');
-        $question				= $result->row();
+        $result = $this->db->get('adviser_cf');
+        $question = $result->row();
         return $question;
     }
 

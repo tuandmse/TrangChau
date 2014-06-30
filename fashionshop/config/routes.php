@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php  if (!defined('BASEPATH')) exit('No direct script access allowed');
 /*
 | -------------------------------------------------------------------------
 | URI ROUTING
@@ -38,15 +38,12 @@
 |
 */
 
-if(file_exists(FCPATH.'fashionshop/config/database.php'))
-{
-    $route['default_controller']	= "cart";
-}
-else
-{
-    $route['default_controller']   = "install";   
+if (file_exists(FCPATH . 'fashionshop/config/database.php')) {
+    $route['default_controller'] = "cart";
+} else {
+    $route['default_controller'] = "install";
 }
 
 //this for the admininstration console
-$route['admin']					= 'admin/dashboard';
-$route['admin/media/(:any)']	= 'admin/media/$1';
+$route['admin'] = 'admin/dashboard';
+$route['admin/media/(:any)'] = 'admin/media/$1';

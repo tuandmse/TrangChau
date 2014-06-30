@@ -1,6 +1,7 @@
 <?php
 
-Class Install extends CI_Controller {
+Class Install extends CI_Controller
+{
 
     function __construct()
     {
@@ -10,8 +11,7 @@ Class Install extends CI_Controller {
         $this->load->helper(array('form', 'file', 'url'));
 
         //if this system is already installed redirect to the homepage
-        if(file_exists(FCPATH.'fashionshop/config/database.php'))
-        {
+        if (file_exists(FCPATH . 'fashionshop/config/database.php')) {
             redirect('/');
         }
 
@@ -25,8 +25,8 @@ Class Install extends CI_Controller {
 
         //check for writable folders
         $data['is_writeable']['root'] = is_writeable(FCPATH);
-        $data['is_writeable']['config'] = is_writeable(FCPATH.'fashionshop/config/');
-        $data['is_writeable']['uploads'] = is_writeable(FCPATH.'uploads/');
+        $data['is_writeable']['config'] = is_writeable(FCPATH . 'fashionshop/config/');
+        $data['is_writeable']['uploads'] = is_writeable(FCPATH . 'uploads/');
 
         $this->form_validation->set_rules('hostname', 'Hostname', 'required');
         $this->form_validation->set_rules('database', 'Database Name', 'required');
@@ -37,56 +37,48 @@ Class Install extends CI_Controller {
         $this->form_validation->set_rules('ssl_support');
         $this->form_validation->set_rules('mod_rewrite');
 
-        if ($this->form_validation->run() == FALSE)
-        {
+        if ($this->form_validation->run() == FALSE) {
             $data['errors'] = validation_errors();
             $this->load->view('install', $data);
-        }
-        else
-        {
+        } else {
             // Unset any existing DB information
             unset($this->db);
 
             //generate a dsn string
-            $dsn = 'mysqli://'.$this->input->post('username').':'.$this->input->post('password').'@'.$this->input->post('hostname').'/'.$this->input->post('database');
+            $dsn = 'mysqli://' . $this->input->post('username') . ':' . $this->input->post('password') . '@' . $this->input->post('hostname') . '/' . $this->input->post('database');
 
             //connect!
             $this->load->database($dsn);
 
-            if (is_resource($this->db->conn_id) OR is_object($this->db->conn_id))
-            {
+            if (is_resource($this->db->conn_id) OR is_object($this->db->conn_id)) {
                 //setup the database config file
-                $settings                   = array();
-                $settings['hostname']       = $this->input->post('hostname');
-                $settings['username']       = $this->input->post('username');
-                $settings['password']       = $this->input->post('password');
-                $settings['database']       = $this->input->post('database');
-                $settings['prefix']         = $this->input->post('prefix');             
-                $file_contents              = $this->load->view('templates/database', $settings, true);
-                write_file(FCPATH.'fashionshop/config/database.php', $file_contents);
+                $settings = array();
+                $settings['hostname'] = $this->input->post('hostname');
+                $settings['username'] = $this->input->post('username');
+                $settings['password'] = $this->input->post('password');
+                $settings['database'] = $this->input->post('database');
+                $settings['prefix'] = $this->input->post('prefix');
+                $file_contents = $this->load->view('templates/database', $settings, true);
+                write_file(FCPATH . 'fashionshop/config/database.php', $file_contents);
 
                 //setup the CodeIgniter default config file
-                $config_index               = array('index'=>'index.php');
-                if($this->input->post('mod_rewrite'))
-                {
-                    $config_index           = array('index'=>'');
+                $config_index = array('index' => 'index.php');
+                if ($this->input->post('mod_rewrite')) {
+                    $config_index = array('index' => '');
                 }
-                $file_contents              = $this->load->view('templates/config', $config_index, true);
-                write_file(FCPATH.'fashionshop/config/config.php', $file_contents);
-                
+                $file_contents = $this->load->view('templates/config', $config_index, true);
+                write_file(FCPATH . 'fashionshop/config/config.php', $file_contents);
+
                 //setup the .htaccess file
-                if($this->input->post('mod_rewrite'))
-                {
-                    $subfolder = trim(str_replace($_SERVER['DOCUMENT_ROOT'], '', FCPATH), '/').'/';
-                    $file_contents              = $this->load->view('templates/htaccess', array('subfolder'=>$subfolder), true);
-                    write_file(FCPATH.'.htaccess', $file_contents);
+                if ($this->input->post('mod_rewrite')) {
+                    $subfolder = trim(str_replace($_SERVER['DOCUMENT_ROOT'], '', FCPATH), '/') . '/';
+                    $file_contents = $this->load->view('templates/htaccess', array('subfolder' => $subfolder), true);
+                    write_file(FCPATH . '.htaccess', $file_contents);
                 }
 
                 //redirect to the admin login
                 redirect('admin');
-            }
-            else
-            {
+            } else {
                 $data['errors'] = '<p>A connection to the database could not be established.</p>';
                 $this->load->view('install', $data);
             }

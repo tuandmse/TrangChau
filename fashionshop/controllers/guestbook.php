@@ -5,7 +5,8 @@
  * Time: 8:00 PM
  */
 
-class Guestbook extends Front_Controller {
+class Guestbook extends Front_Controller
+{
 
     function __construct()
     {
@@ -25,17 +26,18 @@ class Guestbook extends Front_Controller {
         $this->db->query($query);
     }
 
-    function index() {
+    function index()
+    {
         $data = array();
         $data["posted"] = false;
-        if( $this->input->post("submit") ) {
+        if ($this->input->post("submit")) {
             $data = array(
-                "name"	=> $this->input->post("name"),
-                "email"		=> $this->input->post("email"),
-                "content"	=> $this->input->post("content"),
-                "title"	=> $this->input->post("title")
+                "name" => $this->input->post("name"),
+                "email" => $this->input->post("email"),
+                "content" => $this->input->post("content"),
+                "title" => $this->input->post("title")
             );
-            if( $this->Guestbook_model->insert( $data ) ) 	{
+            if ($this->Guestbook_model->insert($data)) {
                 $data["posted"] = true;
             }
         }

@@ -1,20 +1,20 @@
-<?php echo '<?php if ( ! defined(\'BASEPATH\')) exit(\'No direct script access allowed\');';?>
+<?php echo '<?php if ( ! defined(\'BASEPATH\')) exit(\'No direct script access allowed\');'; ?>
 
 // GoCart Theme
 $config['theme'] = 'default';
 
 // SSL support
-$config['ssl_support'] = <?php echo ($ssl_support)?'true':'false';?>;
+$config['ssl_support'] = <?php echo ($ssl_support) ? 'true' : 'false'; ?>;
 
 // Business information
-$config['company_name'] = '<?php echo $company_name;?>';
-$config['address1'] = '<?php echo $address1;?>';
-$config['address2'] = '<?php echo $address2;?>';
-$config['country'] = '<?php echo $country;?>'; // use proper country codes only
-$config['city'] = '<?php echo $city;?>'; 
-$config['state'] = '<?php echo $state;?>';
-$config['zip'] = '<?php echo $zip;?>';
-$config['email'] = '<?php echo $email;?>';
+$config['company_name'] = '<?php echo $company_name; ?>';
+$config['address1'] = '<?php echo $address1; ?>';
+$config['address2'] = '<?php echo $address2; ?>';
+$config['country'] = '<?php echo $country; ?>'; // use proper country codes only
+$config['city'] = '<?php echo $city; ?>';
+$config['state'] = '<?php echo $state; ?>';
+$config['zip'] = '<?php echo $zip; ?>';
+$config['email'] = '<?php echo $email; ?>';
 
 // Store currency
 $config['currency'] = 'USD'; // USD, EUR, etc
@@ -30,7 +30,7 @@ $config['dimension_unit'] = 'IN'; // FT, CM, etc
 // site logo path (for packing slip)
 $config['site_logo'] = '/assets/img/logo.png';
 
-//change the name of the admin controller folder 
+//change the name of the admin controller folder
 $config['admin_folder'] = 'admin';
 
 //file upload size limit
@@ -39,7 +39,7 @@ $config['size_limit'] = intval(ini_get('upload_max_filesize'))*1024;
 //are new registrations automatically approved (true/false)
 $config['new_customer_status'] = true;
 
-//do we require customers to log in 
+//do we require customers to log in
 $config['require_login'] = false;
 
 //require shipping
@@ -52,12 +52,12 @@ $config['order_status'] = 'Pending';
 $config['nonship_status'] = 'Delivered';
 
 $config['order_statuses'] = array(
- 'Pending' => 'Pending',
- 'Processing' => 'Processing',
- 'Shipped' => 'Shipped',
- 'On Hold' => 'On Hold',
- 'Cancelled' => 'Cancelled',
- 'Delivered' => 'Delivered'
+'Pending' => 'Pending',
+'Processing' => 'Processing',
+'Shipped' => 'Shipped',
+'On Hold' => 'On Hold',
+'Cancelled' => 'Cancelled',
+'Delivered' => 'Delivered'
 );
 
 // enable inventory control ?

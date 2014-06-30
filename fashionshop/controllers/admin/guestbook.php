@@ -5,7 +5,8 @@
  * Time: 8:00 PM
  */
 
-class Guestbook extends Admin_Controller {
+class Guestbook extends Admin_Controller
+{
 
     function __construct()
     {
@@ -25,18 +26,20 @@ class Guestbook extends Admin_Controller {
         $this->db->query($query);
     }
 
-    function index() {
+    function index()
+    {
         $data = array();
         $data["entries"] = $this->Guestbook_model->view();
-        $this->view($this->config->item('admin_folder').'/guestbook', $data);
+        $this->view($this->config->item('admin_folder') . '/guestbook', $data);
     }
 
-    function viewdetails($id){
+    function viewdetails($id)
+    {
         $data['guestbook'] = $this->Guestbook_model->viewdetails($id);
-        $this->view($this->config->item('admin_folder').'/guestbook_details', $data);
+        $this->view($this->config->item('admin_folder') . '/guestbook_details', $data);
     }
 
-    function send_response($guestbook_id='')
+    function send_response($guestbook_id = '')
     {
         $config = array(
             'protocol' => 'smtp',
@@ -59,28 +62,24 @@ class Guestbook extends Admin_Controller {
 
         $this->email->send();
 
-        $this->session->set_flashdata('message', 'Phản hồi đã được gửi đến: '.$this->input->post('recipient'));
-        redirect($this->config->item('admin_folder').'/guestbook/viewdetails/'.$guestbook_id);
+        $this->session->set_flashdata('message', 'Phản hồi đã được gửi đến: ' . $this->input->post('recipient'));
+        redirect($this->config->item('admin_folder') . '/guestbook/viewdetails/' . $guestbook_id);
     }
 
     function bulk_delete()
     {
-        $orders	= $this->input->post('order');
+        $orders = $this->input->post('order');
 
-        if($orders)
-        {
-            foreach($orders as $order)
-            {
+        if ($orders) {
+            foreach ($orders as $order) {
                 $this->Guestbook_model->delete($order);
             }
             $this->session->set_flashdata('message', 'Những gợi ý được chọn đã bị xóa!');
-        }
-        else
-        {
+        } else {
             $this->session->set_flashdata('error', 'Bạn chưa chọn gợi ý nào!');
         }
         //redirect as to change the url
-        redirect($this->config->item('admin_folder').'/guestbook');
+        redirect($this->config->item('admin_folder') . '/guestbook');
     }
 }
 

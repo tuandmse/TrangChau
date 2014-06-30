@@ -74,15 +74,17 @@ class Adviser_Rule extends Admin_Controller
                 $exploded = $this->multiexplode(array("^", "=>"), $urule->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
                 array_push($finalResult, $urule);
-                unset($usable_rule[$key]);
-                $usable_rule = array_values($usable_rule);
+//                unset($usable_rule[$key]);
+                array_splice($usable_rule, $key, 1);
+//                $usable_rule = array_values($usable_rule);
                 foreach ($usable_rule as $key2 => $urule2) {
                     $exploded2 = $this->multiexplode(array("^", "=>"), $urule2->rulesContent);
                     $lastItem2 = $exploded2[count($exploded2) - 1];
                     if ($lastItem2 == $lastItem) {
                         array_push($finalResult, $urule2);
-                        unset($usable_rule[$key2]);
-                        $usable_rule = array_values($usable_rule);
+                        array_splice($usable_rule, $key2, 1);
+//                        unset($usable_rule[$key2]);
+//                        $usable_rule = array_values($usable_rule);
                     }
                 }
                 if ($this->calculateCF($inputs, $finalResult) > $maxCF) {
@@ -93,11 +95,11 @@ class Adviser_Rule extends Admin_Controller
                 $finalResult = array();
             }
             $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
-           return  'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
+            return 'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
         } else {
-           return  'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
+            return 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
         }
-		
+
     }
 
     // get usable rule depends on user's input
@@ -186,9 +188,10 @@ class Adviser_Rule extends Admin_Controller
             // set CF(t) to the first item in array
             $inputs[0] = $tam;
             // remove the second item out of array
-            unset($inputs[1]);
+            array_splice($inputs, 1, 1);
+//            unset($inputs[1]);
             // reindex the array
-            $inputs = array_values($inputs);
+//            $inputs = array_values($inputs);
             // call recursively function until the input arrays has only 1 item
             $this->recursiveCertainty($inputs);
         }

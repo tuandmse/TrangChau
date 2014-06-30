@@ -11,9 +11,8 @@ class Adviser_Rule extends Admin_Controller
     function __construct()
     {
         parent::__construct();
-        if(!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin'))
-        {
-            redirect($this->config->item('admin_folder').'/orders');
+        if (!$this->auth->check_access('Advisers') && !$this->auth->check_access('Admin')) {
+            redirect($this->config->item('admin_folder') . '/orders');
         }
         $this->load->library('form_validation');
         $this->load->model(array('Adviser_rule_model', 'Adviser_node_model'));
@@ -97,11 +96,11 @@ class Adviser_Rule extends Admin_Controller
                 $finalResult = array();
             }
             $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
-           return  'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
+            return 'Trang phục phù hợp với bạn là: ' . $suggestNodes->nodesContent;
         } else {
-           return  'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
+            return 'Thông tin bạn cung cấp không đủ để chúng tôi tư vấn cho bạn!';
         }
-		
+
     }
 
     // get usable rule depends on user's input
@@ -208,7 +207,7 @@ class Adviser_Rule extends Admin_Controller
             $exploded = $this->multiexplode(array("^", "=>"), $rules->rulesContent);
             foreach ($exploded as $key => $nodesNode) {
                 $node = $this->Adviser_node_model->viewdetails($nodesNode);
-                if($node){
+                if ($node) {
                     $newContent = $newContent . '<b>' . $node->nodesContent . '</b> (<i>' . $nodesNode . '</i>)';
                 } else {
                     $newContent = $newContent . '<b><font color="red">CHÚ Ý!<br>Không tìm thấy dữ liệu của nút này! Nút có thể đã bị xóa! (<i>' . $nodesNode . '</i>)</b></font>';
@@ -243,19 +242,17 @@ class Adviser_Rule extends Admin_Controller
         $this->form_validation->set_rules('rightclause', 'Nút Vế Phải', 'required');
         $this->form_validation->set_rules('leftclause', 'Nút Vế Trái', 'required');
 
-        if ($id)
-        {
-            $this->question_id		= $id;
-            $question			= $this->Adviser_rule_model->viewdetails($id);
+        if ($id) {
+            $this->question_id = $id;
+            $question = $this->Adviser_rule_model->viewdetails($id);
             //if the administrator does not exist, redirect them to the admin list with an error
-            if (!$question)
-            {
+            if (!$question) {
                 $this->session->set_flashdata('message', 'Không thể tìm thấy câu hỏi yêu cầu!');
-                redirect($this->config->item('admin_folder').'/adviser_question');
+                redirect($this->config->item('admin_folder') . '/adviser_question');
             }
             //set values to db values
-            $data['rulesId']			= $question->rulesId;
-            $data['rulesCF']	= $question->rulesCF;
+            $data['rulesId'] = $question->rulesId;
+            $data['rulesCF'] = $question->rulesCF;
             $exploded = $this->multiexplode(array("^", "=>"), $question->rulesContent);
             $data['selectedNode'] = $exploded;
         }
@@ -282,7 +279,7 @@ class Adviser_Rule extends Admin_Controller
 
             $isRulesExist = $this->Adviser_rule_model->get_adviser_by_content($ruleContent);
             if (count($isRulesExist) > 0) {
-                if($save['rulesId']!=''){
+                if ($save['rulesId'] != '') {
                     $save['rulesContent'] = $ruleContent;
                     $this->Adviser_rule_model->save_adviser_rule($save);
                 }

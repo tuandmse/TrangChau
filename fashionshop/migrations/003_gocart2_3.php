@@ -1,25 +1,23 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_gocart2_3 extends CI_migration {
-    
+class Migration_gocart2_3 extends CI_migration
+{
+
     public function up()
     {
         //We replaced the sessions library in CI and no longer need this table.
-        if($this->db->table_exists('sessions'))
-        {
+        if ($this->db->table_exists('sessions')) {
             $this->dbforge->drop_table('sessions');
         }
 
         //rename postcode_required from orders tbale
-        if($this->db->field_exists('postcode_required', 'countries'))
-        {
-            $fields = array('postcode_required'=>array('name'=>'zip_required', 'type'=>'int','constraint'=>1));
+        if ($this->db->field_exists('postcode_required', 'countries')) {
+            $fields = array('postcode_required' => array('name' => 'zip_required', 'type' => 'int', 'constraint' => 1));
             $this->dbforge->modify_column('countries', $fields);
         }
 
         //if the banner_collections table does not exist, run the migration
-        if (!$this->db->table_exists('banner_collections'))
-        {
+        if (!$this->db->table_exists('banner_collections')) {
             //create banner collections
             $this->dbforge->add_field(array(
                 'banner_collection_id' => array(
@@ -33,73 +31,71 @@ class Migration_gocart2_3 extends CI_migration {
                     'constraint' => 32
                 )
             ));
-                
+
             $this->dbforge->add_key('banner_collection_id', TRUE);
             $this->dbforge->create_table('banner_collections', TRUE);
-        
+
             //create 2 collections to replace the current Banners & Boxes
-            $records = array(array('name'=>'Homepage Banners'), array('name'=>'Homepage Boxes'));
+            $records = array(array('name' => 'Homepage Banners'), array('name' => 'Homepage Boxes'));
             $this->db->insert_batch('banner_collections', $records);
         }
-        
-        if(!$this->db->table_exists('banners'))
-        {
+
+        if (!$this->db->table_exists('banners')) {
             $this->dbforge->add_field(array(
                 'banner_id' => array(
-                            'type' => 'int',
-                            'constraint' => 9,
-                            'unsigned' => true,
-                            'auto_increment' => true
-                            ),
+                    'type' => 'int',
+                    'constraint' => 9,
+                    'unsigned' => true,
+                    'auto_increment' => true
+                ),
                 'banner_collection_id' => array(
-                            'type' => 'int',
-                            'constraint' => 9,
-                            'unsigned' => true,
-                            'null' => false
-                            ),
+                    'type' => 'int',
+                    'constraint' => 9,
+                    'unsigned' => true,
+                    'null' => false
+                ),
                 'name' => array(
-                            'type' => 'varchar',
-                            'constraint' => 128,
-                            'null' => false
-                            ),
+                    'type' => 'varchar',
+                    'constraint' => 128,
+                    'null' => false
+                ),
                 'enable_date' => array(
-                            'type' => 'date',
-                            'null' => false
-                            ),
+                    'type' => 'date',
+                    'null' => false
+                ),
                 'disable_date' => array(
-                            'type' => 'date',
-                            'null' => false
-                            ),
+                    'type' => 'date',
+                    'null' => false
+                ),
                 'image' => array(
-                            'type' => 'varchar',
-                            'constraint' => 64,
-                            'null' => false
-                            ),
+                    'type' => 'varchar',
+                    'constraint' => 64,
+                    'null' => false
+                ),
                 'link' => array(
-                            'type' => 'varchar',
-                            'constraint' => 128,
-                            'null' => true
-                            ),
+                    'type' => 'varchar',
+                    'constraint' => 128,
+                    'null' => true
+                ),
                 'new_window' => array(
-                            'type' => 'tinyint',
-                            'constraint' => 1,
-                            'null' => false,
-                            'default' => 0
-                            ),
+                    'type' => 'tinyint',
+                    'constraint' => 1,
+                    'null' => false,
+                    'default' => 0
+                ),
                 'sequence' => array(
-                            'type' => 'int',
-                            'constraint' => 11,
-                            'null' => false,
-                            'default' => 0
-                            )
+                    'type' => 'int',
+                    'constraint' => 11,
+                    'null' => false,
+                    'default' => 0
+                )
             ));
 
             $this->dbforge->add_key('banner_id', true);
             $this->dbforge->create_table('banners', true);
         }
-        
-        if ($this->db->field_exists('id', 'banners'))
-        {
+
+        if ($this->db->field_exists('id', 'banners')) {
             //update banner table
             //individual banners
             $fields = array(
@@ -131,29 +127,26 @@ class Migration_gocart2_3 extends CI_migration {
                 )
             );
             $this->dbforge->modify_column('banners', $fields);
-            
+
             //add the new column
             $fields = array(
-            'banner_collection_id' => array(
-                'type' => 'INT',
-                'constraint' => 4,
-                'unsigned' => TRUE
+                'banner_collection_id' => array(
+                    'type' => 'INT',
+                    'constraint' => 4,
+                    'unsigned' => TRUE
                 )
             );
             $this->dbforge->add_column('banners', $fields);
-        
+
             //put them all in the homepage banners collection
-            $this->db->where('banner_id !=', 0)->update('banners', array('banner_collection_id'=>1));
+            $this->db->where('banner_id !=', 0)->update('banners', array('banner_collection_id' => 1));
         }
 
-        if ($this->db->table_exists('boxes'))
-        {
+        if ($this->db->table_exists('boxes')) {
             //move boxes over and delete the field.
             $boxes = $this->db->get('boxes')->result();
-            if($boxes)
-            {
-                foreach($boxes as $b)
-                {
+            if ($boxes) {
+                foreach ($boxes as $b) {
                     $new_box = array(
                         'name' => $b->title,
                         'enable_date' => $b->enable_on,
@@ -164,7 +157,7 @@ class Migration_gocart2_3 extends CI_migration {
                         'sequence' => $b->sequence,
                         'new_window' => $b->new_window
                     );
-                
+
                     //put the old boxes into the updated banners table with a foreign key pointing at the homepage box collection
                     $this->db->insert('banners', $new_box);
                 }
@@ -172,38 +165,35 @@ class Migration_gocart2_3 extends CI_migration {
             //drop the boxes table
             $this->dbforge->drop_table('boxes');
         }
-        
-        if (!$this->db->field_exists('enabled', 'categories'))
-        {
+
+        if (!$this->db->field_exists('enabled', 'categories')) {
             // Add the enabled field to categories
-            $fields  = array(
+            $fields = array(
                 'enabled' => array(
-                'type' => 'tinyint',
-                'constraint' => 1,
-                'default' => 1
-              )
+                    'type' => 'tinyint',
+                    'constraint' => 1,
+                    'default' => 1
+                )
             );
             $this->dbforge->add_column('categories', $fields);
         }
 
         //add username field to admin table
-        if (!$this->db->field_exists('username', 'admin'))
-        {
+        if (!$this->db->field_exists('username', 'admin')) {
             // Add the enabled field to categories
-            $fields  = array(
+            $fields = array(
                 'username' => array(
-                'type' => 'varchar',
-                'constraint' => 32,
-                'default' => '',
-                'null' => false
-              )
+                    'type' => 'varchar',
+                    'constraint' => 32,
+                    'default' => '',
+                    'null' => false
+                )
             );
             $this->dbforge->add_column('admin', $fields);
 
             //set the username to be the email by default so people can continue to login
             $admins = $this->db->get('admin')->result();
-            foreach($admins as $admin)
-            {
+            foreach ($admins as $admin) {
                 $admin->username = $admin->email;
                 $this->db->where('id', $admin->id)->update('admin', $admin);
             }
@@ -211,16 +201,14 @@ class Migration_gocart2_3 extends CI_migration {
 
 
         //move config to the database if it exists, otherwise enter default information
-        
+
         //load in the settings model
         $this->load->model('settings_model');
         $settings = $this->settings_model->get_settings('gocart');
 
-        if(empty($settings))
-        {
-            if(file_exists(FCPATH.'fashionshop/config/gocart.php'))
-            {
-                include(FCPATH.'fashionshop/config/gocart.php');
+        if (empty($settings)) {
+            if (file_exists(FCPATH . 'fashionshop/config/gocart.php')) {
+                include(FCPATH . 'fashionshop/config/gocart.php');
                 $config['order_statuses'] = json_encode($config['order_statuses']);
 
                 //set locale to default
@@ -232,11 +220,9 @@ class Migration_gocart2_3 extends CI_migration {
                 unset($config['currency_symbol_side']);
                 unset($config['currency_decimal']);
                 unset($config['currency_thousands_separator']);
-                
-                
-            }
-            else
-            {
+
+
+            } else {
                 $config['theme'] = 'default';
                 $config['ssl_support'] = false;
                 $config['company_name'] = '';
@@ -260,14 +246,14 @@ class Migration_gocart2_3 extends CI_migration {
                 $config['require_login'] = false;
                 $config['order_status'] = 'Order Placed';
                 $config['order_statuses'] = json_encode(array(
-                                                'Order Placed' => 'Order Placed',
-                                                'Pending' => 'Pending',
-                                                'Processing' => 'Processing',
-                                                'Shipped' => 'Shipped',
-                                                'On Hold' => 'On Hold',
-                                                'Cancelled' => 'Cancelled',
-                                                'Delivered' => 'Delivered'
-                                            ));
+                    'Order Placed' => 'Order Placed',
+                    'Pending' => 'Pending',
+                    'Processing' => 'Processing',
+                    'Shipped' => 'Shipped',
+                    'On Hold' => 'On Hold',
+                    'Cancelled' => 'Cancelled',
+                    'Delivered' => 'Delivered'
+                ));
                 $config['inventory_enabled'] = false;
                 $config['allow_os_purchase'] = true;
                 $config['tax_address'] = 'ship';
@@ -281,42 +267,41 @@ class Migration_gocart2_3 extends CI_migration {
             unset($config);
         }
     }
-    
+
     public function down()
     {
 
         //put the session table back if rolling back
-        if(!$this->db->table_exists('sessions'))
-        {
+        if (!$this->db->table_exists('sessions')) {
             $this->dbforge->add_field(array(
                 'session_id' => array(
                     'type' => 'varchar',
-                    'constraint' => 40, 
+                    'constraint' => 40,
                     'null' => false,
                     'default' => '0'
-                    ),
+                ),
                 'ip_address' => array(
                     'type' => 'varchar',
-                    'constraint' => 45, 
+                    'constraint' => 45,
                     'null' => false,
                     'default' => '0'
-                    ),
+                ),
                 'user_agent' => array(
                     'type' => 'varchar',
-                    'constraint' => 120, 
+                    'constraint' => 120,
                     'null' => true
-                    ),
+                ),
                 'last_activity' => array(
                     'type' => 'int',
-                    'constraint' => 10, 
+                    'constraint' => 10,
                     'unsigned' => true,
                     'null' => false,
                     'default' => '0'
-                    ),
+                ),
                 'user_data' => array(
                     'type' => 'text',
                     'null' => false
-                    )
+                )
             ));
 
             $this->dbforge->add_key('session_id', true);
@@ -324,24 +309,21 @@ class Migration_gocart2_3 extends CI_migration {
             $this->dbforge->create_table('sessions', true);
         }
 
-        if($this->db->field_exists('zip_required', 'countries'))
-        {
-            $fields = array('zip_required'=>array('name'=>'postcode_required', 'type'=>'int', 'constraint'=>1));
+        if ($this->db->field_exists('zip_required', 'countries')) {
+            $fields = array('zip_required' => array('name' => 'postcode_required', 'type' => 'int', 'constraint' => 1));
             $this->dbforge->modify_column('countries', $fields);
         }
-        
+
         //moving down to the old banner and box system is destructive.
-        if ($this->db->table_exists('banner_collections'))
-        {
+        if ($this->db->table_exists('banner_collections')) {
             //drop the boxes table
             $this->dbforge->drop_table('banner_collections');
         }
 
-        if ($this->db->table_exists('banners'))
-        {
+        if ($this->db->table_exists('banners')) {
             $this->dbforge->drop_table('banners');
-            
-            
+
+
             //create the old banners table
             //individual banners
             $this->dbforge->add_field(array(
@@ -385,9 +367,8 @@ class Migration_gocart2_3 extends CI_migration {
             $this->dbforge->add_key('id', TRUE);
             $this->dbforge->create_table('banners', TRUE);
         }
-        
-        if (!$this->db->table_exists('boxes'))
-        {   
+
+        if (!$this->db->table_exists('boxes')) {
             //create table fox boxes
             $this->dbforge->add_field(array(
                 'id' => array(
@@ -430,21 +411,19 @@ class Migration_gocart2_3 extends CI_migration {
             $this->dbforge->add_key('id', TRUE);
             $this->dbforge->create_table('boxes', TRUE);
         }
-      
+
         // drop enabled field on categories
-        if($this->db->field_exists('enabled', 'categories'))
-        {
+        if ($this->db->field_exists('enabled', 'categories')) {
             $this->dbforge->drop_column('categories', 'enabled');
         }
 
         //drop the admin username field
-        if($this->db->field_exists('username', 'admin'))
-        {
+        if ($this->db->field_exists('username', 'admin')) {
             $this->dbforge->drop_column('admin', 'username');
         }
 
         //kill the settings from the DB
         $this->load->model('settings_model');
         $this->settings_model->delete_settings('gocart');
-    }   
+    }
 }
