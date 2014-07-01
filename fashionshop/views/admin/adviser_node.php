@@ -1,7 +1,30 @@
+<?php
+
+function sort_url($lang, $by, $sort, $sorder, $admin_folder)
+{
+    if ($sort == $by) {
+        if ($sorder == 'asc') {
+            $sort = 'desc';
+            $icon = ' <i class="icon-chevron-up"></i>';
+        } else {
+            $sort = 'asc';
+            $icon = ' <i class="icon-chevron-down"></i>';
+        }
+    } else {
+        $sort = 'asc';
+        $icon = '';
+    }
+    $return = site_url($admin_folder . '/adviser_node/index/' . $by . '/' . $sort);
+    echo '<a href="' . $return . '">' . $lang . $icon . '</a>';
+}
+?>
 <div class="row">
     <div class="span12">
         <div class="page-header">
             <h1>Quản Trị Nút</h1>
+        </div>
+        <div class="span4">
+            <?php echo $this->pagination->create_links(); ?>    &nbsp;
         </div>
         <div style="text-align:right">
             <a class="btn btn-primary"
@@ -17,9 +40,9 @@
                         <?php echo (count($nodes) < 1) ? 'disabled="disabled"' : '' ?>>
                         <i class="icon-trash icon-white"></i></button>
                 </th>
-                <th style="white-space:nowrap">Nút</th>
-                <th style="white-space:nowrap">Nội Dung</th>
-                <th style="white-space:nowrap">Nút Của Câu Hỏi</th>
+                <th style="white-space:nowrap"><?php echo sort_url('Nút', 'nodesNode', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Nội Dung', 'nodesContent', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Nút Của Câu Hỏi', 'questionNode', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th></th>
             </tr>
             </thead>
@@ -34,14 +57,13 @@
                     <td style=""><?php echo $entry->nodesContent; ?></td>
                     <td style="white-space:nowrap"><?php echo $entry->questionNode; ?></td>
                     <td>
-
-                        <?php
-                        if ($entry->questionNode == ''):
-                            ?>
-                            <a class="btn btn-small" style="float:right;"
-                               href="<?php echo site_url($this->config->item('admin_folder') . '/adviser_node/form/' . $entry->nodesNode); ?>"><i
-                                    class="icon-pencil"></i> <?php echo lang('form_view') ?></a>
-                        <?php endif; ?>
+                        <a class="btn btn-small" style="float:right;" <?php
+                        if ($entry->questionNode != '') {
+                            echo ' disabled="disabled" onclick="return false" href="#"';
+                        } else {
+                            echo 'href="' . site_url($this->config->item('admin_folder') . '/adviser_node/form/' . $entry->nodesNode) . '"';
+                        }
+                        ?>><i class="icon-pencil"></i> <?php echo lang('form_view') ?></a>
                     </td>
                 </tr>
             <?php endforeach; ?>

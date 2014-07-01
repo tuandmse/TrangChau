@@ -14,10 +14,30 @@ class Adviser_question_model extends CI_Model
         $this->load->database();
     }
 
-    function view()
+    function view($data = array(), $return_count = false)
     {
-        $this->db->order_by("questionNode", "desc");
-        return $this->db->get('adviser_question')->result();
+        if (empty($data)) {
+            return $this->db->get('adviser_question')->result();
+        } else {
+
+            if (!empty($data['rows'])) {
+                $this->db->limit($data['rows']);
+            }
+
+            if (!empty($data['page'])) {
+                $this->db->offset($data['page']);
+            }
+
+            if (!empty($data['order_by'])) {
+                $this->db->order_by($data['order_by'], $data['sort_order']);
+            }
+
+            if ($return_count) {
+                return $this->db->count_all_results('adviser_question');
+            } else {
+                return $this->db->get('adviser_question')->result();
+            }
+        }
     }
 
     function save_adviser_question($data)

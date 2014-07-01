@@ -1,7 +1,30 @@
+<?php
+
+function sort_url($lang, $by, $sort, $sorder, $admin_folder)
+{
+    if ($sort == $by) {
+        if ($sorder == 'asc') {
+            $sort = 'desc';
+            $icon = ' <i class="icon-chevron-up"></i>';
+        } else {
+            $sort = 'asc';
+            $icon = ' <i class="icon-chevron-down"></i>';
+        }
+    } else {
+        $sort = 'asc';
+        $icon = '';
+    }
+    $return = site_url($admin_folder . '/adviser_cf/index/' . $by . '/' . $sort);
+    echo '<a href="' . $return . '">' . $lang . $icon . '</a>';
+}
+?>
 <div class="row">
     <div class="span12">
         <div class="page-header">
             <h1>Quản Trị Chỉ Số CF</h1>
+        </div>
+        <div class="span4">
+            <?php echo $this->pagination->create_links(); ?>    &nbsp;
         </div>
         <div style="text-align:right">
             <a class="btn btn-primary"
@@ -17,9 +40,9 @@
                         <?php echo (count($cfs) < 1) ? 'disabled="disabled"' : '' ?>>
                         <i class="icon-trash icon-white"></i></button>
                 </th>
-                <th style="white-space:nowrap">Mã Chỉ Số</th>
-                <th style="white-space:nowrap">Nội Dung</th>
-                <th style="white-space:nowrap">Giá Trị</th>
+                <th style="white-space:nowrap"><?php echo sort_url('Mã Chỉ Số', 'cfId', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Nội Dung', 'cfContent', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Giá Trị', 'cfValue', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th></th>
             </tr>
             </thead>

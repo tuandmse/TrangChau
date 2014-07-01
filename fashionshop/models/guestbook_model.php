@@ -14,10 +14,30 @@ class Guestbook_model extends CI_Model
         $this->load->database();
     }
 
-    function view()
+    function view($data = array(), $return_count = false)
     {
-        $this->db->order_by("guestbook_id", "desc");
-        return $this->db->get('guestbook')->result();
+        if (empty($data)) {
+            return $this->db->get('guestbook')->result();
+        } else {
+
+            if (!empty($data['rows'])) {
+                $this->db->limit($data['rows']);
+            }
+
+            if (!empty($data['page'])) {
+                $this->db->offset($data['page']);
+            }
+
+            if (!empty($data['order_by'])) {
+                $this->db->order_by($data['order_by'], $data['sort_order']);
+            }
+
+            if ($return_count) {
+                return $this->db->count_all_results('guestbook');
+            } else {
+                return $this->db->get('guestbook')->result();
+            }
+        }
     }
 
     function insert($data = array())

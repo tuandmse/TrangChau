@@ -18,10 +18,42 @@ class Adviser_Evaluation extends Admin_Controller
         $this->load->model(array('Adviser_evaluation_model', 'Adviser_node_model'));
     }
 
-    function index()
+    function index($order_by = "evaluationId", $sort_order = "DESC", $code = 0, $page = 0, $rows = 10)
     {
         $data = array();
-        $data["evaluation"] = $this->Adviser_evaluation_model->view();
+        $data['order_by'] = $order_by;
+        $data['sort_order'] = $sort_order;
+        $data['evaluation'] = $this->Adviser_evaluation_model->view(array('order_by' => $order_by, 'sort_order' => $sort_order, 'rows' => $rows, 'page' => $page));
+        $data['total'] = $this->Adviser_evaluation_model->view(array('order_by' => $order_by, 'sort_order' => $sort_order), true);
+        $this->load->library('pagination');
+        $config['base_url'] = site_url($this->config->item('admin_folder') . '/adviser_evaluation/index/' . $order_by . '/' . $sort_order . '/'. $code . '/');
+        $config['total_rows'] = $data['total'];
+        $config['per_page'] = $rows;
+        $config['uri_segment'] = 7;
+        $config['first_link'] = 'First';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+
+        $config['full_tag_open'] = '<div class="pagination"><ul>';
+        $config['full_tag_close'] = '</ul></div>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
+
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+
+        $config['prev_link'] = '&laquo;';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+
+        $config['next_link'] = '&raquo;';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+
+        $this->pagination->initialize($config);
         foreach ($data["evaluation"] as $evaluation) {
             $nodeArray = array();
             $nodeArray = json_decode($evaluation->evaluationSelected);

@@ -1,9 +1,31 @@
+<?php
+
+function sort_url($lang, $by, $sort, $sorder, $admin_folder)
+{
+    if ($sort == $by) {
+        if ($sorder == 'asc') {
+            $sort = 'desc';
+            $icon = ' <i class="icon-chevron-up"></i>';
+        } else {
+            $sort = 'asc';
+            $icon = ' <i class="icon-chevron-down"></i>';
+        }
+    } else {
+        $sort = 'asc';
+        $icon = '';
+    }
+    $return = site_url($admin_folder . '/guestbook/index/' . $by . '/' . $sort);
+    echo '<a href="' . $return . '">' . $lang . $icon . '</a>';
+}
+?>
 <div class="row">
     <div class="span12">
         <div class="page-header">
             <h1>Góp ý</h1>
         </div>
-
+        <div class="span4">
+            <?php echo $this->pagination->create_links(); ?>    &nbsp;
+        </div>
         <?php echo form_open($this->config->item('admin_folder') . '/guestbook/bulk_delete', array('id' => 'delete_form', 'onsubmit' => 'return submit_form();', 'class="form-inline"')); ?>
         <table class="table table-striped">
             <thead>
@@ -13,10 +35,11 @@
                         <?php echo (count($entries) < 1) ? 'disabled="disabled"' : '' ?>>
                         <i class="icon-trash icon-white"></i></button>
                 </th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Title</th>
-                <th>Date Time</th>
+
+                <th style="white-space:nowrap"><?php echo sort_url('Name', 'name', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Email', 'email', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Title', 'title', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Date Time', 'datetime', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th></th>
             </tr>
             </thead>

@@ -1,7 +1,31 @@
+<?php
+
+function sort_url($lang, $by, $sort, $sorder, $admin_folder)
+{
+    if ($sort == $by) {
+        if ($sorder == 'asc') {
+            $sort = 'desc';
+            $icon = ' <i class="icon-chevron-up"></i>';
+        } else {
+            $sort = 'asc';
+            $icon = ' <i class="icon-chevron-down"></i>';
+        }
+    } else {
+        $sort = 'asc';
+        $icon = '';
+    }
+    $return = site_url($admin_folder . '/adviser_evaluation/index/' . $by . '/' . $sort);
+    echo '<a href="' . $return . '">' . $lang . $icon . '</a>';
+}
+
+?>
 <div class="row">
     <div class="span12">
         <div class="page-header">
             <h1>Quản Trị Đánh Giá Tư Vấn</h1>
+        </div>
+        <div class="span4">
+            <?php echo $this->pagination->create_links(); ?>    &nbsp;
         </div>
         <?php echo form_open($this->config->item('admin_folder') . '/adviser_evaluation/bulk_delete', array('id' => 'delete_form', 'onsubmit' => 'return submit_form();', 'class="form-inline"')); ?>
         <table class="table table-striped">
@@ -12,10 +36,10 @@
                         <?php echo (count($evaluation) < 1) ? 'disabled="disabled"' : '' ?>>
                         <i class="icon-trash icon-white"></i></button>
                 </th>
-                <th style="white-space:nowrap">Mã Đánh Giá</th>
-                <th style="white-space:nowrap">Dữ Liệu Nhập</th>
-                <th style="white-space:nowrap">Kết Quả Tư Vấn</th>
-                <th style="white-space:nowrap">Đánh Giá</th>
+                <th style="white-space:nowrap"><?php echo sort_url('Mã Đánh Giá', 'evaluationId', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Dữ Liệu Nhập', 'evaluationSelected', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Kết Quả Tư Vấn', 'evaluationConclusion', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:nowrap"><?php echo sort_url('Đánh Giá', 'evaluationRate', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
             </tr>
             </thead>
 

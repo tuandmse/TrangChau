@@ -14,10 +14,30 @@ class Adviser_cf_model extends CI_Model
         $this->load->database();
     }
 
-    function view()
+    function view($data = array(), $return_count = false)
     {
-        $this->db->order_by("cfId", "desc");
-        return $this->db->get('adviser_cf')->result();
+        if (empty($data)) {
+            return $this->db->get('adviser_cf')->result();
+        } else {
+
+            if (!empty($data['rows'])) {
+                $this->db->limit($data['rows']);
+            }
+
+            if (!empty($data['page'])) {
+                $this->db->offset($data['page']);
+            }
+
+            if (!empty($data['order_by'])) {
+                $this->db->order_by($data['order_by'], $data['sort_order']);
+            }
+
+            if ($return_count) {
+                return $this->db->count_all_results('adviser_cf');
+            } else {
+                return $this->db->get('adviser_cf')->result();
+            }
+        }
     }
 
     function save_adviser_cf($data)
