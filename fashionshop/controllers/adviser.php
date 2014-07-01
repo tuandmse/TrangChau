@@ -8,7 +8,7 @@ class Adviser extends Front_Controller
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->model(array(
-            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model','Adviser_cf_model','Adviser_evaluation_model'));
+            'Adviser_model', 'Adviser_rule_model', 'Adviser_node_model', 'Adviser_cf_model', 'Adviser_evaluation_model'));
 
 
         $query = "CREATE TABLE IF NOT EXISTS " . $this->db->dbprefix('adviser_question') . " (
@@ -27,7 +27,7 @@ class Adviser extends Front_Controller
         $data["postedStyle"] = false;
         $data["postedInfor"] = false;
         $data["posted"] = false;
-        $data["node_view"] = $this->Adviser_model->node_view(); 
+        $data["node_view"] = $this->Adviser_model->node_view();
         $data["ID_of_CF"] = $this->Adviser_model->findIDCF();
         $data["node_view_filterYN"] = $this->Adviser_model->node_view_filterYN($data["ID_of_CF"][0]->questionNode);
         $data["cF_node_view"] = $this->Adviser_model->node_view_filter_CfType($data["ID_of_CF"][0]->questionNode);
@@ -52,7 +52,7 @@ class Adviser extends Front_Controller
                 }
 
             }
-            foreach ($data["cF_node_view"] as $cf_node_entry) {  // lay cau hoi CF dua vao answer
+            foreach ($data["cF_node_view"] as $cf_node_entry) { // lay cau hoi CF dua vao answer
                 $obj = new stdClass();
                 $obj->node = $cf_node_entry->nodesNode;
                 if ($this->input->post($cf_node_entry->nodesNode)) {
@@ -60,7 +60,6 @@ class Adviser extends Front_Controller
                     $answer[$i] = $obj;
                     $i++;
                 }
-
 
 
             }
@@ -77,13 +76,7 @@ class Adviser extends Front_Controller
             $data["evaluationConclusion"] = $nodeAnswer->nodesNode;
 
 
-
-
-
-
         }
-
-
 
 
         $this->view("call_adviser.php", $data);
@@ -120,42 +113,39 @@ class Adviser extends Front_Controller
             $superFinal->cf = '';
             $finalResult = array();
             $maxCF = 0;
-            for ($i = 0; $i < count($usable_rule); $i) {// chay tim 2 luat co cung ket luan la lastitem va lastitem2 đưa vào finalresult
+            for ($i = 0; $i < count($usable_rule); $i) { // chay tim 2 luat co cung ket luan la lastitem va lastitem2 đưa vào finalresult
                 $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
-                
+
                 array_push($finalResult, $usable_rule[$i]);
-               
-                unset($usable_rule[$i]);
-                $usable_rule = array_values($usable_rule);
-                
-                for ($j = 0; $j < count($usable_rule); $j) {
+
+                array_splice($usable_rule, $i, 1);
+//                unset($usable_rule[$i]);
+//                $usable_rule = array_values($usable_rule);
+
+                for ($j = $i; $j < count($usable_rule); $j) {
                     $exploded2 = $this->multiexplode(array("^", "=>"), $usable_rule[$j]->rulesContent);
                     $lastItem2 = $exploded2[count($exploded2) - 1];
                     if ($lastItem2 == $lastItem) {
                         array_push($finalResult, $usable_rule[$j]);
-                        unset($usable_rule[$j]);
-                        $usable_rule = array_values($usable_rule);
+                        array_splice($usable_rule, $j, 1);
+//                        unset($usable_rule[$j]);
+//                        $usable_rule = array_values($usable_rule);
                     } else {
                         $j++;
                     }
                 }
                 $calCF = $this->calculateCF($inputs, $finalResult); // tinh CF
-                
-                
-                
-                
-                if ($calCF > $maxCF) { // so sanh CF
+
+                if ($calCF >= $maxCF) { // so sanh CF
                     $superFinal->node = $lastItem;
                     $superFinal->cf = $calCF;
                     $maxCF = $calCF; // chon CF lon nhat
                 }
                 $finalResult = array();
             }
-            
-            
-            
-            
+
+
             if ($superFinal->node != "") {
                 $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
                 return $suggestNodes;
@@ -174,36 +164,36 @@ class Adviser extends Front_Controller
 
     }
 
-    
+
     function get_usable_rule($inputs, $rules) // dua nhung luat co the su dung vao 1 mang
     {
-       
+
         $usable_rule = array();
         foreach ($rules as $rule) {
-            
+
             $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
             $flag = true;
-            
+
             foreach ($exploded as $key => $nodesNode) {
-                
+
                 if ($key < count($exploded) - 1) {
-                    
-                    
+
+
                     if (!$this->check_exist_in_arrays($inputs, $nodesNode)) {
                         $flag = false;
                     }
                 }
             }
-            
+
             if ($flag == true) {
                 array_push($usable_rule, $rule);
             }
         }
-        
+
         return $usable_rule;
     }
 
-   
+
     function getSingleInputFormInputs($inputs, $id)
     {
         foreach ($inputs as $input) {
@@ -227,43 +217,34 @@ class Adviser extends Front_Controller
                 }
             }
             $f = $minCF * $ruleTemp->rulesCF;
-            array_push($fArray, $f);  // fArray la 1 mang CF dung de chua CF cua mang luat finalresult
+            array_push($fArray, $f); // fArray la 1 mang CF dung de chua CF cua mang luat finalresult
         }
         $value = $this->recursiveCertainty($fArray);
         return $value;
     }
 
-    
+
     function recursiveCertainty($inputs)
     {
-        
+
         if (count($inputs) == 0) {
             return 0;
-        } 
-        else if (count($inputs) == 1) {
+        } else if (count($inputs) == 1) {
             return $inputs[0];
         } else {
-            
             // CF(t) = CF(t1) + CF(t2) – CF(t1) * CF(t2)
             if ($inputs[0] > 0 && $inputs[1] > 0) {
                 $tam = $inputs[0] + $inputs[1] - ($inputs[0] * $inputs[1]);
-            }
-            // CF(t) = CF(t1) + CF(t2) + CF(t1) * CF(t2)
+            } // CF(t) = CF(t1) + CF(t2) + CF(t1) * CF(t2)
             else if ($inputs[0] < 0 && $inputs[1] < 0) {
                 $tam = $inputs[0] + $inputs[1] + ($inputs[0] * $inputs[1]);
-            } 
-            // CF(t) = (CF(t1) + CF(t2)) / (1 – MIN(ABS(CF(t1)), ABS(CF(t2))))
+            } // CF(t) = (CF(t1) + CF(t2)) / (1 – MIN(ABS(CF(t1)), ABS(CF(t2))))
             else {
                 $tam = ($inputs[0] + $inputs[1]) / (1 - min(abs($inputs[0]), abs($inputs[1])));
             }
-            
             $inputs[0] = $tam;
-           
-            unset($inputs[1]);
-            
-            $inputs = array_values($inputs);
-            
-            $this->recursiveCertainty($inputs);
+            array_splice($inputs, 1, 1);
+            return $this->recursiveCertainty($inputs);
         }
     }
 }

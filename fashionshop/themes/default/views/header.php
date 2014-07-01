@@ -1,206 +1,213 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title><?php echo (!empty($seo_title)) ? $seo_title .' - ' : ''; echo $this->config->item('company_name'); ?></title>
+    <title><?php echo (!empty($seo_title)) ? $seo_title . ' - ' : '';
+        echo $this->config->item('company_name'); ?></title>
 
 
-<?php if(isset($meta)):?>
-<!--	--><?php //echo $meta;?>
-<?php else:?>
-<meta name="Keywords" content="Shopping Cart, eCommerce, Code Igniter">
-<meta name="Description" content="This is a website for fashion shopping">
-<?php endif;?>
+    <?php if (isset($meta)): ?>
+        <!--	--><?php //echo $meta;?>
+    <?php else: ?>
+        <meta name="Keywords" content="Shopping Cart, eCommerce, Code Igniter">
+        <meta name="Description" content="This is a website for fashion shopping">
+    <?php endif; ?>
 
-<?php echo theme_css('bootstrap.min.css', true);?>
-<?php echo theme_css('bootstrap-select.min.css', true);?>
-<?php echo theme_css('bootstrap-responsive.min.css', true);?>
-<?php echo theme_css('styles.css', true);?>
+    <?php echo theme_css('bootstrap.min.css', true); ?>
+    <?php echo theme_css('bootstrap-select.min.css', true); ?>
+    <?php echo theme_css('bootstrap-responsive.min.css', true); ?>
+    <?php echo theme_css('styles.css', true); ?>
 
-<?php echo theme_js('jquery.js', true);?>
-<?php echo theme_js('bootstrap.min.js', true);?>
-<?php echo theme_js('bootstrap-select.min.js', true);?>
-<?php echo theme_js('squard.js', true);?>
-<?php echo theme_js('equal_heights.js', true);?>
-<?php
-//with this I can put header data in the header instead of in the body.
-if(isset($additional_header_info))
-{
-	echo $additional_header_info;
-}
+    <?php echo theme_js('jquery.js', true); ?>
+    <?php echo theme_js('bootstrap.min.js', true); ?>
+    <?php echo theme_js('bootstrap-select.min.js', true); ?>
+    <?php echo theme_js('squard.js', true); ?>
+    <?php echo theme_js('equal_heights.js', true); ?>
+    <?php
+    //with this I can put header data in the header instead of in the body.
+    if (isset($additional_header_info)) {
+        echo $additional_header_info;
+    }
 
-?>
+    ?>
 </head>
 
 <body>
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         $('.selectpicker').selectpicker();
-        $(".navbar-search > input").keypress(function(event) {
+        $(".navbar-search > input").keypress(function (event) {
             if (event.which == 13) {
                 event.preventDefault();
                 $(".navbar-search").submit();
             }
         });
         $('.search_area').hide();
-        $('#search_button').click(function(){
-            $( ".search_area" ).toggle();
+        $('#search_button').click(function () {
+            $(".search_area").toggle();
             $("#main_term").focus();
         });
     });
 </script>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
+<div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
 
-				<!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-				</a>
+            <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
 
-				<a class="brand" href="<?php echo site_url();?>">Trang Châu</a>
+            <a class="brand" href="<?php echo site_url(); ?>">Trang Châu</a>
 
-				<div class="nav-collapse">
-					<ul class="nav">
-						<?php if(isset($this->categories[0])):?>
-						<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('catalog')?><b class="caret"></b></a>
-							<ul class="dropdown-menu">
-								<?php foreach($this->categories[0] as $cat_menu):?>
-								<li <?php echo $cat_menu->active ? 'class="active"' : false; ?>><a href="<?php echo site_url($cat_menu->slug);?>"><?php echo $cat_menu->name;?></a></li>
-								<?php endforeach;?>
-							</ul>
-						</li>
-                        <li>
-                            <a href="<?php echo  site_url('guestbook');?>">Liên hệ/Góp ý</a>
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <?php if (isset($this->categories[0])): ?>
+                        <li class="dropdown"><a href="#" class="dropdown-toggle"
+                                                data-toggle="dropdown"><?php echo lang('catalog') ?><b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <?php foreach ($this->categories[0] as $cat_menu): ?>
+                                    <li <?php echo $cat_menu->active ? 'class="active"' : false; ?>><a
+                                            href="<?php echo site_url($cat_menu->slug); ?>"><?php echo $cat_menu->name; ?></a>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
                         </li>
-						<?php
-						endif;
+                        <li>
+                            <a href="<?php echo site_url('guestbook'); ?>">Liên hệ/Góp ý</a>
+                        </li>
+                    <?php
+                    endif;
 
-						if(isset($this->pages[0]))
-						{
-							foreach($this->pages[0] as $menu_page):?>
-								<li>
-								<?php if(empty($menu_page->content)):?>
-									<a href="<?php echo $menu_page->url;?>" <?php if($menu_page->new_window ==1){echo 'target="_blank"';} ?>><?php echo $menu_page->menu_title;?></a>
-								<?php else:?>
-									<a href="<?php echo site_url($menu_page->slug);?>"><?php echo $menu_page->menu_title;?></a>
-								<?php endif;?>
-								</li>
+                    if (isset($this->pages[0])) {
+                        foreach ($this->pages[0] as $menu_page):?>
+                            <li>
+                                <?php if (empty($menu_page->content)): ?>
+                                    <a href="<?php echo $menu_page->url; ?>" <?php if ($menu_page->new_window == 1) {
+                                        echo 'target="_blank"';
+                                    } ?>><?php echo $menu_page->menu_title; ?></a>
+                                <?php else: ?>
+                                    <a href="<?php echo site_url($menu_page->slug); ?>"><?php echo $menu_page->menu_title; ?></a>
+                                <?php endif; ?>
+                            </li>
 
-							<?php endforeach;
-						}
-						?>
-					</ul>
+                        <?php endforeach;
+                    }
+                    ?>
+                </ul>
 
-					<ul class="nav pull-right">
+                <ul class="nav pull-right">
 
-						<?php if($this->Customer_model->is_logged_in(false, false)):?>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('account');?> <b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="<?php echo  site_url('secure/my_account');?>"><?php echo lang('my_account')?></a></li>
-									<li class="divider"></li>
-									<li><a href="<?php echo site_url('secure/logout');?>"><?php echo lang('logout');?></a></li>
-								</ul>
-							</li>
-						<?php else: ?>
-							<li><a href="<?php echo site_url('secure/login');?>"><?php echo lang('login');?></a></li>
-						<?php endif; ?>
-							<li>
-								<a href="<?php echo site_url('cart/view_cart');?>">
-								<?php
-								if ($this->go_cart->total_items()==0)
-								{
-									echo lang('empty_cart');
-								}
-								else
-								{
-									if($this->go_cart->total_items() > 1)
-									{
-										echo sprintf (lang('multiple_items'), $this->go_cart->total_items());
-									}
-									else
-									{
-										echo sprintf (lang('single_item'), $this->go_cart->total_items());
-									}
-								}
-								?>
-								</a>
-							</li>
+                    <?php if ($this->Customer_model->is_logged_in(false, false)): ?>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo lang('account'); ?> <b
+                                    class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="<?php echo site_url('secure/my_account'); ?>"><?php echo lang('my_account') ?></a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="<?php echo site_url('secure/logout'); ?>"><?php echo lang('logout'); ?></a>
+                                </li>
+                            </ul>
+                        </li>
+                    <?php else: ?>
+                        <li><a href="<?php echo site_url('secure/login'); ?>"><?php echo lang('login'); ?></a></li>
+                    <?php endif; ?>
+                    <li>
+                        <a href="<?php echo site_url('cart/view_cart'); ?>">
+                            <?php
+                            if ($this->go_cart->total_items() == 0) {
+                                echo lang('empty_cart');
+                            } else {
+                                if ($this->go_cart->total_items() > 1) {
+                                    echo sprintf(lang('multiple_items'), $this->go_cart->total_items());
+                                } else {
+                                    echo sprintf(lang('single_item'), $this->go_cart->total_items());
+                                }
+                            }
+                            ?>
+                        </a>
+                    </li>
 
 
-							<li><a href="<?php echo site_url('adviser/index');?>">Call Advisers</a></li>
-					</ul>
-                    <button class="btn" id="search_button" style="float: right;">Tìm kiếm</button>
-				</div>
-			</div>
-		</div>
-	</div>
-    <div class="search_area navbar" style="z-index: 10; position: fixed; top: 50px; right: 50px; background-color: #000000; padding: 10px 5px 0px 5px; border-radius: 6px; border: 2px solid #ffffff ">
-        <?php echo form_open('cart/search', 'class="navbar-search pull-right"');?>
-        <?php if(isset($this->categories[0])) { ?>
-            <select name="search_cate" class="selectpicker span15" data-style="btn-primary">
-                <option value="0">Tất cả</option>
-                <?php foreach($this->categories[0] as $cat_menu):?>
-                    <option value="<?php echo $cat_menu->id;?>"><?php echo $cat_menu->name;?></option>
-                <?php endforeach;?>
-            </select>
-        <?php } ?>
-        <input type="text" name="term" style="float: left" id="main_term" class="search-query span2" placeholder="<?php echo lang('search');?>"/>
-        <select name="price_flag" class="selectpicker span15" data-style="btn-warning" style="float: right">
-            <option value="1"><</option>
-            <option value="2">></option>
-        </select>
-        <input style="float: right" type="text" name="price" class="search-query span2" placeholder="<?php echo lang('price');?>"/>
-        </form>
+                    <li><a href="<?php echo site_url('adviser/index'); ?>">Call Advisers</a></li>
+                </ul>
+                <button class="btn" id="search_button" style="float: right;">Tìm kiếm</button>
+            </div>
+        </div>
     </div>
+</div>
+<div class="search_area navbar"
+     style="z-index: 10; position: fixed; top: 50px; right: 50px; background-color: #000000; padding: 10px 5px 0px 5px; border-radius: 6px; border: 2px solid #ffffff ">
+    <?php echo form_open('cart/search', 'class="navbar-search pull-right"'); ?>
+    <?php if (isset($this->categories[0])) { ?>
+        <select name="search_cate" class="selectpicker span15" data-style="btn-primary">
+            <option value="0">Tất cả</option>
+            <?php foreach ($this->categories[0] as $cat_menu): ?>
+                <option value="<?php echo $cat_menu->id; ?>"><?php echo $cat_menu->name; ?></option>
+            <?php endforeach; ?>
+        </select>
+    <?php } ?>
+    <input type="text" name="term" style="float: left" id="main_term" class="search-query span2"
+           placeholder="<?php echo lang('search'); ?>"/>
+    <select name="price_flag" class="selectpicker span15" data-style="btn-warning" style="float: right">
+        <option value="1"><</option>
+        <option value="2">></option>
+    </select>
+    <input style="float: right" type="text" name="price" class="search-query span2"
+           placeholder="<?php echo lang('price'); ?>"/>
+    </form>
+</div>
 
-	<div class="container">
-		<?php if(!empty($base_url) && is_array($base_url)):?>
-			<div class="row">
-				<div class="span12">
-					<ul class="breadcrumb">
-						<?php
-						$url_path	= '';
-						$count	 	= 1;
-						foreach($base_url as $bc):
-							$url_path .= '/'.$bc;
-							if($count == count($base_url)):?>
-								<li class="active"><?php echo $bc;?></li>
-							<?php else:?>
-								<li><a href="<?php echo site_url($url_path);?>"><?php echo $bc;?></a></li> <span class="divider">/</span>
-							<?php endif;
-							$count++;
-						endforeach;?>
- 					</ul>
-				</div>
-			</div>
-		<?php endif;?>
+<div class="container">
+    <?php if (!empty($base_url) && is_array($base_url)): ?>
+        <div class="row">
+            <div class="span12">
+                <ul class="breadcrumb">
+                    <?php
+                    $url_path = '';
+                    $count = 1;
+                    foreach ($base_url as $bc):
+                        $url_path .= '/' . $bc;
+                        if ($count == count($base_url)):?>
+                            <li class="active"><?php echo $bc; ?></li>
+                        <?php else: ?>
+                            <li><a href="<?php echo site_url($url_path); ?>"><?php echo $bc; ?></a></li> <span
+                                class="divider">/</span>
+                        <?php endif;
+                        $count++;
+                    endforeach;?>
+                </ul>
+            </div>
+        </div>
+    <?php endif; ?>
 
-		<?php if ($this->session->flashdata('message')):?>
-			<div class="alert alert-info">
-				<a class="close" data-dismiss="alert">×</a>
-				<?php echo $this->session->flashdata('message');?>
-			</div>
-		<?php endif;?>
+    <?php if ($this->session->flashdata('message')): ?>
+        <div class="alert alert-info">
+            <a class="close" data-dismiss="alert">×</a>
+            <?php echo $this->session->flashdata('message'); ?>
+        </div>
+    <?php endif; ?>
 
-		<?php if ($this->session->flashdata('error')):?>
-			<div class="alert alert-error">
-				<a class="close" data-dismiss="alert">×</a>
-				<?php echo $this->session->flashdata('error');?>
-			</div>
-		<?php endif;?>
+    <?php if ($this->session->flashdata('error')): ?>
+        <div class="alert alert-error">
+            <a class="close" data-dismiss="alert">×</a>
+            <?php echo $this->session->flashdata('error'); ?>
+        </div>
+    <?php endif; ?>
 
-		<?php if (!empty($error)):?>
-			<div class="alert alert-error">
-				<a class="close" data-dismiss="alert">×</a>
-				<?php echo $error;?>
-			</div>
-		<?php endif;?>
+    <?php if (!empty($error)): ?>
+        <div class="alert alert-error">
+            <a class="close" data-dismiss="alert">×</a>
+            <?php echo $error; ?>
+        </div>
+    <?php endif; ?>
 
 
 <?php

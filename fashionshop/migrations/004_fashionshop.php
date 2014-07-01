@@ -1,6 +1,7 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Migration_Fashionshop extends CI_Migration {
+class Migration_Fashionshop extends CI_Migration
+{
 
     public function up()
     {
@@ -31,8 +32,7 @@ class Migration_Fashionshop extends CI_Migration {
      *********************************************/
     private function _table_rate()
     {
-        if(!$this->db->table_exists('rate'))
-        {
+        if (!$this->db->table_exists('rate')) {
             $this->dbforge->add_field(array(
                 'id' => array(
                     'type' => 'int',
@@ -73,83 +73,82 @@ class Migration_Fashionshop extends CI_Migration {
      *********************************************/
     private function _table_customers()
     {
-        if(!$this->db->table_exists('customers'))
-        {
+        if (!$this->db->table_exists('customers')) {
             $this->dbforge->add_field(array(
                 'id' => array(
-                    'type'=> 'int',
+                    'type' => 'int',
                     'constraint' => 9,
                     'unsigned' => true,
                     'auto_increment' => true
                 ),
                 'firstname' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 32,
                     'null' => false
                 ),
                 'lastname' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 32,
                     'null' => false
                 ),
                 'email' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 128,
                     'null' => false
                 ),
                 'email_subscribe' => array(
-                    'type'=> 'tinyint',
+                    'type' => 'tinyint',
                     'constraint' => 1,
                     'default' => '0'
                 ),
                 'phone' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 32,
                     'null' => false
                 ),
                 'company' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 128,
                     'null' => false
                 ),
                 'default_billing_address' => array(
-                    'type'=> 'int',
+                    'type' => 'int',
                     'constraint' => 9
                 ),
                 'default_shipping_address' => array(
-                    'type'=> 'int',
+                    'type' => 'int',
                     'constraint' => 9
                 ),
                 'ship_to_bill_address' => array(
-                    'type'=> 'enum',
-                    'constraint' => array('false','true'),
+                    'type' => 'enum',
+                    'constraint' => array('false', 'true'),
                     'null' => false,
                     'default' => 'true'
                 ),
                 'password' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 40,
                     'null' => false
                 ),
                 'active' => array(
-                    'type'=> 'tinyint',
+                    'type' => 'tinyint',
                     'constraint' => 1,
                     'null' => false
                 ),
                 'group_id' => array(
-                    'type'=> 'int',
+                    'type' => 'int',
                     'constraint' => 11,
                     'null' => false,
                     'default' => '1'
                 ),
                 'confirmed' => array(
-                    'type'=> 'tinyint',
+                    'type' => 'tinyint',
                     'constraint' => 1,
                     'null' => false,
                     'default' => '0'
                 ),
                 'facebook' => array(
-                    'type'=> 'varchar',
+                    'type' => 'varchar',
                     'constraint' => 128,
                     'null' => true
                 )

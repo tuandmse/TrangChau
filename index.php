@@ -2,14 +2,12 @@
 session_start();
 
 //set the session userdata if non-existant
-if(!isset($_SESSION['userdata']))
-{
-	$_SESSION['userdata'] = array();
+if (!isset($_SESSION['userdata'])) {
+    $_SESSION['userdata'] = array();
 }
 //set newFlashdata if non-existent
-if(!isset($_SESSION['newFlashdata']))
-{
-	$_SESSION['newFlashdata'] = array();
+if (!isset($_SESSION['newFlashdata'])) {
+    $_SESSION['newFlashdata'] = array();
 }
 
 //empty out the "oldFlashdata" field

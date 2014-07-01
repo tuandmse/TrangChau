@@ -5,7 +5,8 @@
  * Time: 8:00 PM
  */
 
-class Guestbook extends Admin_Controller {
+class Guestbook extends Admin_Controller
+{
 
     function __construct()
     {
@@ -25,18 +26,53 @@ class Guestbook extends Admin_Controller {
         $this->db->query($query);
     }
 
-    function index() {
+    function index($order_by = "guestbook_id", $sort_order = "DESC", $code = 0, $page = 0, $rows = 10)
+    {
         $data = array();
-        $data["entries"] = $this->Guestbook_model->view();
-        $this->view($this->config->item('admin_folder').'/guestbook', $data);
+        $data['order_by'] = $order_by;
+        $data['sort_order'] = $sort_order;
+        $data['entries'] = $this->Guestbook_model->view(array('order_by' => $order_by, 'sort_order' => $sort_order, 'rows' => $rows, 'page' => $page));
+        $data['total'] = $this->Guestbook_model->view(array('order_by' => $order_by, 'sort_order' => $sort_order), true);
+
+        $this->load->library('pagination');
+        $config['base_url'] = site_url($this->config->item('admin_folder') . '/guestbook/index/' . $order_by . '/' . $sort_order . '/'. $code . '/');
+        $config['total_rows'] = $data['total'];
+        $config['per_page'] = $rows;
+        $config['uri_segment'] = 7;
+        $config['first_link'] = 'First';
+        $config['first_tag_open'] = '<li>';
+        $config['first_tag_close'] = '</li>';
+        $config['last_link'] = 'Last';
+        $config['last_tag_open'] = '<li>';
+        $config['last_tag_close'] = '</li>';
+
+        $config['full_tag_open'] = '<div class="pagination"><ul>';
+        $config['full_tag_close'] = '</ul></div>';
+        $config['cur_tag_open'] = '<li class="active"><a href="#">';
+        $config['cur_tag_close'] = '</a></li>';
+
+        $config['num_tag_open'] = '<li>';
+        $config['num_tag_close'] = '</li>';
+
+        $config['prev_link'] = '&laquo;';
+        $config['prev_tag_open'] = '<li>';
+        $config['prev_tag_close'] = '</li>';
+
+        $config['next_link'] = '&raquo;';
+        $config['next_tag_open'] = '<li>';
+        $config['next_tag_close'] = '</li>';
+
+        $this->pagination->initialize($config);
+        $this->view($this->config->item('admin_folder') . '/guestbook', $data);
     }
 
-    function viewdetails($id){
+    function viewdetails($id)
+    {
         $data['guestbook'] = $this->Guestbook_model->viewdetails($id);
-        $this->view($this->config->item('admin_folder').'/guestbook_details', $data);
+        $this->view($this->config->item('admin_folder') . '/guestbook_details', $data);
     }
 
-    function send_response($guestbook_id='')
+    function send_response($guestbook_id = '')
     {
         $config = array(
             'protocol' => 'smtp',
@@ -59,28 +95,24 @@ class Guestbook extends Admin_Controller {
 
         $this->email->send();
 
-        $this->session->set_flashdata('message', 'Phản hồi đã được gửi đến: '.$this->input->post('recipient'));
-        redirect($this->config->item('admin_folder').'/guestbook/viewdetails/'.$guestbook_id);
+        $this->session->set_flashdata('message', 'Phản hồi đã được gửi đến: ' . $this->input->post('recipient'));
+        redirect($this->config->item('admin_folder') . '/guestbook/viewdetails/' . $guestbook_id);
     }
 
     function bulk_delete()
     {
-        $orders	= $this->input->post('order');
+        $orders = $this->input->post('order');
 
-        if($orders)
-        {
-            foreach($orders as $order)
-            {
+        if ($orders) {
+            foreach ($orders as $order) {
                 $this->Guestbook_model->delete($order);
             }
             $this->session->set_flashdata('message', 'Những gợi ý được chọn đã bị xóa!');
-        }
-        else
-        {
+        } else {
             $this->session->set_flashdata('error', 'Bạn chưa chọn gợi ý nào!');
         }
         //redirect as to change the url
-        redirect($this->config->item('admin_folder').'/guestbook');
+        redirect($this->config->item('admin_folder') . '/guestbook');
     }
 }
 

@@ -1,8 +1,8 @@
 <?php
 /******************************************
-US English
-Admin filter Language
-******************************************/
+ * US English
+ * Admin filter Language
+ ******************************************/
 
 $lang['filters'] = 'Filters';
 $lang['error_not_found'] = 'The requested filter could not be found.';

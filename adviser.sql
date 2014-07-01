@@ -22,11 +22,13 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `fs_adviser_nodes`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_nodes` (
-  `nodesNode` varchar(10) NOT NULL DEFAULT '0',
-  `nodesContent` text NOT NULL,
-  `questionNode` varchar(20) DEFAULT NULL,
+  `nodesNode`    VARCHAR(10) NOT NULL DEFAULT '0',
+  `nodesContent` TEXT        NOT NULL,
+  `questionNode` VARCHAR(20) DEFAULT NULL,
   PRIMARY KEY (`nodesNode`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8;
 
 --
 -- Dumping data for table `fs_adviser_nodes`
@@ -51,7 +53,7 @@ INSERT INTO `fs_adviser_nodes` (`nodesNode`, `nodesContent`, `questionNode`) VAL
 DROP TRIGGER IF EXISTS `tg_fs_adviser_nodes_insert`;
 DELIMITER //
 CREATE TRIGGER `tg_fs_adviser_nodes_insert` BEFORE INSERT ON `fs_adviser_nodes`
- FOR EACH ROW BEGIN
+FOR EACH ROW BEGIN
   INSERT INTO fs_adviser_nodes_seq VALUES (NULL);
   SET NEW.nodesNode = CONCAT('NODE', LPAD(LAST_INSERT_ID(), 6, '0'));
 END
@@ -66,9 +68,12 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `fs_adviser_nodes_seq`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_nodes_seq` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8
+  AUTO_INCREMENT =28;
 
 --
 -- Dumping data for table `fs_adviser_nodes_seq`
@@ -111,11 +116,13 @@ INSERT INTO `fs_adviser_nodes_seq` (`id`) VALUES
 
 DROP TABLE IF EXISTS `fs_adviser_question`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_question` (
-  `questionNode` varchar(10) NOT NULL DEFAULT '0',
-  `questionContent` text NOT NULL,
-  `questionType` varchar(2) NOT NULL,
+  `questionNode`    VARCHAR(10) NOT NULL DEFAULT '0',
+  `questionContent` TEXT        NOT NULL,
+  `questionType`    VARCHAR(2)  NOT NULL,
   PRIMARY KEY (`questionNode`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8;
 
 --
 -- Dumping data for table `fs_adviser_question`
@@ -130,7 +137,7 @@ INSERT INTO `fs_adviser_question` (`questionNode`, `questionContent`, `questionT
 DROP TRIGGER IF EXISTS `tg_fs_adviser_question_insert`;
 DELIMITER //
 CREATE TRIGGER `tg_fs_adviser_question_insert` BEFORE INSERT ON `fs_adviser_question`
- FOR EACH ROW BEGIN
+FOR EACH ROW BEGIN
   INSERT INTO fs_adviser_question_seq VALUES (NULL);
   SET NEW.questionNode = CONCAT('QUES', LPAD(LAST_INSERT_ID(), 6, '0'));
 END
@@ -145,9 +152,12 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `fs_adviser_question_seq`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_question_seq` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8
+  AUTO_INCREMENT =10;
 
 --
 -- Dumping data for table `fs_adviser_question_seq`
@@ -172,11 +182,13 @@ INSERT INTO `fs_adviser_question_seq` (`id`) VALUES
 
 DROP TABLE IF EXISTS `fs_adviser_rules`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_rules` (
-  `rulesId` varchar(10) NOT NULL DEFAULT '0',
-  `rulesContent` text NOT NULL,
-  `rulesCF` double NOT NULL,
+  `rulesId`      VARCHAR(10) NOT NULL DEFAULT '0',
+  `rulesContent` TEXT        NOT NULL,
+  `rulesCF`      DOUBLE      NOT NULL,
   PRIMARY KEY (`rulesId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8;
 
 --
 -- Dumping data for table `fs_adviser_rules`
@@ -185,7 +197,8 @@ CREATE TABLE IF NOT EXISTS `fs_adviser_rules` (
 INSERT INTO `fs_adviser_rules` (`rulesId`, `rulesContent`, `rulesCF`) VALUES
 ('RULE000001', 'NODE000011^NODE000012=>NODE000014', 0.5),
 ('RULE000002', 'NODE000011^NODE000012^NODE000013=>NODE000014', 0.9),
-('RULE000003', 'NODE000011^NODE000012^NODE000013^NODE000015^NODE000016^NODE000017^NODE000018^NODE000019=>NODE000014', 0.99);
+('RULE000003', 'NODE000011^NODE000012^NODE000013^NODE000015^NODE000016^NODE000017^NODE000018^NODE000019=>NODE000014',
+ 0.99);
 
 --
 -- Triggers `fs_adviser_rules`
@@ -193,7 +206,7 @@ INSERT INTO `fs_adviser_rules` (`rulesId`, `rulesContent`, `rulesCF`) VALUES
 DROP TRIGGER IF EXISTS `tg_fs_adviser_rules_insert`;
 DELIMITER //
 CREATE TRIGGER `tg_fs_adviser_rules_insert` BEFORE INSERT ON `fs_adviser_rules`
- FOR EACH ROW BEGIN
+FOR EACH ROW BEGIN
   INSERT INTO fs_adviser_rules_seq VALUES (NULL);
   SET NEW.rulesId = CONCAT('RULE', LPAD(LAST_INSERT_ID(), 6, '0'));
 END
@@ -208,9 +221,12 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `fs_adviser_rules_seq`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_rules_seq` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8
+  AUTO_INCREMENT =4;
 
 --
 -- Dumping data for table `fs_adviser_rules_seq`
@@ -230,11 +246,13 @@ INSERT INTO `fs_adviser_rules_seq` (`id`) VALUES
 
 DROP TABLE IF EXISTS `fs_adviser_cf`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_cf` (
-  `cfId` varchar(10) NOT NULL DEFAULT '0',
-  `cfContent` text NOT NULL,
-  `cfValue` double DEFAULT NULL,
+  `cfId`      VARCHAR(10) NOT NULL DEFAULT '0',
+  `cfContent` TEXT        NOT NULL,
+  `cfValue`   DOUBLE DEFAULT NULL,
   PRIMARY KEY (`cfId`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8;
 
 
 --
@@ -258,6 +276,8 @@ DELIMITER ;
 
 DROP TABLE IF EXISTS `fs_adviser_cf_seq`;
 CREATE TABLE IF NOT EXISTS `fs_adviser_cf_seq` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 ;
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =utf8;

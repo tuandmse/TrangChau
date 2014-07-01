@@ -14,11 +14,11 @@ class Rate_and_comment_model extends CI_Model
         $this->db->select('email, content, rate.id, rate');
         $this->db->join('customers', 'customers.id=rate.user_id', 'right');
         $this->db->where('product_id', $pid);
-        $result	= $this->db->get('rate')->result();
+        $result = $this->db->get('rate')->result();
 
         $customer = $this->go_cart->customer();
-        for($i = 0; $i < count($result); $i ++){
-            if($result[$i]->email == $customer['email']){
+        for ($i = 0; $i < count($result); $i++) {
+            if ($result[$i]->email == $customer['email']) {
                 $result[$i]->is_my_rate = true;
             } else {
                 $result[$i]->is_my_rate = false;
@@ -34,12 +34,12 @@ class Rate_and_comment_model extends CI_Model
         $rate['user_id'] = $uid;
         $rate['rate'] = $star;
         $rate['content'] = $content;
-        $this->db->delete('rate', array('product_id'=>$pid, 'user_id'=>$uid));
+        $this->db->delete('rate', array('product_id' => $pid, 'user_id' => $uid));
         $this->db->insert('rate', $rate);
     }
 
     function delete_rate($cid)
     {
-        $this->db->delete('rate', array('id'=>$cid));
+        $this->db->delete('rate', array('id' => $cid));
     }
 } 

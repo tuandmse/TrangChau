@@ -1,8 +1,8 @@
 <?php
 /******************************************
-US English
-Admin login Language
-******************************************/
+ * US English
+ * Admin login Language
+ ******************************************/
 
 $lang['error_authentication_failed'] = 'Authentication Failed!';
 $lang['message_logged_out'] = 'You have been logged out.';
