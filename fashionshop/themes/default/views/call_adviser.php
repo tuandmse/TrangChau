@@ -42,25 +42,61 @@
             <?php
             echo form_open('adviser_eval', 'class="form-horizontal"');
             ?>
-
-
+            <br/>
             <h2>Hãy gửi đánh giá của bạn cho chúng tôi. Cám ơn ! </h2>
-
-            <div class="control-group">
-
-                <input type="radio" name="eval" value="1"> Rất Chính Xác
-                <input type="radio" name="eval" value="0.8"> Chính Xác
-                <input type="radio" name="eval" value="0.6"> Bình Thường
-                <input type="radio" name="eval" value="0.4"> Không Chính Xác
-                <input type="radio" name="eval" value="0.2"> Rất Không Chính Xác
-                <input type="radio" name="eval" value="0"> Rất Tệ
-
+            <div class="control-group eval-group">
+                <ul style="list-style-type: none;">
+                        <li>
+                            <label class="input-control radio" onclick="">
+                                <input type="radio" name="eval" value="1">
+                                <span class="answer-quiz">Rất Chính Xác</span>
+                            </label>
+                        </li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label class="input-control radio" onclick="">
+                            <input type="radio" name="eval" value="0.8">
+                            <span class="answer-quiz">Chính Xác</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label class="input-control radio" onclick="">
+                            <input type="radio" name="eval" value="0.6">
+                            <span class="answer-quiz">Bình Thường</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label class="input-control radio" onclick="">
+                            <input type="radio" name="eval" value="0.4">
+                            <span class="answer-quiz">Không Chính Xác</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label class="input-control radio" onclick="">
+                            <input type="radio" name="eval" value="0.2">
+                            <span class="answer-quiz">Rất Không Chính Xác</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul style="list-style-type: none;">
+                    <li>
+                        <label class="input-control radio" onclick="">
+                            <input type="radio" name="eval" value="0">
+                            <span class="answer-quiz">Rất Tệ</span>
+                        </label>
+                    </li>
+                </ul>
                 <input type="hidden" name="selected"
                        value="<?php echo htmlspecialchars("$evaluationSelected", ENT_QUOTES); ?>">
                 <input type="hidden" name="conclusion"
                        value="<?php echo htmlspecialchars("$evaluationConclusion", ENT_QUOTES); ?>">
-
-
             </div>
             <div class="span8">
                 <div class="control-group">
@@ -71,65 +107,38 @@
                 </div>
             </div>
             </form>
-
-
-        <?php
-        endif;
-        ?>
-
-        <?php
-        echo form_open('adviser', 'class="form-horizontal"');
-        ?>
-        <?php
-        if ($postedInfor == false && $postedStyle == false):
-            ?>
+        <?php endif; ?>
+        <?php echo form_open('adviser', 'class="form-horizontal"');
+            if ($postedInfor == false && $postedStyle == false): ?>
             <div class="tabbable">
                 <ul class="nav nav-tabs">
-                    <li class="active" id="li_infor"><a href="#infor" data-toggle="tab">Thông tin trang phục</a>
-                    </li>
-                    <li class="" id="li_style"><a href="#style" data-toggle="tab">Chọn kiểu trang phục</a></li>
+                    <li class="active" id="li_infor"><a href="#infor" class="infor-style" data-toggle="tab">Thông tin trang phục</a></li>
+                    <li class="" id="li_style"><a href="#style" class="infor-style" data-toggle="tab">Chọn kiểu trang phục</a></li>
                 </ul>
             </div>
             <div class="tab-content">
                 <div class="tab-pane active" id="infor">
-
-                    <?php
-                    foreach ($question_view as $yn):
-                        ?>
-                        <div class="control-group">
-                            <label for="<?php
-                            echo $yn->questionNode;
-                            ?>">
-                                <?php
-                                echo $yn->questionContent;
-                                ?>
-                            </label>
-
-                            <div>
-
-                                <?php
-                                foreach ($node_view as $a):
-                                    ?>
-                                    <?php
-                                    if ($yn->questionNode == $a->questionNode):
-                                        echo '<input type="radio" name="' . $a->questionNode . '" value="' . $a->nodesNode . '"> ' . $a->nodesContent . '';
-
-                                        ?>
-                                    <?php
-                                    endif;
-                                    ?>
-                                <?php
+                    <?php foreach ($question_view as $yn): ?>
+                        <div class="control-group question-group">
+                            <h3 style="margin-bottom:10px"><?php echo $yn->questionContent; ?></h3>
+                            <ul style="list-style-type: none;">
+                                <?php foreach ($node_view as $a):
+                                    if ($yn->questionNode == $a->questionNode): ?>
+                                        <li>
+                                            <label class="input-control radio" onclick="">
+                                                <input type="radio" name="<?php echo $a->questionNode; ?>" value="<?php echo $a->nodesNode; ?>">
+                                                <span class="answer-quiz"><?php echo $a->nodesContent; ?></span>
+                                            </label>
+                                        </li>
+                                    <?php endif;
                                 endforeach;
                                 ?>
-                            </div>
+                            </ul>
                         </div>
-                    <?php
-                    endforeach;
-                    ?>
+                    <?php endforeach; ?>
                     <div class="span8">
                         <div class="control-group">
                             <label class="control-label" for=""></label>
-
                             <div class="controls">
                                 <input type="button" value="Next" class="btn btn-danger" onclick="next_page()"/>
                             </div>
@@ -137,48 +146,29 @@
                     </div>
                 </div>
                 <div class="tab-pane" id="style">
-
-                    <?php
-                    foreach ($cF_node_view as $node_entry):
-                        ?>
-                        <div class="control-group">
-                            <label for="<?php
-                            echo $node_entry->nodesNode;
-                            ?>">
-                                <?php
-                                echo $node_entry->nodesContent;
-                                ?>
-                            </label>
-
-                            <div>
-
-
-                                <?php
-                                foreach ($Adviser_cf as $adviserCfs):
-                                    ?>
-                                    <input type="radio" name="<?php echo $node_entry->nodesNode; ?>"
-                                           value="<?php echo $adviserCfs->cfValue; ?>"> <?php echo $adviserCfs->cfContent; ?>
-                                <?php
-                                endforeach;
-                                ?>
-
-
-                            </div>
+                    <?php foreach ($cF_node_view as $node_entry): ?>
+                        <div class="control-group question-group">
+                            <h3 style="margin-bottom:10px"><?php echo $node_entry->nodesContent; ?></h3>
+                            <ul style="list-style-type: none;">
+                                <?php foreach ($Adviser_cf as $adviserCfs): ?>
+                                        <li>
+                                            <label class="input-control radio" onclick="">
+                                                <input type="radio" name="<?php echo $node_entry->nodesNode; ?>" value="<?php echo $adviserCfs->cfValue; ?>">
+                                                <span class="answer-quiz"><?php echo $adviserCfs->cfContent; ?></span>
+                                            </label>
+                                        </li>
+                                 <?php endforeach; ?>
+                            </ul>
                         </div>
-
-                    <?php
-                    endforeach;
-                    ?>
+                    <?php endforeach; ?>
                     <div class="span8">
                         <div class="control-group">
                             <div class="controls">
                                 <input type="button" value="Back" class="btn btn-danger" onclick="back_page()"/>
                                 <input type="submit" value="Submit" name="submitInfor" class="btn btn-primary"/>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
 

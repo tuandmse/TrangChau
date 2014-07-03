@@ -277,3 +277,24 @@ td {
     height: 16px;
     background: url('../img/star.png') 0 0;
 }
+
+.tab-pane {
+    margin-left: 0px;
+}
+
+.question-group {
+    padding: 10px 10px;
+    /*background-color: #962f43;*/
+    color: #585455;
+    border: 2px #c33d57 solid;
+    border-radius: 2px;
+}
+
+.infor-style {
+    color: white;
+    background-color: #c33d57;
+}
+
+.eval-group {
+    margin-top: 10px;
+}

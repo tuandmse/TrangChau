@@ -238,7 +238,7 @@ INSERT INTO `fs_adviser_rules_seq` (`id`) VALUES
 (3);
 
 
-- --------------------------------------------------------
+-- --------------------------------------------------------
 
 --
 -- Table structure for table `fs_adviser_cf`
