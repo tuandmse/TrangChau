@@ -1095,6 +1095,7 @@ class go_cart
         $save['shipping_notes'] = $this->get_additional_detail('shipping_notes');
 
         //ordered_on datetime stamp
+        date_default_timezone_set('Asia/Jakarta');
         $save['ordered_on'] = date('Y-m-d H:i:s');
 
         //contents this is the content section serialized
