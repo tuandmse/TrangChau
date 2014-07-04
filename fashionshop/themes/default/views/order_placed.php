@@ -160,6 +160,7 @@ echo $download_section;
     <?php endforeach; ?>
     </tbody>
 </table>
+<?php if($modu == 'nganluong'){ ?>
 <form id="onlinepayment" method="post" action="https://www.nganluong.vn/advance_payment.php">
     <input type="hidden" name="receiver" value="trangchauuit@gmail.com">
     <input id="onlinepayment-id" type="hidden" name="product" value="<?php echo $order_id; ?>">
@@ -169,3 +170,6 @@ echo $download_section;
     <input type="hidden" name="comments" value="">
     <input class="btn btn-block btn-large btn-primary" type="submit" value="<?php echo lang('form_continue'); ?>"/>
 </form>
+<?php } else { ?>
+    <a class="btn btn-block btn-large btn-primary" href="<?php echo site_url(''); ?>"><?php echo lang('form_continue'); ?></a>
+<?php } ?>

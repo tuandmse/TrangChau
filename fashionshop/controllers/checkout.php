@@ -643,6 +643,7 @@ class Checkout extends Front_Controller
         $data['go_cart']['gift_card_discount'] = $this->go_cart->gift_card_discount();
         $data['go_cart']['total'] = $this->go_cart->total();
         $data['go_cart']['contents'] = $this->go_cart->contents();
+        $data['modu'] = $payment['module'];
 
         /* remove the cart from the session */
         $this->go_cart->destroy();
