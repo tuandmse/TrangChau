@@ -26,27 +26,53 @@ Class Product_model extends CI_Model
             //do we order by something other than category_id?
             if (!empty($data['order_by'])) {
                 //if we have an order_by then we must have a direction otherwise KABOOM
-                $this->db->order_by($data['order_by'], $data['sort_order']);
+                $this->db->order_by('products.'.$data['order_by'], $data['sort_order']);
             }
 
-            //do we have a search submitted?
-            if (!empty($data['term'])) {
-                $search = json_decode($data['term']);
-                //if we are searching dig through some basic fields
-                if (!empty($search->term)) {
-                    $this->db->like('name', $search->term);
-                    $this->db->or_like('description', $search->term);
-                    $this->db->or_like('excerpt', $search->term);
-                    $this->db->or_like('sku', $search->term);
-                }
+            if(!empty($data['current_admin'])){
+                $this->db->join('category_products', 'category_products.product_id=products.id', 'right');
+                if (!empty($data['term'])) {
+                    $search = json_decode($data['term']);
+                    //if we are searching dig through some basic fields
+                    if (!empty($search->term)) {
+                        $this->db->like('products.'.'name', $search->term);
+                        $this->db->or_like('products.'.'description', $search->term);
+                        $this->db->or_like('products.'.'excerpt', $search->term);
+                        $this->db->or_like('products.'.'sku', $search->term);
+                    }
 
-                if (!empty($search->category_id)) {
-                    //lets do some joins to get the proper category products
-                    $this->db->join('category_products', 'category_products.product_id=products.id', 'right');
-                    $this->db->where('category_products.category_id', $search->category_id);
-                    $this->db->order_by('sequence', 'ASC');
+                    if (!empty($search->category_id)) {
+                        //lets do some joins to get the proper category products
+                        $this->db->where('category_products.category_id', $search->category_id);
+                        $this->db->order_by('category_products.sequence', 'ASC');
+                    }
+                }
+                $this->db->join('categories', 'categories.id=category_products.category_id', 'right');
+                $this->db->where('categories.pic', $data['current_admin']);
+                $this->db->select('*,products.name AS catename');
+
+            } else {
+                //do we have a search submitted?
+                if (!empty($data['term'])) {
+                    $search = json_decode($data['term']);
+                    //if we are searching dig through some basic fields
+                    if (!empty($search->term)) {
+                        $this->db->like('products.'.'name', $search->term);
+                        $this->db->or_like('products.'.'description', $search->term);
+                        $this->db->or_like('products.'.'excerpt', $search->term);
+                        $this->db->or_like('products.'.'sku', $search->term);
+                    }
+
+                    if (!empty($search->category_id)) {
+                        //lets do some joins to get the proper category products
+                        $this->db->join('category_products', 'category_products.product_id=products.id', 'right');
+                        $this->db->where('category_products.category_id', $search->category_id);
+                        $this->db->order_by('sequence', 'ASC');
+                    }
                 }
             }
+
+
 
             if ($return_count) {
                 return $this->db->count_all_results('products');

@@ -5,6 +5,8 @@ class Products extends Admin_Controller
 
     private $use_inventory = false;
 
+    var $current_admin = false;
+
     function __construct()
     {
         parent::__construct();
@@ -16,19 +18,23 @@ class Products extends Admin_Controller
         $this->load->model(array('Product_model', 'Adviser_rule_model'));
         $this->load->helper('form');
         $this->lang->load('product');
+        $this->current_admin = $this->session->userdata('admin');
     }
 
     function index($order_by = "name", $sort_order = "ASC", $code = 0, $page = 0, $rows = 15)
     {
 
         $data['page_title'] = lang('products');
-
+        $data['current_admin'] = $this->current_admin;
         $data['code'] = $code;
         $term = false;
         $category_id = false;
 
         //get the category list for the drop menu
         $data['categories'] = $this->Category_model->get_categories_tiered();
+        if($this->auth->check_access('Orders')){
+            $data['categories'] = $this->Category_model->get_categories_by_who($this->current_admin['username']);
+        }
 
         $post = $this->input->post(null, false);
         $this->load->model('Search_model');
@@ -44,8 +50,14 @@ class Products extends Admin_Controller
         $data['term'] = $term;
         $data['order_by'] = $order_by;
         $data['sort_order'] = $sort_order;
-
         $data['products'] = $this->Product_model->products(array('term' => $term, 'order_by' => $order_by, 'sort_order' => $sort_order, 'rows' => $rows, 'page' => $page));
+        //total number of products
+        $data['total'] = $this->Product_model->products(array('term' => $term, 'order_by' => $order_by, 'sort_order' => $sort_order), true);
+        if ($this->current_admin['access'] == 'Orders') {
+            $data['products'] = $this->Product_model->products(array('term' => $term, 'order_by' => $order_by, 'sort_order' => $sort_order, 'rows' => $rows, 'page' => $page, 'current_admin' => $this->current_admin['username']));
+            $data['total'] = count($data['products']);
+        }
+
 
         //total number of products
         $data['total'] = $this->Product_model->products(array('term' => $term, 'order_by' => $order_by, 'sort_order' => $sort_order), true);

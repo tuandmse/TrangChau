@@ -4,15 +4,21 @@
     }
 </script>
 
-<div style="text-align:right">
-    <a class="btn" href="<?php echo site_url($this->config->item('admin_folder') . '/categories/form'); ?>"><i
-            class="icon-plus-sign"></i> <?php echo lang('add_new_category'); ?></a>
-</div>
 <?php
 
 define('ADMIN_FOLDER', $this->config->item('admin_folder'));
 define('ADMIN_ACCESS', $currentAdmin['access']);
 ?>
+
+<?php
+if (ADMIN_ACCESS == 'Admin') :
+?>
+<div style="text-align:right">
+    <a class="btn" href="<?php echo site_url($this->config->item('admin_folder') . '/categories/form'); ?>"><i
+            class="icon-plus-sign"></i> <?php echo lang('add_new_category'); ?></a>
+</div>
+
+<?php endif; ?>
 <table class="table table-striped">
     <thead>
     <tr>
