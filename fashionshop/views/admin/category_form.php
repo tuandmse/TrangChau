@@ -26,6 +26,20 @@
 
                 <label for="enabled"><?php echo lang('enabled_status'); ?> </label>
                 <?php echo form_dropdown('enabled', array('0' => lang('disabled'), '1' => lang('enabled')), set_value('enabled', $enabled)); ?>
+                <?php
+                if($currentAdmin['access'] == 'Admin') :
+                ?>
+                <label for="enabled"><?php echo lang('pic'); ?> </label>
+                <?php
+                $perInCharge = array();
+                array_push($perInCharge, '');
+                foreach ($admins as $admin) {
+                    if($admin->access == 'Orders') {
+                        $perInCharge[$admin->username] = $admin->username;
+                    }
+                }
+                echo form_dropdown('pic', $perInCharge , set_value('pic', $pic)); ?>
+               <?php endif ?>
             </fieldset>
         </div>
 

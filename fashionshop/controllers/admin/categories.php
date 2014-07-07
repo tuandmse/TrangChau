@@ -3,16 +3,24 @@
 class Categories extends Admin_Controller
 {
 
+    var $current_admin = false;
+
     function __construct()
     {
         parent::__construct();
         if ($this->auth->check_access('Advisers')) {
             redirect($this->config->item('admin_folder') . '/adviser_rule');
         }
+        if (!$this->db->field_exists('pic', 'categories'))
+        {
+            $query = $this->db->query('ALTER TABLE `fs_categories` ADD `pic` VARCHAR(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT \'\'');
+        }
         //$this->auth->check_access('Admin', true);
 
         $this->lang->load('category');
+        $this->load->helper('form');
         $this->load->model('Category_model');
+        $this->current_admin = $this->session->userdata('admin');
     }
 
     function index()
@@ -21,7 +29,11 @@ class Categories extends Admin_Controller
         //$this->session->set_flashdata('message', 'this is our message');
 
         $data['page_title'] = lang('categories');
+        $data['currentAdmin'] = $this->current_admin;
         $data['categories'] = $this->Category_model->get_categories_tiered(true);
+        if($this->auth->check_access('Orders')){
+            $data['categories'] = $this->Category_model->get_categories_by_who($this->current_admin['username']);
+        }
 
         $this->view($this->config->item('admin_folder') . '/categories', $data);
     }
@@ -89,6 +101,9 @@ class Categories extends Admin_Controller
         $data['parent_id'] = 0;
         $data['enabled'] = '';
         $data['error'] = '';
+        $data['pic'] = '';
+        $data['admins'] = $this->auth->get_admin_list();
+        $data['currentAdmin'] = $this->current_admin;
 
         //create the photos array for later use
         $data['photos'] = array();
@@ -117,6 +132,7 @@ class Categories extends Admin_Controller
             $data['seo_title'] = $category->seo_title;
             $data['meta'] = $category->meta;
             $data['enabled'] = $category->enabled;
+            $data['pic']  = $category->pic;
 
         }
 
@@ -242,6 +258,9 @@ class Categories extends Admin_Controller
             $save['seo_title'] = $this->input->post('seo_title');
             $save['meta'] = $this->input->post('meta');
             $save['enabled'] = $this->input->post('enabled');
+            if($this->current_admin['access'] == 'Admin'){
+                $save['pic'] = $this->input->post('pic');
+            }
             $save['route_id'] = intval($route_id);
             $save['slug'] = $slug;
 

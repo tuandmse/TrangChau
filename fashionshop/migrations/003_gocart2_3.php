@@ -178,6 +178,18 @@ class Migration_gocart2_3 extends CI_migration
             $this->dbforge->add_column('categories', $fields);
         }
 
+        if (!$this->db->field_exists('pic', 'categories')) {
+            // Add the enabled field to categories
+            $fields = array(
+                'pic' => array(
+                    'type' => 'varchar',
+                    'constraint' => 100,
+                    'default' => ''
+                )
+            );
+            $this->dbforge->add_column('categories', $fields);
+        }
+
         //add username field to admin table
         if (!$this->db->field_exists('username', 'admin')) {
             // Add the enabled field to categories

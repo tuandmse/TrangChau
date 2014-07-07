@@ -36,3 +36,4 @@ $lang['sku'] = 'SKU';
 $lang['price'] = 'Price';
 $lang['sale'] = 'Sale';
 $lang['max_file_size'] = 'Max File Size';
+$lang['pic'] = 'Person In Charge';

@@ -22,10 +22,33 @@ Class Category_model extends CI_Model
         return $categories;
     }
 
-    function get_categories_tiered($admin = false)
+    function get_categories_tiered($admin = false, $adminId = false)
     {
         if (!$admin) $this->db->where('enabled', 1);
+        if(!$adminId) $this->db->where('pic', $adminId);
+        $this->db->order_by('sequence');
+        $this->db->order_by('name', 'ASC');
+        $categories = $this->db->get('categories')->result();
 
+        $results = array();
+        foreach ($categories as $category) {
+
+            // Set a class to active, so we can highlight our current category
+            if ($this->uri->segment(1) == $category->slug) {
+                $category->active = true;
+            } else {
+                $category->active = false;
+            }
+
+            $results[$category->parent_id][$category->id] = $category;
+        }
+
+        return $results;
+    }
+
+    function get_categories_by_who($adminId)
+    {
+        $this->db->where('pic', $adminId);
         $this->db->order_by('sequence');
         $this->db->order_by('name', 'ASC');
         $categories = $this->db->get('categories')->result();

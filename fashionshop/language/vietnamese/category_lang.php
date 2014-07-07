@@ -36,3 +36,4 @@ $lang['sku'] = 'SKU';
 $lang['price'] = 'Giá'; //'Price';
 $lang['sale'] = 'Giảm giá'; //'Sale';
 $lang['max_file_size'] = 'Dung lượng tập tin tối đa'; //'Max File Size';
+$lang['pic'] = 'Người quản lý'; //'Person In Charge';
