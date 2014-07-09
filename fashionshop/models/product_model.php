@@ -49,7 +49,7 @@ Class Product_model extends CI_Model
                 }
                 $this->db->join('categories', 'categories.id=category_products.category_id', 'right');
                 $this->db->where('categories.pic', $data['current_admin']);
-                $this->db->select('*,products.name AS catename');
+                $this->db->select('*,products.name AS catename, products.id AS proId, products.enabled AS proEnabled');
 
             } else {
                 //do we have a search submitted?

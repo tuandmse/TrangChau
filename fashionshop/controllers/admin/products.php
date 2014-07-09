@@ -145,6 +145,9 @@ class Products extends Admin_Controller
         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
 
         $data['categories'] = $this->Category_model->get_categories_tiered();
+        if($this->auth->check_access('Orders')){
+            $data['categories'] = $this->Category_model->get_categories_by_who($this->current_admin['username']);
+        }
         $data['file_list'] = $this->Digital_Product_model->get_list();
         $data['nodeRight'] = $this->Adviser_rule_model->list_righthand();
 

@@ -119,33 +119,27 @@ if (!empty($term)):
     <?php echo (count($products) < 1) ? '<tr><td style="text-align:center;" colspan="7">' . lang('no_products') . '</td></tr>' : '' ?>
     <?php foreach ($products as $product): ?>
         <tr>
-            <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
-            <?php
-                if($current_admin['access'] == 'Admin') {
-            ?>
-            <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>
-            <?php
-                } else {
-            ?>
-            <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->catename), 'class' => 'span2')); ?></td>
-            <?php
-                }
-            ?>
-            <td><?php echo form_input(array('name' => 'product[' . $product->id . '][price]', 'value' => set_value('price', $product->price), 'class' => 'span1')); ?></td>
-            <td><?php echo form_input(array('name' => 'product[' . $product->id . '][saleprice]', 'value' => set_value('saleprice', $product->saleprice), 'class' => 'span1')); ?></td>
-            <!--				<td>-->
-            <?php //echo ((bool)$product->track_stock)?form_input(array('name'=>'product['.$product->id.'][quantity]', 'value'=>set_value('quantity', $product->quantity), 'class'=>'span1')):'N/A';?><!--</td>-->
-            <td>
-                <?php
-                $options = array(
-                    '1' => lang('enabled'),
-                    '0' => lang('disabled')
-                );
 
-                echo form_dropdown('product[' . $product->id . '][enabled]', $options, set_value('enabled', $product->enabled), 'class="span2"');
+            <?php
+            if ($current_admin['access'] == 'Admin') {
                 ?>
-            </td>
-            <td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->id . '][price]', 'value' => set_value('price', $product->price), 'class' => 'span1')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->id . '][saleprice]', 'value' => set_value('saleprice', $product->saleprice), 'class' => 'span1')); ?></td>
+                <!--				<td>-->
+                <?php //echo ((bool)$product->track_stock)?form_input(array('name'=>'product['.$product->id.'][quantity]', 'value'=>set_value('quantity', $product->quantity), 'class'=>'span1')):'N/A';?><!--</td>-->
+                <td>
+                    <?php
+                    $options = array(
+                        '1' => lang('enabled'),
+                        '0' => lang('disabled')
+                    );
+
+                    echo form_dropdown('product[' . $product->id . '][enabled]', $options, set_value('enabled', $product->enabled), 'class="span2"');
+                    ?>
+                </td>
+                <td>
 					<span class="btn-group pull-right">
 						<a class="btn"
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/form/' . $product->id); ?>"><i
@@ -158,7 +152,44 @@ if (!empty($term)):
                            onclick="return areyousure();"><i
                                 class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
 					</span>
-            </td>
+                </td>
+            <?php
+            } else {
+                ?>
+                <td><?php echo form_input(array('name' => 'product[' . $product->proId . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->proId . '][name]', 'value' => form_decode($product->catename), 'class' => 'span2')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->proId . '][price]', 'value' => set_value('price', $product->price), 'class' => 'span1')); ?></td>
+                <td><?php echo form_input(array('name' => 'product[' . $product->proId . '][saleprice]', 'value' => set_value('saleprice', $product->saleprice), 'class' => 'span1')); ?></td>
+                <!--				<td>-->
+                <?php //echo ((bool)$product->track_stock)?form_input(array('name'=>'product['.$product->id.'][quantity]', 'value'=>set_value('quantity', $product->quantity), 'class'=>'span1')):'N/A';?><!--</td>-->
+                <td>
+                    <?php
+                    $options = array(
+                        '1' => lang('enabled'),
+                        '0' => lang('disabled')
+                    );
+
+                    echo form_dropdown('product[' . $product->proId . '][enabled]', $options, set_value('enabled', $product->proEnabled), 'class="span2"');
+                    ?>
+                </td>
+                <td>
+					<span class="btn-group pull-right">
+						<a class="btn"
+                           href="<?php echo site_url($this->config->item('admin_folder') . '/products/form/' . $product->proId); ?>"><i
+                                class="icon-pencil"></i>  <?php echo lang('edit'); ?></a>
+						<a class="btn"
+                           href="<?php echo site_url($this->config->item('admin_folder') . '/products/form/' . $product->proId . '/1'); ?>"><i
+                                class="icon-share-alt"></i> <?php echo lang('copy'); ?></a>
+						<a class="btn btn-danger"
+                           href="<?php echo site_url($this->config->item('admin_folder') . '/products/delete/' . $product->proId); ?>"
+                           onclick="return areyousure();"><i
+                                class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
+					</span>
+                </td>
+            <?php
+            }
+            ?>
+
         </tr>
     <?php endforeach; ?>
     </tbody>
