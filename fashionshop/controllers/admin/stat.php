@@ -23,4 +23,28 @@ class Stat extends Admin_Controller
             ));
         }
     }
+
+    function get_stat_for_a_month(){
+        $pid = $this->input->post('pro');
+        $i_year = $this->input->post('year');
+        $i_month = $this->input->post('month');
+        $result = $this->Stat_model->get_stat_for_a_month($pid, $i_year, $i_month);
+
+        $num_of_day = cal_days_in_month(CAL_GREGORIAN, $i_month, $i_year);
+        $result_array = [];
+        for($i = 1; $i <= $num_of_day; $i++){
+            $fla = 0;
+            for($j = 0; $j < count($result); $j++){
+                if($result[$j]->day == $i){
+                    array_push($result_array, $result[$j]->quantity + 0);
+                    $fla = 1;
+                }
+            }
+            if($fla == 0){
+                array_push($result_array, 0);
+            }
+        }
+        header('Content-Type: application/json');
+        echo json_encode($result_array);
+    }
 }

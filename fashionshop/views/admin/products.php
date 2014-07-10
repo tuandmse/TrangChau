@@ -216,5 +216,4 @@ if (!empty($term)):
             <div id="stat-chart"></div>
         </div>
     </div>
-
 </div>

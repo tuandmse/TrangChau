@@ -251,6 +251,7 @@ $(document).ready(function(){
     var curMonth = 0;
     var curYear = 0;
     $('.stat').click(function(){
+        alert($(this).closest('.product-id').text());
         $('.blur-background').show();
         $.ajax({
             url: "../admin/stat/get_first_date",
@@ -295,25 +296,29 @@ $(document).ready(function(){
                     for(var i = 1; i <= new Date($("#stat-select-year").val(), $("#stat-select-month").val(), 0).getDate(); i++){
                         value_array.push(i * 1);
                     }
-                    char_option.series[0].data = value_array;
-                    $('#stat-chart').highcharts(char_option);
-                    char_option.xAxis['categories'] = day_array;
-                    $.ajax({
-                        url: "../admin/stat/get_stat_for_a_month",
-                        data: { year: $("#stat-select-year").val(), month: $("#stat-select-month").val() },
-                        type: "POST",
-                        error: function(error){
-//                            alert('errr');
-                        }
-                    }).done(function(data_this_month){
 
-                    });
+                    stat_month_ajax(1, $("#stat-select-year").val(), $("#stat-select-month").val(), day_array);
                 }
         });
     });
     $('.stat-close-btn').click(function(){
         $('.blur-background').hide();
     });
+
+    function stat_month_ajax(pro, myYear, myMonth, day_array){
+        char_option.xAxis['categories'] = day_array;
+        $.ajax({
+            url: "../admin/stat/get_stat_for_a_month",
+            data: { pro: pro, year: myYear, month: myMonth },
+            type: "POST",
+            error: function(error){
+                alert('errrr');
+            }
+        }).done(function(data_this_month){
+                char_option.series[0].data = data_this_month;
+                $('#stat-chart').highcharts(char_option);
+            });
+    };
 
     $("#stat-select-year").change(function(){
         $("#stat-select-month").html('');
