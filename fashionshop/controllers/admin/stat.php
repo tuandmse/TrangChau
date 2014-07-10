@@ -13,10 +13,14 @@ class Stat extends Admin_Controller
     function get_first_date(){
         $pid = $this->input->post('pro');
         $date = $this->Stat_model->get_first_date_in_order($pid);
-        header('Content-Type: application/json');
-        echo json_encode(array('year' => date('Y',strtotime($date[0]->ordered_on)),
-            'day' => date('d',strtotime($date[0]->ordered_on)),
-            'month' => date('m',strtotime($date[0]->ordered_on))
-        ));
+        if(!$date[0]){
+            echo 'no result';
+        } else {
+            header('Content-Type: application/json');
+            echo json_encode(array('year' => date('Y',strtotime($date[0]->ordered_on)),
+                'day' => date('d',strtotime($date[0]->ordered_on)),
+                'month' => date('m',strtotime($date[0]->ordered_on))
+            ));
+        }
     }
 }

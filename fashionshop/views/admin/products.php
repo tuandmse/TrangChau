@@ -205,12 +205,15 @@ if (!empty($term)):
     <div class="chart-container">
         <a class="stat-close-btn"><i class="icon-close-stat"></i></a>
         <div class="select-container">
-            <select class="stat-select-year">
-                <option>Chọn năm</option>
+            <select id="stat-select-year">
+<!--                <option value="0">Chọn năm</option>-->
             </select>
-            <select class="stat-select-month">
-                <option>Chọn tháng</option>
+            <select id="stat-select-month">
+<!--                <option value="0">Chọn tháng</option>-->
             </select>
+        </div>
+        <div class="chart">
+            <div id="stat-chart"></div>
         </div>
     </div>
 

@@ -15,6 +15,7 @@
     <script type="text/javascript" src="<?php echo base_url('assets/js/bootstrap.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/redactor.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assets/js/script.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assets/js/highcharts.js'); ?>"></script>
 
     <?php if ($this->auth->is_logged_in(false, false)): ?>
 
