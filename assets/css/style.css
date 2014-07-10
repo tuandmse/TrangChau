@@ -64,3 +64,16 @@
 .chart {
     margin: 10px 10px 10px 10px;
 }
+
+#stat-chart {
+}
+
+.no-product {
+    border: 5px solid rgba(0, 0, 0, 0.5);
+    color: rgba(256, 256, 256, 1);
+    min-height: 100%;
+    height: auto !important;
+    border-radius: 5px;
+    background-color: #2a2a2b;
+    padding: 20px;
+}

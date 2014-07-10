@@ -13,7 +13,7 @@ class Stat extends Admin_Controller
     function get_first_date(){
         $pid = $this->input->post('pro');
         $date = $this->Stat_model->get_first_date_in_order($pid);
-        if(!$date[0]){
+        if(!$date){
             echo 'no result';
         } else {
             header('Content-Type: application/json');
@@ -29,8 +29,11 @@ class Stat extends Admin_Controller
         $i_year = $this->input->post('year');
         $i_month = $this->input->post('month');
         $result = $this->Stat_model->get_stat_for_a_month($pid, $i_year, $i_month);
-
-        $num_of_day = cal_days_in_month(CAL_GREGORIAN, $i_month, $i_year);
+        if($i_month == 0){
+            $num_of_day = 0;
+        } else {
+            $num_of_day = cal_days_in_month(CAL_GREGORIAN, $i_month, $i_year);
+        }
         $result_array = [];
         for($i = 1; $i <= $num_of_day; $i++){
             $fla = 0;

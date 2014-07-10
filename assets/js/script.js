@@ -250,25 +250,26 @@ $(document).ready(function(){
     var oldestMonth = 0;
     var curMonth = 0;
     var curYear = 0;
+    var pid = 0;
     $('.stat').click(function(){
-        alert($(this).closest('.product-id').text());
+        pid = $(this).closest('span').find('.product-id').text();
         $('.blur-background').show();
         $.ajax({
             url: "../admin/stat/get_first_date",
-            data: { pro: 1 },
+            data: { pro: pid },
             type: "POST",
             error: function(error){
                 alert('errr');
             }
         }).done(function(data){
                 if(data == 'no result'){
-                    alert('no result');
+                    $('#stat-chart').html('<div class="no-product">Không có dữ liệu cho sản phẩm này!</div>');
                 } else {
                     oldestYear = data['year'];
                     oldestMonth = data['month'];
                     dateObj = new Date();
                     curMonth = dateObj.getUTCMonth();
-                    var day = dateObj.getUTCDate();
+//                    var day = dateObj.getUTCDate();
                     curYear = dateObj.getUTCFullYear();
                     year = curYear;
                     $("#stat-select-month").html('');
@@ -297,11 +298,12 @@ $(document).ready(function(){
                         value_array.push(i * 1);
                     }
 
-                    stat_month_ajax(1, $("#stat-select-year").val(), $("#stat-select-month").val(), day_array);
+                    stat_month_ajax(pid, $("#stat-select-year").val(), $("#stat-select-month").val(), day_array);
                 }
         });
     });
     $('.stat-close-btn').click(function(){
+        $('#stat-chart').html('');
         $('.blur-background').hide();
     });
 
@@ -312,7 +314,7 @@ $(document).ready(function(){
             data: { pro: pro, year: myYear, month: myMonth },
             type: "POST",
             error: function(error){
-                alert('errrr');
+
             }
         }).done(function(data_this_month){
                 char_option.series[0].data = data_this_month;
@@ -323,11 +325,12 @@ $(document).ready(function(){
     $("#stat-select-year").change(function(){
         $("#stat-select-month").html('');
         var chosen = $("#stat-select-year").val();
+        var o = new Option('Chọn tháng', 0);
+        $("#stat-select-month").append(o);
         if(chosen == oldestYear){
             var f = 12;
             while(oldestMonth <= f){
                 var o = new Option(f, f);
-                $(o).html(f);
                 $("#stat-select-month").append(o);
                 f--;
             }
@@ -335,7 +338,6 @@ $(document).ready(function(){
             var f = curMonth + 1;
             while(f >= 1){
                 var o = new Option(f, f);
-                $(o).html(f);
                 $("#stat-select-month").append(o);
                 f--;
             }
@@ -343,12 +345,23 @@ $(document).ready(function(){
             var f = 12;
             while(f >= 1){
                 var o = new Option(f, f);
-                $(o).html(f);
                 $("#stat-select-month").append(o);
                 f--;
             }
         }
     })
+
+    $("#stat-select-month").click(function(){
+        var day_array = [];
+        if($("#stat-select-month").val() == 0){
+            $('#stat-chart').html('<div class="no-product">Hãy chọn 1 tháng để xem thống kê</div>');
+        } else {
+            for(var i = 1; i <= new Date($("#stat-select-year").val(), $("#stat-select-month").val(), 0).getDate(); i++){
+                day_array.push(i);
+            }
+            stat_month_ajax(pid, $("#stat-select-year").val(), $("#stat-select-month").val(), day_array);
+        }
+    });
 
 
 });

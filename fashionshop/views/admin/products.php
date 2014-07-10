@@ -122,7 +122,6 @@ if (!empty($term)):
             <?php
             if ($current_admin['access'] == 'Admin') {
                 ?>
-                <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][price]', 'value' => set_value('price', $product->price), 'class' => 'span1')); ?></td>
@@ -154,6 +153,7 @@ if (!empty($term)):
                         <a class="btn stat"
                            href="#stat"><i
                                 class="icon-stat"></i> Thống kê</a>
+                        <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
 					</span>
                 </td>
             <?php
