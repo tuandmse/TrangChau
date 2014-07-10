@@ -146,6 +146,7 @@ if (!empty($term)):
                 ?>
             </td>
             <td>
+                <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
 					<span class="btn-group pull-right">
 						<a class="btn"
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/form/' . $product->id); ?>"><i
@@ -157,6 +158,9 @@ if (!empty($term)):
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/delete/' . $product->id); ?>"
                            onclick="return areyousure();"><i
                                 class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
+                        <a class="btn stat"
+                           href="#stat"><i
+                                class="icon-stat"></i> Thống kê</a>
 					</span>
             </td>
         </tr>
@@ -164,3 +168,17 @@ if (!empty($term)):
     </tbody>
 </table>
 </form>
+<div class="blur-background">
+    <div class="chart-container">
+        <a class="stat-close-btn"><i class="icon-close-stat"></i></a>
+        <div class="select-container">
+            <select class="stat-select-year">
+                <option>Chọn năm</option>
+            </select>
+            <select class="stat-select-month">
+                <option>Chọn tháng</option>
+            </select>
+        </div>
+    </div>
+
+</div>
