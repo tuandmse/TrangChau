@@ -123,11 +123,9 @@ if (!empty($term)):
             <?php
             if ($current_admin['access'] == 'Admin') {
                 ?>
-<<<<<<< HEAD
             </td>
             <td>
                 <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
-=======
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][price]', 'value' => set_value('price', $product->price), 'class' => 'span1')); ?></td>
@@ -145,7 +143,6 @@ if (!empty($term)):
                     ?>
                 </td>
                 <td>
->>>>>>> 8834540c4c4f973ea3d268c57ef885809448b3b0
 					<span class="btn-group pull-right">
 						<a class="btn"
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/form/' . $product->id); ?>"><i
