@@ -119,12 +119,9 @@ if (!empty($term)):
     <?php echo (count($products) < 1) ? '<tr><td style="text-align:center;" colspan="7">' . lang('no_products') . '</td></tr>' : '' ?>
     <?php foreach ($products as $product): ?>
         <tr>
-
             <?php
             if ($current_admin['access'] == 'Admin') {
                 ?>
-            </td>
-            <td>
                 <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>
