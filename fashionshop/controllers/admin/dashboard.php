@@ -8,7 +8,7 @@ class Dashboard extends Admin_Controller
         parent::__construct();
 
         if ($this->auth->check_access('Orders')) {
-            redirect($this->config->item('admin_folder') . '/orders');
+            redirect($this->config->item('admin_folder') . '/categories');
         }
 
         if ($this->auth->check_access('Advisers')) {

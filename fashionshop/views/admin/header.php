@@ -96,6 +96,7 @@
                         <?php
                         // Restrict access from Advisers
                         if (!$this->auth->check_access('Advisers')) : ?>
+                            <?php if (!$this->auth->check_access('Orders')) : ?>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle"
                                    data-toggle="dropdown"><?php echo lang('common_sales') ?> <b class="caret"></b></a>
@@ -121,6 +122,7 @@
                                     <li><a href="<?php echo $admin_url; ?>guestbook">Quản Lý Góp Ý</a></li>
                                 </ul>
                             </li>
+                            <?php endif; ?>
 
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle"
