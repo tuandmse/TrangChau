@@ -40,6 +40,7 @@ if (!empty($term)):
     function areyousure() {
         return confirm('<?php echo lang('confirm_delete_product');?>');
     }
+    var base_url = '<?php echo base_url(); ?>';
 </script>
 <style type="text/css">
     .pagination {
@@ -150,9 +151,8 @@ if (!empty($term)):
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/delete/' . $product->id); ?>"
                            onclick="return areyousure();"><i
                                 class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
-                        <a class="btn stat"
-                           href="#stat"><i
-                                class="icon-stat"></i> Thống kê</a>
+                        <div class="btn stat">
+                            <i class="icon-stat"></i> Thống kê</div>
                         <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
 					</span>
                 </td>
@@ -187,6 +187,9 @@ if (!empty($term)):
                            href="<?php echo site_url($this->config->item('admin_folder') . '/products/delete/' . $product->proId); ?>"
                            onclick="return areyousure();"><i
                                 class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
+                        <div class="btn stat">
+                            <i class="icon-stat"></i> Thống kê</div>
+                        <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
 					</span>
                 </td>
             <?php

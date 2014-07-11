@@ -14,7 +14,8 @@ class Stat extends Admin_Controller
         $pid = $this->input->post('pro');
         $date = $this->Stat_model->get_first_date_in_order($pid);
         if(!$date){
-            echo 'no result';
+            header('Content-Type: application/json');
+            echo json_encode(array('status' => 'no result'));
         } else {
             header('Content-Type: application/json');
             echo json_encode(array('year' => date('Y',strtotime($date[0]->ordered_on)),

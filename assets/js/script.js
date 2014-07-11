@@ -255,14 +255,15 @@ $(document).ready(function(){
         pid = $(this).closest('span').find('.product-id').text();
         $('.blur-background').show();
         $.ajax({
-            url: "../admin/stat/get_first_date",
+            url: base_url + "admin/stat/get_first_date",
             data: { pro: pid },
             type: "POST",
+            dataType: "JSON",
             error: function(error){
                 alert(JSON.stringify(error));
             }
         }).done(function(data){
-                if(data == 'no result'){
+                if(data.status == 'no result'){
                     $('#stat-chart').html('<div class="no-product">Không có dữ liệu cho sản phẩm này!</div>');
                 } else {
                     oldestYear = data['year'];
@@ -310,11 +311,11 @@ $(document).ready(function(){
     function stat_month_ajax(pro, myYear, myMonth, day_array){
         char_option.xAxis['categories'] = day_array;
         $.ajax({
-            url: "../admin/stat/get_stat_for_a_month",
+            url: base_url + "admin/stat/get_stat_for_a_month",
             data: { pro: pro, year: myYear, month: myMonth },
             type: "POST",
             error: function(error){
-
+                alert(JSON.stringify(error));
             }
         }).done(function(data_this_month){
                 char_option.series[0].data = data_this_month;
