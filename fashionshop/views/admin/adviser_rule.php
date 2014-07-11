@@ -32,7 +32,7 @@ function sort_url($lang, $by, $sort, $sorder, $admin_folder)
                     class="icon-plus-sign"></i> Thêm Luật</a>
         </div>
         <?php echo form_open($this->config->item('admin_folder') . '/adviser_rule/bulk_delete', array('id' => 'delete_form', 'onsubmit' => 'return submit_form();', 'class="form-inline"')); ?>
-        <table class="table table-striped">
+        <table class="table table-striped" style="float: left;">
             <thead>
             <tr>
                 <th style="white-space:nowrap"><input type="checkbox" id="gc_check_all"/>
@@ -41,7 +41,7 @@ function sort_url($lang, $by, $sort, $sorder, $admin_folder)
                         <i class="icon-trash icon-white"></i></button>
                 </th>
 
-                <th style="white-space:nowrap"><?php echo sort_url('Mã Luật', 'rulesId', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
+                <th style="white-space:inherit"><?php echo sort_url('Mã Luật', 'rulesId', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th style="white-space:nowrap"><?php echo sort_url('Nội Dung Luật', 'rulesContent', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th style="white-space:nowrap"><?php echo sort_url('Giá Trị CF', 'rulesCF', $order_by, $sort_order, $this->config->item('admin_folder')); ?></th>
                 <th></th>

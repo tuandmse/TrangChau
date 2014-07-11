@@ -32,7 +32,7 @@ function sort_url($lang, $by, $sort, $sorder, $admin_folder)
                     class="icon-plus-sign"></i> Thêm Chỉ Số</a>
         </div>
         <?php echo form_open($this->config->item('admin_folder') . '/adviser_cf/bulk_delete', array('id' => 'delete_form', 'onsubmit' => 'return submit_form();', 'class="form-inline"')); ?>
-        <table class="table table-striped">
+        <table class="table table-striped" style="float: left;">
             <thead>
             <tr>
                 <th style="white-space:nowrap"><input type="checkbox" id="gc_check_all"/>
