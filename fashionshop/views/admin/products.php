@@ -121,7 +121,7 @@ if (!empty($term)):
     <?php foreach ($products as $product): ?>
         <tr>
             <?php
-            if ($current_admin['access'] == 'Admin') {
+            if ($current_admin['access'] != 'Orders') {
                 ?>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][sku]', 'value' => form_decode($product->sku), 'class' => 'span1')); ?></td>
                 <td><?php echo form_input(array('name' => 'product[' . $product->id . '][name]', 'value' => form_decode($product->name), 'class' => 'span2')); ?></td>

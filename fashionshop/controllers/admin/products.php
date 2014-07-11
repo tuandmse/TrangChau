@@ -10,9 +10,9 @@ class Products extends Admin_Controller
     function __construct()
     {
         parent::__construct();
-        if ($this->auth->check_access('Advisers')) {
-            redirect($this->config->item('admin_folder') . '/adviser_rule');
-        }
+//        if ($this->auth->check_access('Advisers')) {
+//            redirect($this->config->item('admin_folder') . '/adviser_rule');
+//        }
         //$this->auth->check_access('Admin', true);
 
         $this->load->model(array('Product_model', 'Adviser_rule_model'));

@@ -1,6 +1,6 @@
 <?php
 /**
- * User: Ce No
+ * User: Trang Chau
  * Date: 5/23/14
  * Time: 8:00 PM
  */

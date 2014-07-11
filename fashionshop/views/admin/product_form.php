@@ -85,7 +85,7 @@
                 <li><a href="#product_downloads" data-toggle="tab"><?php echo lang('digital_content'); ?></a></li>
             <?php endif; ?>
             <li><a href="#product_categories" data-toggle="tab"><?php echo lang('categories'); ?></a></li>
-            <li><a href="#product_options" data-toggle="tab"><?php echo lang('options'); ?></a></li>
+<!--            <li><a href="#product_options" data-toggle="tab">--><?php //echo lang('options'); ?><!--</a></li>-->
             <li><a href="#product_related" data-toggle="tab"><?php echo lang('related_products'); ?></a></li>
             <li><a href="#product_photos" data-toggle="tab"><?php echo lang('images'); ?></a></li>
             <li><a href="#product_adviser" data-toggle="tab"><?php echo lang('advisers'); ?></a></li>
@@ -259,146 +259,146 @@
         </div>
     </div>
 
-    <div class="tab-pane" id="product_options">
-        <div class="row">
-            <div class="span8">
-                <div class="pull-right" style="padding:0px 0px 10px 0px;">
-                    <select id="option_options" style="margin:0px;">
-                        <option value=""><?php echo lang('select_option_type') ?></option>
+<!--    <div class="tab-pane" id="product_options">-->
+<!--        <div class="row">-->
+<!--            <div class="span8">-->
+<!--                <div class="pull-right" style="padding:0px 0px 10px 0px;">-->
+<!--                    <select id="option_options" style="margin:0px;">-->
+<!--                        <option value="">--><?php //echo lang('select_option_type') ?><!--</option>-->
                         <option value="checklist"><?php echo lang('checklist'); ?></option>
                         <option value="radiolist"><?php echo lang('radiolist'); ?></option>
                         <option value="droplist"><?php echo lang('droplist'); ?></option>
                         <option value="textfield"><?php echo lang('textfield'); ?></option>
                         <option value="textarea"><?php echo lang('textarea'); ?></option>
-                    </select>
-                    <input id="add_option" class="btn" type="button" value="<?php echo lang('add_option'); ?>"
-                           style="margin:0px;"/>
-                </div>
-            </div>
-        </div>
-
-        <script type="text/javascript">
-
-            $("#add_option").click(function () {
-                if ($('#option_options').val() != '') {
-                    add_option($('#option_options').val());
-                    $('#option_options').val('');
-                }
-            });
-
-            function add_option(type) {
-                //increase option_count by 1
-                option_count++;
-
-                <?php
-                $value			= array(array('name'=>'', 'value'=>'', 'weight'=>'', 'price'=>'', 'limit'=>''));
-                $js_textfield	= (object)array('name'=>'', 'type'=>'textfield', 'required'=>false, 'values'=>$value);
-                $js_textarea	= (object)array('name'=>'', 'type'=>'textarea', 'required'=>false, 'values'=>$value);
-                $js_radiolist	= (object)array('name'=>'', 'type'=>'radiolist', 'required'=>false, 'values'=>$value);
-                $js_checklist	= (object)array('name'=>'', 'type'=>'checklist', 'required'=>false, 'values'=>$value);
-                $js_droplist	= (object)array('name'=>'', 'type'=>'droplist', 'required'=>false, 'values'=>$value);
-                ?>
-                if (type == 'textfield') {
-                    $('#options_container').append('<?php add_option($js_textfield, "'+option_count+'");?>');
-                }
-                else if (type == 'textarea') {
-                    $('#options_container').append('<?php add_option($js_textarea, "'+option_count+'");?>');
-                }
-                else if (type == 'radiolist') {
-                    $('#options_container').append('<?php add_option($js_radiolist, "'+option_count+'");?>');
-                }
-                else if (type == 'checklist') {
-                    $('#options_container').append('<?php add_option($js_checklist, "'+option_count+'");?>');
-                }
-                else if (type == 'droplist') {
-                    $('#options_container').append('<?php add_option($js_droplist, "'+option_count+'");?>');
-                }
-            }
-
-            function add_option_value(option) {
-
-                option_value_count++;
-                <?php
-                $js_po	= (object)array('type'=>'radiolist');
-                $value	= (object)array('name'=>'', 'value'=>'', 'weight'=>'', 'price'=>'');
-                ?>
-                $('#option-items-' + option).append('<?php add_option_value($js_po, "'+option+'", "'+option_value_count+'", $value);?>');
-            }
-
-            $(document).ready(function () {
-                $('body').on('click', '.option_title', function () {
-                    $($(this).attr('href')).slideToggle();
-                    return false;
-                });
-
-                $('body').on('click', '.delete-option-value', function () {
-                    if (confirm('<?php echo lang('confirm_remove_value');?>')) {
-                        $(this).closest('.option-values-form').remove();
-                    }
-                });
-
-
-                $('#options_container').sortable({
-                    axis: "y",
-                    items: 'tr',
-                    handle: '.handle',
-                    forceHelperSize: true,
-                    forcePlaceholderSize: true
-                });
-
-                $('.option-items').sortable({
-                    axis: "y",
-                    handle: '.handle',
-                    forceHelperSize: true,
-                    forcePlaceholderSize: true
-                });
-            });
-        </script>
-        <style type="text/css">
-            .option-form {
-                display: none;
-                margin-top: 10px;
-            }
-
-            .option-values-form {
-                background-color: #fff;
-                padding: 6px 3px 6px 6px;
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                margin-bottom: 5px;
-                border: 1px solid #ddd;
-            }
-
-            .option-values-form input {
-                margin: 0px;
-            }
-
-            .option-values-form a {
-                margin-top: 3px;
-            }
-        </style>
-        <div class="row">
-            <div class="span8">
-                <table class="table table-striped" id="options_container">
-                    <?php
-                    $counter = 0;
-                    if (!empty($product_options)) {
-                        foreach ($product_options as $po) {
-                            $po = (object)$po;
-                            if (empty($po->required)) {
-                                $po->required = false;
-                            }
-
-                            add_option($po, $counter);
-                            $counter++;
-                        }
-                    }?>
-
-                </table>
-            </div>
-        </div>
-    </div>
+<!--                    </select>-->
+<!--                    <input id="add_option" class="btn" type="button" value="--><?php //echo lang('add_option'); ?><!--"-->
+<!--                           style="margin:0px;"/>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <script type="text/javascript">-->
+<!---->
+<!--            $("#add_option").click(function () {-->
+<!--                if ($('#option_options').val() != '') {-->
+<!--                    add_option($('#option_options').val());-->
+<!--                    $('#option_options').val('');-->
+<!--                }-->
+<!--            });-->
+<!---->
+<!--            function add_option(type) {-->
+<!--                //increase option_count by 1-->
+<!--                option_count++;-->
+<!---->
+<!--                --><?php
+//                $value			= array(array('name'=>'', 'value'=>'', 'weight'=>'', 'price'=>'', 'limit'=>''));
+//                $js_textfield	= (object)array('name'=>'', 'type'=>'textfield', 'required'=>false, 'values'=>$value);
+//                $js_textarea	= (object)array('name'=>'', 'type'=>'textarea', 'required'=>false, 'values'=>$value);
+//                $js_radiolist	= (object)array('name'=>'', 'type'=>'radiolist', 'required'=>false, 'values'=>$value);
+//                $js_checklist	= (object)array('name'=>'', 'type'=>'checklist', 'required'=>false, 'values'=>$value);
+//                $js_droplist	= (object)array('name'=>'', 'type'=>'droplist', 'required'=>false, 'values'=>$value);
+//                ?>
+<!--                if (type == 'textfield') {-->
+<!--                    $('#options_container').append('--><?php //add_option($js_textfield, "'+option_count+'");?><!--');-->
+<!--                }-->
+<!--                else if (type == 'textarea') {-->
+<!--                    $('#options_container').append('--><?php //add_option($js_textarea, "'+option_count+'");?><!--');-->
+<!--                }-->
+<!--                else if (type == 'radiolist') {-->
+<!--                    $('#options_container').append('--><?php //add_option($js_radiolist, "'+option_count+'");?><!--');-->
+<!--                }-->
+<!--                else if (type == 'checklist') {-->
+<!--                    $('#options_container').append('--><?php //add_option($js_checklist, "'+option_count+'");?><!--');-->
+<!--                }-->
+<!--                else if (type == 'droplist') {-->
+<!--                    $('#options_container').append('--><?php //add_option($js_droplist, "'+option_count+'");?><!--');-->
+<!--                }-->
+<!--            }-->
+<!---->
+<!--            function add_option_value(option) {-->
+<!---->
+<!--                option_value_count++;-->
+<!--                --><?php
+//                $js_po	= (object)array('type'=>'radiolist');
+//                $value	= (object)array('name'=>'', 'value'=>'', 'weight'=>'', 'price'=>'');
+//                ?>
+<!--                $('#option-items-' + option).append('--><?php //add_option_value($js_po, "'+option+'", "'+option_value_count+'", $value);?><!--');-->
+<!--            }-->
+<!---->
+<!--            $(document).ready(function () {-->
+<!--                $('body').on('click', '.option_title', function () {-->
+<!--                    $($(this).attr('href')).slideToggle();-->
+<!--                    return false;-->
+<!--                });-->
+<!---->
+<!--                $('body').on('click', '.delete-option-value', function () {-->
+<!--                    if (confirm('--><?php //echo lang('confirm_remove_value');?><!--')) {-->
+<!--                        $(this).closest('.option-values-form').remove();-->
+<!--                    }-->
+<!--                });-->
+<!---->
+<!---->
+<!--                $('#options_container').sortable({-->
+<!--                    axis: "y",-->
+<!--                    items: 'tr',-->
+<!--                    handle: '.handle',-->
+<!--                    forceHelperSize: true,-->
+<!--                    forcePlaceholderSize: true-->
+<!--                });-->
+<!---->
+<!--                $('.option-items').sortable({-->
+<!--                    axis: "y",-->
+<!--                    handle: '.handle',-->
+<!--                    forceHelperSize: true,-->
+<!--                    forcePlaceholderSize: true-->
+<!--                });-->
+<!--            });-->
+<!--        </script>-->
+<!--        <style type="text/css">-->
+<!--            .option-form {-->
+<!--                display: none;-->
+<!--                margin-top: 10px;-->
+<!--            }-->
+<!---->
+<!--            .option-values-form {-->
+<!--                background-color: #fff;-->
+<!--                padding: 6px 3px 6px 6px;-->
+<!--                -webkit-border-radius: 3px;-->
+<!--                -moz-border-radius: 3px;-->
+<!--                border-radius: 3px;-->
+<!--                margin-bottom: 5px;-->
+<!--                border: 1px solid #ddd;-->
+<!--            }-->
+<!---->
+<!--            .option-values-form input {-->
+<!--                margin: 0px;-->
+<!--            }-->
+<!---->
+<!--            .option-values-form a {-->
+<!--                margin-top: 3px;-->
+<!--            }-->
+<!--        </style>-->
+<!--        <div class="row">-->
+<!--            <div class="span8">-->
+<!--                <table class="table table-striped" id="options_container">-->
+<!--                    --><?php
+//                    $counter = 0;
+//                    if (!empty($product_options)) {
+//                        foreach ($product_options as $po) {
+//                            $po = (object)$po;
+//                            if (empty($po->required)) {
+//                                $po->required = false;
+//                            }
+//
+//                            add_option($po, $counter);
+//                            $counter++;
+//                        }
+//                    }?>
+<!---->
+<!--                </table>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
 
     <div class="tab-pane" id="product_related">
         <div class="row">
