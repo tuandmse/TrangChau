@@ -259,7 +259,7 @@ $(document).ready(function(){
             data: { pro: pid },
             type: "POST",
             error: function(error){
-                alert('errr');
+                alert(JSON.stringify(error));
             }
         }).done(function(data){
                 if(data == 'no result'){
