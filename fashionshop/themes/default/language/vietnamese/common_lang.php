@@ -78,16 +78,16 @@ $lang['sort_by_price_asc'] = 'Sắp xếp theo giá Thấp đến Cao';
 $lang['sort_by_price_desc'] = 'Sắp xếp theo giá Cao đến Thấp';
 
 $lang['products'] = 'Products';
-$lang['out_of_stock'] = 'Out of Stock';
-$lang['no_products'] = 'There are currently no available products in this category.';
-$lang['no_image_available'] = 'No Image Available';
+$lang['out_of_stock'] = 'HẾT HÀNG';
+$lang['no_products'] = 'Không có sản phẩm nào.';
+$lang['no_image_available'] = 'Không có hình ảnh nào';
 $lang['product_reg'] = 'Giá Gốc:';
 $lang['product_price'] = 'Giá:';
 $lang['product_sale'] = 'KHUYẾN MÃI:';
-$lang['available_options'] = 'Available Options';
-$lang['choose_option'] = 'Choose an Option';
-$lang['tab_description'] = 'Description';
-$lang['tab_related_products'] = 'Related Products';
+$lang['available_options'] = 'Các tùy chọn có sẵn';
+$lang['choose_option'] = 'Lựa một tùy chọn';
+$lang['tab_description'] = 'Mô tả';
+$lang['tab_related_products'] = 'Sản phẩm có liên quan';
 $lang['subcategories'] = 'Subcategories';
 $lang['edit_category'] = 'Edit Category';
 $lang['edit_product'] = 'Edit Product';
@@ -246,9 +246,9 @@ $lang['giftcard_balance_applied'] = 'You should see your card balance displayed.
 $lang['giftcard_zero_balance'] = 'Sorry, but the gift card you entered is expired or has a zero balance.';
 $lang['giftcard_not_exist'] = 'The gift card code you entered does not exist.';
 $lang['giftcard_already_applied'] = 'Your gift card is already applied';
-$lang['error_updating_cart'] = 'There was an error updating the cart!';
-$lang['not_enough_stock'] = 'The quantity requested for the "%s" product could not be added. We only have %d item(s) in stock.';
-$lang['remove_item'] = 'Are you sure you want to remove this item from your cart?';
+$lang['error_updating_cart'] = 'Có lỗi khi cập nhật lại giỏ hàng!';
+$lang['not_enough_stock'] = 'Số lượng yêu cầu cho sản phẩm "%s" không thể thêm vào giỏ. Chúng tôi chỉ có %d sản phẩm trong kho.';
+$lang['remove_item'] = 'Bạn có chắc chắn muốn bỏ (những) sản phẩm này ra khỏi giỏ?';
 
 //comment and like
 $lang['said'] = 'đã nhận xét';
