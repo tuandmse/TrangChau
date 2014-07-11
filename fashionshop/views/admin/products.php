@@ -189,7 +189,7 @@ if (!empty($term)):
                                 class="icon-trash icon-white"></i> <?php echo lang('delete'); ?></a>
                         <div class="btn stat">
                             <i class="icon-stat"></i> Thống kê</div>
-                        <div class="product-id" style="display: none;"><?php echo $product->id; ?></div>
+                        <div class="product-id" style="display: none;"><?php echo $product->proId; ?></div>
 					</span>
                 </td>
             <?php
