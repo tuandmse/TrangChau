@@ -265,11 +265,11 @@
 <!--                <div class="pull-right" style="padding:0px 0px 10px 0px;">-->
 <!--                    <select id="option_options" style="margin:0px;">-->
 <!--                        <option value="">--><?php //echo lang('select_option_type') ?><!--</option>-->
-                        <option value="checklist"><?php echo lang('checklist'); ?></option>
-                        <option value="radiolist"><?php echo lang('radiolist'); ?></option>
-                        <option value="droplist"><?php echo lang('droplist'); ?></option>
-                        <option value="textfield"><?php echo lang('textfield'); ?></option>
-                        <option value="textarea"><?php echo lang('textarea'); ?></option>
+<!--                        <option value="checklist">--><?php //echo lang('checklist'); ?><!--</option>-->
+<!--                        <option value="radiolist">--><?php //echo lang('radiolist'); ?><!--</option>-->
+<!--                        <option value="droplist">--><?php //echo lang('droplist'); ?><!--</option>-->
+<!--                        <option value="textfield">--><?php //echo lang('textfield'); ?><!--</option>-->
+<!--                        <option value="textarea">--><?php //echo lang('textarea'); ?><!--</option>-->
 <!--                    </select>-->
 <!--                    <input id="add_option" class="btn" type="button" value="--><?php //echo lang('add_option'); ?><!--"-->
 <!--                           style="margin:0px;"/>-->
