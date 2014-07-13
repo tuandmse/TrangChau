@@ -614,115 +614,115 @@ function add_image($photo_id, $filename, $alt, $caption, $primary = false)
 }
 
 
-function add_option($po, $count)
-{
-    ob_start();
-    ?>
-    <tr id="option-<?php echo $count; ?>">
-        <td>
-            <a class="handle btn btn-mini"><i class="icon-align-justify"></i></a>
-            <strong><a class="option_title"
-                       href="#option-form-<?php echo $count; ?>"><?php echo $po->type; ?> <?php echo (!empty($po->name)) ? ' : ' . $po->name : ''; ?></a></strong>
-            <button type="button" class="btn btn-mini btn-danger pull-right"
-                    onclick="remove_option(<?php echo $count ?>);"><i class="icon-trash icon-white"></i></button>
-            <input type="hidden" name="option[<?php echo $count; ?>][type]" value="<?php echo $po->type; ?>"/>
-
-            <div class="option-form" id="option-form-<?php echo $count; ?>">
-                <div class="row-fluid">
-
-                    <div class="span10">
-                        <input type="text" class="span10" placeholder="<?php echo lang('option_name'); ?>"
-                               name="option[<?php echo $count; ?>][name]" value="<?php echo $po->name; ?>"/>
-                    </div>
-
-                    <div class="span2" style="text-align:right;">
-                        <input class="checkbox" type="checkbox" name="option[<?php echo $count; ?>][required]"
-                               value="1" <?php echo ($po->required) ? 'checked="checked"' : ''; ?>/> <?php echo lang('required'); ?>
-                    </div>
-                </div>
-                <?php if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
-                    <div class="row-fluid">
-                        <div class="span12">
-                            <a class="btn"
-                               onclick="add_option_value(<?php echo $count; ?>);"><?php echo lang('add_item'); ?></a>
-                        </div>
-                    </div>
-                <?php endif; ?>
-                <div style="margin-top:10px;">
-
-                    <div class="row-fluid">
-                        <?php if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
-                            <div class="span1">&nbsp;</div>
-                        <?php endif; ?>
-                        <div class="span3"><strong>&nbsp;&nbsp;<?php echo lang('name'); ?></strong></div>
-                        <div class="span2"><strong>&nbsp;<?php echo lang('value'); ?></strong></div>
-                        <div class="span2"><strong>&nbsp;<?php echo lang('weight'); ?></strong></div>
-                        <div class="span2"><strong>&nbsp;<?php echo lang('price'); ?></strong></div>
-                        <div class="span2"><strong>
-                                &nbsp;<?php echo ($po->type == 'textfield') ? lang('limit') : ''; ?></strong></div>
-                    </div>
-                    <div class="option-items" id="option-items-<?php echo $count; ?>">
-                        <?php if ($po->values): ?>
-                            <?php
-                            foreach ($po->values as $value) {
-                                $value = (object)$value;
-                                add_option_value($po, $count, $GLOBALS['option_value_count'], $value);
-                                $GLOBALS['option_value_count']++;
-                            }?>
-                        <?php endif; ?>
-                    </div>
-                </div>
-            </div>
-        </td>
-    </tr>
-
-    <?php
-    $stuff = ob_get_contents();
-
-    ob_end_clean();
-
-    echo replace_newline($stuff);
-}
-
-function add_option_value($po, $count, $valcount, $value)
-{
-    ob_start();
-    ?>
-    <div class="option-values-form">
-        <div class="row-fluid">
-            <?php if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
-                <div class="span1"><a class="handle btn btn-mini" style="float:left;"><i class="icon-align-justify"></i></a>
-                </div><?php endif; ?>
-            <div class="span3"><input type="text" class="span12"
-                                      name="option[<?php echo $count; ?>][values][<?php echo $valcount ?>][name]"
-                                      value="<?php echo $value->name ?>"/></div>
-            <div class="span2"><input type="text" class="span12"
-                                      name="option[<?php echo $count; ?>][values][<?php echo $valcount ?>][value]"
-                                      value="<?php echo $value->value ?>"/></div>
-            <div class="span2"><input type="text" class="span12"
-                                      name="option[<?php echo $count; ?>][values][<?php echo $valcount ?>][weight]"
-                                      value="<?php echo $value->weight ?>"/></div>
-            <div class="span2"><input type="text" class="span12"
-                                      name="option[<?php echo $count; ?>][values][<?php echo $valcount ?>][price]"
-                                      value="<?php echo $value->price ?>"/></div>
-            <div class="span2">
-                <?php if ($po->type == 'textfield'): ?><input class="span12" type="text"
-                                                              name="option[<?php echo $count; ?>][values][<?php echo $valcount ?>][limit]"
-                                                              value="<?php echo $value->limit ?>" />
-                <?php elseif ($po->type != 'textarea' && $po->type != 'textfield'): ?>
-                    <a class="delete-option-value btn btn-danger btn-mini pull-right"><i
-                            class="icon-trash icon-white"></i></a>
-                <?php endif; ?>
-            </div>
-        </div>
-    </div>
-    <?php
-    $stuff = ob_get_contents();
-
-    ob_end_clean();
-
-    echo replace_newline($stuff);
-}
+//function add_option($po, $count)
+//{
+//    ob_start();
+//    ?>
+<!--    <tr id="option---><?php //echo $count; ?><!--">-->
+<!--        <td>-->
+<!--            <a class="handle btn btn-mini"><i class="icon-align-justify"></i></a>-->
+<!--            <strong><a class="option_title"-->
+<!--                       href="#option-form---><?php //echo $count; ?><!--">--><?php //echo $po->type; ?><!-- --><?php //echo (!empty($po->name)) ? ' : ' . $po->name : ''; ?><!--</a></strong>-->
+<!--            <button type="button" class="btn btn-mini btn-danger pull-right"-->
+<!--                    onclick="remove_option(--><?php //echo $count ?><!--);"><i class="icon-trash icon-white"></i></button>-->
+<!--            <input type="hidden" name="option[--><?php //echo $count; ?><!--][type]" value="--><?php //echo $po->type; ?><!--"/>-->
+<!---->
+<!--            <div class="option-form" id="option-form---><?php //echo $count; ?><!--">-->
+<!--                <div class="row-fluid">-->
+<!---->
+<!--                    <div class="span10">-->
+<!--                        <input type="text" class="span10" placeholder="--><?php //echo lang('option_name'); ?><!--"-->
+<!--                               name="option[--><?php //echo $count; ?><!--][name]" value="--><?php //echo $po->name; ?><!--"/>-->
+<!--                    </div>-->
+<!---->
+<!--                    <div class="span2" style="text-align:right;">-->
+<!--                        <input class="checkbox" type="checkbox" name="option[--><?php //echo $count; ?><!--][required]"-->
+<!--                               value="1" --><?php //echo ($po->required) ? 'checked="checked"' : ''; ?><!--/> --><?php //echo lang('required'); ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--                --><?php //if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
+<!--                    <div class="row-fluid">-->
+<!--                        <div class="span12">-->
+<!--                            <a class="btn"-->
+<!--                               onclick="add_option_value(--><?php //echo $count; ?><!--);">--><?php //echo lang('add_item'); ?><!--</a>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                --><?php //endif; ?>
+<!--                <div style="margin-top:10px;">-->
+<!---->
+<!--                    <div class="row-fluid">-->
+<!--                        --><?php //if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
+<!--                            <div class="span1">&nbsp;</div>-->
+<!--                        --><?php //endif; ?>
+<!--                        <div class="span3"><strong>&nbsp;&nbsp;--><?php //echo lang('name'); ?><!--</strong></div>-->
+<!--                        <div class="span2"><strong>&nbsp;--><?php //echo lang('value'); ?><!--</strong></div>-->
+<!--                        <div class="span2"><strong>&nbsp;--><?php //echo lang('weight'); ?><!--</strong></div>-->
+<!--                        <div class="span2"><strong>&nbsp;--><?php //echo lang('price'); ?><!--</strong></div>-->
+<!--                        <div class="span2"><strong>-->
+<!--                                &nbsp;--><?php //echo ($po->type == 'textfield') ? lang('limit') : ''; ?><!--</strong></div>-->
+<!--                    </div>-->
+<!--                    <div class="option-items" id="option-items---><?php //echo $count; ?><!--">-->
+<!--                        --><?php //if ($po->values): ?>
+<!--                            --><?php
+//                            foreach ($po->values as $value) {
+//                                $value = (object)$value;
+//                                add_option_value($po, $count, $GLOBALS['option_value_count'], $value);
+//                                $GLOBALS['option_value_count']++;
+//                            }?>
+<!--                        --><?php //endif; ?>
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </td>-->
+<!--    </tr>-->
+<!---->
+<!--    --><?php
+//    $stuff = ob_get_contents();
+//
+//    ob_end_clean();
+//
+//    echo replace_newline($stuff);
+//}
+//
+//function add_option_value($po, $count, $valcount, $value)
+//{
+//    ob_start();
+//    ?>
+<!--    <div class="option-values-form">-->
+<!--        <div class="row-fluid">-->
+<!--            --><?php //if ($po->type != 'textarea' && $po->type != 'textfield'): ?>
+<!--                <div class="span1"><a class="handle btn btn-mini" style="float:left;"><i class="icon-align-justify"></i></a>-->
+<!--                </div>--><?php //endif; ?>
+<!--            <div class="span3"><input type="text" class="span12"-->
+<!--                                      name="option[--><?php //echo $count; ?><!--][values][--><?php //echo $valcount ?><!--][name]"-->
+<!--                                      value="--><?php //echo $value->name ?><!--"/></div>-->
+<!--            <div class="span2"><input type="text" class="span12"-->
+<!--                                      name="option[--><?php //echo $count; ?><!--][values][--><?php //echo $valcount ?><!--][value]"-->
+<!--                                      value="--><?php //echo $value->value ?><!--"/></div>-->
+<!--            <div class="span2"><input type="text" class="span12"-->
+<!--                                      name="option[--><?php //echo $count; ?><!--][values][--><?php //echo $valcount ?><!--][weight]"-->
+<!--                                      value="--><?php //echo $value->weight ?><!--"/></div>-->
+<!--            <div class="span2"><input type="text" class="span12"-->
+<!--                                      name="option[--><?php //echo $count; ?><!--][values][--><?php //echo $valcount ?><!--][price]"-->
+<!--                                      value="--><?php //echo $value->price ?><!--"/></div>-->
+<!--            <div class="span2">-->
+<!--                --><?php //if ($po->type == 'textfield'): ?><!--<input class="span12" type="text"-->
+<!--                                                              name="option[--><?php //echo $count; ?><!--][values][--><?php //echo $valcount ?><!--][limit]"-->
+<!--                                                              value="--><?php //echo $value->limit ?><!--" />-->
+<!--                --><?php //elseif ($po->type != 'textarea' && $po->type != 'textfield'): ?>
+<!--                    <a class="delete-option-value btn btn-danger btn-mini pull-right"><i-->
+<!--                            class="icon-trash icon-white"></i></a>-->
+<!--                --><?php //endif; ?>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    --><?php
+//    $stuff = ob_get_contents();
+//
+//    ob_end_clean();
+//
+//    echo replace_newline($stuff);
+//}
 
 //this makes it easy to use the same code for initial generation of the form as well as javascript additions
 function replace_newline($string)
