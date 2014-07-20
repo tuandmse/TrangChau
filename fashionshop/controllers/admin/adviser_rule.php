@@ -267,7 +267,8 @@ class Adviser_Rule extends Admin_Controller
         //default values are empty if the customer is new
         $data['rulesId'] = '';
         $data['rulesCF'] = '0.0';
-        $data['selectedNode'] = array();
+        $data['selectedNodeLeft'] = array();
+        $data['selectedNodeRight'] = array();
         $data['lefthand'] = $this->Adviser_rule_model->list_lefthand();
         $data['righthand'] = $this->Adviser_rule_model->list_righthand();
         $this->form_validation->set_rules('rulesId', 'Nút', 'trim|max_length[20]');
@@ -287,7 +288,13 @@ class Adviser_Rule extends Admin_Controller
             $data['rulesId'] = $question->rulesId;
             $data['rulesCF'] = $question->rulesCF;
             $exploded = $this->multiexplode(array("^", "=>"), $question->rulesContent);
-            $data['selectedNode'] = $exploded;
+            foreach ($exploded as $key => $nodesNode) {
+                if ($key < count($exploded) - 1) {
+                    array_push($data['selectedNodeLeft'], $nodesNode);
+                } else {
+                    array_push($data['selectedNodeRight'], $nodesNode);
+                }
+            }
         }
 
         if ($this->form_validation->run() == FALSE) {

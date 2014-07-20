@@ -112,6 +112,7 @@ class Adviser extends Front_Controller
                 $usable_rule = $this->get_usable_rule($inputs, $rules);
             } while (count($usable_rule) != $oldSize);
         }
+        $usable_rule = $this->get_clean_usable_rule($usable_rule);
         if (count($usable_rule) > 0) {
             $superFinal = new stdClass();
             $superFinal->node = '';
@@ -158,15 +159,55 @@ class Adviser extends Front_Controller
         }
 
     }
+    function get_clean_usable_rule($usable_rule){
+        $finalResult = array();
+        for ($i = 0; $i < count($usable_rule); $i) {
+            $currentRule = $usable_rule[$i];
+            $exploded = $this->multiexplode(array("^", "=>"), $currentRule->rulesContent);
+            $lastItem = $exploded[count($exploded) - 1];
+            array_splice($usable_rule, $i, 1);
+            if($this->is_cleanable($lastItem, $usable_rule) === false){
+                array_push($finalResult, $currentRule);
+            }
+        }
+        return $finalResult;
+    }
+
+    function is_cleanable($lastItem, $usable_rule){
+        for ($j = 0; $j < count($usable_rule); $j) {
+            $exploded2 = explode("=>", $usable_rule[$j]->rulesContent);
+            $exploded2 = explode("^", $exploded2[0]);
+            if(in_array($lastItem, $exploded2)){
+                return true;
+            }
+        }
+        return false;
+    }
 
     function getMoreInputFromUsable($inputs, $usable_rule)
     {
-        foreach ($usable_rule as $rule) {
-            $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
+        $finalResult = array();
+        for ($i = 0; $i < count($usable_rule); $i) { // chay tim 2 luat co cung ket luan la lastitem va lastitem2 ??a vào finalresult
+            $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
+            $lastItem = $exploded[count($exploded) - 1];
+            array_push($finalResult, $usable_rule[$i]);
+            array_splice($usable_rule, $i, 1);
+            for ($j = $i; $j < count($usable_rule); $j) {
+                $exploded2 = $this->multiexplode(array("^", "=>"), $usable_rule[$j]->rulesContent);
+                $lastItem2 = $exploded2[count($exploded2) - 1];
+                if ($lastItem2 == $lastItem) {
+                    array_push($finalResult, $usable_rule[$j]);
+                    array_splice($usable_rule, $j, 1);
+                } else {
+                    $j++;
+                }
+            }
+            $calCF = $this->calculateCF($inputs, $finalResult);
             $obj = new stdClass();
-            $obj->node = $exploded[count($exploded) - 1];
-            $obj->cf = $rule->rulesCF;
+            $obj->node = $lastItem;
+            $obj->cf = $calCF;
             array_push($inputs, $obj);
+            $finalResult = array();
         }
         return $inputs;
     }

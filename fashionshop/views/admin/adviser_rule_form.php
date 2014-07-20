@@ -15,7 +15,7 @@
                             <td style="vertical-align: text-top;"><input name="leftclause[]" type="checkbox"
                                                                          value="<?php echo $entry->nodesNode; ?>"
                                     <?php
-                                    if (in_array($entry->nodesNode, $selectedNode)) {
+                                    if (in_array($entry->nodesNode, $selectedNodeLeft)) {
                                         echo "checked=\"checked\"";
                                     }
                                     ?>
@@ -28,7 +28,7 @@
                             <td style="vertical-align: text-top;"><input name="leftclause[]" type="checkbox"
                                                                          value="<?php echo $entry->nodesNode; ?>"
                                     <?php
-                                    if (in_array($entry->nodesNode, $selectedNode)) {
+                                    if (in_array($entry->nodesNode, $selectedNodeLeft)) {
                                         echo "checked=\"checked\"";
                                     }
                                     ?>
@@ -57,7 +57,7 @@
                             <td style="vertical-align: text-top;"><input name="rightclause" type="radio"
                                                                          value="<?php echo $entry->nodesNode; ?>"
                                     <?php
-                                    if (in_array($entry->nodesNode, $selectedNode)) {
+                                    if (in_array($entry->nodesNode, $selectedNodeRight)) {
                                         echo "checked=\"checked\"";
                                     }
                                     ?>
