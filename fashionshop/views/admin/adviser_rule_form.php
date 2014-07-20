@@ -23,6 +23,19 @@
                             <td style=""><?php echo $entry->nodesContent; ?></td>
                         </tr>
                     <?php endforeach; ?>
+                    <?php if (isset($righthand)) foreach ($righthand as $entry): ?>
+                        <tr>
+                            <td style="vertical-align: text-top;"><input name="leftclause[]" type="checkbox"
+                                                                         value="<?php echo $entry->nodesNode; ?>"
+                                    <?php
+                                    if (in_array($entry->nodesNode, $selectedNode)) {
+                                        echo "checked=\"checked\"";
+                                    }
+                                    ?>
+                                                                         class="gc_check"/></td>
+                            <td style=""><?php echo $entry->nodesContent; ?></td>
+                        </tr>
+                    <?php endforeach; ?>
                 </table>
             </div>
         </fieldset>

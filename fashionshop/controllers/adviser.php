@@ -104,11 +104,16 @@ class Adviser extends Front_Controller
     {
         header('Content-Type: text/html; charset=utf-8');
         $rules = $this->Adviser_rule_model->view();
-
         $usable_rule = $this->get_usable_rule($inputs, $rules);
         if (count($usable_rule) > 0) {
+            do {
+                $oldSize = count($usable_rule);
+                $inputs = $this->getMoreInputFromUsable($inputs, $usable_rule);
+                $usable_rule = $this->get_usable_rule($inputs, $rules);
+            } while (count($usable_rule) != $oldSize);
+        }
+        if (count($usable_rule) > 0) {
             $superFinal = new stdClass();
-
             $superFinal->node = '';
             $superFinal->cf = '';
             $finalResult = array();
@@ -116,27 +121,19 @@ class Adviser extends Front_Controller
             for ($i = 0; $i < count($usable_rule); $i) { // chay tim 2 luat co cung ket luan la lastitem va lastitem2 đưa vào finalresult
                 $exploded = $this->multiexplode(array("^", "=>"), $usable_rule[$i]->rulesContent);
                 $lastItem = $exploded[count($exploded) - 1];
-
                 array_push($finalResult, $usable_rule[$i]);
-
                 array_splice($usable_rule, $i, 1);
-//                unset($usable_rule[$i]);
-//                $usable_rule = array_values($usable_rule);
-
                 for ($j = $i; $j < count($usable_rule); $j) {
                     $exploded2 = $this->multiexplode(array("^", "=>"), $usable_rule[$j]->rulesContent);
                     $lastItem2 = $exploded2[count($exploded2) - 1];
                     if ($lastItem2 == $lastItem) {
                         array_push($finalResult, $usable_rule[$j]);
                         array_splice($usable_rule, $j, 1);
-//                        unset($usable_rule[$j]);
-//                        $usable_rule = array_values($usable_rule);
                     } else {
                         $j++;
                     }
                 }
                 $calCF = $this->calculateCF($inputs, $finalResult); // tinh CF
-
                 if ($calCF >= $maxCF) { // so sanh CF
                     $superFinal->node = $lastItem;
                     $superFinal->cf = $calCF;
@@ -144,8 +141,6 @@ class Adviser extends Front_Controller
                 }
                 $finalResult = array();
             }
-
-
             if ($superFinal->node != "") {
                 $suggestNodes = $this->Adviser_node_model->viewdetails($superFinal->node);
                 return $suggestNodes;
@@ -164,32 +159,35 @@ class Adviser extends Front_Controller
 
     }
 
+    function getMoreInputFromUsable($inputs, $usable_rule)
+    {
+        foreach ($usable_rule as $rule) {
+            $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
+            $obj = new stdClass();
+            $obj->node = $exploded[count($exploded) - 1];
+            $obj->cf = $rule->rulesCF;
+            array_push($inputs, $obj);
+        }
+        return $inputs;
+    }
 
     function get_usable_rule($inputs, $rules) // dua nhung luat co the su dung vao 1 mang
     {
-
         $usable_rule = array();
         foreach ($rules as $rule) {
-
             $exploded = $this->multiexplode(array("^", "=>"), $rule->rulesContent);
             $flag = true;
-
             foreach ($exploded as $key => $nodesNode) {
-
                 if ($key < count($exploded) - 1) {
-
-
                     if (!$this->check_exist_in_arrays($inputs, $nodesNode)) {
                         $flag = false;
                     }
                 }
             }
-
             if ($flag == true) {
                 array_push($usable_rule, $rule);
             }
         }
-
         return $usable_rule;
     }
 
