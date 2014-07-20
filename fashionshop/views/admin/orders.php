@@ -70,9 +70,9 @@ if ($term):?>
 <table class="table table-striped">
     <thead>
     <tr>
-        <th><input type="checkbox" id="gc_check_all"/>
+        <!--<th><input type="checkbox" id="gc_check_all"/>
             <button type="submit" class="btn btn-small btn-danger"><i class="icon-trash icon-white"></i></button>
-        </th>
+        </th>-->
         <th><?php echo sort_url('order', 'order_number', $sort_by, $sort_order, $code, $this->config->item('admin_folder')); ?></th>
         <th><?php echo sort_url('bill_to', 'bill_lastname', $sort_by, $sort_order, $code, $this->config->item('admin_folder')); ?></th>
         <th><?php echo sort_url('ship_to', 'ship_lastname', $sort_by, $sort_order, $code, $this->config->item('admin_folder')); ?></th>
@@ -87,7 +87,7 @@ if ($term):?>
     <?php echo (count($orders) < 1) ? '<tr><td style="text-align:center;" colspan="8">' . lang('no_orders') . '</td></tr>' : '' ?>
     <?php foreach ($orders as $order): ?>
         <tr>
-            <td><input name="order[]" type="checkbox" value="<?php echo $order->id; ?>" class="gc_check"/></td>
+            <!--<td><input name="order[]" type="checkbox" value="<?php /*echo $order->id; */?>" class="gc_check"/></td>-->
             <td><?php echo $order->order_number; ?></td>
             <td style="white-space:nowrap"><?php echo $order->bill_lastname . ', ' . $order->bill_firstname; ?></td>
             <td style="white-space:nowrap"><?php echo $order->ship_lastname . ', ' . $order->ship_firstname; ?></td>

@@ -21,6 +21,7 @@
     <?php echo theme_css('styles.css', true); ?>
 
     <?php echo theme_js('jquery.js', true); ?>
+    <?php echo theme_js('jquery.slides.min.js', true); ?>
     <?php echo theme_js('bootstrap.min.js', true); ?>
     <?php echo theme_js('bootstrap-select.min.js', true); ?>
     <?php echo theme_js('squard.js', true); ?>

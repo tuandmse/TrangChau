@@ -6038,3 +6038,3027 @@ DEBUG - 2014-07-20 10:54:56 --> File loaded: fashionshop/themes/default/views/ca
 DEBUG - 2014-07-20 10:54:56 --> File loaded: fashionshop/themes/default/views/footer.php
 DEBUG - 2014-07-20 10:54:56 --> Final output sent to browser
 DEBUG - 2014-07-20 10:54:56 --> Total execution time: 0.8801
+DEBUG - 2014-07-20 10:59:30 --> Config Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Hooks Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 10:59:30 --> URI Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Router Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Output Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Security Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Input Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 10:59:30 --> Language Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Loader Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 10:59:30 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Session Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Controller Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Migrations class initialized
+DEBUG - 2014-07-20 10:59:30 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 10:59:30 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Current migration: 4
+DEBUG - 2014-07-20 10:59:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 10:59:30 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 10:59:30 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> Model Class Initialized
+DEBUG - 2014-07-20 10:59:30 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 10:59:31 --> File loaded: fashionshop/themes/default/views/call_adviser.php
+DEBUG - 2014-07-20 10:59:31 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 10:59:31 --> Final output sent to browser
+DEBUG - 2014-07-20 10:59:31 --> Total execution time: 0.8710
+DEBUG - 2014-07-20 11:11:07 --> Config Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:11:07 --> URI Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> Router Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:07 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Output Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Security Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Input Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:11:08 --> Language Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:11:08 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:11:08 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Session Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Migrations class initialized
+DEBUG - 2014-07-20 11:11:08 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:11:08 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Current migration: 4
+DEBUG - 2014-07-20 11:11:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:08 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:11:08 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:11:08 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:11:08 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:11:09 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:11:09 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:09 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:09 --> Model Class Initialized
+DEBUG - 2014-07-20 11:11:09 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:11:09 --> Language file loaded: language/vietnamese/order_lang.php
+DEBUG - 2014-07-20 11:11:09 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:11:09 --> Helper loaded: date_helper
+DEBUG - 2014-07-20 11:11:10 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:11:10 --> File loaded: fashionshop/views/admin/header.php
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:11:12 --> Could not find the language line "form_view"
+DEBUG - 2014-07-20 11:11:12 --> File loaded: fashionshop/views/admin/orders.php
+DEBUG - 2014-07-20 11:11:12 --> File loaded: fashionshop/views/admin/footer.php
+DEBUG - 2014-07-20 11:11:12 --> Final output sent to browser
+DEBUG - 2014-07-20 11:11:12 --> Total execution time: 5.2223
+DEBUG - 2014-07-20 11:11:13 --> Config Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:11:14 --> URI Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> Router Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:14 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:11:14 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:11:15 --> Config Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:11:15 --> URI Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Router Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:11:15 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:11:15 --> Config Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:11:15 --> URI Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Router Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:11:15 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:11:15 --> Config Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:11:15 --> URI Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Router Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:11:15 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:11:15 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:12:46 --> Config Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:12:46 --> URI Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Router Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Output Class Initialized
+DEBUG - 2014-07-20 11:12:46 --> Security Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Input Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:12:47 --> Language Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:12:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Session Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Migrations class initialized
+DEBUG - 2014-07-20 11:12:47 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:12:47 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Current migration: 4
+DEBUG - 2014-07-20 11:12:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:12:47 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:12:47 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:12:47 --> Language file loaded: language/vietnamese/order_lang.php
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:12:47 --> Helper loaded: date_helper
+DEBUG - 2014-07-20 11:12:47 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:12:47 --> File loaded: fashionshop/views/admin/header.php
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+ERROR - 2014-07-20 11:12:47 --> Could not find the language line "form_view"
+DEBUG - 2014-07-20 11:12:47 --> File loaded: fashionshop/views/admin/orders.php
+DEBUG - 2014-07-20 11:12:47 --> File loaded: fashionshop/views/admin/footer.php
+DEBUG - 2014-07-20 11:12:47 --> Final output sent to browser
+DEBUG - 2014-07-20 11:12:47 --> Total execution time: 1.0481
+DEBUG - 2014-07-20 11:12:48 --> Config Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:12:48 --> URI Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Router Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:12:48 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:12:48 --> Config Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:12:48 --> URI Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Router Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:48 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:12:48 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:12:49 --> Config Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:12:49 --> URI Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Router Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:12:49 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:12:49 --> Config Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:12:49 --> URI Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Router Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:12:49 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:12:49 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:42 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:42 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Output Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Security Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Input Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:13:42 --> Language Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:13:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Session Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Migrations class initialized
+DEBUG - 2014-07-20 11:13:42 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:13:42 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Current migration: 4
+DEBUG - 2014-07-20 11:13:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:13:42 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:42 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 11:13:43 --> Facebook class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:43 --> Helper loaded: directory_helper
+DEBUG - 2014-07-20 11:13:43 --> File loaded: fashionshop/themes/default/views/header.php
+ERROR - 2014-07-20 11:13:43 --> Severity: Notice  --> Undefined variable: user_profile C:\xampp\htdocs\fashionshop\fashionshop\themes\default\views\login.php 59
+DEBUG - 2014-07-20 11:13:43 --> File loaded: fashionshop/themes/default/views/login.php
+DEBUG - 2014-07-20 11:13:43 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:13:43 --> Final output sent to browser
+DEBUG - 2014-07-20 11:13:43 --> Total execution time: 1.2701
+DEBUG - 2014-07-20 11:13:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:44 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:13:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:44 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:44 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:44 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Output Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Security Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Input Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:13:45 --> Language Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:13:45 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Session Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Migrations class initialized
+DEBUG - 2014-07-20 11:13:45 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:13:45 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Current migration: 4
+DEBUG - 2014-07-20 11:13:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:13:45 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 11:13:45 --> Facebook class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:46 --> Model Class Initialized
+ERROR - 2014-07-20 11:13:46 --> Severity: Notice  --> Undefined index: ship_address C:\xampp\htdocs\fashionshop\fashionshop\models\tax_model.php 20
+DEBUG - 2014-07-20 11:13:46 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:47 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Output Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Security Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Input Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:13:47 --> Language Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:13:47 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:13:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Session Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Migrations class initialized
+DEBUG - 2014-07-20 11:13:47 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:13:47 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Current migration: 4
+DEBUG - 2014-07-20 11:13:47 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:47 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:13:48 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: directory_helper
+DEBUG - 2014-07-20 11:13:48 --> Helper loaded: date_helper
+DEBUG - 2014-07-20 11:13:48 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:13:48 --> Form_validation class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:48 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:13:48 --> File loaded: fashionshop/themes/default/views/my_account.php
+DEBUG - 2014-07-20 11:13:48 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:13:48 --> Final output sent to browser
+DEBUG - 2014-07-20 11:13:48 --> Total execution time: 1.9921
+DEBUG - 2014-07-20 11:13:49 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:49 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:49 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:13:49 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:49 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:49 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:50 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:50 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:50 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:50 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:50 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:50 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:50 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:50 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:51 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:51 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Output Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Security Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Input Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:13:51 --> Language Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:13:51 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:13:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:51 --> Session Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Migrations class initialized
+DEBUG - 2014-07-20 11:13:52 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:13:52 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Current migration: 4
+DEBUG - 2014-07-20 11:13:52 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:13:52 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:13:52 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:13:52 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:13:52 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:13:52 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:13:53 --> File loaded: fashionshop/themes/default/views/category.php
+DEBUG - 2014-07-20 11:13:53 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:13:53 --> Final output sent to browser
+DEBUG - 2014-07-20 11:13:53 --> Total execution time: 1.4361
+DEBUG - 2014-07-20 11:13:54 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:54 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Output Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Security Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Input Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:13:54 --> Language Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:13:54 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:13:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Session Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:13:54 --> Migrations class initialized
+DEBUG - 2014-07-20 11:13:54 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:13:54 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Current migration: 4
+DEBUG - 2014-07-20 11:13:55 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:13:55 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:13:55 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:13:55 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:13:55 --> Model Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:13:55 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:13:55 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:13:55 --> Final output sent to browser
+DEBUG - 2014-07-20 11:13:55 --> Total execution time: 1.0001
+DEBUG - 2014-07-20 11:13:55 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:55 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:55 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:56 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:56 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:56 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:56 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:13:56 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:56 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:56 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:13:56 --> Config Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:13:56 --> URI Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Router Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:13:56 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:13:56 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:03 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:03 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:03 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Output Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Security Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Input Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:14:04 --> Language Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:14:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Session Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Migrations class initialized
+DEBUG - 2014-07-20 11:14:04 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:14:04 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Current migration: 4
+DEBUG - 2014-07-20 11:14:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:14:04 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:14:04 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:04 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Output Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Security Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Input Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:14:04 --> Language Class Initialized
+DEBUG - 2014-07-20 11:14:04 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:14:05 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Session Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Migrations class initialized
+DEBUG - 2014-07-20 11:14:05 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:14:05 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Current migration: 4
+DEBUG - 2014-07-20 11:14:05 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:14:05 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:14:05 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:14:05 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:14:05 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:14:05 --> Final output sent to browser
+DEBUG - 2014-07-20 11:14:05 --> Total execution time: 0.8660
+DEBUG - 2014-07-20 11:14:05 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:05 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:05 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:06 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:06 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:06 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:06 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:14:06 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:06 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:06 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:06 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:06 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:06 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:15 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:15 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Output Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Security Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Input Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:14:15 --> Language Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:14:15 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:14:15 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Session Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Migrations class initialized
+DEBUG - 2014-07-20 11:14:15 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:14:15 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:15 --> Current migration: 4
+DEBUG - 2014-07-20 11:14:15 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:14:16 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:14:16 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:16 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Output Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Security Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Input Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:14:16 --> Language Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:14:16 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:14:16 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Session Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Migrations class initialized
+DEBUG - 2014-07-20 11:14:17 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:14:17 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+ERROR - 2014-07-20 11:14:17 --> Severity: Warning  --> fopen(fashionshop/logs/log-2014-07-20.php): failed to open stream: Permission denied C:\xampp\htdocs\fashionshop\system\libraries\Log.php 89
+DEBUG - 2014-07-20 11:14:17 --> Current migration: 4
+DEBUG - 2014-07-20 11:14:17 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:14:17 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:14:17 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:14:17 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:14:17 --> Model Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:14:17 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:14:17 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:14:17 --> Final output sent to browser
+DEBUG - 2014-07-20 11:14:17 --> Total execution time: 1.1131
+DEBUG - 2014-07-20 11:14:17 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:17 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:18 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:18 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:18 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:18 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:18 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:14:18 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:18 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:18 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:14:18 --> Config Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:14:18 --> URI Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Router Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:14:18 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:14:18 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:17:26 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:26 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:26 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:27 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:27 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:27 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:27 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:27 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:17:27 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:17:27 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:17:27 --> File loaded: fashionshop/themes/default/views/category.php
+DEBUG - 2014-07-20 11:17:27 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:17:27 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:27 --> Total execution time: 0.8350
+DEBUG - 2014-07-20 11:17:29 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:29 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:29 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:29 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:29 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:29 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:30 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:30 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:30 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:30 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:30 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:30 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:17:30 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:17:30 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:17:30 --> File loaded: fashionshop/themes/default/views/category.php
+DEBUG - 2014-07-20 11:17:30 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:17:30 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:30 --> Total execution time: 0.9141
+DEBUG - 2014-07-20 11:17:32 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:32 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:32 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:33 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:33 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:33 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:33 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:33 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:33 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:17:33 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:17:33 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:17:33 --> File loaded: fashionshop/themes/default/views/category.php
+DEBUG - 2014-07-20 11:17:33 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:17:33 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:33 --> Total execution time: 0.8931
+DEBUG - 2014-07-20 11:17:34 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:34 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:34 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:34 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:35 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:35 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:35 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:35 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:35 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:17:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:17:35 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:17:35 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:17:35 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:35 --> Total execution time: 0.8150
+DEBUG - 2014-07-20 11:17:35 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:35 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:17:36 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:17:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:17:36 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:17:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:17:36 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:17:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:17:36 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:17:38 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Utf8 Class Initialized
+ERROR - 2014-07-20 11:17:38 --> Severity: Warning  --> fopen(fashionshop/logs/log-2014-07-20.php): failed to open stream: Permission denied C:\xampp\htdocs\fashionshop\system\libraries\Log.php 89
+DEBUG - 2014-07-20 11:17:38 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:38 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:38 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:38 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:38 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:38 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:38 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:38 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:38 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:17:38 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:38 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:17:39 --> File loaded: fashionshop/views/admin/header.php
+ERROR - 2014-07-20 11:17:39 --> Severity: Notice  --> Undefined variable: counter C:\xampp\htdocs\fashionshop\fashionshop\views\admin\product_form.php 736
+DEBUG - 2014-07-20 11:17:39 --> File loaded: fashionshop/views/admin/product_form.php
+DEBUG - 2014-07-20 11:17:39 --> File loaded: fashionshop/views/admin/footer.php
+DEBUG - 2014-07-20 11:17:39 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:39 --> Total execution time: 1.4931
+DEBUG - 2014-07-20 11:17:39 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:40 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:40 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:40 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:40 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:40 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:40 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:40 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:40 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:40 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:17:40 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:17:40 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:40 --> Total execution time: 0.8680
+DEBUG - 2014-07-20 11:17:40 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:40 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:40 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:41 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:41 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:41 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:41 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:41 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:41 --> Language file loaded: language/vietnamese/product_lang.php
+ERROR - 2014-07-20 11:17:41 --> 404 Page Not Found --> products/img
+DEBUG - 2014-07-20 11:17:41 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:41 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:41 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:41 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:42 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:42 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/product_lang.php
+ERROR - 2014-07-20 11:17:42 --> 404 Page Not Found --> products/font
+DEBUG - 2014-07-20 11:17:42 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:42 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Input Class Initialized
+ERROR - 2014-07-20 11:17:42 --> Severity: Warning  --> fopen(fashionshop/logs/log-2014-07-20.php): failed to open stream: Permission denied C:\xampp\htdocs\fashionshop\system\libraries\Log.php 89
+DEBUG - 2014-07-20 11:17:42 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:42 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:42 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:42 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:42 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/product_lang.php
+ERROR - 2014-07-20 11:17:43 --> 404 Page Not Found --> products/font
+DEBUG - 2014-07-20 11:17:43 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:43 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:43 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:43 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:43 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:44 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:44 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:44 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:44 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:44 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:44 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:44 --> Language file loaded: language/vietnamese/product_lang.php
+ERROR - 2014-07-20 11:17:44 --> 404 Page Not Found --> products/font
+DEBUG - 2014-07-20 11:17:52 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:52 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:52 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:53 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:53 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:53 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:53 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:53 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:53 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:53 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:53 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:17:53 --> Upload Class Initialized
+DEBUG - 2014-07-20 11:17:54 --> Image Lib Class Initialized
+DEBUG - 2014-07-20 11:17:54 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:17:54 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:54 --> Total execution time: 1.8401
+DEBUG - 2014-07-20 11:17:58 --> Config Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:17:58 --> URI Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Router Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Output Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Security Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Input Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:17:58 --> Language Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:17:58 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:17:58 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Session Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Migrations class initialized
+DEBUG - 2014-07-20 11:17:58 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:17:58 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:58 --> Current migration: 4
+DEBUG - 2014-07-20 11:17:59 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:17:59 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:17:59 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:17:59 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:17:59 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Model Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:17:59 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:17:59 --> Upload Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> Image Lib Class Initialized
+DEBUG - 2014-07-20 11:17:59 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:17:59 --> Final output sent to browser
+DEBUG - 2014-07-20 11:17:59 --> Total execution time: 0.9671
+DEBUG - 2014-07-20 11:18:21 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:21 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:21 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:21 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:21 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:21 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:21 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:21 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:22 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:22 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:22 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:18:22 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:22 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:18:22 --> Upload Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> Image Lib Class Initialized
+DEBUG - 2014-07-20 11:18:22 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:18:22 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:22 --> Total execution time: 1.0041
+DEBUG - 2014-07-20 11:18:25 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:25 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:25 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:26 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:26 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:26 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:26 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:26 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:26 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:18:26 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:26 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:18:26 --> Upload Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> Image Lib Class Initialized
+DEBUG - 2014-07-20 11:18:26 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:18:26 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:26 --> Total execution time: 1.0131
+DEBUG - 2014-07-20 11:18:31 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:31 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:31 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:31 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:31 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:31 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:31 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:31 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:18:31 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:31 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:18:31 --> Upload Class Initialized
+DEBUG - 2014-07-20 11:18:31 --> Image Lib Class Initialized
+DEBUG - 2014-07-20 11:18:32 --> File loaded: fashionshop/views/admin/iframe/product_image_uploader.php
+DEBUG - 2014-07-20 11:18:32 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:32 --> Total execution time: 1.0801
+DEBUG - 2014-07-20 11:18:33 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:34 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:34 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:34 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Form Validation Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:18:34 --> Language file loaded: language/vietnamese/form_validation_lang.php
+DEBUG - 2014-07-20 11:18:34 --> Helper loaded: text_helper
+DEBUG - 2014-07-20 11:18:34 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:35 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:35 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:35 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:35 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:35 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:36 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:36 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:36 --> Language file loaded: language/vietnamese/admin_common_lang.php
+DEBUG - 2014-07-20 11:18:36 --> Language file loaded: language/vietnamese/media_lang.php
+DEBUG - 2014-07-20 11:18:36 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:36 --> Language file loaded: language/vietnamese/product_lang.php
+DEBUG - 2014-07-20 11:18:36 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> File loaded: fashionshop/views/admin/header.php
+DEBUG - 2014-07-20 11:18:36 --> File loaded: fashionshop/views/admin/products.php
+DEBUG - 2014-07-20 11:18:36 --> File loaded: fashionshop/views/admin/footer.php
+DEBUG - 2014-07-20 11:18:36 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:36 --> Total execution time: 0.9601
+DEBUG - 2014-07-20 11:18:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:36 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:18:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:37 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:37 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:18:37 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:37 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:37 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:18:37 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:37 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:37 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:37 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:18:39 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:39 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> No URI present. Default controller set.
+DEBUG - 2014-07-20 11:18:39 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:39 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:39 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:39 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:39 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:39 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:39 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:39 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:39 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:40 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:40 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:40 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:18:40 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:18:40 --> File loaded: fashionshop/themes/default/views/banners/default.php
+DEBUG - 2014-07-20 11:18:40 --> File loaded: fashionshop/themes/default/views/banners/4_box_row.php
+DEBUG - 2014-07-20 11:18:40 --> File loaded: fashionshop/themes/default/views/homepage.php
+DEBUG - 2014-07-20 11:18:40 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:18:40 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:40 --> Total execution time: 1.0291
+DEBUG - 2014-07-20 11:18:40 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:40 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:40 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:41 --> 404 Page Not Found --> uploads
+DEBUG - 2014-07-20 11:18:41 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:41 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:41 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:41 --> 404 Page Not Found --> uploads
+DEBUG - 2014-07-20 11:18:42 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:42 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:42 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:42 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:42 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:43 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:43 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:43 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:43 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:43 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:18:43 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> Pagination Class Initialized
+DEBUG - 2014-07-20 11:18:43 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:18:43 --> File loaded: fashionshop/themes/default/views/category.php
+DEBUG - 2014-07-20 11:18:43 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:18:43 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:43 --> Total execution time: 1.0601
+DEBUG - 2014-07-20 11:18:44 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:44 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Output Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Security Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Input Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:18:44 --> Language Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:18:44 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:18:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Session Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:18:44 --> Migrations class initialized
+DEBUG - 2014-07-20 11:18:45 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:18:45 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Current migration: 4
+DEBUG - 2014-07-20 11:18:45 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:18:45 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:18:45 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:18:45 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:18:45 --> Model Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:18:45 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:18:45 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:18:45 --> Final output sent to browser
+DEBUG - 2014-07-20 11:18:45 --> Total execution time: 0.8580
+DEBUG - 2014-07-20 11:18:45 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:45 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:45 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:45 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:18:46 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:46 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:46 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:18:46 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:46 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:46 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:18:46 --> Config Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:18:46 --> URI Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Router Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:18:46 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:18:46 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:57:49 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:49 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Output Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Security Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Input Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:57:49 --> Language Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:57:49 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:57:49 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:57:49 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Session Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Migrations class initialized
+DEBUG - 2014-07-20 11:57:50 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:57:50 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Current migration: 4
+DEBUG - 2014-07-20 11:57:50 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:57:50 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:57:50 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:57:50 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:57:50 --> Model Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:57:50 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:57:50 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:57:50 --> Final output sent to browser
+DEBUG - 2014-07-20 11:57:50 --> Total execution time: 0.9191
+DEBUG - 2014-07-20 11:57:50 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:50 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:50 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:57:50 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:57:51 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:51 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:57:51 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:57:51 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:51 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:57:51 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:57:51 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:51 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:51 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:57:52 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:57:52 --> Config Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:57:52 --> URI Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> Router Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:57:52 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:57:52 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:02 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:02 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Output Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Security Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Input Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:58:02 --> Language Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:58:02 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:58:02 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Session Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Migrations class initialized
+DEBUG - 2014-07-20 11:58:02 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:58:02 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Current migration: 4
+DEBUG - 2014-07-20 11:58:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:02 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:58:03 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:58:03 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:58:03 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:58:03 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:58:03 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:58:03 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:58:03 --> Final output sent to browser
+DEBUG - 2014-07-20 11:58:03 --> Total execution time: 0.8781
+DEBUG - 2014-07-20 11:58:03 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:03 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:03 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:58:03 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:03 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:03 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:03 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:03 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:04 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:04 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:58:04 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:04 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:04 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:04 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:04 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:04 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:04 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:45 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:45 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:45 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:46 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Output Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Security Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Input Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:58:46 --> Language Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:58:46 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Session Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Migrations class initialized
+DEBUG - 2014-07-20 11:58:46 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:58:46 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Current migration: 4
+DEBUG - 2014-07-20 11:58:46 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:58:46 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:58:46 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:46 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:58:46 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:58:46 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:58:46 --> Final output sent to browser
+DEBUG - 2014-07-20 11:58:46 --> Total execution time: 0.8760
+DEBUG - 2014-07-20 11:58:47 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:47 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:47 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:58:47 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:47 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:47 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:47 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:47 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:47 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:58:47 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:47 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:47 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:48 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:48 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:48 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:48 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:48 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:58:53 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:54 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Output Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Security Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Input Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:58:54 --> Language Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:58:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Session Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Migrations class initialized
+DEBUG - 2014-07-20 11:58:54 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:58:54 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Current migration: 4
+DEBUG - 2014-07-20 11:58:54 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:58:54 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:58:54 --> Model Class Initialized
+DEBUG - 2014-07-20 11:58:54 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:58:54 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:58:54 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:58:54 --> Final output sent to browser
+DEBUG - 2014-07-20 11:58:54 --> Total execution time: 0.9031
+DEBUG - 2014-07-20 11:58:59 --> Config Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:58:59 --> URI Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> Router Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:58:59 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:58:59 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:00 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:00 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:00 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:00 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:00 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:00 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:00 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:00 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:00 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:01 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:01 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:01 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:01 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:10 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:10 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:10 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:11 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:11 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:11 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:11 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:11 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:11 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:11 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:11 --> 404 Page Not Found --> fashionshop
+DEBUG - 2014-07-20 11:59:35 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:35 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Output Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Security Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Input Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 11:59:35 --> Language Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Loader Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 11:59:35 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Session Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Controller Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Migrations class initialized
+DEBUG - 2014-07-20 11:59:35 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 11:59:35 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Current migration: 4
+DEBUG - 2014-07-20 11:59:35 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 11:59:35 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 11:59:35 --> Model Class Initialized
+DEBUG - 2014-07-20 11:59:35 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 11:59:35 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 11:59:36 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 11:59:36 --> Final output sent to browser
+DEBUG - 2014-07-20 11:59:36 --> Total execution time: 0.9191
+DEBUG - 2014-07-20 11:59:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:36 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:59:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:36 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 11:59:36 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:36 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:36 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:37 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 11:59:37 --> Config Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Hooks Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 11:59:37 --> URI Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Router Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 11:59:37 --> Database Driver Class Initialized
+ERROR - 2014-07-20 11:59:37 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:04 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:04 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Output Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Security Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Input Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:01:04 --> Language Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:01:04 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Session Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Migrations class initialized
+DEBUG - 2014-07-20 12:01:04 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:01:04 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Current migration: 4
+DEBUG - 2014-07-20 12:01:04 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:01:04 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:04 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:01:04 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:01:05 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:01:05 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:01:05 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:01:05 --> Final output sent to browser
+DEBUG - 2014-07-20 12:01:05 --> Total execution time: 0.8901
+DEBUG - 2014-07-20 12:01:05 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:05 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:05 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:05 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:05 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:05 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:01:05 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:05 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:06 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:06 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:06 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:06 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:06 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:06 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:25 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:25 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Output Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Security Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Input Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:01:25 --> Language Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:01:25 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Session Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Migrations class initialized
+DEBUG - 2014-07-20 12:01:25 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:01:25 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Current migration: 4
+DEBUG - 2014-07-20 12:01:25 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:01:25 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:01:25 --> Model Class Initialized
+DEBUG - 2014-07-20 12:01:25 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:01:25 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:01:25 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:01:25 --> Final output sent to browser
+DEBUG - 2014-07-20 12:01:25 --> Total execution time: 0.9231
+DEBUG - 2014-07-20 12:01:26 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:26 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:26 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:26 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:26 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:26 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:01:26 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:26 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:26 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:01:26 --> Config Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:01:26 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:01:27 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:01:27 --> URI Class Initialized
+DEBUG - 2014-07-20 12:01:27 --> Router Class Initialized
+DEBUG - 2014-07-20 12:01:27 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:01:27 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:01:27 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:43 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:43 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Output Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Security Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Input Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:03:43 --> Language Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:03:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Session Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Migrations class initialized
+DEBUG - 2014-07-20 12:03:43 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:03:43 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Current migration: 4
+DEBUG - 2014-07-20 12:03:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:03:43 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:03:43 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:43 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:03:44 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:44 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:44 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:03:44 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:44 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:44 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:44 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:44 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:45 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:45 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:45 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:45 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:45 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:45 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:51 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:51 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Output Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Security Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Input Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:03:51 --> Language Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:03:51 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Session Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Migrations class initialized
+DEBUG - 2014-07-20 12:03:51 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:03:51 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Current migration: 4
+DEBUG - 2014-07-20 12:03:51 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:03:51 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:03:51 --> Model Class Initialized
+DEBUG - 2014-07-20 12:03:51 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:03:51 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:03:51 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:03:51 --> Final output sent to browser
+DEBUG - 2014-07-20 12:03:51 --> Total execution time: 0.9091
+DEBUG - 2014-07-20 12:03:52 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:52 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:52 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:52 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:52 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:52 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:03:52 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:52 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:52 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:03:52 --> Config Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:03:52 --> URI Class Initialized
+DEBUG - 2014-07-20 12:03:52 --> Router Class Initialized
+DEBUG - 2014-07-20 12:03:53 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:03:53 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:03:53 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:41 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:41 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Output Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Security Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Input Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:04:41 --> Language Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:04:41 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:04:41 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Session Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Migrations class initialized
+DEBUG - 2014-07-20 12:04:41 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:04:41 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Current migration: 4
+DEBUG - 2014-07-20 12:04:41 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:04:41 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:04:41 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:41 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:04:42 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:04:42 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:04:42 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:04:42 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:04:42 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:04:42 --> Final output sent to browser
+DEBUG - 2014-07-20 12:04:42 --> Total execution time: 0.9121
+DEBUG - 2014-07-20 12:04:42 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:42 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:42 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:42 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:42 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:42 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:42 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:04:43 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:43 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:43 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:43 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:43 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:43 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:43 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:53 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:53 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Output Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Security Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Input Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:04:53 --> Language Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:04:53 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Session Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Migrations class initialized
+DEBUG - 2014-07-20 12:04:53 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:04:53 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Current migration: 4
+DEBUG - 2014-07-20 12:04:53 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:04:53 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:04:53 --> Model Class Initialized
+DEBUG - 2014-07-20 12:04:53 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:04:53 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:04:53 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:04:53 --> Final output sent to browser
+DEBUG - 2014-07-20 12:04:53 --> Total execution time: 0.9041
+DEBUG - 2014-07-20 12:04:54 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:54 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:54 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:54 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:54 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:54 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:04:54 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:54 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:54 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:04:54 --> Config Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:04:54 --> URI Class Initialized
+DEBUG - 2014-07-20 12:04:54 --> Router Class Initialized
+DEBUG - 2014-07-20 12:04:55 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:04:55 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:04:55 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:05:22 --> Config Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:05:22 --> URI Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Router Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Output Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Security Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Input Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2014-07-20 12:05:22 --> Language Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Loader Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Helper loaded: url_helper
+DEBUG - 2014-07-20 12:05:22 --> Helper loaded: file_helper
+DEBUG - 2014-07-20 12:05:22 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Session Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Controller Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Migrations class initialized
+DEBUG - 2014-07-20 12:05:22 --> Language file loaded: language/vietnamese/migration_lang.php
+DEBUG - 2014-07-20 12:05:22 --> Database Forge Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Current migration: 4
+DEBUG - 2014-07-20 12:05:22 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:22 --> Language file loaded: language/vietnamese/digital_product_lang.php
+DEBUG - 2014-07-20 12:05:22 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Helper loaded: string_helper
+DEBUG - 2014-07-20 12:05:23 --> Helper loaded: html_helper
+DEBUG - 2014-07-20 12:05:23 --> Helper loaded: language_helper
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Helper loaded: formatting_helper
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Helper loaded: form_helper
+DEBUG - 2014-07-20 12:05:23 --> Language file loaded: language/vietnamese/common_lang.php
+DEBUG - 2014-07-20 12:05:23 --> Model Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> File loaded: fashionshop/themes/default/views/header.php
+DEBUG - 2014-07-20 12:05:23 --> File loaded: fashionshop/themes/default/views/product.php
+DEBUG - 2014-07-20 12:05:23 --> File loaded: fashionshop/themes/default/views/footer.php
+DEBUG - 2014-07-20 12:05:23 --> Final output sent to browser
+DEBUG - 2014-07-20 12:05:23 --> Total execution time: 0.9191
+DEBUG - 2014-07-20 12:05:23 --> Config Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:05:23 --> URI Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Router Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:05:23 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:05:23 --> Config Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:05:23 --> URI Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Router Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:23 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:05:24 --> 404 Page Not Found --> img
+DEBUG - 2014-07-20 12:05:24 --> Config Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:05:24 --> URI Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Router Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:05:24 --> 404 Page Not Found --> font
+DEBUG - 2014-07-20 12:05:24 --> Config Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Hooks Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Utf8 Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> UTF-8 Support Enabled
+DEBUG - 2014-07-20 12:05:24 --> URI Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Router Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Database Driver Class Initialized
+DEBUG - 2014-07-20 12:05:24 --> Database Driver Class Initialized
+ERROR - 2014-07-20 12:05:24 --> 404 Page Not Found --> font
