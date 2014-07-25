@@ -169,6 +169,7 @@ class Adviser extends Front_Controller
             if($this->is_cleanable($lastItem, $usable_rule) === false){
                 array_push($finalResult, $currentRule);
             }
+            $i++;
         }
         return $finalResult;
     }
@@ -180,6 +181,7 @@ class Adviser extends Front_Controller
             if(in_array($lastItem, $exploded2)){
                 return true;
             }
+            $j++;
         }
         return false;
     }
