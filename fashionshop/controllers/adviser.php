@@ -165,7 +165,7 @@ class Adviser extends Front_Controller
             $currentRule = $usable_rule[$i];
             $exploded = $this->multiexplode(array("^", "=>"), $currentRule->rulesContent);
             $lastItem = $exploded[count($exploded) - 1];
-            array_splice($usable_rule, $i, 1);
+            //array_splice($usable_rule, $i, 1);
             if($this->is_cleanable($lastItem, $usable_rule) === false){
                 array_push($finalResult, $currentRule);
             }
